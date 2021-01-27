@@ -136,14 +136,17 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
+  height: 600px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover,
   .fh5co-hero {
+    height: 500px;
   }
 }
 .fh5co-cover.fh5co-hero-2,
 .fh5co-hero.fh5co-hero-2 {
+  height: 400px;
 }
 .fh5co-cover.fh5co-hero-2 .fh5co-overlay,
 .fh5co-hero.fh5co-hero-2 .fh5co-overlay {

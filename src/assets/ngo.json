@@ -294,14 +294,14 @@
       "role": "Founder",
       "reachOut": {
         "phone2": "",
-        "instagram": "",
-        "website": "",
+        "instagram": "instagram.com",
+        "website": "website.com",
         "facebook": "https://www.facebook.com/Barath.SN",
         "phone1": "9894949878",
-        "twitter": "",
-        "linkedin": "",
-        "youtube": "",
-        "email": ""
+        "twitter": "tw.com",
+        "linkedin": "tw.com",
+        "youtube": "tw.com",
+        "email": "tw.com"
       },
       "to": { "_seconds": 0, "_nanoseconds": 0 },
       "since": { "_seconds": 0, "_nanoseconds": 0 },

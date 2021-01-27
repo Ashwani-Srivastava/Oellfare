@@ -24,7 +24,35 @@ export class CharityAbout {
             <div id="fh5co-page">
                 <charity-header ngo={this.ngo}></charity-header>
 
-                <h1 style={{'text-align': 'center', 'font-size': '32px', 'margin': '64px' }} > About us Page </h1>
+                <div class="fh5co-hero">
+                    <div class="fh5co-overlay"></div>
+                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                        <div class="desc animate-box">
+                            <h2>About us</h2>
+                            <span> { this.ngo.vision } </span>
+                            <p style={{ 'color': 'white'}} > -- The Vision -- </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fh5co-features">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-12 text-center heading-section">
+                                <h6>
+                                    { this.ngo.mission.map(m => (
+                                    <p> { m } </p>
+                                )) }
+                                </h6>
+                                <p> --- Our Mission --- </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
 
                 <div id="fh5co-content-section" class="fh5co-section-gray">
                     <div class="container">
@@ -48,7 +76,6 @@ export class CharityAbout {
                                         <div>
                                             <h3> { p.name } </h3>
                                             <p><span> { p.role } </span></p>
-                                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                         </div>
 
                                         <p class="fh5co-social-icons">

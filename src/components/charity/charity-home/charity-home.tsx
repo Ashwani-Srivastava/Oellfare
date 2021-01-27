@@ -1,9 +1,9 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop }   from '@stencil/core';
 import * as ngo                 from    '../../../assets/ngo.json';
 
 @Component({
-    tag: 'charity-home',
-    styleUrl: 'charity-home.css',
+    tag                         :   'charity-home',
+    styleUrl                    :   'charity-home.css',
 })
 export class CharityHome {
 
@@ -16,17 +16,11 @@ export class CharityHome {
     };
 
     constructor () {
-
         console.log('Home :: Constructor');
-
     }
 
     async componentWillLoad() {
         console.log('Home :: Component will load');
-        /*
-        const jsonRawData       =   await fetch('assets/ngo.json');
-        this.ngo                =   await jsonRawData.json();
-         */
     }
 
     async componentDidLoad() {
@@ -44,7 +38,7 @@ export class CharityHome {
 
                 <charity-header ngo={this.ngo}></charity-header>
 
-                <div class="fh5co-hero">
+                <div class="fh5co-hero" style={{ 'height': 'auto' }}>
                     <div class="fh5co-overlay"></div>
 
                     <ion-slides style={{ 'height': '100%' }} id='coverSlides' options={this.coverSlideOptions} >
@@ -56,19 +50,17 @@ export class CharityHome {
 
                     </ion-slides>
 
-            {/*
-            <div class="desc animate-box">
-                <h2><strong>Donate</strong> for the <strong>Poor Children</strong></h2>
-                <span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></span>
-                <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span>
-            </div>
-              */}
-
-
                 </div>
 
                 <div id="fh5co-features">
                     <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-12 text-center heading-section">
+                                <h3> We care for </h3>
+                            </div>
+                        </div>
+
                         <div class="row">
 
                             { this.ngo.sdg.slice(0, 3).map(s => (
@@ -116,6 +108,8 @@ export class CharityHome {
                                 <p><img src="assets/images/motivationx600.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive" /></p>
                             </div>
                         </div>
+
+                        { /*
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="feature-text">
@@ -136,6 +130,7 @@ export class CharityHome {
                                 </div>
                             </div>
                         </div>
+                           */ }
 
 
                     </div>
@@ -147,7 +142,7 @@ export class CharityHome {
 
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-                                <h3>Ongoing Fundraisers</h3>
+                                <h3>Active Fundraisers</h3>
                             </div>
                         </div>
 
@@ -160,7 +155,7 @@ export class CharityHome {
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a href="#" class="btn btn-primary btn-lg">See Gallery</a>
+                                <a href="#" class="btn btn-primary btn-lg">See More</a>
                             </div>
                         </div>
 
@@ -196,9 +191,27 @@ export class CharityHome {
                                     </div>
 
                                     <p class="fh5co-social-icons">
-                                        <a href="#"><i class="icon-twitter2"></i></a>
-                                        <a href="#"><i class="icon-linkedin2"></i></a>
-                                        <a href="#"><i class="icon-facebook3"></i></a>
+
+                                        { m.reachOut.facebook.length !== 0 ?
+                                            <a href={m.reachOut.facebook}><i class="icon-facebook3"></i></a>
+                                        : null }
+
+                                        { m.reachOut.twitter.length !== 0 ?
+                                            <a href={m.reachOut.twitter}><i class="icon-twitter3"></i></a>
+                                        : null }
+
+                                        { m.reachOut.instagram.length !== 0 ?
+                                            <a href={m.reachOut.instagram}><i class="icon-instagram2"></i></a>
+                                        : null }
+
+                                        { m.reachOut.linkedin.length !== 0 ?
+                                            <a href={m.reachOut.linkedin}><i class="icon-linkedin3"></i></a>
+                                        : null }
+
+                                        { m.reachOut.youtube.length !== 0 ?
+                                            <a href={m.reachOut.youtube}><i class="icon-youtube2"></i></a>
+                                        : null }
+
                                     </p>
 
                                 </div>
@@ -230,6 +243,8 @@ export class CharityHome {
                                     <span><i class="icon-heart"></i></span>
                                     <h3> { p.name } </h3>
                                     <p> { p.description.length < 100 ? p.description : p.description.substring(0, 100) + '...' } </p>
+                                    <p><a> <ion-router-link href={`/projects/${p.id}`}> Learn more... </ion-router-link> </a></p>
+                                
                                 </div>
                             </div>
                             )) }
@@ -245,7 +260,7 @@ export class CharityHome {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                                <h3> Our Team </h3>
+                                <h3> Media has been soo kind to us </h3>
                                 <p> Work hard in silence, let your success be your noise. </p>
                             </div>
                         </div>
@@ -254,10 +269,9 @@ export class CharityHome {
                         <div class="row row-bottom-padded-md">
 
                             {this.ngo.media.slice(0, 3).map(m => (
-                            <span>
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="fh5co-blog animate-box">
-                                    <a href={m.link}><img class="img-responsive" src={m.photo.url} alt="" style={{'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top'}} /></a>
+                                    <a href={m.link}><img class="img-responsive" src={m.photo.url} alt="" style={{'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
                                     <div class="blog-text">
                                         <div class="prod-title">
                                             <h3><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
@@ -268,15 +282,13 @@ export class CharityHome {
                                     </div> 
                                 </div>
                             </div>
-                            <div class="clearfix visible-md-block"></div>
-                            </span>
                             )) }
 
                         </div>
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a href="#" class="btn btn-primary btn-lg"> See More </a>
+                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/about#media" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
                             </div>
                         </div>
 
