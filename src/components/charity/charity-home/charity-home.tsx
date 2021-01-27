@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
     tag: 'charity-home',
@@ -6,65 +6,26 @@ import { Component, h } from '@stencil/core';
 })
 export class CharityHome {
 
+    @Prop() ngo                 :   any                 =   {};
+
+    async componentWillLoad() {
+        const jsonRawData       =   await fetch('assets/ngo.json');
+        this.ngo                =   await jsonRawData.json();
+    }
+
     render() {
+
+        if(!this.ngo) {
+            return [
+                <div> Loading... </div>
+            ];
+        } else {
         return [
 
         <div id="fh5co-wrapper">
             <div id="fh5co-page">
-                <div class="header-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 text-left fh5co-link">
-                                <a href="#">FAQ</a>
-                                <a href="#">Forum</a>
-                                <a href="#">Contact</a>
-                            </div>
-                            <div class="col-md-6 col-sm-6 text-right fh5co-social">
-                                <a href="#" class="grow"><i class="icon-facebook2"></i></a>
-                                <a href="#" class="grow"><i class="icon-twitter2"></i></a>
-                                <a href="#" class="grow"><i class="icon-instagram2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <header id="fh5co-header-section" class="sticky-banner">
-                    <div class="container">
-                        <div class="nav-header">
-                            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-                            <h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
-                            <nav id="fh5co-menu-wrap" role="navigation">
-                                <ul class="sf-menu" id="fh5co-primary-menu">
-                                    <li class="active">
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fh5co-sub-ddown">Get Involved</a>
-                                        <ul class="fh5co-sub-menu">
-                                            <li><a href="#">Donate</a></li>
-                                            <li><a href="#">Fundraise</a></li>
-                                            <li><a href="#">Campaign</a></li>
-                                            <li><a href="#">Philantrophy</a></li>
-                                            <li><a href="#">Volunteer</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="fh5co-sub-ddown">Projects</a>
-                                        <ul class="fh5co-sub-menu">
-                                            <li><a href="#">Water World</a></li>
-                                            <li><a href="#">Cloth Giving</a></li>
-                                            <li><a href="#">Medical Mission</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </header>
 
-
+                <charity-header ngo={this.ngo}></charity-header>
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
@@ -408,33 +369,15 @@ export class CharityHome {
                     </div>
                 </div>
 
-                <footer>
-                    <div id="footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-3 text-center">
-                                    <p class="fh5co-social-icons">
-                                        <a href="#"><i class="icon-twitter2"></i></a>
-                                        <a href="#"><i class="icon-facebook2"></i></a>
-                                        <a href="#"><i class="icon-instagram"></i></a>
-                                        <a href="#"><i class="icon-dribbble2"></i></a>
-                                        <a href="#"><i class="icon-youtube"></i></a>
-                                    </p>
-                                    <p>Copyright 2016 Free Html5 <a href="#">Charity</a>. All Rights Reserved. <br/>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-
+                <charity-footer ngo={this.ngo}></charity-footer>
 
             </div>
 
         </div>
 
-
-
         ];
+
+        }
     }
 
 }
