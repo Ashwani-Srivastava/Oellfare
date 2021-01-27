@@ -9,6 +9,6 @@ export const config: Config = {
     outputTargets: [{
         type: 'www',
         serviceWorker: null,
-        baseUrl:'https://css.thegrassroots.app/'
+        baseUrl:'https://css-grassroots.web.app/'
     }],
 };

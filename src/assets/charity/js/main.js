@@ -137,12 +137,16 @@
 
 	// Document on load.
 	$(function(){
-		mainMenu();
-		parallax();
-		offcanvas();
-		mobileMenuOutsideClick();
-		contentWayPoint();
-		stickyBanner();
+
+        setTimeout(() => {
+            console.log('JS Init');
+            mainMenu();
+            parallax();
+            offcanvas();
+            mobileMenuOutsideClick();
+            contentWayPoint();
+            stickyBanner();
+        }, 5000);
 	});
 
 

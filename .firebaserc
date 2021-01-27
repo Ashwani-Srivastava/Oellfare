@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "gr-live"
+  },
+  "targets": {
+    "gr-live": {
+      "hosting": {
+        "css": [
+          "css-grassroots"
+        ]
+      }
+    }
+  }
+}

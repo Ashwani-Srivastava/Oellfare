@@ -20,8 +20,12 @@ export class CharityHeader {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 text-left fh5co-link">
+                        { /*
                         <a href="tel://{ this.ngo.reachOut.phone1 }"> { this.ngo.reachOut.phone1 } </a>
                         <a href="mailto:{ this.ngo.reachOut.email }"> { this.ngo.reachOut.email } </a>
+                           */ }
+                        <a href="#"> { this.ngo.reachOut.phone1 } </a>
+                        <a href="#"> { this.ngo.reachOut.email } </a>
                     </div>
                     <div class="col-md-6 col-sm-6 text-right fh5co-social">
                         { this.ngo.reachOut.facebook.length !== 0 ?
@@ -53,17 +57,19 @@ export class CharityHeader {
             <div class="container">
                 <div class="nav-header">
                     <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-                    <h1 id="fh5co-logo"><a href="index.html"> { this.ngo.name } </a></h1>
+                    <h1 id="fh5co-logo"><a href="/"> { this.ngo.name } </a></h1>
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
                             <li class="active">
-                                <a href="/">Home 1</a>
+                                <a> <ion-router-link href='/'> Home </ion-router-link> </a>
                             </li>
 
-                            <li><a href="about">About</a></li>
+                            <li>
+                                <a> <ion-router-link href="/about"> About us </ion-router-link> </a>
+                            </li>
 
                             <li>
-                                <a href="projects" class="fh5co-sub-ddown">Projects</a>
+                                <a class="fh5co-sub-ddown"> <ion-router-link href="/projects"> Projects </ion-router-link> </a>
                                 <ul class="fh5co-sub-menu">
                                     { this.ngo.projects.map(p => (
                                         <li><a href="#"> {p.name } </a></li>
@@ -71,11 +77,18 @@ export class CharityHeader {
                                 </ul>
                             </li>
 
-                            <li><a href="donate">Donate</a></li>
+                            <li>
+                                <a> <ion-router-link href="/donate"> Donate </ion-router-link> </a>
+                            </li>
 
-                            <li><a href="volunteer">Volunteer</a></li>
+                            <li>
+                                <a> <ion-router-link href="/volunteer"> Volunteer </ion-router-link> </a>
+                            </li>
 
-                            <li><a href="contact">Contact</a></li>
+                            <li>
+                                <a> <ion-router-link href="/contact"> Contact us </ion-router-link> </a>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>

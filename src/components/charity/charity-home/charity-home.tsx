@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import * as ngo                 from    '../../../assets/ngo.json';
 
 @Component({
     tag: 'charity-home',
@@ -6,20 +7,34 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class CharityHome {
 
-    @Prop() ngo                 :   any                 =   {};
+    @Prop() ngo                 :   any                 =   ngo;
+
+    constructor () {
+
+        console.log('Home :: Constructor');
+
+    }
 
     async componentWillLoad() {
+        console.log('Home :: Component will load');
+        /*
         const jsonRawData       =   await fetch('assets/ngo.json');
         this.ngo                =   await jsonRawData.json();
+         */
+    }
+
+    async componentDidLoad() {
+        console.log('Home :: Component did load');
     }
 
     render() {
 
-        if(!this.ngo) {
-            return [
-                <div> Loading... </div>
-            ];
-        } else {
+        console.log('Home :: Render');
+
+        const bgImageStyle = {
+            'background-image':  this.ngo.photos[0]
+        }
+
         return [
 
         <div id="fh5co-wrapper">
@@ -29,12 +44,9 @@ export class CharityHome {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{'background-image': `${this.ngo.photos[0]}` }}>
+                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={bgImageStyle}>
                         <div class="desc animate-box">
-                            {/*
                             <h2><strong>Donate</strong> for the <strong>Poor Children</strong></h2>
-                              */}
-                            <h2> {this.ngo.photos[0]} </h2>
                             <span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></span>
                             <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span>
                         </div>
@@ -380,7 +392,6 @@ export class CharityHome {
 
         ];
 
-        }
     }
 
 }
