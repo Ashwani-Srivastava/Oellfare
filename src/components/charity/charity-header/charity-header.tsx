@@ -60,33 +60,33 @@ export class CharityHeader {
                     <h1 id="fh5co-logo"><a href="/"> { this.ngo.name } </a></h1>
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
-                            <li class="active">
-                                <a> <ion-router-link href='/'> Home </ion-router-link> </a>
+                            <li>
+                                <a> <ion-router-link color={location.pathname === '/' ? 'primary' : 'medium' } href='/'> Home </ion-router-link> </a>
                             </li>
 
                             <li>
-                                <a> <ion-router-link href="/about"> About us </ion-router-link> </a>
+                                <a> <ion-router-link color={location.pathname.startsWith('/about') ? 'primary' : 'medium' } href="/about"> About us </ion-router-link> </a>
                             </li>
 
-                            <li>
-                                <a class="fh5co-sub-ddown"> <ion-router-link href="/projects"> Projects </ion-router-link> </a>
+                            <li class='active'>
+                                <a class="fh5co-sub-ddown"> <ion-router-link href="/projects" color={location.pathname.startsWith('/projects') ? 'primary' : 'medium'} > Projects </ion-router-link> </a>
                                 <ul class="fh5co-sub-menu">
                                     { this.ngo.projects.map(p => (
-                                        <li><a href="#"> {p.name } </a></li>
+                                        <li><a>  <ion-router-link color={location.pathname.startsWith('/projects/' + p.id) ? 'primary' : 'medium' } href={`/projects/${p.id}`} > { p.name } </ion-router-link> </a></li>
                                     )) }
                                 </ul>
                             </li>
 
                             <li>
-                                <a> <ion-router-link href="/donate"> Donate </ion-router-link> </a>
+                                <a> <ion-router-link href="/donate" color={location.pathname.startsWith('/donate') ? 'primary' : 'medium'} > Donate </ion-router-link> </a>
                             </li>
 
                             <li>
-                                <a> <ion-router-link href="/volunteer"> Volunteer </ion-router-link> </a>
+                                <a> <ion-router-link href="/volunteer" color={location.pathname.startsWith('/volunteer') ? 'primary' : 'medium'} > Volunteer </ion-router-link> </a>
                             </li>
 
                             <li>
-                                <a> <ion-router-link href="/contact"> Contact us </ion-router-link> </a>
+                                <a> <ion-router-link href="/contact" color={location.pathname.startsWith('/contact') ? 'primary' : 'medium'} > Contact us </ion-router-link> </a>
                             </li>
 
                         </ul>

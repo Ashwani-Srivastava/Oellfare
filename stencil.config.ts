@@ -9,6 +9,7 @@ export const config: Config = {
     outputTargets: [{
         type: 'www',
         serviceWorker: null,
-        baseUrl:'https://css-grassroots.web.app/'
+        baseUrl:'https://css-grassroots.web.app/',
+        prerenderConfig: './prerender.config.ts',
     }],
 };

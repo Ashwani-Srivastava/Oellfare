@@ -294,14 +294,14 @@
       "role": "Founder",
       "reachOut": {
         "phone2": "",
-        "instagram": "instagram.com",
+        "instagram": "https://instagram.com",
         "website": "website.com",
         "facebook": "https://www.facebook.com/Barath.SN",
         "phone1": "9894949878",
-        "twitter": "tw.com",
-        "linkedin": "tw.com",
-        "youtube": "tw.com",
-        "email": "tw.com"
+        "twitter": "https://twitter.com",
+        "linkedin": "",
+        "youtube": "",
+        "email": ""
       },
       "to": { "_seconds": 0, "_nanoseconds": 0 },
       "since": { "_seconds": 0, "_nanoseconds": 0 },
@@ -330,7 +330,7 @@
         "instagram": "",
         "phone2": "",
         "email": "",
-        "facebook": "facebook.com/RamkumarVNR"
+        "facebook": "https://facebook.com/RamkumarVNR"
       }
     },
     {
