@@ -10,7 +10,11 @@ export class AppRoot {
             <ion-app>
                 <ion-router useHash={false}>
                     <ion-route url="/" component="charity-home" />
-                    <ion-route url="/profile/:name" component="app-profile" />
+                    <ion-route url="/about" component="charity-about" />
+                    <ion-route url="/contact" component="charity-contact" />
+                    <ion-route url="/donate" component="charity-donate" />
+                    <ion-route url="/projects" component="charity-projects" />
+                    <ion-route url="/volunteer" component="charity-volunteer" />
                 </ion-router>
                 <ion-nav />
             </ion-app>
