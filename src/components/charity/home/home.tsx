@@ -3,7 +3,7 @@ import * as ngo                 from    '../../../assets/ngo.json';
 
 @Component({
     tag                         :   'charity-home',
-    styleUrl                    :   'charity-home.css',
+    styleUrl                    :   'home.css',
 })
 export class CharityHome {
 
@@ -42,7 +42,7 @@ export class CharityHome {
                     <div class="fh5co-overlay"></div>
 
                     <ion-slides style={{ 'height': '100%' }} id='coverSlides' options={this.coverSlideOptions} >
-                        { this.ngo.photos.map(p => (
+                        { this.ngo.photos.slice(0, 3).map(p => (
                             <ion-slide>
                                 <img src={p} style={{ 'width': '100%', 'object-fit': 'cover' }} />
                             </ion-slide>
@@ -99,13 +99,13 @@ export class CharityHome {
 
                         <div class="row row-bottom-padded-md">
                             <div class="col-md-12 text-center animate-box">
-                                <p><img src="assets/images/believe-in-yourselfx1440.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive" /></p>
+                                <p><ion-img src="assets/images/believe-in-yourselfx1440.jpg" class="img-responsive"></ion-img></p>
                             </div>
                             <div class="col-md-6 text-center animate-box">
-                                <p><img src="assets/images/dreamx600.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive" /></p>
+                                <p><ion-img src="assets/images/dreamx600.jpg" class="img-responsive"></ion-img></p>
                             </div>
                             <div class="col-md-6 text-center animate-box">
-                                <p><img src="assets/images/motivationx600.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive" /></p>
+                                <p><ion-img src="assets/images/motivationx600.jpg" class="img-responsive"></ion-img></p>
                             </div>
                         </div>
 
@@ -178,12 +178,11 @@ export class CharityHome {
 
                     <div class="container">
                         <div class="row">
-                            { this.ngo.team.map(m => (
+                            { this.ngo.team.slice(0, 3).map(m => (
                             <div class="col-md-4">
-                                <div class="fh5co-testimonial text-center animate-box">
-                                    <figure>
-                                        <img src={m.photo.url} alt="user" />
-                                    </figure>
+                                <div class="fh5co-team text-center animate-box">
+
+                                    <ion-img class='round' style={{'margin': '0em 6em', 'border-radius': '50px !important', 'margin-top': '-8em' }} src={m.photo.url} alt="user"></ion-img>
 
                                     <div>
                                         <h3> { m.name } </h3>
@@ -271,7 +270,7 @@ export class CharityHome {
                             {this.ngo.media.slice(0, 3).map(m => (
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="fh5co-blog animate-box">
-                                    <a href={m.link}><img class="img-responsive" src={m.photo.url} alt="" style={{'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
+                                    <a href={m.link}><img class="img-responsive media" src={m.photo.url} alt="" style={{ 'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
                                     <div class="blog-text">
                                         <div class="prod-title">
                                             <h3><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
@@ -299,7 +298,13 @@ export class CharityHome {
 
             </div>
 
-        </div>
+        </div>,
+
+        <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+            <ion-fab-button color='secondary' href={`https://api.whatsapp.com/send?phone=${this.ngo.reachOut.phone1}&text=Hi. I like to support ${this.ngo.name}.`}>
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
 
         ];
 

@@ -1,10 +1,10 @@
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'charity-contact',
-  styleUrl: 'charity-contact.css',
+    tag: 'charity-projects',
+    styleUrl: 'projects.css',
 })
-export class CharityContact {
+export class CharityProjects {
 
     @Prop() ngo                 :   any                 =   {};
 
@@ -24,7 +24,7 @@ export class CharityContact {
             <div id="fh5co-page">
                 <charity-header ngo={this.ngo}></charity-header>
 
-                <h1 style={{'text-align': 'center', 'font-size': '32px', 'margin': '64px' }} > Contact us Page </h1>
+                <h1 style={{'text-align': 'center', 'font-size': '32px', 'margin': '64px' }} > Projects Page </h1>
 
                 <charity-footer ngo={this.ngo}></charity-footer>
             </div>

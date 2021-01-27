@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
     tag: 'charity-footer',
-    styleUrl: 'charity-footer.css',
+    styleUrl: 'footer.css',
 })
 export class CharityFooter {
 
