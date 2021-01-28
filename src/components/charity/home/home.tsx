@@ -1,4 +1,4 @@
-import { Component, h, Prop }   from '@stencil/core';
+import { Component, h, Prop }   from    '@stencil/core';
 import * as ngo                 from    '../../../assets/ngo.json';
 
 @Component({
@@ -68,9 +68,9 @@ export class CharityHome {
 
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <img src={s.photo.url} />
+                                        <img src={s.photo.url}/>
                                     </span>
-                                    <div class="feature-copy">
+                                    <div class="feature-copy" style={{ 'padding-left': '4px' }}>
                                         <h3> { s.name }</h3>
                                         <p> { s.description }</p>
                                         { /*
@@ -235,17 +235,23 @@ export class CharityHome {
                     </div>
                     <div class="container">
                         <div class="row text-center">
-                            { this.ngo.projects.map(p => (
-                            <div class="col-md-4 col-sm-4">
+                            { this.ngo.projects.slice(0, 3) .map(p => (
+                            <div class="col-md-4 col-sm-6">
                                 <div class="services animate-box">
-                                    <span><i class="icon-heart"></i></span>
+                                    <img style={{ 'margin-top': '-1em', 'margin-bottom': '2em' }} src={ p.photo.url } />
                                     <h3> { p.name } </h3>
-                                    <p> { p.description.length < 100 ? p.description : p.description.substring(0, 100) + '...' } </p>
+                                    <p style={{ 'max-height': '80px' }}> { p.description.length < 100 ? p.description : p.description.substring(0, 100) + '...' } </p>
                                     <p><a> <ion-router-link href={`/projects/${p.slug}`}> Learn more... </ion-router-link> </a></p>
-                                
                                 </div>
                             </div>
                             )) }
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 text-center animate-box">
+                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/projects" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
+                            </div>
                         </div>
                     </div>
                 </div> : null }
@@ -284,14 +290,11 @@ export class CharityHome {
 
                         </div>
 
-                        { /*
-                        Open issue: https://github.com/ionic-team/ionic-framework/issues/19566#event-2691316521
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/about#media" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
+                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/about/press-coverage" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
                             </div>
                         </div>
-                           */ }
 
                     </div>
                 </div>: null }

@@ -1,17 +1,64 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop }   from    '@stencil/core';
+import * as ngo                 from    '../../../../assets/ngo.json';
 
 @Component({
-  tag: 'charity-press-coverage',
-  styleUrl: 'press-coverage.css',
+    tag: 'charity-press-coverage',
+    styleUrl: 'press-coverage.css',
 })
 export class PressCoverage {
 
-  render() {
-    return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
-  }
+    @Prop() ngo                 :   any                 =   ngo;
+
+    render() {
+
+        return (
+
+        <div id="fh5co-wrapper">
+            <div id="fh5co-page">
+                <charity-header ngo={this.ngo}></charity-header>
+
+                <div class="fh5co-hero">
+                    <div class="fh5co-overlay"></div>
+                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                        <div class="desc animate-box">
+                            <h2> Press Coverage </h2>
+                            <span> What the Press talks about us </span>
+                        </div>
+                    </div>
+                </div>
+
+                { this.ngo.media.length > 0 ?
+                <div id="fh5co-blog-section" class="fh5co-section-gray">
+
+                    <div class="container">
+                        <div class="row row-bottom-padded-md">
+
+                            {this.ngo.media.map(m => (
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="fh5co-blog animate-box">
+                                    <a href={m.link}><img class="img-responsive media" src={m.photo.url} alt="" style={{ 'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
+                                    <div class="blog-text">
+                                        <div class="prod-title">
+                                            <h3 style={{ 'height': '60px', 'overflow': 'hidden' }}><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
+                                            <span class="posted_by"> { new Date(m.date._seconds * 1000).toLocaleDateString("en-US") } </span>
+                                            <p style={{ 'height': '80px', 'overflow': 'hidden' }}> { m.description.length < 60 ? m.description : m.description.substring(0, 60) + '...' } </p>
+                                            <p><a href={m.link}> { m.publicationName } </a></p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            )) }
+
+                        </div>
+                    </div>
+                </div>: null }
+
+            <charity-footer ngo={this.ngo}></charity-footer>
+        </div>
+    </div>
+
+);
+
+    }
 
 }

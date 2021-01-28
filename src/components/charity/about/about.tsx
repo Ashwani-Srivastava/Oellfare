@@ -1,22 +1,28 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop }   from    '@stencil/core';
+import * as ngo                 from    '../../../assets/ngo.json';
 
 @Component({
-    tag: 'charity-about',
-    styleUrl: 'about.css',
+    tag                         :   'charity-about',
+    styleUrl                    :   'about.css',
 })
 export class CharityAbout {
 
-    @Prop() ngo                 :   any                 =   {};
+    @Prop() ngo                 :   any                 =   ngo;
+
+    constructor () {
+        console.log('About :: Constructor');
+    }
 
     async componentWillLoad() {
-        const jsonRawData       =   await fetch('/assets/ngo.json');
-        this.ngo                =   await jsonRawData.json();
+        console.log('About :: Component will load');
+    }
+
+    async componentDidLoad() {
+        console.log('About :: Component did load');
     }
 
 
     render() {
-
-        if(!this.ngo) return '';
 
         return (
 
@@ -39,13 +45,18 @@ export class CharityAbout {
                     <div class="container">
 
                         <div class="row">
-                            <div class="col-md-12 text-center heading-section">
+                            <div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
+                                <h3> Our Mission</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">
                                 <h6>
                                     { this.ngo.mission.map(m => (
                                     <p> { m } </p>
                                 )) }
                                 </h6>
-                                <p> --- Our Mission --- </p>
                             </div>
                         </div>
 
@@ -105,40 +116,6 @@ export class CharityAbout {
                                 </div>
                                 </div>
                             )) }
-                        </div>
-                    </div>
-                </div>: null }
-
-
-                { this.ngo.media.length > 0 ?
-                <div id="fh5co-blog-section" class="fh5co-section-gray">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                                <h3> Media has been soo kind to us </h3>
-                                <p> Work hard in silence, let your success be your noise. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row row-bottom-padded-md">
-
-                            {this.ngo.media.map(m => (
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                <div class="fh5co-blog animate-box">
-                                    <a href={m.link}><img class="img-responsive media" src={m.photo.url} alt="" style={{ 'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
-                                    <div class="blog-text">
-                                        <div class="prod-title">
-                                            <h3><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
-                                            <span class="posted_by"> { m.date } </span>
-                                            <p> { m.description.length < 60 ? m.description : m.description.substring(0, 60) + '...' } </p>
-                                            <p><a href={m.link}> { m.publicationName } </a></p>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            )) }
-
                         </div>
                     </div>
                 </div>: null }
