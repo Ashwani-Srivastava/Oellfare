@@ -1,3 +1,4 @@
-:host {
-  display: block;
+table, td, th {
+    border: 1px solid #aaa;
+    padding: 4px !important;
 }

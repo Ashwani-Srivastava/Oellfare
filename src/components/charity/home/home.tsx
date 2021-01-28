@@ -175,8 +175,6 @@ export class CharityHome {
                 </div>
 
 
-                { this.ngo.team.length > 0 ?
-
                 <div id="fh5co-content-section" class="fh5co-section-gray">
 
                     <div class="container">
@@ -219,7 +217,7 @@ export class CharityHome {
 
                     </div>
 
-                </div>: null }
+                </div>
 
                 { this.ngo.projects.length > 0 ?
                 <div id="fh5co-services-section">

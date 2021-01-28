@@ -41,6 +41,7 @@ export class CharityFooter {
 
                             </p>
                             <p>Copyright 2016 Free Html5 <a href="#">Charity</a>. All Rights Reserved. <br/>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+                            <p>Powered with <a href='https://thegrassroots.app/' target='_blank' style={{ 'color': 'white' }}> Grassroots </a> </p>
                         </div>
 
                     </div>
