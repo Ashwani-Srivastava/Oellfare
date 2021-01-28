@@ -45,7 +45,7 @@ export class CharityProjectsDetail {
                             <div class="col-md-12">
                                 <div class="services animate-box">
                                     <img style={{ 'width': '100%', 'margin-top': '-1em', 'margin-bottom': '2em' }} src={ this.project.photo.url } />
-                                    <p style={{ 'max-height': '80px' }}> { this.project.description } </p>
+                                    <p> { this.project.description } </p>
                                 </div>
                             </div>
                         </div>

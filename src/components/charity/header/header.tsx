@@ -72,7 +72,7 @@ export class CharityHeader {
                                 </ul>
                             </li>
 
-                            <li class='active'>
+                            <li>
                                 <a class="fh5co-sub-ddown"> <ion-router-link href="/projects" color={location.pathname.startsWith('/projects') ? 'primary' : 'medium'} > Projects </ion-router-link> </a>
                                 <ul class="fh5co-sub-menu">
                                     { this.ngo.projects.map(p => (
