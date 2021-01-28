@@ -65,14 +65,18 @@ export class CharityHeader {
                             </li>
 
                             <li>
-                                <a> <ion-router-link color={location.pathname.startsWith('/about') ? 'primary' : 'medium' } href="/about"> About us </ion-router-link> </a>
+                                <a class="fh5co-sub-ddown"> <ion-router-link color={location.pathname.startsWith('/about') ? 'primary' : 'medium' } href="/about"> About us </ion-router-link> </a>
+                                <ul class="fh5co-sub-menu">
+                                    <li><a>  <ion-router-link color={location.pathname.startsWith('/about/press-coverage') ? 'primary' : 'medium' } href='/about/press-coverage' > Press Coverage </ion-router-link> </a></li>
+                                    <li><a>  <ion-router-link color={location.pathname.startsWith('/about/legal') ? 'primary' : 'medium' } href='/about/legal' > Legal </ion-router-link> </a></li>
+                                </ul>
                             </li>
 
                             <li class='active'>
                                 <a class="fh5co-sub-ddown"> <ion-router-link href="/projects" color={location.pathname.startsWith('/projects') ? 'primary' : 'medium'} > Projects </ion-router-link> </a>
                                 <ul class="fh5co-sub-menu">
                                     { this.ngo.projects.map(p => (
-                                        <li><a>  <ion-router-link color={location.pathname.startsWith('/projects/' + p.id) ? 'primary' : 'medium' } href={`/projects/${p.id}`} > { p.name } </ion-router-link> </a></li>
+                                        <li><a>  <ion-router-link color={location.pathname.startsWith('/projects/' + p.slug) ? 'primary' : 'medium' } href={`/projects/${p.slug}`} > { p.name } </ion-router-link> </a></li>
                                     )) }
                                 </ul>
                             </li>

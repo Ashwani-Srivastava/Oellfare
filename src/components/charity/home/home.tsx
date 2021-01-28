@@ -97,6 +97,13 @@ export class CharityHome {
                         </div>
 
 
+                        { this.ngo.video.url.length > 0 ? 
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+                            <iframe style={{ 'width': '100%', 'min-height': '320px' }} src={`https://www.youtube.com/embed/${this.ngo.video.url.split('?v=')[1]}`} frameborder="0" allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </div>
+                        </div>
+                            :
                         <div class="row row-bottom-padded-md">
                             <div class="col-md-12 text-center animate-box">
                                 <p><ion-img src="assets/images/believe-in-yourselfx1440.jpg" class="img-responsive"></ion-img></p>
@@ -108,6 +115,8 @@ export class CharityHome {
                                 <p><ion-img src="assets/images/motivationx600.jpg" class="img-responsive"></ion-img></p>
                             </div>
                         </div>
+                        }
+
 
                         { /*
                         <div class="row">
@@ -153,11 +162,13 @@ export class CharityHome {
                             </div>
                         </div>
 
+                                { /*
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
                                 <a href="#" class="btn btn-primary btn-lg">See More</a>
                             </div>
                         </div>
+                                   */ }
 
 
                     </div>
@@ -167,55 +178,43 @@ export class CharityHome {
                 { this.ngo.team.length > 0 ?
 
                 <div id="fh5co-content-section" class="fh5co-section-gray">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                                <h3>Our Team</h3>
-                                <p> Awesome people behind the whole thing </p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="container">
                         <div class="row">
-                            { this.ngo.team.slice(0, 3).map(m => (
-                            <div class="col-md-4">
-                                <div class="fh5co-team text-center animate-box">
-
-                                    <ion-img class='round' style={{'margin': '0em 6em', 'border-radius': '50px !important', 'margin-top': '-8em' }} src={m.photo.url} alt="user"></ion-img>
-
-                                    <div>
-                                        <h3> { m.name } </h3>
-                                        <p><span> { m.role } </span></p>
+                            <div class="col-md-4 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-12 text-center heading-section animate-box">
+                                        <h3> Why Volunteer here? </h3>
                                     </div>
-
-                                    <p class="fh5co-social-icons">
-
-                                        { m.reachOut.facebook.length !== 0 ?
-                                            <a href={m.reachOut.facebook}><i class="icon-facebook3"></i></a>
-                                        : null }
-
-                                        { m.reachOut.twitter.length !== 0 ?
-                                            <a href={m.reachOut.twitter}><i class="icon-twitter3"></i></a>
-                                        : null }
-
-                                        { m.reachOut.instagram.length !== 0 ?
-                                            <a href={m.reachOut.instagram}><i class="icon-instagram2"></i></a>
-                                        : null }
-
-                                        { m.reachOut.linkedin.length !== 0 ?
-                                            <a href={m.reachOut.linkedin}><i class="icon-linkedin3"></i></a>
-                                        : null }
-
-                                        { m.reachOut.youtube.length !== 0 ?
-                                            <a href={m.reachOut.youtube}><i class="icon-youtube2"></i></a>
-                                        : null }
-
-                                    </p>
-
                                 </div>
+                                { this.ngo.whyVolunteerHere.slice(0, 3).map(w => (
+                                    <div class="feature-text">
+                                        <p>
+                                            <ion-icon name={ w.icon } style={{'margin-right': '8px'}}></ion-icon>
+                                            { w.text }
+                                        </p>
+                                    </div>
+                                )) }
                             </div>
-                            )) }
+
+                            <div class="col-md-4 col-md-offset-2">
+ 
+                                <div class="row">
+                                    <div class="col-md-12 text-center heading-section animate-box">
+                                        <h3> Why your help matters? </h3>
+                                    </div>
+                                </div>
+                                { this.ngo.whyHelpMatters.slice(0, 3).map(w => (
+                                    <div class="feature-text">
+                                        <p>
+                                            <ion-icon name={ w.icon } style={{'margin-right': '8px'}}></ion-icon>
+                                            { w.text }
+                                        </p>
+                                    </div>
+                                )) }
+                                                           
+                            
+                            </div>
                         </div>
 
                     </div>
@@ -242,7 +241,7 @@ export class CharityHome {
                                     <span><i class="icon-heart"></i></span>
                                     <h3> { p.name } </h3>
                                     <p> { p.description.length < 100 ? p.description : p.description.substring(0, 100) + '...' } </p>
-                                    <p><a> <ion-router-link href={`/projects/${p.id}`}> Learn more... </ion-router-link> </a></p>
+                                    <p><a> <ion-router-link href={`/projects/${p.slug}`}> Learn more... </ion-router-link> </a></p>
                                 
                                 </div>
                             </div>
@@ -270,13 +269,13 @@ export class CharityHome {
                             {this.ngo.media.slice(0, 3).map(m => (
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="fh5co-blog animate-box">
-                                    <a href={m.link}><img class="img-responsive media" src={m.photo.url} alt="" style={{ 'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
+                                    <a href={m.link} target='_blank'><img class="img-responsive media" src={m.photo.url} alt="" style={{ 'max-height': '240px', 'object-fit': 'cover', 'object-position': 'top', 'border': '2px solid #eee'}} /></a>
                                     <div class="blog-text">
                                         <div class="prod-title">
                                             <h3><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
-                                            <span class="posted_by"> { m.date } </span>
+                                            <span class="posted_by"> { new Date(m.date._seconds * 1000).toLocaleDateString("en-US") } </span>
                                             <p> { m.description.length < 60 ? m.description : m.description.substring(0, 60) + '...' } </p>
-                                            <p><a href={m.link}> { m.publicationName } </a></p>
+                                            <p><a href={m.link} target='_blank'> { m.publicationName } </a></p>
                                         </div>
                                     </div> 
                                 </div>
@@ -285,11 +284,14 @@ export class CharityHome {
 
                         </div>
 
+                        { /*
+                        Open issue: https://github.com/ionic-team/ionic-framework/issues/19566#event-2691316521
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
                                 <a class="btn btn-primary btn-lg"> <ion-router-link href="/about#media" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
                             </div>
                         </div>
+                           */ }
 
                     </div>
                 </div>: null }

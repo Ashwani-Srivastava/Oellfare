@@ -416,6 +416,7 @@
   "projects": [
     {
       "name": "Job Assistance",
+      "slug": "job-assistance",
       "isActive": true,
       "id": "5ws2B1EK8cWt8zFVN3PG",
       "updatedAt": { "_seconds": 1590691997, "_nanoseconds": 0 },
@@ -441,6 +442,7 @@
       "createdAt": { "_seconds": 1589097574, "_nanoseconds": 0 },
       "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
       "name": "Awareness Campaign",
+      "slug": "awareness-campaign",
       "isActive": true,
       "id": "otfcbFNxDrFz6SD9Zgmf",
       "description": "\"On regular basis Lit the Light participates in different Awareness Campaign all over Chennai and volunteers for different event organised by other NGO’s.\n\nThe different Campaign Lit the Light participated are:\n\nTraffic Awareness Very month last Sunday.\nBeach Cleanup Activity.\nVolunteering for District Level Volleyball Competition.\nGoal: Work with all the NGO’s hand in hand and contribute in Making a better society to Live In.\"",
@@ -461,6 +463,7 @@
       "date": { "_seconds": 1589097538, "_nanoseconds": 318000000 },
       "link": "http://litthelight.org/featured/talent-search/",
       "name": "Talent Search",
+      "slug": "talent-search",
       "createdAt": { "_seconds": 1589097554, "_nanoseconds": 0 },
       "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
       "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2"
@@ -476,6 +479,7 @@
       "updatedAt": { "_seconds": 1589097531, "_nanoseconds": 0 },
       "date": { "_seconds": 1589097515, "_nanoseconds": 843000000 },
       "name": "Recording",
+      "slug": "recording",
       "description": "\"We are currently working on the project of creating a Digital Audio Library for VC students.\nBooks will be recorded in 3 categories i.e. Academic Books, General Books (Motivational, General Knowledge, etc.) and Competitive Exam Books.\nThese audio books will be made available online so that any student can download it at any time and use it. Currently we have about 200 volunteers, just for Recording Books.\nCurrently we have about 200 volunteers, just for Recording Books.\nGoal: To Create a Digital Audio Library, State wise and make it available for students everywhere.\"",
       "id": "qCqSgTr7ovCQM7q91EHs",
       "parent": null,
@@ -495,6 +499,7 @@
       },
       "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
       "name": "Reading",
+      "slug": "reading",
       "parent": null,
       "createdAt": { "_seconds": 1589097511, "_nanoseconds": 0 },
       "link": "http://litthelight.org/featured/reading/"
@@ -503,6 +508,7 @@
       "date": { "_seconds": 1589097184, "_nanoseconds": 719000000 },
       "updatedAt": { "_seconds": 1589097400, "_nanoseconds": 0 },
       "name": "Scribes",
+      "slug": "scribes",
       "isActive": true,
       "photo": {
         "caption": "Photo of Scribes project",
