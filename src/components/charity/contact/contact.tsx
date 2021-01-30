@@ -31,7 +31,8 @@ export class CharityContact {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(images/cover_bg_2.jpg)' }} >
+                    <div class="fh5co-cover text-center">
+                        <img src='/assets/images/contact-001x1024.jpg' class='cover-image' style={{ 'width': '100%', 'fiter': 'brightness(0.75)' }} />
                         <div class="desc animate-box">
                             <h2><strong>Contact</strong> Us</h2>
                         </div>

@@ -32,7 +32,8 @@ export class CharityDonate {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(images/cover_bg_2.jpg)' }} >
+                    <div class="fh5co-cover text-center">
+                        <img src='/assets/charity/images/thank-010x1024.jpg' class='cover-image' />
                         <div class="desc animate-box">
                             <h2><strong>Donate</strong> for Impact</h2>
                         </div>

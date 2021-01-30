@@ -1,5 +1,3 @@
-//import { Build              }   from    '@stencil/core';
-//import { doc                }   from    'rxfire/firestore';
 import { user               }   from    'rxfire/auth';
 
 import { Observable, of     }   from    'rxjs';
@@ -381,23 +379,4 @@ export class AuthServiceController {
 
 export const AuthService        =   new AuthServiceController();
 
-
-
-/*
-Test Scenarios:
-
-1. User with Auth.mail, Auth.phone and Profile
- - Home Page
- - Signup Page          -> Redirect back to home page
- - Mobile OTP Page      -> Redirect back to home page
-2. User with Auth.mail, Auth.phone and NO Profile
- - Home Page            -> Save profile
- - Signup Page          -> Save profile and Redirect back to home page
- - Mobile OTP Pagee     -> Save profile and Redirect back to home page
-3. User with Auth.mail, NO Auth.phone and NO Profile
- - Home Page            -> Redirect to OTP page
- - Signup Page          -> Redirect to OTP page
- - Mobile OTP Page
-
- */
 

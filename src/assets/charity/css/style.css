@@ -219,11 +219,22 @@ figure {
   position: relative;
   height: 400px;
 }
+
+.cover-image {
+    width: 100% !important;
+    filter: brightness(0.75);
+    margin-top: -20%;
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-cover,
   .fh5co-hero {
     height: 300px;
   }
+    .cover-image {
+        margin-top: -3em;
+        height: 300px;
+    }
 }
 .fh5co-cover.fh5co-hero-2,
 .fh5co-hero.fh5co-hero-2 {
@@ -256,6 +267,7 @@ figure {
 .fh5co-cover {
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {

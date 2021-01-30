@@ -30,7 +30,8 @@ export class CharityProjectsDetail {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                    <div class="fh5co-cover text-center">
+                        <img src={this.project.photo.url} class='cover-image' style={{ 'width': '100%', 'fiter': 'brightness(0.75)' }} />
                         <div class="desc animate-box">
                             <h2> { this.project.name } </h2>
                             <span> Our Project </span>
@@ -44,7 +45,6 @@ export class CharityProjectsDetail {
                         <div class="row text-center">
                             <div class="col-md-12">
                                 <div class="services animate-box">
-                                    <img style={{ 'width': '100%', 'margin-top': '-1em', 'margin-bottom': '2em' }} src={ this.project.photo.url } />
                                     <p> { this.project.description } </p>
                                 </div>
                             </div>

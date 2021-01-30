@@ -32,7 +32,8 @@ export class LegalPage {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                    <div class="fh5co-cover text-center">
+                        <img src='/assets/charity/images/books-001x1024.jpg' class='cover-image' />
                         <div class="desc animate-box">
                             <h2> Legal </h2>
                             <span> Transparency and Trust </span>

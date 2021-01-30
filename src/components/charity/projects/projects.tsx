@@ -33,7 +33,8 @@ export class CharityProjects {
 
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                    <div class="fh5co-cover text-center">
+                        <img src='/assets/charity/images/projects-001x1024.jpg' class='cover-image' />
                         <div class="desc animate-box">
                             <h2> Our Projects </h2>
                         </div>

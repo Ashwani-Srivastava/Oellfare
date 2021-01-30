@@ -20,6 +20,7 @@ export class PressCoverage {
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
                     <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style={{ 'background-image': 'url(assets/charity/images/cover_bg_2.jpg)' }} >
+                        <img src='/assets/charity/images/press-001x1024.jpg' class='cover-image' />
                         <div class="desc animate-box">
                             <h2> Press Coverage </h2>
                             <span> What the Press talks about us </span>
