@@ -1,0 +1,19 @@
+volunteer-mini {
+    cursor                      :   pointer;
+}
+
+volunteer-mini ion-img {
+    width                       :   32px;
+    display                     :   inline-block;
+}
+
+volunteer-mini .inline {
+    display                     :   inline;
+    margin                      :   0px;
+}
+
+volunteer-mini span {
+    display                     :   flex;
+    align-items                 :   center;
+}
+

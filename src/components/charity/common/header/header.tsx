@@ -1,8 +1,8 @@
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-    tag: 'charity-header',
-    styleUrl: 'header.css',
+    tag                         :   'charity-header',
+    styleUrl                    :   'header.css',
 })
 export class CharityHeader {
 

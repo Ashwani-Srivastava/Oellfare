@@ -3,8 +3,8 @@ import { PrerenderConfig } from '@stencil/core';
 export const config: PrerenderConfig = {
     hydrateOptions(url) {
         return {
-            prettyHtml: true,
-            runtimeLogging: true
+            prettyHtml: true
+            //runtimeLogging: true
         };
     }
 };

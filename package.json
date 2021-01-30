@@ -16,6 +16,11 @@
     "prel": "npm run build --prod --prerender && firebase deploy --only hosting:css-grassroots"
   },
   "dependencies": {
+    "dayjs": "^1.10.4",
+    "firebase": "^8.2.5",
+    "rxfire": "^4.0.0",
+    "rxjs": "^6.6.3",
+    "ua-parser-js": "^0.7.23"
   },
   "devDependencies": {
     "@ionic/core": "^5.3.2",
