@@ -158,6 +158,8 @@ export class Volunteer extends Doc {
     public bank                 :   VolunteerBank[];
     public residence            :   VolunteerResidence;
     public state                :   State;
+    public isJoined             :   boolean;
+    public whyVolunteer         :   string;
 
     constructor(obj: any = {}) {
 
@@ -175,6 +177,8 @@ export class Volunteer extends Doc {
         this.provider           =   obj.provider        ||  '';
         this.residence          =   new VolunteerResidence(obj.residence || {});
         this.state              =   new State(obj.state);
+        this.isJoined           =   obj.isJoined        ||  false;
+        this.whyVolunteer       =   obj.whyVolunteer    ||  '';
 
         if (this.bank.length === 0) {
             this.bank.push(new VolunteerBank({}));

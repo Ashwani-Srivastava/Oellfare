@@ -1,28 +1,22 @@
-import { EnvironmentConfig  }  from     './environment-config';
-
 class EnvironmentServiceController {
 
-    private m: Map<keyof EnvironmentConfig, any>;
+    public config: any          =   {};
 
     constructor() {
-        // Private constructor, singleton
         this.init();
     }
 
     private init() {
-        if (!window) {
-            return;
+
+        let win;
+        if (typeof window !== 'undefined') {
+            win                 =   window as any;
+        } else {
+            win                 =   global as any;
         }
 
-        const win = window as any;
-        const Grassroots = win.Grassroots;
+        this.config             =   win.config;
 
-        this.m = new Map<keyof EnvironmentConfig, any>(Object.entries(Grassroots.config) as any);
-    }
-
-    get(key: keyof EnvironmentConfig, fallback?: any): any {
-        const value = this.m.get(key);
-        return (value !== undefined) ? value : fallback;
     }
 
 }

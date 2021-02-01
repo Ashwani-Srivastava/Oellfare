@@ -12,6 +12,14 @@ import { Volunteer          }   from    'volunteer/volunteer.model';
 
 import * as ngo                 from    'assets/ngo.json';
 
+/**
+ * 3 States:
+ *  1. Not Logged in. Covers both
+ *      * Not logged in with Gmail
+ *      * Logged in with Gmail, but didn't verify Phone number
+ *  2. Logged in - Did't signedup a Volunteer yet
+ *  3. Logged in - And Signed up as Volunteer
+ */
 @Component({
     tag                         :   'charity-volunteer',
     styleUrl                    :   'volunteer.css',
@@ -20,9 +28,14 @@ export class CharityVolunteer {
 
     @Prop() ngo                 :   any                 =   ngo;
     @State() me                 :   Volunteer           =   null;
+
+    /**
+     * True when Gmail session is present and Mobile number is OTP verified
+     */
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
+    private whyVolunteer        :   string              =   '';
 
     constructor () {
         console.log('Volunteer :: Constructor');
@@ -63,7 +76,7 @@ export class CharityVolunteer {
     }
 
     private async openAuthDrawer() {
-        console.log('show auth popup', EnvironmentService.get('firebase'));
+        console.log('show auth popup', EnvironmentService.config.firebase);
 
         location.hash           =   "login";
 
@@ -75,6 +88,27 @@ export class CharityVolunteer {
         })
         modal.present();
 
+    }
+
+    private handleCommonInput(e, fieldName: string): void {
+        console.log(e.target.value, fieldName);
+        this.whyVolunteer       =   e.target.value;
+    }
+
+    private async joinNgo(): Promise<any> {
+        this.me.isJoined        =   true;
+        this.me.whyVolunteer    =   this.whyVolunteer;
+        this.me.updatedAt       =   new Date();
+
+        await AuthService.saveProfile(this.me);
+    }
+
+    private async unjoinNgo(): Promise<any> {
+        this.me.isJoined        =   false;
+        this.me.whyVolunteer    =   '';
+        this.me.updatedAt       =   new Date();
+
+        await AuthService.saveProfile(this.me);
     }
 
     render() {
@@ -129,13 +163,14 @@ export class CharityVolunteer {
                                         </div>
 
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="row">
 
                                         { !this.isLoggedIn ?
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="button" onClick={() => this.openAuthDrawer()} value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="button" onClick={() => this.openAuthDrawer()} value="Login with Grassroots" class="btn btn-primary" style={{ 'width': '100%' }} />
                                             </div>
                                         </div> : null }
 
@@ -143,6 +178,12 @@ export class CharityVolunteer {
                                             <h3 class="section-title">Volunteer Details</h3>
                                         </div>
                 
+                                        { this.isLoggedIn && this.me?.isJoined === false ?
+                                        <div class="col-md-12">
+                                            <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
+                                        </div> : null }
+
+                                        { !this.me?.isJoined ? <span>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" placeholder="Name" disabled={ !this.isLoggedIn } value={ this.me?.name } />
@@ -155,49 +196,41 @@ export class CharityVolunteer {
                                             </div>
                                         </div>
 
-                                        { /*
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="State" disabled={ !this.isLoggedIn } value={ this.me?.state.name }  />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="District" disabled={ !this.isLoggedIn } value={ this.me?.district.name }  />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Date of Birth" disabled={ !this.isLoggedIn } value={ this.me?.dob.toString() }  />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Profession" disabled={ !this.isLoggedIn } value={ this.me?.name }  />
-                                            </div>
-                                        </div>
-                                           */ }
-
-
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea name="" class="form-control" id="" cols={30} rows={7} placeholder="Why I am joining?" disabled={ !this.isLoggedIn } ></textarea>
+                                                <textarea class="form-control" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'whyVolunteer') } 
+                                                    cols={30} rows={7} 
+                                                    placeholder="Why I am joining?" 
+                                                    disabled={ !this.isLoggedIn } ></textarea>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Join as a Volunteer" class="btn btn-primary" style={{ 'width': '100%' }} disabled={ !this.isLoggedIn } />
+                                                <input type="submit" 
+                                                    onClick={() => this.joinNgo()}
+                                                    value="Join as a Volunteer"
+                                                    class="btn btn-primary"
+                                                    style={{ 'width': '100%' }}
+                                                    disabled={ !this.isLoggedIn } />
                                             </div>
+                                        </div> </span> : <span>
+ 
+                                        <div class="col-md-12">
+                                            <h5> Already Volunteering as { this.me?.name }. Would you like to <a href='#' onClick={() =>  this.unjoinNgo() }> Unjoin </a> </h5>
                                         </div>
+
+                                        { /* Show profile here (For Later) */ }
+
+                                        </span> }
 
                                     </div>
                                 </div>
                             </div>
                         </form>
+
+                        <div class='row'> {/* To enlist all volunteers here (For Later) */ } </div>
                     </div>
                 </div>
 
@@ -207,6 +240,14 @@ export class CharityVolunteer {
 
     );
 
+    }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
     }
 
 }

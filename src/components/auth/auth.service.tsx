@@ -74,7 +74,7 @@ export class AuthServiceController {
 
         const router        :   HTMLIonRouterElement=   document.querySelector('ion-router');
 
-        if (['prod', 'live'].includes(EnvironmentService.get('build'))) {
+        if (['prod', 'live'].includes(EnvironmentService.config.build)) {
             router.addEventListener('ionRouteDidChange',(_e: any)=>{
                 AnalyticsService.trackPage();
             });

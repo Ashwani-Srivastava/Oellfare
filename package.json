@@ -14,7 +14,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch",
     "generate": "stencil generate",
-    "prel": "npm run build --prod --prerender && firebase deploy --only hosting:css-grassroots"
+    "prel": "stencil build --dev --prod --prerender && firebase deploy --only hosting:css-grassroots"
   },
   "dependencies": {
     "dayjs": "^1.10.4",

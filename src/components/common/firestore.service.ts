@@ -27,8 +27,8 @@ export class FirestoreServiceController {
 
             if (this.firebase.apps.length > 0) return;
 
-            this.firebase.initializeApp(EnvironmentService.get('firebase'));
-            if (EnvironmentService.get('build') === 'live') {
+            this.firebase.initializeApp(EnvironmentService.config.firebase);
+            if (EnvironmentService.config.build === 'live') {
                 this.firebase.analytics();
             }
 

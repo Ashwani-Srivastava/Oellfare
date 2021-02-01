@@ -47,6 +47,10 @@ export class AuthDrawerComponent {
                     this.formValue.name = this.me.name;
                     this.formValue.email = this.me.email;
                     this.isLoggedIn=this.me && this.me.id.length > 0;
+
+                    if (this.me.phone.length > 0) {
+                        this.closeModal();
+                    }
                 }, error => {
                     DialogService.dismissDefaultLoader();
                     DialogService.presentAlert('Auth Error', JSON.stringify(error));

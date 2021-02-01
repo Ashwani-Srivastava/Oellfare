@@ -1,11 +1,17 @@
-import { Build, Component, h, Prop }   from    '@stencil/core';
+import { Build, Component,
+         h, Prop}   from    '@stencil/core';
+//import { Build, Component,
+//         h, Prop, State     }   from    '@stencil/core';
+//import { modalController    }   from    "@ionic/core";
+//
+//import { filter, takeWhile  }   from    'rxjs/operators';
+//
+//import { AuthService        }   from    'auth/auth.service';
+//import { DialogService      }   from    'common/dialog.service';
+//import { EnvironmentService }   from    'common/environment.service';
+//import { Logger             }   from    'common/logger';
+//import { Volunteer          }   from    'volunteer/volunteer.model';
 
-import { of                 }   from    'rxjs';
-import { filter,
-        switchMap, takeWhile}   from    'rxjs/operators';
-
-import { AuthService        }   from    "auth/auth.service";
-import { Logger             }   from    'common/logger';
 
 import * as ngo                 from    'assets/ngo.json';
 
@@ -16,7 +22,7 @@ import * as ngo                 from    'assets/ngo.json';
 export class CharityDonate {
 
     @Prop() ngo                 :   any                 =   ngo;
-    private alive               :   boolean             =   true;
+    //private alive               :   boolean             =   true;
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -26,9 +32,11 @@ export class CharityDonate {
         console.log('Donate :: Component will load');
 
         if (Build.isBrowser) {
+            /*
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
                 this.initialize();
             });
+             */
         }
 
     }
@@ -37,17 +45,11 @@ export class CharityDonate {
         console.log('Donate :: Component did load');
     }
 
+        /*
     private async initialize() {
         Logger.info('Donate :: Initialize :: ');
-
-        AuthService.vol$.pipe(
-            takeWhile(_f => this.alive),
-            switchMap(_u => {
-                return of(_u);
-            })
-        ).subscribe(_vol => {
-        });
     }
+         */
 
     render() {
 
@@ -233,6 +235,14 @@ export class CharityDonate {
 
         );
 
+    }
+
+    connectedCallback() {
+        //this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        //this.alive              =   false;
     }
 
 }
