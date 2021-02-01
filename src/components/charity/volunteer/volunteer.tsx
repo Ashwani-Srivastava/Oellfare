@@ -1,5 +1,16 @@
-import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../assets/ngo.json';
+import { Build, Component,
+         h, Prop, State     }   from    '@stencil/core';
+import { modalController    }   from    "@ionic/core";
+
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
+import { DialogService      }   from    'common/dialog.service';
+import { EnvironmentService }   from    'common/environment.service';
+import { Logger             }   from    'common/logger';
+import { Volunteer          }   from    'volunteer/volunteer.model';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'charity-volunteer',
@@ -8,6 +19,10 @@ import * as ngo                 from    '../../../assets/ngo.json';
 export class CharityVolunteer {
 
     @Prop() ngo                 :   any                 =   ngo;
+    @State() me                 :   Volunteer           =   null;
+    @State() isLoggedIn         :   boolean             =   false;
+
+    private alive               :   boolean             =   true;
 
     constructor () {
         console.log('Volunteer :: Constructor');
@@ -15,10 +30,47 @@ export class CharityVolunteer {
 
     async componentWillLoad() {
         console.log('Volunteer :: Component will load');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
+                DialogService.presentDefaultLoader();
+
+                AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
+
+                    DialogService.dismissDefaultLoader();
+                    Logger.info('AuthDrawer :: Component will load :: vol$', vol);
+                    this.me     =   vol;
+                    this.isLoggedIn=AuthService.me && AuthService.me.id.length > 0 && AuthService.me.phone.length > 0;
+
+                }, error => {
+                    DialogService.dismissDefaultLoader();
+                    DialogService.presentAlert('Auth Error', JSON.stringify(error));
+                }); 
+            });
+
+        }
+
+
     }
 
     async componentDidLoad() {
         console.log('Volunteer :: Component did load');
+    }
+
+    private async showAuthPopup() {
+        console.log('show auth popup', EnvironmentService.get('firebase'));
+
+        location.hash           =   "login";
+
+        const modal             :   HTMLIonModalElement =   await modalController.create({
+            component           :   'auth-drawer',
+            cssClass            :   'auth-modal',
+            swipeToClose        :   false,
+            mode                :   'ios'
+        })
+        modal.present();
+
     }
 
     render() {
@@ -76,35 +128,12 @@ export class CharityVolunteer {
                                 <div class="col-md-6">
                                     <div class="row">
 
+                                        { !this.isLoggedIn ?
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="button" value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="button" onClick={() => this.showAuthPopup()} value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
                                             </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Mobile" />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="button" value="Send Otp" class="btn btn-primary" style={{ 'width': '100%', 'margin': '4px 0px' }} />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="OTP" />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="submit" value="Verify OTP" class="btn btn-primary" style={{ 'width': '100%', 'margin': '4px 0px'  }} />
-                                            </div>
-                                        </div>
+                                        </div> : null }
 
                                         <div class="col-md-12">
                                             <h3 class="section-title">Volunteer Details</h3>
@@ -112,50 +141,50 @@ export class CharityVolunteer {
                 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Name" />
+                                                <input type="text" class="form-control" placeholder="Name" disabled={ !this.isLoggedIn } value={ this.me?.name } />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Email" />
+                                                <input type="text" class="form-control" placeholder="Email" disabled={ !this.isLoggedIn } value={ this.me?.email }  />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="State" />
+                                                <input type="text" class="form-control" placeholder="State" disabled={ !this.isLoggedIn } value={ this.me?.state.name }  />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="District" />
+                                                <input type="text" class="form-control" placeholder="District" disabled={ !this.isLoggedIn } value={ this.me?.district.name }  />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Date of Birth" />
+                                                <input type="text" class="form-control" placeholder="Date of Birth" disabled={ !this.isLoggedIn } value={ this.me?.dob.toString() }  />
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Profession" />
+                                                <input type="text" class="form-control" placeholder="Profession" disabled={ !this.isLoggedIn } value={ this.me?.name }  />
                                             </div>
                                         </div>
 
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea name="" class="form-control" id="" cols={30} rows={7} placeholder="Why I am joining?"></textarea>
+                                                <textarea name="" class="form-control" id="" cols={30} rows={7} placeholder="Why I am joining?" disabled={ !this.isLoggedIn } ></textarea>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Join as a Volunteer" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="submit" value="Join as a Volunteer" class="btn btn-primary" style={{ 'width': '100%' }} disabled={ !this.isLoggedIn } />
                                             </div>
                                         </div>
 
@@ -165,9 +194,6 @@ export class CharityVolunteer {
                         </form>
                     </div>
                 </div>
-
-
-
 
                 <charity-footer ngo={this.ngo}></charity-footer>
             </div>

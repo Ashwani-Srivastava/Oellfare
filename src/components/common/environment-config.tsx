@@ -3,6 +3,7 @@
 export interface EnvironmentConfig {
     baseUrl                     :   string;
     build                       :   string;
+    firebase                    :   any;
 }
 
 export function setupConfig(config: EnvironmentConfig) {

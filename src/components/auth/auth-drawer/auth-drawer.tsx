@@ -14,14 +14,12 @@ import { UtilityService     }   from    'common/utility.service';
     styleUrl                    :   "auth-drawer.css",
 })
 export class AuthDrawerComponent {
+
     @Element() el               :   HTMLElement;
     @State() mode               :   string              =   'login';
     @State() otpSent            :   boolean             =   false;
-    private router              :   HTMLIonRouterElement=   document.querySelector('ion-router');
     private alive               :   boolean             =   true;
     private recaptchaVerifier   :   any;
-
-    private isCustomForm        :   boolean             =   false;
 
     @State() formValue          :   any                 =   {
         name                    :   '',
@@ -36,45 +34,23 @@ export class AuthDrawerComponent {
 
         if (Build.isBrowser) {
 
-            const pathName      =   location.pathname;
-
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
                 DialogService.presentDefaultLoader();
 
                 AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
 
-                    if (this.isCustomForm) return;
-
                     DialogService.dismissDefaultLoader();
                     Logger.info('AuthDrawer :: Component will load :: vol$', vol);
-
-                    let fragments;
-                    if (pathName.startsWith('/auth')) {
-                        fragments=pathName.split('/');
-                        fragments.shift();
-                        fragments.shift();
-                        fragments.shift();
-                    } else {
-                        fragments = ['return', pathName.replace(/\//g, '$$$$$')]
-                    }
-
-                    const actionParams= fragments.join('/');
 
                     if (vol.id.length > 0) {
                         if (vol.phone.length === 0) {
                             this.closeModal();
-                            this.router.push(`number-verification/${actionParams}`);
                             /*
+                            this.router.push(`number-verification/${actionParams}`);
                         } else if (vol.dob && vol.dob.getFullYear() === 1900) {
                             this.closeModal();
                             this.router.push(`finish-signup/${actionParams}`);
                              */
-                        } else if ( actionParams.startsWith('return') ) {
-                            const returnUrl =   fragments[1].replace(/\$\$\$/g, '/');
-                            this.closeModal();
-                            this.router.push(returnUrl);
-                        } else {
-                            this.router.push('/');
                         }
                     } else {
                         // No session. Remain here.
@@ -189,8 +165,6 @@ export class AuthDrawerComponent {
 
         DialogService.presentDefaultLoader();
 
-        this.isCustomForm       =   true;
-
         await AuthService.createAccountAndSendOtp(
             this.formValue.email,
             this.formValue.countryCode,
@@ -241,6 +215,10 @@ export class AuthDrawerComponent {
 
     }
 
+    private isLoggedIn(): boolean {
+        return !AuthService.me || AuthService.me?.id.length === 0;
+    }
+
     render() {
         return [
             <div class="auth-drawer-wrapper">
@@ -260,29 +238,14 @@ export class AuthDrawerComponent {
                 <div class="content-wrapper">
                 <ion-grid>
 
-                    <div class="mb-16 mt-16"> 
-                        <button class="sign-in-sign-up-btn ion-activatable ripple-parent transform-onclick" onClick={this.googleSignupTapped.bind(this)}>
-                            <ion-icon src="../../../assets/images/google-logo.svg" 
-                                slot="start" class="mr-8 icon">
-                            </ion-icon>
-                            <span class="level-4-text">{this.mode === 'login' ? 'Login': 'Sign Up'} with Gmail</span>
-                            <ion-ripple-effect></ion-ripple-effect>
-                        </button>
-                    </div>
+                    <ion-item lines='none' class='ion-no-padding'> 
+                        <ion-button onClick={() => this.googleSignupTapped() } style={{ 'width': '100%', 'height': '44px' }} >
+                            <ion-icon name="logo-google" slot="start"> </ion-icon>
+                            {this.mode === 'login' ? 'Login with Gmail': 'Sign Up'}
+                        </ion-button>
+                    </ion-item>
 
-					<ion-row>
-						<ion-col>
-							<div class="brb-ce mr-16 pt-24 mb-24"></div>
-						</ion-col>
-						<ion-col size="1" class="pt-16 align-center">
-							<ion-label class="ff-regular">or</ion-label>
-						</ion-col>
-						<ion-col>
-							<div class="brb-ce ml-16 pt-24 mb-24"></div>
-						</ion-col>
-					</ion-row>
-
-                    <ion-item class="br-t br-r br-l br-rt mt-16">
+                    <ion-item class="br-t br-r br-l br-rt" disabled={ this.isLoggedIn() }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Name
 						</ion-label>
@@ -290,7 +253,7 @@ export class AuthDrawerComponent {
 						</ion-input>
 					</ion-item>
 
-					<ion-item class="br-r br-l">
+					<ion-item class="br-r br-l" disabled={ this.isLoggedIn() }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Email
 						</ion-label>
@@ -299,7 +262,7 @@ export class AuthDrawerComponent {
 					</ion-item>
 
 
-					<ion-item class="br-r br-l">
+					<ion-item class="br-r br-l" disabled={ this.isLoggedIn() }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Country/Region
 						</ion-label>
@@ -310,7 +273,7 @@ export class AuthDrawerComponent {
 						</ion-select>
 					</ion-item>
 
-					<ion-item class="br-r br-l" lines="none">
+					<ion-item class="br-r br-l" lines="none" disabled={ this.isLoggedIn() }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Phone Number
 						</ion-label>
@@ -323,7 +286,7 @@ export class AuthDrawerComponent {
 
                     <div id="recaptcha-verifier"></div>
 
-					<ion-item class="br-b br-r br-l br-rb" lines="none">
+					<ion-item class="br-b br-r br-l br-rb" lines="none" disabled={ this.isLoggedIn() }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							OTP
 						</ion-label>

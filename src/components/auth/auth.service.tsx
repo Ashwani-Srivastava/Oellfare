@@ -7,7 +7,6 @@ import { shareReplay        }   from    'rxjs/operators';
 
 import { AnalyticsService   }   from    'common/analytics.service';
 import { DialogService      }   from    'common/dialog.service';
-import { ConfigService      }   from    'common/config.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { FirestoreService   }   from    'common/firestore.service';
 import { Logger             }   from    'common/logger';
@@ -88,12 +87,9 @@ export class AuthServiceController {
                 if (firebaseUser) {
                     localStorage.setItem('username', firebaseUser.displayName);
                     localStorage.setItem('userid', firebaseUser.uid);
-                }
-
-                if (firebaseUser) {
 
                     const vol   =   this.prepareUserdata(firebaseUser);
-                    const ref   =   FirestoreService.fetchSingleDocument('Volunteer', vol.id, Volunteer);
+                    const ref   =   FirestoreService.fetchSingleSubDocument('Ngo', 'jjewCbG2olNnNYlxxTRa', 'Volunteer', vol.id, Volunteer);
 
                     return ref.pipe(
                         map(_vol => {
@@ -155,8 +151,7 @@ export class AuthServiceController {
      */
 
     public saveProfile(vol: Volunteer): Promise<void> {
-        debugger;
-        return FirestoreService.addDocument('Volunteer', vol.id, vol.toJson());
+        return FirestoreService.addSubDocument('Ngo', 'jjewCbG2olNnNYlxxTRa', 'Volunteer', vol.id, vol.toJson());
     }
 
     public getAuth(): any {

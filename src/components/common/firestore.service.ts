@@ -6,7 +6,7 @@ import { map, catchError                }   from    'rxjs/operators';
 import { doc                }   from    'rxfire/firestore';
 import { collectionData     }   from    'rxfire/firestore';
 
-import { ConfigService      }   from    'common/config.service';
+import { EnvironmentService }   from    'common/environment.service';
 
 export class FirestoreServiceController {
 
@@ -27,8 +27,8 @@ export class FirestoreServiceController {
 
             if (this.firebase.apps.length > 0) return;
 
-            this.firebase.initializeApp(ConfigService.firbaseKeys[ConfigService.build]);
-            if (ConfigService.build === 'live') {
+            this.firebase.initializeApp(EnvironmentService.get('firebase'));
+            if (EnvironmentService.get('build') === 'live') {
                 this.firebase.analytics();
             }
 
