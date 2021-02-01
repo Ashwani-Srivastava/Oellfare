@@ -8,6 +8,7 @@ import { shareReplay        }   from    'rxjs/operators';
 import { AnalyticsService   }   from    'common/analytics.service';
 import { DialogService      }   from    'common/dialog.service';
 import { ConfigService      }   from    'common/config.service';
+import { EnvironmentService }   from    'common/environment.service';
 import { FirestoreService   }   from    'common/firestore.service';
 import { Logger             }   from    'common/logger';
 import { Volunteer          }   from    'volunteer/volunteer.model';
@@ -74,7 +75,7 @@ export class AuthServiceController {
 
         const router        :   HTMLIonRouterElement=   document.querySelector('ion-router');
 
-        if (['prod', 'live'].includes(ConfigService.build)) {
+        if (['prod', 'live'].includes(EnvironmentService.get('build'))) {
             router.addEventListener('ionRouteDidChange',(_e: any)=>{
                 AnalyticsService.trackPage();
             });

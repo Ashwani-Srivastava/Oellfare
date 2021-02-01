@@ -1,10 +1,32 @@
-import { Component, h } from '@stencil/core';
+import { Build, Component, h }   from    '@stencil/core';
+
+import { AuthService        }   from    'auth/auth.service';
+import { ConfigService      }   from    'common/config.service';
+import { Logger             }   from    'common/logger';
 
 @Component({
-    tag: 'app-root',
-    styleUrl: 'app-root.css',
+    tag                         :   'app-root',
+    styleUrl                    :   'app-root.css',
 })
 export class AppRoot {
+
+    constructor() {
+        Logger.info(`AppRoot Component :: Constructor :: App version :: v${ConfigService.appVersion}`);
+
+        if (Build.isBrowser) {
+            AuthService.initialize();
+        }
+    }
+
+    /*----------------------------------------------------------*/
+    /*-------------------- Lifecycle Hooks ---------------------*/
+    /*----------------------------------------------------------*/
+
+    async componentWillLoad() {
+        Logger.info('App root :: will load');
+    }
+
+
     render() {
         return (
             <ion-app>

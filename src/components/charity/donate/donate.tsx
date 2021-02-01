@@ -1,5 +1,13 @@
-import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../assets/ngo.json';
+import { Build, Component, h, Prop }   from    '@stencil/core';
+
+import { of                 }   from    'rxjs';
+import { filter,
+        switchMap, takeWhile}   from    'rxjs/operators';
+
+import { AuthService        }   from    "auth/auth.service";
+import { Logger             }   from    'common/logger';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'charity-donate',
@@ -8,6 +16,7 @@ import * as ngo                 from    '../../../assets/ngo.json';
 export class CharityDonate {
 
     @Prop() ngo                 :   any                 =   ngo;
+    private alive               :   boolean             =   true;
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -15,10 +24,29 @@ export class CharityDonate {
 
     async componentWillLoad() {
         console.log('Donate :: Component will load');
+
+        if (Build.isBrowser) {
+            AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
+                this.initialize();
+            });
+        }
+
     }
 
     async componentDidLoad() {
         console.log('Donate :: Component did load');
+    }
+
+    private async initialize() {
+        Logger.info('Donate :: Initialize :: ');
+
+        AuthService.vol$.pipe(
+            takeWhile(_f => this.alive),
+            switchMap(_u => {
+                return of(_u);
+            })
+        ).subscribe(_vol => {
+        });
     }
 
     render() {
