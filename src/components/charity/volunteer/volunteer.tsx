@@ -33,6 +33,10 @@ export class CharityVolunteer {
 
         if (Build.isBrowser) {
 
+            if (location.hash === '#login') {
+                this.openAuthDrawer();
+            }
+
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
                 DialogService.presentDefaultLoader();
 
@@ -58,7 +62,7 @@ export class CharityVolunteer {
         console.log('Volunteer :: Component did load');
     }
 
-    private async showAuthPopup() {
+    private async openAuthDrawer() {
         console.log('show auth popup', EnvironmentService.get('firebase'));
 
         location.hash           =   "login";
@@ -131,7 +135,7 @@ export class CharityVolunteer {
                                         { !this.isLoggedIn ?
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="button" onClick={() => this.showAuthPopup()} value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="button" onClick={() => this.openAuthDrawer()} value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
                                             </div>
                                         </div> : null }
 
@@ -151,6 +155,7 @@ export class CharityVolunteer {
                                             </div>
                                         </div>
 
+                                        { /*
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" placeholder="State" disabled={ !this.isLoggedIn } value={ this.me?.state.name }  />
@@ -174,6 +179,7 @@ export class CharityVolunteer {
                                                 <input type="text" class="form-control" placeholder="Profession" disabled={ !this.isLoggedIn } value={ this.me?.name }  />
                                             </div>
                                         </div>
+                                           */ }
 
 
                                         <div class="col-md-12">

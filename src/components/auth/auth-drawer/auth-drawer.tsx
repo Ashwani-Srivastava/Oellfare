@@ -8,6 +8,7 @@ import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { Logger             }   from    'common/logger';
 import { UtilityService     }   from    'common/utility.service';
+import { Volunteer          }   from    'volunteer/volunteer.model';
 
 @Component({
     tag                         :   "auth-drawer",
@@ -18,6 +19,8 @@ export class AuthDrawerComponent {
     @Element() el               :   HTMLElement;
     @State() mode               :   string              =   'login';
     @State() otpSent            :   boolean             =   false;
+    @State() me                 :   Volunteer           =   null;
+    @State() isLoggedIn         :   boolean             =   false;
     private alive               :   boolean             =   true;
     private recaptchaVerifier   :   any;
 
@@ -38,28 +41,17 @@ export class AuthDrawerComponent {
                 DialogService.presentDefaultLoader();
 
                 AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
-
                     DialogService.dismissDefaultLoader();
                     Logger.info('AuthDrawer :: Component will load :: vol$', vol);
-
-                    if (vol.id.length > 0) {
-                        if (vol.phone.length === 0) {
-                            this.closeModal();
-                            /*
-                            this.router.push(`number-verification/${actionParams}`);
-                        } else if (vol.dob && vol.dob.getFullYear() === 1900) {
-                            this.closeModal();
-                            this.router.push(`finish-signup/${actionParams}`);
-                             */
-                        }
-                    } else {
-                        // No session. Remain here.
-                    }
-
+                    this.me     =   vol;
+                    this.formValue.name = this.me.name;
+                    this.formValue.email = this.me.email;
+                    this.isLoggedIn=this.me && this.me.id.length > 0;
                 }, error => {
                     DialogService.dismissDefaultLoader();
                     DialogService.presentAlert('Auth Error', JSON.stringify(error));
                 }); 
+
             });
 
         }
@@ -165,10 +157,8 @@ export class AuthDrawerComponent {
 
         DialogService.presentDefaultLoader();
 
-        await AuthService.createAccountAndSendOtp(
-            this.formValue.email,
-            this.formValue.countryCode,
-            this.formValue.phone,
+        AuthService.confirmationResult = await AuthService.sendOTP(
+            this.formValue.countryCode + this.formValue.phone,
             this.recaptchaVerifier
         );
 
@@ -215,10 +205,6 @@ export class AuthDrawerComponent {
 
     }
 
-    private isLoggedIn(): boolean {
-        return !AuthService.me || AuthService.me?.id.length === 0;
-    }
-
     render() {
         return [
             <div class="auth-drawer-wrapper">
@@ -238,31 +224,32 @@ export class AuthDrawerComponent {
                 <div class="content-wrapper">
                 <ion-grid>
 
+                    { !this.isLoggedIn ?
                     <ion-item lines='none' class='ion-no-padding'> 
                         <ion-button onClick={() => this.googleSignupTapped() } style={{ 'width': '100%', 'height': '44px' }} >
                             <ion-icon name="logo-google" slot="start"> </ion-icon>
                             {this.mode === 'login' ? 'Login with Gmail': 'Sign Up'}
                         </ion-button>
-                    </ion-item>
+                    </ion-item> : null }
 
-                    <ion-item class="br-t br-r br-l br-rt" disabled={ this.isLoggedIn() }>
+                    <ion-item class="br-t br-r br-l br-rt" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Name
 						</ion-label>
-						<ion-input class="ff-regular" type="text" onIonChange={ (e) => this.handleCommonInput(e, 'name') }>
+						<ion-input class="ff-regular" type="text" onIonChange={ (e) => this.handleCommonInput(e, 'name') } disabled={true} value={ this.formValue.name } >
 						</ion-input>
 					</ion-item>
 
-					<ion-item class="br-r br-l" disabled={ this.isLoggedIn() }>
+					<ion-item class="br-r br-l" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Email
 						</ion-label>
-						<ion-input class="ff-regular" type="email" onIonChange={ (e) => this.handleCommonInput(e, 'email') }>
+						<ion-input class="ff-regular" type="email" onIonChange={ (e) => this.handleCommonInput(e, 'email') } disabled={true} value={ this.formValue.email } >
 						</ion-input>
 					</ion-item>
 
 
-					<ion-item class="br-r br-l" disabled={ this.isLoggedIn() }>
+					<ion-item class="br-r br-l" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Country/Region
 						</ion-label>
@@ -273,7 +260,7 @@ export class AuthDrawerComponent {
 						</ion-select>
 					</ion-item>
 
-					<ion-item class="br-r br-l" lines="none" disabled={ this.isLoggedIn() }>
+					<ion-item class="br-r br-l" lines="none" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							Phone Number
 						</ion-label>
@@ -286,7 +273,7 @@ export class AuthDrawerComponent {
 
                     <div id="recaptcha-verifier"></div>
 
-					<ion-item class="br-b br-r br-l br-rb" lines="none" disabled={ this.isLoggedIn() }>
+					<ion-item class="br-b br-r br-l br-rb" lines="none" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
 							OTP
 						</ion-label>
