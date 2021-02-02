@@ -1,64 +1,64 @@
 {
-  "project": { "name": "", "id": "" },
-  "name": "General Donation",
-  "isBroadcasted": false,
-  "block": { "name": "", "id": 0 },
-  "donationMin": 100,
-  "ngo": {
-    "logo": {
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_logo.jpg?alt=media",
-      "caption": "Caption of Chennai Social Service photo"
-    },
-    "id": "71CJnfEkwRkHX90onkUR",
-    "slug": "chennai-social-service",
-    "name": "Chennai Social Service"
-  },
-  "id": "Gvs9CQhxKuMYUeprbeSN",
-  "startDate": { "_seconds": 1611483023, "_nanoseconds": 135000000 },
-  "updatedAt": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
-  "commission": 5,
   "status": 0,
-  "district": { "id": 3100, "name": "Chennai" },
-  "donation": { "required": 100000, "count": 0, "collected": 0 },
-  "aboutNgo": "Chennai Social service is a registered non governmental organization (NGO) with about 1400 online members and 75 active volunteers. CSS has been rendering its service to chennai city since July 27, 2006. The activities of CSS revolve around nine different teams. The Nine teams of CSS are: * Aravanaipu * Child Abuse Prevention * Disaster Management Group * Environmental Care Group * Gramudharan * Nalanda * Red Drops * Road Safety Group * VScribe. All these teams work based on their vision statement by their members. The design is such that, the achievement of vision of each team are the steps of ladder which in turn lead to the vision of CSS.",
-  "shortCode": "",
-  "coverPhoto": [
-    {
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Ffundraiser%2FGvs9CQhxKuMYUeprbeSN%2Foriginal_cover.jpg?alt=media&token=159626b4-9c53-4a50-8953-892722b4ffaf",
-      "caption": ""
-    }
-  ],
-  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
   "slug": "general-donation",
-  "createdAt": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
+  "video": { "caption": "", "url": "" },
   "coordinators": [
     {
-      "priority": 200,
-      "phone": "6385051777",
-      "name": "Team Grassroots",
+      "priority": 0,
+      "email": "saiy2k@gmail.com",
       "ngo": {
-        "id": "71CJnfEkwRkHX90onkUR",
-        "name": "Chennai Social Service",
-        "slug": "chennai-social-service",
-        "logo": { "caption": "", "url": "" }
+        "id": "jjewCbG2olNnNYlxxTRa",
+        "slug": "gfoi",
+        "logo": { "url": "", "caption": "" },
+        "name": "GFoI"
       },
-      "email": "thegrassrootsapp@gmail.com",
-      "photo": { "url": "", "caption": "" },
-      "id": "OBIB4vabR7PrG2y6WXYpLph6l342"
+      "name": "saiy2k",
+      "id": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "photo": { "caption": "", "url": "" },
+      "phone": "+919952998132"
     }
   ],
-  "recentUpdate": [],
-  "isActive": true,
+  "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+  "id": "uRY8PLS9FOKHKjyb3aHG",
+  "donation": { "collected": 0, "required": 50000, "count": 0 },
+  "createdAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "commission": 5,
+  "fullUrl": "",
   "shortUrl": "",
-  "donationSlot": [],
-  "aboutProject": "General donation towards our Relief activities",
   "state": { "id": 31, "name": "Tamil Nadu" },
-  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "donationBtnText": "Donate",
+  "startDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
+  "donationMin": 100,
+  "donationSlot": [],
+  "coverPhoto": [
+    {
+      "caption": "",
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Ffundraiser%2FuRY8PLS9FOKHKjyb3aHG%2Foriginal_cover.jpg?alt=media&token=3521bb76-d114-4f12-ac68-4d53a895852e"
+    }
+  ],
+  "aboutProject": "About the Ngo",
+  "isBroadcasted": false,
+  "project": { "name": "", "id": "" },
+  "shortCode": "",
   "aggregate": { "update": 0, "fork": 0 },
-  "video": { "url": "", "caption": "" },
+  "donationBtnText": "Donate",
+  "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
   "donationMax": 10000,
-  "endDate": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
+  "ngo": {
+    "logo": {
+      "caption": "Caption of GFoI photo",
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_logo.jpg?alt=media"
+    },
+    "name": "GFoI",
+    "slug": "gfoi",
+    "id": "jjewCbG2olNnNYlxxTRa"
+  },
+  "block": { "id": 0, "name": "" },
+  "district": { "id": 3100, "name": "Chennai" },
+  "aboutNgo": "About the Ngo",
+  "endDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
+  "updatedAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "isActive": true,
   "cause": { "id": 0, "name": "" },
-  "fullUrl": ""
+  "name": "General Donation",
+  "recentUpdate": []
 }

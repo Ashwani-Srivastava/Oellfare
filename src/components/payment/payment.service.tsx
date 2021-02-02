@@ -5,7 +5,8 @@
 //         map                }   from    'rxjs/operators';
 
 import { AuthService        }   from    'auth/auth.service';
-import { ConfigService      }   from    'common/config.service';
+//import { ConfigService      }   from    'common/config.service';
+import { EnvironmentService }   from    'common/environment.service';
 import { FirestoreService   }   from    'common/firestore.service';
 import { Gateway            }   from    'common/common.model';
 import { Fundraiser,
@@ -188,7 +189,7 @@ export class PaymentServiceController {
     public async showRazorpay(pay: Payment): Promise<Payment> {
         return new Promise((resolve, reject) => {
             const options       =   {
-                "key"           :   ConfigService.razorpayKey, // Enter the Key ID generated from the Dashboard
+                "key"           :   EnvironmentService.config.razorpay.key, // Enter the Key ID generated from the Dashboard
                 "amount"        :   pay.amount * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                 "currency"      :   "INR",
                 "name"          :   pay.ngo.name,
@@ -232,12 +233,13 @@ export class PaymentServiceController {
     }
 
     private getDonationURL(pay: Payment): string {
-        const baseURL           =   ConfigService.baseCFURL[ConfigService.build];
+        debugger
+        const baseURL           =   EnvironmentService.config.baseCFUrl;
         return `${baseURL}/createRPOrder?amount=${pay.amount}&paymentId=${pay.id}`
     }
 
     private getPaidURL(pay: Payment): string {
-        const baseURL           =   ConfigService.baseCFURL[ConfigService.build];
+        const baseURL           =   EnvironmentService.config.baseCFUrl;
         return `${baseURL}/paidRPOrder?paymentId=${pay.id}&rzPaymentId=${pay.gateway.razorpay.paymentId}`
     }
 

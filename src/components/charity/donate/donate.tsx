@@ -7,12 +7,13 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
-import { Fundraiser         }   from    'fundraiser/fundraiser.model';
-import { FundraiserService  }   from    'fundraiser/fundraiser.service';
+//import { Fundraiser         }   from    'fundraiser/fundraiser.model';
+//import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { PaymentState       }   from    'payment/payment.model';
 import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
+import { UtilityService     }   from    'common/utility.service';
 
 
 import * as ngo                 from    'assets/ngo.json';
@@ -55,6 +56,11 @@ export class CharityDonate {
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
                 this.initialize();
             });
+
+            //https://checkout.razorpay.com/v1/checkout.js
+            UtilityService.loadScript('/assets/lib/checkout.min.js')
+                .then(resp => console.log('razorpay lib ready'))
+                .catch(_err => console.log);
         }
 
     }

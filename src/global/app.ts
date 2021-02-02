@@ -11,7 +11,9 @@ export default () => {
 
     win.config                  =   {};
     win.config.baseUrl          =   'https://thegrassroots.app';
+    win.config.baseCFUrl        =   'https://asia-east2-gr-live.cloudfunctions.net';
     win.config.build            =   'live';
+
     win.config.firebase         =   {
         apiKey: "AIzaSyCf5KZ2D8y8nt5YpuxtkhZN1iOmUK2DCUk",
         authDomain: "gr-live.firebaseapp.com",
@@ -21,6 +23,10 @@ export default () => {
         messagingSenderId: "47976454273",
         appId: "1:47976454273:web:7ba7f5e9e573da87b59580",
         measurementId: "G-MS5CEGJ6Z9"
+    };
+
+    win.config.razorpay         =   {
+        key                     :   'rzp_live_JRVjeL7iLec4Ck'
     };
 
 };

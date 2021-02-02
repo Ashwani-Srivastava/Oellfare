@@ -48,6 +48,22 @@ class UtilityServiceController {
         setTimeout(() => ( document.body.style.opacity='1' ), 500);
     }
 
+    public loadScript(path: string): Promise<any> {
+        return new Promise((resolve, reject) => {
+
+            const script        =   document.createElement('script');
+            script.src          =   path;
+
+            script.onload       =   () => {
+                resolve();
+            };
+            script.onerror      =   (err) => {
+                reject(err);
+            }
+
+            document.head.appendChild(script);
+        });
+    }
 }
 
 export const UtilityService = new UtilityServiceController();
