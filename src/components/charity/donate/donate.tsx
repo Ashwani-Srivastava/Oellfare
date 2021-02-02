@@ -7,11 +7,16 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
+import { Fundraiser         }   from    'fundraiser/fundraiser.model';
+import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
+import { PaymentState       }   from    'payment/payment.model';
+import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 
 
 import * as ngo                 from    'assets/ngo.json';
+import * as fund                from    'assets/fund.json';
 
 @Component({
     tag                         :   'charity-donate',
@@ -20,6 +25,7 @@ import * as ngo                 from    'assets/ngo.json';
 export class CharityDonate {
 
     @Prop() ngo                 :   any                 =   ngo;
+    @Prop() fund                :   any                 =   fund;
     @State() me                 :   Volunteer           =   null;
 
     /**
@@ -28,7 +34,10 @@ export class CharityDonate {
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
+    private donationAmount      :   number              =   0
     private whyDonate           :   string              =   '';
+    private referredBy          :   string              =   '';
+    private isAnonymous         :   boolean             =   false
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -73,8 +82,27 @@ export class CharityDonate {
     }
 
     private async makeDonation(): Promise<any> {
-        console.log('makeDonation');
-        await DialogService.presentToast('Donated');
+        console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
+
+        await DialogService.presentDefaultLoader();
+        const pay               =   await PaymentService.initiateDonation(this.fund, this.ngo, AuthService.me, this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
+
+        if (pay && pay.status === PaymentState.RzPending) {
+            PaymentService.showRazorpay(pay)
+                .then(success => {
+                    DialogService.presentAlert('Thanks', `Hey ${AuthService.me.name}, Thanks for being a Hero and supporting this cause. You will receive the receipt in mail shortly.`);
+                    Logger.log('Showrazorpay success', success);
+                }).catch(err => {
+                    Logger.error('Showrazorpay error', err);
+                    DialogService.presentAlert('Error', 'Reach out to 6385051777 for support. ' + JSON.stringify(err) );
+                });
+        } else {
+            DialogService.presentAlert('Error', `${pay ? pay.gateway.failureReason : 'Network error. Please retry'}. Reach out to 6385051777 for support. `);
+        }
+
+        DialogService.dismissDefaultLoader();
+
+        //await DialogService.presentToast('Donated');
     }
 
 
@@ -95,7 +123,13 @@ export class CharityDonate {
 
     private handleCommonInput(e, fieldName: string): void {
         console.log(e.target.value, fieldName);
-        this.whyDonate          =   e.target.value;
+        if (fieldName === 'donationAmount') {
+            this.donationAmount =   parseInt(e.target.value);
+        } else if (fieldName === 'isAnonymous') {
+            this.isAnonymous    =   !this.isAnonymous;
+        } else {
+            this[fieldName]     =   e.target.value;
+        }
     }
 
 
@@ -182,6 +216,7 @@ export class CharityDonate {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="number" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'donationAmount') } 
                                                     min={100}
                                                     class="form-control" 
                                                     placeholder="Amount"
@@ -192,6 +227,7 @@ export class CharityDonate {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="text" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'referredBy') } 
                                                     class="form-control" 
                                                     placeholder="Referred by"
                                                     disabled={ !this.isLoggedIn } />
@@ -201,6 +237,7 @@ export class CharityDonate {
                                         <div class="col-md-12">
                                             <div class="form-group form-control">
                                                 <input type="checkbox" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'isAnonymous') }
                                                     style={{ 'width': '18px', 'height': '18px' }} 
                                                     id="anonymous" name="anonymous" value="yes"
                                                     disabled={ !this.isLoggedIn } />
@@ -212,6 +249,7 @@ export class CharityDonate {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'whyDonate') } 
                                                     cols={30} rows={7} 
                                                     placeholder="Why am I donating?"
                                                     disabled={ !this.isLoggedIn } ></textarea>
@@ -220,7 +258,7 @@ export class CharityDonate {
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" 
+                                                <input type="button" 
                                                     onClick={() => this.makeDonation()}
                                                     value="Donate" 
                                                     class="btn btn-primary" 

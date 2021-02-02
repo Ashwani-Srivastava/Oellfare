@@ -1,0 +1,64 @@
+{
+  "project": { "name": "", "id": "" },
+  "name": "General Donation",
+  "isBroadcasted": false,
+  "block": { "name": "", "id": 0 },
+  "donationMin": 100,
+  "ngo": {
+    "logo": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_logo.jpg?alt=media",
+      "caption": "Caption of Chennai Social Service photo"
+    },
+    "id": "71CJnfEkwRkHX90onkUR",
+    "slug": "chennai-social-service",
+    "name": "Chennai Social Service"
+  },
+  "id": "Gvs9CQhxKuMYUeprbeSN",
+  "startDate": { "_seconds": 1611483023, "_nanoseconds": 135000000 },
+  "updatedAt": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
+  "commission": 5,
+  "status": 0,
+  "district": { "id": 3100, "name": "Chennai" },
+  "donation": { "required": 100000, "count": 0, "collected": 0 },
+  "aboutNgo": "Chennai Social service is a registered non governmental organization (NGO) with about 1400 online members and 75 active volunteers. CSS has been rendering its service to chennai city since July 27, 2006. The activities of CSS revolve around nine different teams. The Nine teams of CSS are: * Aravanaipu * Child Abuse Prevention * Disaster Management Group * Environmental Care Group * Gramudharan * Nalanda * Red Drops * Road Safety Group * VScribe. All these teams work based on their vision statement by their members. The design is such that, the achievement of vision of each team are the steps of ladder which in turn lead to the vision of CSS.",
+  "shortCode": "",
+  "coverPhoto": [
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Ffundraiser%2FGvs9CQhxKuMYUeprbeSN%2Foriginal_cover.jpg?alt=media&token=159626b4-9c53-4a50-8953-892722b4ffaf",
+      "caption": ""
+    }
+  ],
+  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "slug": "general-donation",
+  "createdAt": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
+  "coordinators": [
+    {
+      "priority": 200,
+      "phone": "6385051777",
+      "name": "Team Grassroots",
+      "ngo": {
+        "id": "71CJnfEkwRkHX90onkUR",
+        "name": "Chennai Social Service",
+        "slug": "chennai-social-service",
+        "logo": { "caption": "", "url": "" }
+      },
+      "email": "thegrassrootsapp@gmail.com",
+      "photo": { "url": "", "caption": "" },
+      "id": "OBIB4vabR7PrG2y6WXYpLph6l342"
+    }
+  ],
+  "recentUpdate": [],
+  "isActive": true,
+  "shortUrl": "",
+  "donationSlot": [],
+  "aboutProject": "General donation towards our Relief activities",
+  "state": { "id": 31, "name": "Tamil Nadu" },
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "donationBtnText": "Donate",
+  "aggregate": { "update": 0, "fork": 0 },
+  "video": { "url": "", "caption": "" },
+  "donationMax": 10000,
+  "endDate": { "_seconds": 1611483023, "_nanoseconds": 134000000 },
+  "cause": { "id": 0, "name": "" },
+  "fullUrl": ""
+}
