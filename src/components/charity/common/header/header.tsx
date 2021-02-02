@@ -12,8 +12,6 @@ export class CharityHeader {
 
         if (!this.ngo) return '';
         
-        console.log(this.ngo.projects);
-
         return [
 
         <div class="header-top">

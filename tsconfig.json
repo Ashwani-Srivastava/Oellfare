@@ -19,12 +19,18 @@
 
         "baseUrl": "src",
         "paths": {
-            "assets/*"  : [ "assets/*" ],
-            "auth/*"    : [ "components/auth/*" ],
-            "common/*"  : [ "components/common/*" ],
+            "assets/*"  : [ "assets/*"              ],
+            "auth/*"    : [ "components/auth/*"     ],
+            "cause/*"   : [ "components/cause/*"    ],
+            "common/*"  : [ "components/common/*"   ],
+            "event/*"   : [ "components/event/*"    ],
+            "fundraiser/*":["components/fundraiser/*" ],
             "location/*": [ "components/location/*" ],
-            "ngo/*"     : [ "components/ngo/*" ],
-            "volunteer/*":[ "components/volunteer/*" ]
+            "ngo/*"     : [ "components/ngo/*"      ],
+            "payment/*" : [ "components/payment/*"  ],
+            "recurring-fund/*": [ "components/recurring-fund/*"      ],
+            "sdg/*"     : [ "components/sdg/*"      ],
+            "volunteer/*":[ "components/volunteer/*"]
         }
 
     },

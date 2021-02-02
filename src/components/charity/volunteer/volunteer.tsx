@@ -5,7 +5,8 @@ import { modalController    }   from    "@ionic/core";
 import { filter, takeWhile  }   from    'rxjs/operators';
 
 import { AuthService        }   from    'auth/auth.service';
-import { DialogService      }   from    'common/dialog.service';
+import { ConfirmResponse,
+         DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { Logger             }   from    'common/logger';
 import { Volunteer          }   from    'volunteer/volunteer.model';
@@ -51,23 +52,10 @@ export class CharityVolunteer {
             }
 
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
-                DialogService.presentDefaultLoader();
-
-                AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
-
-                    DialogService.dismissDefaultLoader();
-                    Logger.info('AuthDrawer :: Component will load :: vol$', vol);
-                    this.me     =   vol;
-                    this.isLoggedIn=AuthService.me && AuthService.me.id.length > 0 && AuthService.me.phone.length > 0;
-
-                }, error => {
-                    DialogService.dismissDefaultLoader();
-                    DialogService.presentAlert('Auth Error', JSON.stringify(error));
-                }); 
+                this.initialize();
             });
 
         }
-
 
     }
 
@@ -90,6 +78,24 @@ export class CharityVolunteer {
 
     }
 
+    private async initialize() {
+        Logger.info('Volunteer :: Initialize :: ');
+
+        DialogService.presentDefaultLoader();
+
+        AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
+
+            DialogService.dismissDefaultLoader();
+            Logger.info('Volunteer :: Component will load :: vol$', vol);
+            this.me             =   vol;
+            this.isLoggedIn     =   AuthService.me && AuthService.me.id.length > 0 && AuthService.me.phone.length > 0;
+
+        }, error => {
+            DialogService.dismissDefaultLoader();
+            DialogService.presentAlert('Auth Error', JSON.stringify(error));
+        }); 
+    }
+
     private handleCommonInput(e, fieldName: string): void {
         console.log(e.target.value, fieldName);
         this.whyVolunteer       =   e.target.value;
@@ -101,14 +107,22 @@ export class CharityVolunteer {
         this.me.updatedAt       =   new Date();
 
         await AuthService.saveProfile(this.me);
+        await DialogService.presentToast('Joined');
     }
 
     private async unjoinNgo(): Promise<any> {
-        this.me.isJoined        =   false;
-        this.me.whyVolunteer    =   '';
-        this.me.updatedAt       =   new Date();
 
-        await AuthService.saveProfile(this.me);
+        const response          =   await DialogService.presentConfirmAlert('Unjoin', 'Are you sure want to unjoin?');
+
+        if (response === ConfirmResponse.Success) {
+            this.me.isJoined    =   false;
+            this.me.whyVolunteer=   '';
+            this.me.updatedAt   =   new Date();
+
+            await AuthService.saveProfile(this.me);
+            await DialogService.presentToast('Unjoined');
+        }
+
     }
 
     render() {
@@ -177,7 +191,7 @@ export class CharityVolunteer {
                                         <div class="col-md-12">
                                             <h3 class="section-title">Volunteer Details</h3>
                                         </div>
-                
+
                                         { this.isLoggedIn && this.me?.isJoined === false ?
                                         <div class="col-md-12">
                                             <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>

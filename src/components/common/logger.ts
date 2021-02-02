@@ -12,10 +12,12 @@ export class LogServiceController {
 
     constructor() {
 
+        /*
         if (['prod', 'live'].includes(ConfigService.build)) {
             const token         =   ConfigService.logEntriesToken[ConfigService.build];
             this.loadLogEntries(token);
         }
+        */
 
         const parser            =   UAParser();
         const browserObject     =   parser.browser;
@@ -29,6 +31,7 @@ export class LogServiceController {
 
     }
 
+    /*
     private loadLogEntries(token: string): void {
         const script = document.createElement('script');
         script.src = '/assets/lib/le.min.js';
@@ -39,6 +42,7 @@ export class LogServiceController {
         };
         document.head.appendChild(script);
     }
+    */
 
     public info(logMessage:string, logObject?): void {
         this.handleLog(this.LE ? this.LE.info : null, logMessage, null, logObject);

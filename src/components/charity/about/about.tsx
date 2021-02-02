@@ -33,7 +33,7 @@ export class CharityAbout {
                 <div class="fh5co-hero">
                     <div class="fh5co-overlay"></div>
                     <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5">
-                        <img src='assets/charity/images/team-001x1024.jpg' class='cover-image' style={{ 'width': '100%', 'fiter': 'brightness(0.75)' }} />
+                        <img src='/assets/charity/images/team-001x1024.jpg' class='cover-image' style={{ 'width': '100%', 'fiter': 'brightness(0.75)' }} />
                         <div class="desc animate-box">
                             <h2>About us</h2>
                             <span> { this.ngo.vision } </span>

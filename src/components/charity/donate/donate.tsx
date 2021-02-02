@@ -1,16 +1,14 @@
 import { Build, Component,
-         h, Prop}   from    '@stencil/core';
-//import { Build, Component,
-//         h, Prop, State     }   from    '@stencil/core';
-//import { modalController    }   from    "@ionic/core";
-//
-//import { filter, takeWhile  }   from    'rxjs/operators';
-//
-//import { AuthService        }   from    'auth/auth.service';
-//import { DialogService      }   from    'common/dialog.service';
-//import { EnvironmentService }   from    'common/environment.service';
-//import { Logger             }   from    'common/logger';
-//import { Volunteer          }   from    'volunteer/volunteer.model';
+         h, Prop, State     }   from    '@stencil/core';
+import { modalController    }   from    "@ionic/core";
+
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
+import { DialogService      }   from    'common/dialog.service';
+import { EnvironmentService }   from    'common/environment.service';
+import { Logger             }   from    'common/logger';
+import { Volunteer          }   from    'volunteer/volunteer.model';
 
 
 import * as ngo                 from    'assets/ngo.json';
@@ -22,7 +20,15 @@ import * as ngo                 from    'assets/ngo.json';
 export class CharityDonate {
 
     @Prop() ngo                 :   any                 =   ngo;
-    //private alive               :   boolean             =   true;
+    @State() me                 :   Volunteer           =   null;
+
+    /**
+     * True when Gmail session is present and Mobile number is OTP verified
+     */
+    @State() isLoggedIn         :   boolean             =   false;
+
+    private alive               :   boolean             =   true;
+    private whyDonate           :   string              =   '';
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -32,11 +38,14 @@ export class CharityDonate {
         console.log('Donate :: Component will load');
 
         if (Build.isBrowser) {
-            /*
+
+            if (location.hash === '#login') {
+                this.openAuthDrawer();
+            }
+
             AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
                 this.initialize();
             });
-             */
         }
 
     }
@@ -45,11 +54,50 @@ export class CharityDonate {
         console.log('Donate :: Component did load');
     }
 
-        /*
     private async initialize() {
         Logger.info('Donate :: Initialize :: ');
+
+        DialogService.presentDefaultLoader();
+
+        AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
+
+            DialogService.dismissDefaultLoader();
+            Logger.info('Donate :: Component will load :: vol$', vol);
+            this.me             =   vol;
+            this.isLoggedIn     =   AuthService.me && AuthService.me.id.length > 0 && AuthService.me.phone.length > 0;
+
+        }, error => {
+            DialogService.dismissDefaultLoader();
+            DialogService.presentAlert('Auth Error', JSON.stringify(error));
+        }); 
     }
-         */
+
+    private async makeDonation(): Promise<any> {
+        console.log('makeDonation');
+        await DialogService.presentToast('Donated');
+    }
+
+
+    private async openAuthDrawer() {
+        console.log('show auth popup', EnvironmentService.config.firebase);
+
+        location.hash           =   "login";
+
+        const modal             :   HTMLIonModalElement =   await modalController.create({
+            component           :   'auth-drawer',
+            cssClass            :   'auth-modal',
+            swipeToClose        :   false,
+            mode                :   'ios'
+        })
+        modal.present();
+
+    }
+
+    private handleCommonInput(e, fieldName: string): void {
+        console.log(e.target.value, fieldName);
+        this.whyDonate          =   e.target.value;
+    }
+
 
     render() {
 
@@ -107,74 +155,77 @@ export class CharityDonate {
                                 <div class="col-md-6">
                                     <div class="row">
 
+                                        { !this.isLoggedIn ?
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="button" value="Login with Gmail" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="button" onClick={() => this.openAuthDrawer()} value="Login with Grassroots" class="btn btn-primary" style={{ 'width': '100%' }} />
                                             </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Mobile" />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="button" value="Send Otp" class="btn btn-primary" style={{ 'width': '100%', 'margin': '4px 0px' }} />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="OTP" />
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="submit" value="Verify OTP" class="btn btn-primary" style={{ 'width': '100%', 'margin': '4px 0px'  }} />
-                                            </div>
-                                        </div>
+                                        </div> : null }
 
                                         <div class="col-md-12">
                                             <h3 class="section-title">Donation Details</h3>
                                         </div>
                 
-                                        <div class="col-sm-6">
+                                        { this.isLoggedIn ?
+                                        <div class="col-md-12">
+                                            <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
+                                        </div> : null }
+
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Fundraiser" />
+                                                <select class='form-control' disabled={ !this.isLoggedIn } >
+                                                    <option> General Donation </option>
+                                                </select>
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Amount" />
+                                                <input type="number" 
+                                                    min={100}
+                                                    class="form-control" 
+                                                    placeholder="Amount"
+                                                    disabled={ !this.isLoggedIn } />
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Referred by" />
+                                                <input type="text" 
+                                                    class="form-control" 
+                                                    placeholder="Referred by"
+                                                    disabled={ !this.isLoggedIn } />
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Make Anonymous" />
+                                        <div class="col-md-12">
+                                            <div class="form-group form-control">
+                                                <input type="checkbox" 
+                                                    style={{ 'width': '18px', 'height': '18px' }} 
+                                                    id="anonymous" name="anonymous" value="yes"
+                                                    disabled={ !this.isLoggedIn } />
+                                                <span style={{ 'padding-left': '16px' }} > Make Anonymous </span>
                                             </div>
                                         </div>
 
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea name="" class="form-control" id="" cols={30} rows={7} placeholder="Why am I donating?"></textarea>
+                                                <textarea class="form-control" 
+                                                    cols={30} rows={7} 
+                                                    placeholder="Why am I donating?"
+                                                    disabled={ !this.isLoggedIn } ></textarea>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Donate" class="btn btn-primary" style={{ 'width': '100%' }} />
+                                                <input type="submit" 
+                                                    onClick={() => this.makeDonation()}
+                                                    value="Donate" 
+                                                    class="btn btn-primary" 
+                                                    style={{ 'width': '100%' }}
+                                                    disabled={ !this.isLoggedIn } />
                                             </div>
                                         </div>
 
