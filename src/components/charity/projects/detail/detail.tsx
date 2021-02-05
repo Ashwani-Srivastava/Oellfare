@@ -1,8 +1,13 @@
-import { Component, h, Prop,
-         State              }   from    '@stencil/core';
+import { Build, Component, h,
+         Prop, State        }   from    '@stencil/core';
 
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
+import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 
 import * as ngo                 from    'assets/ngo.json';
 
@@ -13,7 +18,8 @@ import * as ngo                 from    'assets/ngo.json';
 export class CharityProjectsDetail {
 
     @Prop() projectSlug         :   string;
-    @Prop() ngo                 :   any                 =   new Ngo(ngo);
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    private alive               :   boolean             =   true;
 
     @State() project            :   any                 =   {};
 
@@ -22,7 +28,26 @@ export class CharityProjectsDetail {
 
         this.project            =   (this.ngo.projects.filter(p => p.slug === this.projectSlug))[0];
 
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+        }
+
         console.log(this.project);
+    }
+
+    private async initialize() {
+        Logger.info(`Prject :: ${this.projectSlug} :: Initialize :: `);
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
     }
 
     render() {

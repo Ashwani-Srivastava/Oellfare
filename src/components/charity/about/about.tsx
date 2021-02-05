@@ -1,7 +1,13 @@
-import { Component, h, Prop }   from    '@stencil/core';
+import { Build, Component, h,
+         Prop               }   from    '@stencil/core';
 
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
+import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 
 import * as ngo                 from    'assets/ngo.json';
 
@@ -11,7 +17,8 @@ import * as ngo                 from    'assets/ngo.json';
 })
 export class CharityAbout {
 
-    @Prop() ngo                 :   any                 =   new Ngo(ngo);
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    private alive               :   boolean             =   true;
 
     constructor () {
         console.log('About :: Constructor');
@@ -19,12 +26,32 @@ export class CharityAbout {
 
     async componentWillLoad() {
         console.log('About :: Component will load');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+        }
+
+
     }
 
     async componentDidLoad() {
         console.log('About :: Component did load');
     }
 
+    private async initialize() {
+        Logger.info('About :: Initialize :: ');
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
+    }
 
     render() {
 
@@ -133,6 +160,14 @@ export class CharityAbout {
 
 );
 
+    }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
     }
 
 }

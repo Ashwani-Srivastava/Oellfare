@@ -1,7 +1,13 @@
-import { Component, h, Prop }   from    '@stencil/core';
+import { Build, Component, h,
+         Prop               }   from    '@stencil/core';
 
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
+import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 
 import * as ngo                 from    'assets/ngo.json';
 
@@ -11,7 +17,33 @@ import * as ngo                 from    'assets/ngo.json';
 })
 export class PressCoverage {
 
-    @Prop() ngo                 :   any                 =   new Ngo(ngo);
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    private alive               :   boolean             =   true;
+
+    async componentWillLoad() {
+        console.log('About - Press Coverage :: Component will load');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+        }
+
+
+    }
+
+    private async initialize() {
+        Logger.info('About - Press Coverage :: Initialize :: ');
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
+    }
 
     render() {
 
@@ -45,7 +77,7 @@ export class PressCoverage {
                                     <div class="blog-text">
                                         <div class="prod-title">
                                             <h3 style={{ 'height': '60px', 'overflow': 'hidden' }}><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
-                                            <span class="posted_by"> { new Date(m.date._seconds * 1000).toLocaleDateString("en-US") } </span>
+                                            <span class="posted_by"> { m.date.toLocaleDateString("en-US") } </span>
                                             <p style={{ 'height': '80px', 'overflow': 'hidden' }}> { m.description.length < 60 ? m.description : m.description.substring(0, 60) + '...' } </p>
                                             <p><a href={m.link}> { m.publicationName } </a></p>
                                         </div>
@@ -67,5 +99,14 @@ export class PressCoverage {
 );
 
     }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
+    }
+
 
 }

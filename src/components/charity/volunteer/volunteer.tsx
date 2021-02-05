@@ -11,6 +11,7 @@ import { EnvironmentService }   from    'common/environment.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 
 import * as ngo                 from    'assets/ngo.json';
@@ -85,6 +86,10 @@ export class CharityVolunteer {
 
         DialogService.presentDefaultLoader();
 
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
         AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
 
             DialogService.dismissDefaultLoader();

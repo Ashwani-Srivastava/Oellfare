@@ -12,6 +12,7 @@ import { HelmetService      }   from    'common/helmet.service';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 import { PaymentState       }   from    'payment/payment.model';
 import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
@@ -74,6 +75,11 @@ export class CharityDonate {
         Logger.info('Donate :: Initialize :: ');
 
         DialogService.presentDefaultLoader();
+
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
 
         AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
 
@@ -336,11 +342,11 @@ export class CharityDonate {
     }
 
     connectedCallback() {
-        //this.alive              =   true;
+        this.alive              =   true;
     }
 
     disconnectedCallback() {
-        //this.alive              =   false;
+        this.alive              =   false;
     }
 
 }

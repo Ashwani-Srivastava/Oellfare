@@ -344,6 +344,7 @@ export class Project extends Doc {
     link                        :   string;
     photo                       :   Media;
     parent                      :   string;
+    slug                        :   string;
     date                        :   Date;
 
     constructor(data            :   any) {
@@ -352,6 +353,7 @@ export class Project extends Doc {
         this.link               =   data.link ? data.link : '';
         this.photo              =   data.photo ? data.photo : '';
         this.parent             =   data.parent ? data.parent : null;
+        this.slug               =   data.slug ? data.slug : '';
         this.date               =   data.date ? data.date : '';
     }
 

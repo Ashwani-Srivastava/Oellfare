@@ -1,7 +1,13 @@
-import { Component, h, Prop }   from    '@stencil/core';
+import { Build, Component, h,
+         Prop               }   from    '@stencil/core';
 
+import { filter, takeWhile  }   from    'rxjs/operators';
+
+import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
+import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 
 import * as ngo                 from    'assets/ngo.json';
 
@@ -11,7 +17,8 @@ import * as ngo                 from    'assets/ngo.json';
 })
 export class CharityHome {
 
-    @Prop() ngo                 :   any                 =   new Ngo(ngo);
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    private alive               :   boolean             =   true;
 
     private coverSlideOptions   :   any                 =   {
         autoplay: {
@@ -25,11 +32,33 @@ export class CharityHome {
 
     async componentWillLoad() {
         console.log('Home :: Component will load');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+        }
+
     }
 
     async componentDidLoad() {
         console.log('Home :: Component did load');
     }
+
+    private async initialize() {
+        Logger.info('Donate :: Initialize :: ');
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
+    }
+
+
 
     render() {
 
@@ -281,7 +310,7 @@ export class CharityHome {
                                     <div class="blog-text">
                                         <div class="prod-title">
                                             <h3><a href="#"> { m.name.length < 40 ? m.name : m.name.substring(0, 40) + '...' } </a></h3>
-                                            <span class="posted_by"> { new Date(m.date._seconds * 1000).toLocaleDateString("en-US") } </span>
+                                            <span class="posted_by"> { m.date.toLocaleDateString("en-US") } </span>
                                             <p> { m.description.length < 60 ? m.description : m.description.substring(0, 60) + '...' } </p>
                                             <p><a href={m.link} target='_blank'> { m.publicationName } </a></p>
                                         </div>
@@ -317,6 +346,14 @@ export class CharityHome {
 
         ];
 
+    }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
     }
 
 }
