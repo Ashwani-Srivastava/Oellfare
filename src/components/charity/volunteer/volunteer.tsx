@@ -8,7 +8,9 @@ import { AuthService        }   from    'auth/auth.service';
 import { ConfirmResponse,
          DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
+import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
+import { Ngo                }   from    'ngo/ngo.model';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 
 import * as ngo                 from    'assets/ngo.json';
@@ -27,7 +29,7 @@ import * as ngo                 from    'assets/ngo.json';
 })
 export class CharityVolunteer {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
     @State() me                 :   Volunteer           =   null;
 
     /**
@@ -249,6 +251,8 @@ export class CharityVolunteer {
                 </div>
 
                 <charity-footer ngo={this.ngo}></charity-footer>
+
+                { HelmetService.render(this.ngo, 'Volunteer') }
             </div>
         </div>
 

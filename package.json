@@ -1,30 +1,31 @@
 {
-  "name": "standalone-site",
-  "private": true,
-  "version": "0.0.1",
-  "description": "standalone-site",
-  "license": "MIT",
-  "files": [
-    "dist/"
-  ],
-  "scripts": {
-    "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "live": "stencil build --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watch",
-    "generate": "stencil generate",
-    "prel": "stencil build --dev --prod --prerender && firebase deploy --only hosting:css-grassroots"
-  },
-  "dependencies": {
-    "dayjs": "^1.10.4",
-    "firebase": "^8.2.5",
-    "rxfire": "^4.0.0",
-    "rxjs": "^6.6.3",
-    "ua-parser-js": "^0.7.23"
-  },
-  "devDependencies": {
-    "@ionic/core": "^5.3.2",
-    "@stencil/core": "^2.0.1"
-  }
+    "name": "standalone-site",
+    "private": true,
+    "version": "0.0.1",
+    "description": "standalone-site",
+    "license": "MIT",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "stencil build",
+        "start": "stencil build --dev --watch --serve",
+        "live": "stencil build --watch --serve",
+        "test": "stencil test --spec --e2e",
+        "test.watch": "stencil test --spec --e2e --watch",
+        "generate": "stencil generate",
+        "prel": "stencil build --dev --prod --prerender && firebase deploy --only hosting:css-grassroots"
+    },
+    "dependencies": {
+        "dayjs": "^1.10.4",
+        "firebase": "^8.2.5",
+        "rxfire": "^4.0.0",
+        "rxjs": "^6.6.3",
+        "ua-parser-js": "^0.7.23"
+    },
+    "devDependencies": {
+        "@ionic/core": "^5.3.2",
+        "@stencil/core": "^2.0.1",
+        "@stencil/helmet": "^0.3.2"
+    }
 }

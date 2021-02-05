@@ -2,6 +2,7 @@ import { Build, Component, h }   from    '@stencil/core';
 
 import { AuthService        }   from    'auth/auth.service';
 import { ConfigService      }   from    'common/config.service';
+import { EnvironmentService }   from    'common/environment.service';
 import { Logger             }   from    'common/logger';
 
 @Component({
@@ -24,6 +25,7 @@ export class AppRoot {
 
     async componentWillLoad() {
         Logger.info('App root :: will load');
+        EnvironmentService.init();
     }
 
 

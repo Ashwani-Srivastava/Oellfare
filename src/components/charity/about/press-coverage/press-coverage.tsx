@@ -1,13 +1,17 @@
 import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../../assets/ngo.json';
+
+import { HelmetService      }   from    'common/helmet.service';
+import { Ngo                }   from    'ngo/ngo.model';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
-    tag: 'charity-press-coverage',
-    styleUrl: 'press-coverage.css',
+    tag                         :   'charity-press-coverage',
+    styleUrl                    :   'press-coverage.css',
 })
 export class PressCoverage {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
 
     render() {
 
@@ -55,6 +59,8 @@ export class PressCoverage {
                 </div>: null }
 
             <charity-footer ngo={this.ngo}></charity-footer>
+
+            { HelmetService.render(this.ngo, 'Press Coverage') }
         </div>
     </div>
 

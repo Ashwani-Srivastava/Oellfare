@@ -1,5 +1,9 @@
 import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../../assets/ngo.json';
+
+import { HelmetService      }   from    'common/helmet.service';
+import { Ngo                }   from    'ngo/ngo.model';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'charity-legal',
@@ -7,7 +11,7 @@ import * as ngo                 from    '../../../../assets/ngo.json';
 })
 export class LegalPage {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
 
     constructor () {
         console.log('About - Legal :: Constructor');
@@ -125,6 +129,8 @@ export class LegalPage {
                 </div>
 
             <charity-footer ngo={this.ngo}></charity-footer>
+
+            { HelmetService.render(this.ngo, 'Legal') }
         </div>
     </div>
 

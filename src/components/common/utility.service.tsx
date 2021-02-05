@@ -26,7 +26,8 @@ class UtilityServiceController {
         return [day, month, year].join("-");
     }
 
-    private commonMetaPrefix    :   string              =   " - Grassroots - Chennai's Volunteering app";
+    //private commonMetaPrefix    :   string              =   " - Grassroots - Chennai's Volunteering app";
+    private commonMetaPrefix    :   string              =   "";
 
     public getMetaTitle(title: string): string {
         return `${title}${this.commonMetaPrefix}`;

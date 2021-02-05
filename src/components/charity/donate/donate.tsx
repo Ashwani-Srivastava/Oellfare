@@ -7,14 +7,15 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
+import { HelmetService      }   from    'common/helmet.service';
 //import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
+import { Ngo                }   from    'ngo/ngo.model';
 import { PaymentState       }   from    'payment/payment.model';
 import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 import { UtilityService     }   from    'common/utility.service';
-
 
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
@@ -25,7 +26,7 @@ import * as fund                from    'assets/fund.json';
 })
 export class CharityDonate {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
     @Prop() fund                :   any                 =   fund;
     @State() me                 :   Volunteer           =   null;
 
@@ -59,7 +60,7 @@ export class CharityDonate {
 
             //https://checkout.razorpay.com/v1/checkout.js
             UtilityService.loadScript('/assets/lib/checkout.min.js')
-                .then(resp => console.log('razorpay lib ready'))
+                .then(_resp => console.log('razorpay lib ready'))
                 .catch(_err => console.log);
         }
 
@@ -325,6 +326,8 @@ export class CharityDonate {
                 </div>
 
                 <charity-footer ngo={this.ngo}></charity-footer>
+
+                { HelmetService.render(this.ngo, 'Donate') }
             </div>
         </div>
 

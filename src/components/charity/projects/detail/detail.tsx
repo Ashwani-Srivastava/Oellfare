@@ -1,6 +1,10 @@
 import { Component, h, Prop,
          State              }   from    '@stencil/core';
-import * as ngo                 from    '../../../../assets/ngo.json';
+
+import { HelmetService      }   from    'common/helmet.service';
+import { Ngo                }   from    'ngo/ngo.model';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'charity-projects-detail',
@@ -9,7 +13,7 @@ import * as ngo                 from    '../../../../assets/ngo.json';
 export class CharityProjectsDetail {
 
     @Prop() projectSlug         :   string;
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
 
     @State() project            :   any                 =   {};
 
@@ -55,6 +59,8 @@ export class CharityProjectsDetail {
 
 
             <charity-footer ngo={this.ngo}></charity-footer>
+
+            { HelmetService.render(this.ngo, this.project.name) }
         </div>
         </div>
         );

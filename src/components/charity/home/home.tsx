@@ -1,5 +1,9 @@
 import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../assets/ngo.json';
+
+import { HelmetService      }   from    'common/helmet.service';
+import { Ngo                }   from    'ngo/ngo.model';
+
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'charity-home',
@@ -7,7 +11,7 @@ import * as ngo                 from    '../../../assets/ngo.json';
 })
 export class CharityHome {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
 
     private coverSlideOptions   :   any                 =   {
         autoplay: {
@@ -298,6 +302,8 @@ export class CharityHome {
                 </div>: null }
 
                 <charity-footer ngo={this.ngo}></charity-footer>
+
+                { HelmetService.render(this.ngo, 'Home') }
 
             </div>
 

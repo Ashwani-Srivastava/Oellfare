@@ -4,8 +4,10 @@ export default () => {
 
     let win;
     if (typeof window !== 'undefined') {
+        console.log('win is window');
         win                     =   window as any;
     } else {
+        console.log('win is global');
         win                     =   global as any;
     }
 
@@ -27,5 +29,7 @@ export default () => {
     win.config.razorpay         =   {
         key                     :   'rzp_test_khebg4URfgOTGT'
     };
+
+    console.log(win.config);
 
 };
