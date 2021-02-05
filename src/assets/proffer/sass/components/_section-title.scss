@@ -1,0 +1,63 @@
+.section-title {
+	margin-bottom: 20px;
+	
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+
+	> span {
+		font-weight: 700;
+		color: $theme-primary-color;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		display: block;
+    	margin-top: -0.3em;
+	}
+
+	h2 {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+		line-height: 1em;
+		margin: 0.2em 0 0;
+
+		span {
+			-webkit-text-fill-color: $white; /* Will override color (regardless of order) */
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: $heading-color;
+		}
+
+		@include media-query(991px) {
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+		}
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+	}
+}
+
+.section-title-s2 {
+	@extend .section-title;
+	text-align: center;
+	margin-bottom: 40px;
+	
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+}
+
+.section-title-s3 {
+	@extend .section-title-s2;
+	text-align: center;
+	margin-bottom: 40px;
+
+	h2 {
+		margin-bottom: 0.4em;
+	}
+	
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+}

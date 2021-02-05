@@ -281,7 +281,7 @@ export class CharityHome {
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/projects" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
+                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/projects" style={{ 'color': 'white' }} > See all Projects </ion-router-link> </a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@ export class CharityHome {
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/about/press-coverage" style={{ 'color': 'white' }} > See more </ion-router-link> </a>
+                                <a class="btn btn-primary btn-lg"> <ion-router-link href="/about/press-coverage" style={{ 'color': 'white' }} > See all Press coverages </ion-router-link> </a>
                             </div>
                         </div>
 

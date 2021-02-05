@@ -1,0 +1,25 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+// fonts
+$base-font-size: 16;
+$base-font: 'Jost', sans-serif;
+$heading-font: 'Jost', sans-serif;
+
+
+
+// color
+$dark-gray: #2a2a2a;
+$white: #fff;
+$black: #000;
+$red: #cd211d;
+$black2: #020202;
+$black3: #1c1c1c;
+
+$theme-primary-color: $red;
+$body-bg-color: $white;
+$section-bg-color: #edecec;
+$text-color: $black3;
+$heading-color: $black2;

@@ -1,0 +1,304 @@
+{
+  "whyHelpMatters": [ { "text": "test 123", "icon": "checkmark-circle-outline" } ],
+  "receipt": { "nextId": 1000, "fields": [], "baseImage": "" },
+  "video": { "caption": "Caption of GFoI video", "url": "" },
+  "address": "2/14A, West Saidapet, Chennai",
+  "whyVolunteerHere": [ { "text": "rest", "icon": "checkmark-circle-outline" } ],
+  "slug": "gfoi",
+  "activeIn": [],
+  "priority": 100,
+  "projects": [
+    {
+      "id": "TsL9AKHbyaQZvZfKQpRb",
+      "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "photo": {
+        "caption": "Photo of Tech 4 Good project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Fproject%2Foriginal_TsL9AKHbyaQZvZfKQpRb.jpg?alt=media"
+      },
+      "link": "",
+      "slug": "tech-4-good",
+      "aggregate": {
+        "volunteer": {
+          "donated": 0,
+          "required": 0,
+          "registered": 0,
+          "subscribed": 0,
+          "fundSupported": 0,
+          "unattendedSelf": 0,
+          "unattendedVerified": 0,
+          "recurringFundSupported": 0,
+          "attendedSelf": 0,
+          "attendedVerified": 0,
+          "joined": 0,
+          "hoursSelf": 0,
+          "hoursVerified": 0
+        },
+        "subscription": {
+          "totalCollected": 0,
+          "currentCount": 0,
+          "required": 0,
+          "currentCollected": 0,
+          "totalCount": 0,
+          "months": 0
+        },
+        "donation": { "required": 0, "collected": 0, "count": 0 }
+      },
+      "description": "The development and adoption of advanced technologies including smart automation and artificial intelligence has the potential not only to raise productivity and GDP growth but also to improve well-being more broadly, including through healthier life and longevity and more leisure. Alongside such benefits, these technologies also have the potential to reduce disruption and the potentially destabilizing effects on society arising from their adoption.",
+      "isActive": true,
+      "name": "Tech 4 Good",
+      "createdAt": { "_seconds": 1612498565, "_nanoseconds": 0 },
+      "updatedAt": { "_seconds": 1612498565, "_nanoseconds": 0 },
+      "parent": "",
+      "date": { "_seconds": 1454645741, "_nanoseconds": 0 },
+      "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "sdg": {
+        "description": "",
+        "link": "",
+        "slug": "",
+        "id": 0,
+        "photo": { "url": "", "caption": "" },
+        "name": ""
+      }
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Fproject%2Foriginal_AppIqQywzlhi21tO0AWX.jpg?alt=media",
+        "caption": "Photo of RTI Workshop project"
+      },
+      "updatedAt": { "_seconds": 1612498537, "_nanoseconds": 0 },
+      "parent": "",
+      "date": { "_seconds": 1423109667, "_nanoseconds": 0 },
+      "sdg": {
+        "slug": "",
+        "description": "",
+        "photo": { "url": "", "caption": "" },
+        "link": "",
+        "name": "",
+        "id": 0
+      },
+      "slug": "rti-workshop",
+      "isActive": true,
+      "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "link": "",
+      "name": "RTI Workshop",
+      "aggregate": {
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "subscription": {
+          "months": 0,
+          "currentCollected": 0,
+          "currentCount": 0,
+          "totalCount": 0,
+          "required": 0,
+          "totalCollected": 0
+        },
+        "volunteer": {
+          "attendedVerified": 0,
+          "unattendedSelf": 0,
+          "required": 0,
+          "attendedSelf": 0,
+          "unattendedVerified": 0,
+          "registered": 0,
+          "fundSupported": 0,
+          "subscribed": 0,
+          "joined": 0,
+          "hoursVerified": 0,
+          "hoursSelf": 0,
+          "donated": 0,
+          "recurringFundSupported": 0
+        }
+      },
+      "createdAt": { "_seconds": 1612498537, "_nanoseconds": 0 },
+      "id": "AppIqQywzlhi21tO0AWX",
+      "description": "One day Regional Workshop on the theme “\nRoadmap for the future” is being jointly organized by DoPT, Ministry of Personnel, Public Grievances &\nPension, Govt. of India and ATI- HIPA Gurgaon on Thursday the 04th December, 2014. This is being\norganized under the Government of India’s scheme titled “Improving transparency and Accountability in\nGovernment through effective implementation of Right to Information Act, 2005”. The workshop is\nassigned for the participants from states of Jammu & Kashmir, Himachal Pradesh, Punjab, Chandigarh,\nUttarakhand, Delhi, Uttar Pradesh an . d Haryana",
+      "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43"
+    }
+  ],
+  "review": [],
+  "reachOut": {
+    "linkedin": "",
+    "email": "saiy2k@gmail.com",
+    "phone2": "6385051777",
+    "twitter": "",
+    "instagram": "",
+    "website": "grayfaceofindia.in",
+    "facebook": "",
+    "youtube": "",
+    "phone1": "9952998132"
+  },
+  "description": "To put American flag in the moon by the end of this decade",
+  "logo": {
+    "caption": "Caption of GFoI photo",
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_logo.jpg?alt=media"
+  },
+  "name": "GFoI",
+  "state": { "name": "Tamil Nadu", "id": 31 },
+  "ops": {
+    "settlementSheetId": "",
+    "settlementRow": 0,
+    "spreadSheetId": "",
+    "receiptVersion": 2,
+    "offlinePaymentRow": 0
+  },
+  "awards": [],
+  "status": 3,
+  "id": "jjewCbG2olNnNYlxxTRa",
+  "createdBy": "iXDIfG88DyPYOwMBRUgt6SRG48z2",
+  "isActive": true,
+  "shortCode": "",
+  "shortUrl": "https://grs.one/",
+  "legal": { "_12ANo": "", "fcraNo": "", "_80GNo": "", "regNo": "", "panNo": "" },
+  "createdAt": { "_seconds": 1612140724, "_nanoseconds": 522000000 },
+  "causes": [],
+  "bank": { "bankName": "", "accountName": "", "accountNo": "", "ifscCode": "" },
+  "team": [
+    {
+      "role": "Founder",
+      "reachOut": {
+        "linkedin": "",
+        "facebook": "",
+        "instagram": "",
+        "email": "",
+        "youtube": "",
+        "phone2": "",
+        "website": "",
+        "twitter": "",
+        "phone1": ""
+      },
+      "hobbies": "",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "id": "zizuCdAIlOf42K85lnZU",
+      "name": "Radhakrishnan",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Fteam%2Foriginal_zizuCdAIlOf42K85lnZU.jpg?alt=media",
+        "caption": "Photo of Radhakrishnan team"
+      }
+    },
+    {
+      "hobbies": "",
+      "since": { "_seconds": 1612498602, "_nanoseconds": 72000000 },
+      "id": "LU0iZCVZ5YjZkNSQfDR5",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "photo": {
+        "caption": "Photo of Ganesh team",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Fteam%2Foriginal_LU0iZCVZ5YjZkNSQfDR5.jpg?alt=media"
+      },
+      "role": "Treasurer",
+      "reachOut": {
+        "twitter": "",
+        "website": "",
+        "linkedin": "",
+        "phone2": "",
+        "instagram": "",
+        "facebook": "",
+        "email": "",
+        "youtube": "",
+        "phone1": ""
+      },
+      "name": "Ganesh"
+    }
+  ],
+  "activities": [ "rti workshop" ],
+  "oid": "",
+  "nextReceiptNumber": 1000,
+  "admin": [],
+  "testimonial": [],
+  "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+  "vision": "1 To put American flag in the moon by the end of this decade",
+  "district": { "name": "Chennai", "id": 3100 },
+  "updatedAt": { "_seconds": 1612140724, "_nanoseconds": 0 },
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_cover1.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_cover3.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_cover4.jpg?alt=media"
+  ],
+  "access": { "fundraiser": true, "event": false, "receipt": false, "profile": true, "form": false },
+  "mission": [ "" ],
+  "fullUrl": "https://thegrassroots.app/chennai/ngo/gfoi",
+  "aggregate": {
+    "volHoursPerWeek": 0,
+    "mediaRecognition": 1,
+    "award": 0,
+    "fund": 0,
+    "volPerWeek": 0,
+    "testimonial": 0,
+    "event": 0,
+    "volunteer": {
+      "registered": 0,
+      "unattendedSelf": 0,
+      "subscribed": 0,
+      "hoursSelf": 0,
+      "joined": 0,
+      "attendedVerified": 0,
+      "recurringFundSupported": 0,
+      "fundSupported": 0,
+      "unattendedVerified": 0,
+      "donated": 0,
+      "required": 0,
+      "hoursVerified": 0,
+      "attendedSelf": 0
+    },
+    "subscription": {
+      "months": 0,
+      "required": 0,
+      "currentCollected": 0,
+      "currentCount": 0,
+      "totalCount": 0,
+      "totalCollected": 0
+    },
+    "donation": { "required": 0, "collected": 0, "count": 0 },
+    "upcomingEvent": 0,
+    "photo": 3,
+    "avgRating": 0,
+    "admin": 0,
+    "review": 0,
+    "project": 2,
+    "recurringFund": 0,
+    "follower": 0
+  },
+  "media": [
+    {
+      "publicationLogo": "",
+      "description": "",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Fmedia%2Foriginal_QYn2PwK9Ozt1LiOL5zll.jpg?alt=media",
+        "caption": "Photo of RTI Awareness by this NGO media"
+      },
+      "publicationName": "The Hindu",
+      "name": "RTI Awareness by this NGO",
+      "updatedAt": { "_seconds": 1612498459, "_nanoseconds": 0 },
+      "reporterName": "",
+      "video": { "caption": "Video of RTI Awareness by this NGO media", "url": "" },
+      "id": "QYn2PwK9Ozt1LiOL5zll",
+      "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "slug": "QYn2PwK9Ozt1LiOL5zll",
+      "link": "https://timesofindia.indiatimes.com/topic/RTI-awareness-campaign/news",
+      "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "date": { "_seconds": 1612498404, "_nanoseconds": 397000000 },
+      "createdAt": { "_seconds": 1612498459, "_nanoseconds": 0 },
+      "isActive": true
+    }
+  ],
+  "sdg": [
+    {
+      "link": "",
+      "description": "Ensure availability and sustainable management of water and sanitation for all",
+      "name": "Clean water and Sanitation",
+      "photo": { "url": "", "caption": "" },
+      "slug": "clean-water-and-sanitation",
+      "id": 6
+    },
+    {
+      "slug": "climate-action",
+      "description": "Take urgent action to combat climate change and its impacts",
+      "id": 13,
+      "name": "Climate Action",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-13.png?alt=media&token=0d7b3160-9863-4e3f-8cf0-d399a2ccfdd4",
+        "caption": ""
+      },
+      "link": ""
+    }
+  ],
+  "gateway": { "lotuspay": { "accountId": "" }, "id": "", "name": "", "razorpay": { "accountId": "" } }
+}

@@ -1,0 +1,401 @@
+/*--------------------------------------------------------------
+	#case-single-page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#6.1	case-single-section
+--------------------------------------------------------------*/
+.case-single-section {
+	padding-bottom: 95px;
+
+	.case-info-area {
+
+		@include media-query(991px) {
+			margin-top: 50px;
+		}
+
+		h3 {
+			font-size: 34px;
+			font-size: calc-rem-value(34);
+			margin: 0 0 1em;
+
+			@include media-query(991px) {
+				font-size: 28px;
+				font-size: calc-rem-value(28);
+			}
+
+		}
+
+		.goal-raised {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			font-weight: 600;
+			color: $theme-primary-color;
+			text-transform: uppercase;
+			overflow: hidden;
+
+			> div {
+				width: 50%;
+				float: left;
+			}
+
+			span {
+				color: $heading-color;
+			}
+		}
+
+		.progress {
+			background-color: #e6e6e6;
+			height: 8px;
+			box-shadow: none;
+			overflow: visible;
+			box-shadow: none;
+			border-radius: 10px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			@include transition-time(0.5s);
+
+			span {
+				background-color: $theme-primary-color;
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+				font-weight: bold;
+				color: $white;
+				padding: 2px 6px;
+				text-align: center;
+				position: absolute;
+				right: -15px;
+				top: -32px;
+
+				&:before {
+					content: "";
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-top: 10px solid $theme-primary-color;
+					position: absolute;
+					bottom: -6px;
+					left: 14px;
+				}
+
+				@include media-query(991px) {
+					padding: 0 6px;
+				}
+			}
+		}
+
+		.progress-bar {
+			background: $theme-primary-color;
+			position: relative;
+			box-shadow: none;
+		    border-radius: 10px;
+		}
+	}
+
+
+	.social-area {
+		margin: 30px 0;
+	}
+
+	.social-area ul {
+		overflow: hidden;
+		list-style: none;
+		display: inline-block;
+
+		@include media-query(991px) {
+			display: inline-block;
+		}
+
+		li {
+			float: left;
+		}
+
+		> li + li {
+			margin-left: 10px;
+		}
+
+		a {
+			background-color: #e2e2e2;
+			width: 30px;
+			height: 30px;
+			line-height: 32px;
+			text-align: center;
+			font-size: 12px;
+			font-size: calc-rem-value(12);
+			color: #525252;
+			display: inline-block;
+			border-radius: 0;
+		}
+
+		a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+
+	.social-area span {
+		font-family: $heading-font;
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		display: inline-block;
+		float: right;
+		position: relative;
+
+		@include media-query(767px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+
+		&:before {
+			content: "";
+			background-color: $heading-color;
+			width: 30px;
+			height: 1px;
+			position: absolute;
+			left: -40px;
+			top: 50%;
+		}
+	}
+
+	.social-area + p {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		margin: 0;
+	}
+
+	/*----------------------------------------
+		donate-area-wrapper
+	------------------------------------------*/
+	.donate-area-bottom {
+		margin-top: 80px;
+	}
+
+	.donate-area-wrapper {
+
+		h3 {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			margin: 0 0 0.5em;
+		}
+
+		h3 + p {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			text-transform: uppercase;
+			position: relative;
+			padding-left: 30px;
+			margin: 0 0 2em;
+
+			span {
+				background-color: $theme-primary-color;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				font-size: 12px;
+				font-size: calc-rem-value(12);
+				color: $white;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		form[id*=give-form] .give-donation-amount {
+		    margin: 0 0 15px;
+		    clear: both;
+		}
+
+		.give-form-type-multi .give-currency-symbol {
+			background-color: #f2f2f2;
+		    height: 50px;
+		    border: 1px solid #eee;
+		    border-left: none !important;
+		    line-height: 50px;
+		    color: #242f6c;
+		    padding: 0px 18px;
+		    font-size: 18px;
+		    box-sizing: border-box;
+		    float: left;
+		}
+
+		#give-recurring-form .give-hidden, 
+		form.give-form .give-hidden, 
+		form[id*=give-form] .give-hidden,
+		.give-hidden {
+		    display: none;
+		}
+
+		form[id*=give-form] 
+		.give-donation-amount #give-amount, 
+		form[id*=give-form] 
+		.give-donation-amount #give-amount-text {
+		    height: 50px;
+		    border: 1px solid #eee;
+		}
+
+		.give-btn {
+			background: #eeeeee;
+			border: 0;
+			padding: 12px 20px;
+		    color: #636363;
+		    @inlcude transition-time(0.3s);
+		}
+
+		.give-btn:hover,
+		.give-btn:focus {
+			background: $theme-primary-color;
+			color: $white;
+		}
+
+		#give-recurring-form h3.give-section-break, 
+		#give-recurring-form h4.give-section-break, 
+		#give-recurring-form legend, 
+		form.give-form h3.give-section-break, 
+		form.give-form h4.give-section-break, 
+		form.give-form legend, 
+		form[id*=give-form] h3.give-section-break, 
+		form[id*=give-form] h4.give-section-break, 
+		form[id*=give-form] legend {
+		    font-size: 15px;
+		    margin-bottom: 2em;
+		}
+
+		#give-recurring-form .form-row label, 
+		form.give-form .form-row label, 
+		form[id*=give-form] .form-row label {
+		    font-weight: 600;
+		    font-size: 14px;
+		}
+
+		.give-input {
+			font-size: 14px !important;
+		}
+
+		.give-submit {
+			background: $heading-color;
+			font-size: 16px;
+			color: white;
+			padding: 15px 25px;
+			border-radius: 5px;
+		}
+	}
+
+
+	/*---------------------------------------
+		case-single-sidebar
+	----------------------------------------*/
+	.case-single-sidebar {
+		> .widget + .widget {
+			margin-top: 60px;
+		}
+
+		@include media-query(991px) {
+			max-width: 400px;
+			margin-top: 80px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 60px;
+			max-width: 400px;
+		}
+	}
+
+	.contact-widget {
+		@include background-style("../images/m-1.jpg", center center, cover, no-repeat, local);
+		padding: 65px 40px;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: "";
+			background: $theme-primary-color;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.9;
+		}
+
+		> div {
+			position: relative;
+			z-index: 1;
+		}
+
+		> div + div {
+			margin-top: 30px;
+		}
+
+		h4 {
+			font-size: 24px;
+			font-size: calc-rem-value(24);
+			line-height: 1.4em;
+			color: $white;
+			margin: 0;
+			text-transform: capitalize;
+		}
+
+
+		p {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			color: $white;
+			margin: 0;
+		}
+	}
+
+	/*** urgent-case-widget ***/
+	.urgent-case-widget {
+		.case {
+			overflow: hidden;
+		}
+
+		.cases > .case + .case {
+			margin-top: 15px;
+			padding-top: 15px;
+		}
+
+		.case .img-holder {
+			width: 70px;
+			float: left;
+		}
+
+		.case .details {
+			width: calc(100% - 70px);
+			float: left;
+			padding-left: 20px;
+		}
+
+		.case h4 {
+			font-family: $base-font;
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			font-weight: 600;
+			line-height: 1.3em;
+			margin: 0 0 0.3em;
+
+			@include media-query(1199px) {
+				margin: 0;
+			}
+		}
+
+		.case h4 a {
+			display: inline-block;
+			color: $heading-color;
+		}
+
+		.case h4 a:hover {
+			color: $theme-primary-color;
+		}
+
+		.case .details .g-r {
+			font-size: 13px;
+			font-size: calc-rem-value(13);
+			font-weight: 600;
+			color: $theme-primary-color;
+		}
+	}
+
+}

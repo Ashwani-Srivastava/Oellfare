@@ -1,0 +1,206 @@
+/*--------------------------------------------------------------
+	### Miscellaneous
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+
+// fonts
+$base-font-size: 16;
+$base-font: 'Jost', sans-serif;
+$heading-font: 'Jost', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: 600;
+    color: $heading-color;
+}
+
+.theme-btn-s1, 
+.theme-btn-s3, 
+.theme-btn-s6, 
+.theme-btn-s7 {
+    font-weight: 400;
+}
+
+.theme-btn-s4,
+.theme-btn-s5 {
+	font-weight: 500;
+}
+
+.page-title .breadcrumb li {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.page-title h2 {
+	font-size: 50px;
+	font-size: calc-rem-value(50);
+	font-weight: bold;
+	margin: 0 0 0.2em;
+
+	@include media-query(991px) {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+	}
+
+	@include media-query(767px) {
+		font-size: 35px;
+		font-size: calc-rem-value(35);
+	}
+}
+
+.section-title-s3 p {
+	@include widther (1200px) {
+		font-size: 17px;
+	}
+}
+
+/*--------------------------------------------------------------
+	#blog-section
+--------------------------------------------------------------*/
+.blog-section {
+	.grid:before {
+		display: none;
+	}
+
+	.entry-details {
+		position: static;
+		margin-top: 35px;
+	}
+
+	.entry-details h3 {
+		line-height: 1.2em;
+		margin: 0 0 0.6em;
+	}
+
+	.entry-details h3 a {
+		color: $heading-color;
+	}
+
+	.entry-details p {
+	    font-size: 12px;
+	    font-weight: 500;
+	    letter-spacing: 3px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+	#case-single-section
+--------------------------------------------------------------*/
+.case-single-section {
+	.big-img {
+		max-height: 455px;
+		overflow: hidden;
+	}
+
+	.donate-area-bottom {
+		margin-top: 60px;
+	}
+
+	form[id*=give-form] #give-final-total-wrap .give-donation-total-label,
+	form[id*=give-form] #give-final-total-wrap .give-final-total-amount {
+		font-size: 16px;
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.donate-area-wrapper textarea  {
+		height: 150px;
+	}
+
+	.case-info-area .goal-raised span {
+	    display: inline-block;
+	    padding-right: 8px;
+	}
+
+	.donate-area-wrapper,
+	.big-img {
+		@include widther(1200px) {
+			padding-right: 25px;
+		}
+	}
+
+	#give-gateway-radio-list label {
+		font-weight: 600;
+	}
+
+	#give_purchase_form_wrap .give-input {
+		padding-left: 15px;
+	}
+
+	#give-recurring-form .form-row, 
+	form.give-form .form-row, 
+	form[id*=give-form] .form-row {
+		margin-bottom: 22px;
+	}
+
+	#give_purchase_form_wrap {
+		padding-top: 15px;
+	}
+
+	.donate-area-wrapper h3 + p {
+		text-transform: none;
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
+
+
+/*--------------------------------------------------------------
+	#event-single-section
+--------------------------------------------------------------*/
+.event-single-section {
+	.event-info h5 {
+	    font-size: 13px;
+	    font-weight: 600;
+	    text-transform: uppercase;
+	    padding-top: 5px;
+	    margin: 0 0 0.1em;
+	}
+
+	.event-info h3 {
+	    margin: 0 0 1em;
+	}
+
+	@include widther(1200px) {
+		.event-text p {
+		    margin-bottom: 1.8em;
+		    font-size: 18px;
+		}
+	}
+
+	.event-text p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+/*--------------------------------------------------------------
+	#mission-vision-section
+--------------------------------------------------------------*/
+.mission-vision-section {
+	.overlay:before {
+	    background: rgba(205, 33, 29, 0.95);
+	}
+}
+
+.about-page-section .about-features-grid p {
+    font-size: 16px;
+}
+
+.about-section .about-features p {
+    font-size: 15px;
+}
+
+.shop-pg-section .details h4 {
+    font-weight: 500;
+}
+
+.shop-pg-section .details del {
+     font-weight: 400; 
+}

@@ -29,3 +29,19 @@
   More info about color theming using Ionic:
   https://ionicframework.com/docs/theming/color-generator
 */
+
+
+/**
+ * BEGIN: Proffer
+ */
+
+/**
+ * To enable scrolling in all pages
+ */
+.page-wrapper {
+    overflow-y                  :   scroll !important;
+}
+
+/**
+ * END: Proffer
+ */

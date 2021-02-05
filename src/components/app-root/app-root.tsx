@@ -33,6 +33,8 @@ export class AppRoot {
         return (
             <ion-app>
                 <ion-router useHash={false}>
+
+                    { /*
                     <ion-route url="/" component="charity-home" />
                     <ion-route url="/about" component="charity-about" />
                     <ion-route url="/about/press-coverage" component="charity-press-coverage" />
@@ -42,6 +44,18 @@ export class AppRoot {
                     <ion-route url="/projects" component="charity-projects" />
                     <ion-route url="/projects/:projectSlug" component="charity-projects-detail" />
                     <ion-route url="/volunteer" component="charity-volunteer" />
+                       */ }
+
+                    <ion-route url="/" component="proffer-home" />
+                    <ion-route url="/about" component="proffer-about" />
+                    <ion-route url="/about/press-coverage" component="proffer-press-coverage" />
+                    <ion-route url="/about/legal" component="proffer-legal" />
+                    <ion-route url="/contact" component="proffer-contact" />
+                    <ion-route url="/donate" component="proffer-donate" />
+                    <ion-route url="/projects" component="proffer-projects" />
+                    <ion-route url="/projects/:projectSlug" component="proffer-projects-detail" />
+                    <ion-route url="/volunteer" component="proffer-volunteer" />
+
                 </ion-router>
                 <ion-nav />
             </ion-app>

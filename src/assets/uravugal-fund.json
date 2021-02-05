@@ -1,0 +1,64 @@
+{
+  "status": 0,
+  "slug": "general-donation",
+  "video": { "caption": "", "url": "" },
+  "coordinators": [
+    {
+      "priority": 0,
+      "email": "saiy2k@gmail.com",
+      "ngo": {
+        "id": "jjewCbG2olNnNYlxxTRa",
+        "slug": "gfoi",
+        "logo": { "url": "", "caption": "" },
+        "name": "GFoI"
+      },
+      "name": "saiy2k",
+      "id": "8ugfTOyf1hgMQkTep2VddWntdN43",
+      "photo": { "caption": "", "url": "" },
+      "phone": "+919952998132"
+    }
+  ],
+  "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+  "id": "uRY8PLS9FOKHKjyb3aHG",
+  "donation": { "collected": 0, "required": 50000, "count": 0 },
+  "createdAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "commission": 5,
+  "fullUrl": "",
+  "shortUrl": "",
+  "state": { "id": 31, "name": "Tamil Nadu" },
+  "startDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
+  "donationMin": 100,
+  "donationSlot": [],
+  "coverPhoto": [
+    {
+      "caption": "",
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Ffundraiser%2FuRY8PLS9FOKHKjyb3aHG%2Foriginal_cover.jpg?alt=media&token=3521bb76-d114-4f12-ac68-4d53a895852e"
+    }
+  ],
+  "aboutProject": "About the Project",
+  "isBroadcasted": false,
+  "project": { "name": "", "id": "" },
+  "shortCode": "",
+  "aggregate": { "update": 0, "fork": 0 },
+  "donationBtnText": "Donate",
+  "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
+  "donationMax": 10000,
+  "ngo": {
+    "logo": {
+      "caption": "Caption of GFoI photo",
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_logo.jpg?alt=media"
+    },
+    "name": "GFoI",
+    "slug": "gfoi",
+    "id": "jjewCbG2olNnNYlxxTRa"
+  },
+  "block": { "id": 0, "name": "" },
+  "district": { "id": 3100, "name": "Chennai" },
+  "aboutNgo": "About the Ngo",
+  "endDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
+  "updatedAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "isActive": true,
+  "cause": { "id": 0, "name": "" },
+  "name": "General Donation",
+  "recentUpdate": []
+}
