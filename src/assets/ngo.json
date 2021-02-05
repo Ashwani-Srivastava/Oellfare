@@ -1,400 +1,635 @@
 {
-  "slug": "uravugal-trust",
-  "awards": [],
-  "whyHelpMatters": [ { "text": "To serve helpless souls, get peace", "icon": "checkmark-circle-outline" } ],
-  "isActive": true,
-  "projects": [],
-  "id": "6rmWbKOxpTyAhGybdAlB",
-  "testimonials": [],
-  "logo": {
-    "id": "",
-    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_logo.jpg?alt=media",
-    "caption": "Caption of Uravugal Trust photo"
-  },
-  "video": {
-    "id": "",
-    "url": "https://www.youtube.com/watch?v=EFvlzdyJq-U",
-    "caption": "Caption of Uravugal Trust video"
-  },
-  "address": "21, Abdulla Street Srirampuram,\nSakthi Nagar, Sankarapuram, Choolaimedu,\nChennai, Tamil Nadu 600094",
-  "ops": {
-    "settlementSheetId": "1oUsijw7MegONgRn6Wj7fsUf1XtYNULYZX9Vi4jAZYIA",
-    "receiptVersion": 2,
-    "offlinePaymentRow": 724,
-    "spreadSheetId": "1oUsijw7MegONgRn6Wj7fsUf1XtYNULYZX9Vi4jAZYIA",
-    "settlementRow": 5
-  },
-  "fullUrl": "https://thegrassroots.app/chennai/ngo/uravugal-trust",
-  "receipt": {
-    "baseImage": { "url": "" },
-    "fields": [],
-    "nextId": 12,
-    "offNextId": 21,
-    "onlineNextId": 1000,
-    "autoNextId": 15
-  },
-  "priority": 100,
-  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "bank": { "bankName": "", "ifscCode": "", "accountName": "", "accountNo": "" },
-  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "vision": "To create a nation free from homelessness",
-  "accountId": "",
-  "legal": {
-    "regDeed": { "regNo": "861/2017", "file": "", "date": "2020-07-16T07:44:10.444+05:30" },
-    "bank": {
-      "ifscCode": "UTIB0001009",
-      "accountNo": "918020042973683",
-      "accountName": "Uravugal Trust",
-      "bankName": "Axis Bank"
-    },
-    "fcra": { "date": "2020-07-16T07:33:03.458+05:30", "regNo": "", "file": "" },
-    "legal12a": { "regNo": "AAATU8453D", "file": "", "date": "2020-07-16T07:33:03.457+05:30" },
-    "panNo": "AAATU8453D",
-    "regNo": "861/2017",
-    "legal80g": { "file": "", "date": "2020-07-16T07:33:03.457+05:30", "regNo": "" }
-  },
-  "photos": [
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover1.jpg?alt=media",
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover2.jpg?alt=media",
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover3.jpg?alt=media",
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover4.jpg?alt=media"
-  ],
-  "district": { "id": 3100, "name": "Chennai" },
-  "updatedAt": { "_seconds": 1594866668, "_nanoseconds": 0 },
-  "description": "We do the final rites of the mortal remains of homeless and unknown corpses. Unfortunately, these people have been ignored by their children and society during their lifetime and they end up on the streets where they beg and do whatever they could to have few square meals a day. Right from the inception of this organization we have buried close to 950+ dead bodies of homeless and sick people, old people dying on the roads, people dying due to natural calamities, small kids who passed away while treatment. We don't ask a rupee from the grieving family to perform the last rites. We undertake everything. \n\nApart from this, we have also rescued and rehabilitated 50+ old aged homeless people and relocated them to old age homes.",
-  "status": 3,
-  "state": { "name": "Tamil Nadu", "id": 31 },
-  "shortUrl": "https://grs.one/",
-  "aggregate": {
-    "mediaRecognition": 10,
-    "follower": 2,
-    "subscription": {
-      "count": 0,
-      "currentCollected": 200,
-      "currentCount": 1,
-      "amount": 0,
-      "totalCollected": 200,
-      "totalCount": 1
-    },
-    "upcomingEvent": 0,
-    "project": 0,
-    "volunteer": {
-      "joined": 0,
-      "required": 0,
-      "registered": 0,
-      "unattendedVerified": 0,
-      "hoursSelf": 0,
-      "unattendedSelf": 0,
-      "hoursVerified": 0,
-      "attendedSelf": 0,
-      "attendedVerified": 0
-    },
-    "review": 0,
-    "admin": 0,
-    "photo": 4,
-    "event": 0,
-    "testimonial": 0,
-    "donation": { "count": 0, "required": 0, "collected": 0 },
-    "award": 0,
-    "avgRating": 0
-  },
-  "shortCode": "",
-  "media": [
-    {
-      "reporterName": "",
-      "publicationLogo": "",
-      "updatedAt": { "_seconds": 1612191430, "_nanoseconds": 0 },
-      "publicationName": "Behindwoods Air",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "date": { "_seconds": 1602428112, "_nanoseconds": 204000000 },
-      "id": "KOsilvguxwafU0kGbKRo",
-      "link": "https://www.youtube.com/watch?v=UWffdco6x08",
-      "slug": "KOsilvguxwafU0kGbKRo",
-      "isActive": true,
-      "video": {
-        "caption": "Video of \"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி media",
-        "url": ""
-      },
-      "createdAt": { "_seconds": 1612191430, "_nanoseconds": 0 },
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "photo": {
-        "caption": "Photo of \"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி media",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_KOsilvguxwafU0kGbKRo.jpg?alt=media"
-      },
-      "description": "",
-      "name": "\"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி"
-    },
-    {
-      "name": "புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19",
-      "slug": "gmjYms0kVlEHnsb2dSLB",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "id": "gmjYms0kVlEHnsb2dSLB",
-      "reporterName": "",
-      "date": { "_seconds": 1586843767, "_nanoseconds": 162000000 },
-      "createdAt": { "_seconds": 1600495023, "_nanoseconds": 0 },
-      "link": "",
-      "video": {
-        "caption": "Video of புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19 media",
-        "url": "https://www.youtube.com/watch?v=PiXNkACnseg"
-      },
-      "isActive": true,
-      "updatedAt": { "_seconds": 1612191225, "_nanoseconds": 0 },
-      "description": "",
-      "publicationName": " Nakkheeran TV",
-      "photo": {
-        "caption": "Photo of புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19 media",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_gmjYms0kVlEHnsb2dSLB.jpg?alt=media"
-      },
-      "publicationLogo": ""
-    },
-    {
-      "updatedAt": { "_seconds": 1612191793, "_nanoseconds": 0 },
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_th2nLOyIG3wo9Th70Kkn.jpg?alt=media",
-        "caption": "Photo of Uravugal Trust Founder Interview media"
-      },
-      "name": "Uravugal Trust Founder Interview",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "publicationLogo": "",
-      "slug": "th2nLOyIG3wo9Th70Kkn",
-      "publicationName": "CH Times",
-      "description": "",
-      "createdAt": { "_seconds": 1612191793, "_nanoseconds": 0 },
-      "reporterName": "",
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "date": { "_seconds": 1559142102, "_nanoseconds": 91000000 },
-      "id": "th2nLOyIG3wo9Th70Kkn",
-      "isActive": true,
-      "link": "https://www.youtube.com/watch?v=HPjLgUPSVc0",
-      "video": {
-        "caption": "Video of Uravugal Trust Founder Interview media",
-        "url": "https://www.youtube.com/watch?v=HPjLgUPSVc0"
-      }
-    },
-    {
-      "isActive": true,
-      "link": "https://www.rediff.com/getahead/report/this-23-year-old-is-the-hero-of-chennai/20190111.htm",
-      "updatedAt": { "_seconds": 1612427260, "_nanoseconds": 0 },
-      "date": { "_seconds": 1547195152, "_nanoseconds": 711000000 },
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_VTgpr74864lXBIiysZP7.jpg?alt=media",
-        "caption": "Photo of This 23 year old is the hero of Chennai media"
-      },
-      "description": "",
-      "publicationLogo": "",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "reporterName": "Divya Nair",
-      "createdAt": { "_seconds": 1612427260, "_nanoseconds": 0 },
-      "video": { "url": "", "caption": "Video of This 23 year old is the hero of Chennai media" },
-      "name": "This 23 year old is the hero of Chennai",
-      "id": "VTgpr74864lXBIiysZP7",
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "slug": "VTgpr74864lXBIiysZP7",
-      "publicationName": "Rediff"
-    },
-    {
-      "name": "Steps Stone",
-      "id": "USv14W7vlrTW7R1oK3fV",
-      "publicationName": "Steps Stone",
-      "reporterName": "",
-      "isActive": true,
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_USv14W7vlrTW7R1oK3fV.jpg?alt=media",
-        "caption": "Photo of Steps Stone media"
-      },
-      "link": "https://www.facebook.com/uravugaltrust/photos/a.137976053457129/323602051561194/?type=3&theater",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "video": { "url": "", "caption": "Video of Steps Stone media" },
-      "createdAt": { "_seconds": 1600494878, "_nanoseconds": 0 },
-      "date": { "_seconds": 1543643619, "_nanoseconds": 392000000 },
-      "updatedAt": { "_seconds": 1612190766, "_nanoseconds": 0 },
-      "description": "",
-      "slug": "USv14W7vlrTW7R1oK3fV",
-      "publicationLogo": ""
-    },
-    {
-      "name": "By their side at the very end",
-      "link": "https://epaper.newindianexpress.com/m5/1818978/EDEX/17-09-2018#dual/6/1",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "createdAt": { "_seconds": 1600494408, "_nanoseconds": 0 },
-      "publicationLogo": "",
-      "id": "KS7q4hldpZeYx2yu1cMv",
-      "description": "",
-      "publicationName": "The New Indian Express",
-      "photo": {
-        "caption": "Photo of By their side at the very end media",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_KS7q4hldpZeYx2yu1cMv.jpg?alt=media"
-      },
-      "date": { "_seconds": 1537163086, "_nanoseconds": 839000000 },
-      "updatedAt": { "_seconds": 1612191680, "_nanoseconds": 0 },
-      "video": { "url": "", "caption": "Video of By their side at the very end media" },
-      "isActive": true,
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "reporterName": "",
-      "slug": "KS7q4hldpZeYx2yu1cMv"
-    },
-    {
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "slug": "juikJesXjBH8tnaC1sNP",
-      "isActive": true,
-      "photo": {
-        "caption": "Photo of Dedicated to providing dignity to the dead media",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_juikJesXjBH8tnaC1sNP.jpg?alt=media"
-      },
-      "name": "Dedicated to providing dignity to the dead",
-      "date": { "_seconds": 1527486487, "_nanoseconds": 120000000 },
-      "createdAt": { "_seconds": 1600494582, "_nanoseconds": 0 },
-      "reporterName": "S. Poorvaja",
-      "id": "juikJesXjBH8tnaC1sNP",
-      "link": "https://www.thehindu.com/news/cities/chennai/dedicated-to-providing-dignity-to-the-dead/article24008377.ece",
-      "video": { "caption": "Video of Dedicated to providing dignity to the dead media", "url": "" },
-      "publicationLogo": "",
-      "updatedAt": { "_seconds": 1612190564, "_nanoseconds": 0 },
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "publicationName": "The Hindu",
-      "description": ""
-    },
-    {
-      "publicationLogo": "",
-      "link": "https://www.facebook.com/k7tamilnews/photos/a.1556986741270792/1858664187769711/?type=3&source=57",
-      "date": { "_seconds": 1526913469, "_nanoseconds": 793000000 },
-      "reporterName": "",
-      "description": "",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_g0vewfoTU8G9aAdL3FxP.jpg?alt=media",
-        "caption": "Photo of இது போன்ற உதவி புரியும் குணம் லட்சத்தில் ஒருவருக்கு தான் அமையும்!! media"
-      },
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "id": "g0vewfoTU8G9aAdL3FxP",
-      "isActive": true,
-      "name": "இது போன்ற உதவி புரியும் குணம் லட்சத்தில் ஒருவருக்கு தான் அமையும்!!",
-      "updatedAt": { "_seconds": 1612190850, "_nanoseconds": 0 },
-      "video": {
-        "url": "",
-        "caption": "Video of இது போன்ற உதவி புரியும் குணம் லட்சத்தில் ஒருவருக்கு தான் அமையும்!! media"
-      },
-      "publicationName": "K7 Tamil News",
-      "createdAt": { "_seconds": 1612190391, "_nanoseconds": 0 },
-      "slug": "g0vewfoTU8G9aAdL3FxP",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
-    },
-    {
-      "video": {
-        "url": "",
-        "caption": "Video of ஆதரவற்றவர்களின் சடலத்தை அடக்கம்செய்ய உதவும் கல்லூரி மாணவர்கள்! media"
-      },
-      "updatedAt": { "_seconds": 1612190674, "_nanoseconds": 0 },
-      "id": "vBZagBc9OcZfRXKdDzLW",
-      "link": "https://www.vikatan.com/news/miscellaneous/125537-college-students-arranged-the-funeral-function-for-workhouses",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "publicationLogo": "",
-      "isActive": true,
-      "name": "ஆதரவற்றவர்களின் சடலத்தை அடக்கம்செய்ய உதவும் கல்லூரி மாணவர்கள்!",
-      "description": "",
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "photo": {
-        "caption": "Photo of ஆதரவற்றவர்களின் சடலத்தை அடக்கம்செய்ய உதவும் கல்லூரி மாணவர்கள்! media",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_vBZagBc9OcZfRXKdDzLW.jpg?alt=media"
-      },
-      "publicationName": "Vikatan",
-      "date": { "_seconds": 1526881793, "_nanoseconds": 970000000 },
-      "slug": "vBZagBc9OcZfRXKdDzLW",
-      "reporterName": "சக்தி தமிழ்ச்செல்வன்",
-      "createdAt": { "_seconds": 1600494755, "_nanoseconds": 0 }
-    },
-    {
-      "id": "CHGxI5ULEYY9ioEY6h7J",
-      "date": { "_seconds": 1505919834, "_nanoseconds": 563000000 },
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "description": "",
-      "link": "https://www.newindianexpress.com/cities/chennai/2017/sep/20/dignity-in-death-for-nameless-souls-1660262.html",
-      "slug": "CHGxI5ULEYY9ioEY6h7J",
-      "video": { "caption": "Video of Dignity in death for nameless souls media", "url": "" },
-      "name": "Dignity in death for nameless souls",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_CHGxI5ULEYY9ioEY6h7J.jpg?alt=media",
-        "caption": "Photo of Dignity in death for nameless souls media"
-      },
-      "publicationLogo": "",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "publicationName": "The New Indian Express",
-      "isActive": true,
-      "reporterName": "",
-      "updatedAt": { "_seconds": 1612191928, "_nanoseconds": 0 },
-      "createdAt": { "_seconds": 1612191928, "_nanoseconds": 0 }
-    }
-  ],
-  "activeIn": [ { "id": 3100, "name": "Chennai" } ],
-  "team": [
-    {
-      "id": "Tbvuq4Hj5uyZIFqIAith",
-      "reachOut": {
-        "linkedin": "",
-        "twitter": "",
-        "website": "",
-        "phone1": "",
-        "instagram": "",
-        "facebook": "https://www.facebook.com/khalid.ahamed.5458",
-        "phone2": "",
-        "youtube": "",
-        "email": ""
-      },
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Furavugal-trust%2Fteam%2Foriginal_khaalid-ahamed.-n.jpg?alt=media",
-        "caption": "Photo of Khaalid Ahamed. N team"
-      },
-      "name": "Khaalid Ahamed. N",
-      "slug": "khaalid-ahamed.-n",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "role": "Founder",
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "hobbies": ""
-    }
-  ],
-  "mission": [
-    "Not just life, death deserves some dignity too. With the same core aspect, we have started 'Uravugal Trust' towards burial of unknown and homeless corpses. This was started by Mr.Khaalid Ahamed (Founder and President) with their friends in the year 2017. Our team comprises of youngsters from age 18 - 25 who have come forward understanding the depth of this cause and the need to stand by such families during the time of death. Almost 80% of our volunteers are college students across Chennai."
-  ],
-  "createdAt": { "_seconds": 1594866668, "_nanoseconds": 22000000 },
-  "name": "Uravugal Trust",
-  "activities": [ "dead body burial" ],
   "sdg": [
     {
       "id": 1,
-      "description": "End Poverty in all its forms everywhere",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-1.png?alt=media&token=76fb2429-e7b3-405d-8901-1bbcd03ebdbc",
-        "caption": ""
-      },
       "name": "No Poverty",
+      "photo": {
+        "caption": "",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-1.png?alt=media&token=76fb2429-e7b3-405d-8901-1bbcd03ebdbc"
+      },
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html",
       "slug": "",
-      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html"
+      "description": "End Poverty in all its forms everywhere"
     },
     {
       "photo": {
         "caption": "",
         "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-2.png?alt=media&token=9ab7cbbd-3807-48f8-a295-e1f67a3c68fe"
       },
+      "slug": "",
       "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-2-zero-hunger.html",
-      "name": "Zero Hunger",
       "id": 2,
       "description": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
-      "slug": ""
+      "name": "Zero Hunger"
     }
   ],
-  "whyVolunteerHere": [ { "icon": "checkmark-circle-outline", "text": "To serve helpless souls, get peace" } ],
-  "reachOut": {
-    "linkedin": "",
-    "website": "http://uravugaltrust.com/",
-    "twitter": "",
-    "phone2": "+917010751396",
-    "instagram": "https://www.instagram.com/uravugaltrust/",
-    "phone1": "+919087087063",
-    "youtube": "https://www.youtube.com/channel/UCtM1jcbxoAjYkRDMT-D-xZw",
-    "facebook": "https://www.facebook.com/uravugaltrust/",
-    "email": "uravugaltrust17@gmail.com"
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover1.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover2.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover3.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover4.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover5.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover6.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_cover7.jpg?alt=media"
+  ],
+  "bank": { "accountNo": "", "accountName": "", "ifscCode": "", "bankName": "" },
+  "team": [
+    {
+      "reachOut": {
+        "facebook": "www.facebook.com/khalid.ahamed.5458",
+        "phone2": "",
+        "youtube": "",
+        "website": "",
+        "phone1": "",
+        "twitter": "",
+        "linkedin": "",
+        "email": "",
+        "instagram": ""
+      },
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "id": "Tbvuq4Hj5uyZIFqIAith",
+      "name": "Khaalid Ahamed. N",
+      "photo": {
+        "caption": "Photo of Khaalid Ahamed. N team",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Furavugal-trust%2Fteam%2Foriginal_khaalid-ahamed.-n.jpg?alt=media"
+      },
+      "slug": "khaalid-ahamed.-n",
+      "role": "Founder",
+      "hobbies": "",
+      "since": { "_seconds": 0, "_nanoseconds": 0 }
+    },
+    {
+      "id": "O7EYPwdIVx0mQ5bHHJGE",
+      "reachOut": {
+        "phone1": "",
+        "phone2": "",
+        "twitter": "",
+        "linkedin": "",
+        "instagram": "",
+        "website": "",
+        "email": "",
+        "facebook": "",
+        "youtube": ""
+      },
+      "hobbies": "",
+      "role": "Secretary",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fteam%2Foriginal_O7EYPwdIVx0mQ5bHHJGE.jpg?alt=media",
+        "caption": "Photo of Deeshna Dinesh team"
+      },
+      "name": "Deeshna Dinesh"
+    },
+    {
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "hobbies": "",
+      "reachOut": {
+        "facebook": "",
+        "phone2": "",
+        "twitter": "",
+        "website": "",
+        "phone1": "",
+        "email": "",
+        "youtube": "",
+        "instagram": "",
+        "linkedin": ""
+      },
+      "name": "Ravi",
+      "id": "ThKv6tacwdqTmqpz3CoA",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fteam%2Foriginal_ThKv6tacwdqTmqpz3CoA.jpg?alt=media",
+        "caption": "Photo of Ravi team"
+      },
+      "role": "Treasurer"
+    },
+    {
+      "name": "Paulin",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fteam%2Foriginal_gWCLgNuqEpPjiZUZeeF1.jpg?alt=media",
+        "caption": "Photo of Paulin team"
+      },
+      "reachOut": {
+        "facebook": "",
+        "instagram": "",
+        "website": "",
+        "youtube": "",
+        "linkedin": "",
+        "twitter": "",
+        "phone2": "",
+        "phone1": "",
+        "email": ""
+      },
+      "id": "gWCLgNuqEpPjiZUZeeF1",
+      "hobbies": "",
+      "role": "Committe Member"
+    },
+    {
+      "hobbies": "",
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "role": "Committe Member",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fteam%2Foriginal_zKRV9Hy8zC8wuRTimpe1.jpg?alt=media",
+        "caption": "Photo of Niruban team"
+      },
+      "name": "Niruban",
+      "reachOut": {
+        "instagram": "",
+        "linkedin": "",
+        "website": "",
+        "facebook": "",
+        "email": "",
+        "youtube": "",
+        "phone2": "",
+        "phone1": "",
+        "twitter": ""
+      },
+      "id": "zKRV9Hy8zC8wuRTimpe1"
+    },
+    {
+      "photo": {
+        "caption": "Photo of Gayathri team",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fteam%2Foriginal_2pIvcQKL0Qq8qXZ0n1Mf.jpg?alt=media"
+      },
+      "id": "2pIvcQKL0Qq8qXZ0n1Mf",
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "name": "Gayathri",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "reachOut": {
+        "email": "",
+        "phone2": "",
+        "youtube": "",
+        "website": "",
+        "phone1": "",
+        "instagram": "",
+        "linkedin": "",
+        "facebook": "",
+        "twitter": ""
+      },
+      "hobbies": "",
+      "role": "Committe Member"
+    }
+  ],
+  "testimonials": [],
+  "updatedAt": { "_seconds": 1594866668, "_nanoseconds": 0 },
+  "media": [
+    {
+      "publicationName": "The New Indian Express",
+      "link": "https://www.newindianexpress.com/cities/chennai/2020/oct/29/how-this-chennai-social-worker-is-providing-dignity-to-the-dead-in-covid-19-times-2216677.html",
+      "createdAt": { "_seconds": 1612529009, "_nanoseconds": 0 },
+      "photo": {
+        "caption": "Photo of How this Chennai social worker is providing dignity to the dead in COVID-19 times media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_D4i3V9MYsCVNCwrYNR9R.jpg?alt=media"
+      },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "isActive": true,
+      "publicationLogo": "",
+      "video": {
+        "caption": "Video of How this Chennai social worker is providing dignity to the dead in COVID-19 times media",
+        "url": ""
+      },
+      "slug": "D4i3V9MYsCVNCwrYNR9R",
+      "reporterName": "Narayani M",
+      "description": "",
+      "id": "D4i3V9MYsCVNCwrYNR9R",
+      "name": "How this Chennai social worker is providing dignity to the dead in COVID-19 times",
+      "updatedAt": { "_seconds": 1612529009, "_nanoseconds": 0 },
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "date": { "_seconds": 1603975355, "_nanoseconds": 591000000 }
+    },
+    {
+      "id": "KOsilvguxwafU0kGbKRo",
+      "updatedAt": { "_seconds": 1612529101, "_nanoseconds": 0 },
+      "isActive": true,
+      "publicationName": "Behindwoods Air",
+      "name": "\"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "slug": "KOsilvguxwafU0kGbKRo",
+      "createdAt": { "_seconds": 1612191430, "_nanoseconds": 0 },
+      "date": { "_seconds": 1602428112, "_nanoseconds": 204000000 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "publicationLogo": "",
+      "reporterName": "",
+      "link": "https://www.youtube.com/watch?v=UWffdco6x08",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=UWffdco6x08",
+        "caption": "Video of \"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி media"
+      },
+      "description": "",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_KOsilvguxwafU0kGbKRo.jpg?alt=media",
+        "caption": "Photo of \"தாய்ப்பால சவக்குழியில ஊத்தினாங்க.. எனக்கு கரோனா பாசிட்டிவ்\" - உன்னத உள்ளம் Khalid Ahmed பேட்டி media"
+      }
+    },
+    {
+      "date": { "_seconds": 1596027213, "_nanoseconds": 234000000 },
+      "updatedAt": { "_seconds": 1612529672, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1612529672, "_nanoseconds": 0 },
+      "isActive": true,
+      "publicationName": "The Economic Times",
+      "reporterName": "Indulekha Aravind",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "photo": {
+        "caption": "Photo of For funerals in the time of Covid, strangers step in to help in final journey media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_4NkgySTPWPhCGg833Byw.jpg?alt=media"
+      },
+      "name": "For funerals in the time of Covid, strangers step in to help in final journey",
+      "slug": "4NkgySTPWPhCGg833Byw",
+      "publicationLogo": "",
+      "id": "4NkgySTPWPhCGg833Byw",
+      "video": {
+        "caption": "Video of For funerals in the time of Covid, strangers step in to help in final journey media",
+        "url": ""
+      },
+      "link": "https://economictimes.indiatimes.com/news/politics-and-nation/for-funerals-in-the-time-of-covid-strangers-step-in-to-help-in-final-journey/articleshow/77228537.cms",
+      "description": ""
+    },
+    {
+      "photo": {
+        "caption": "Photo of The TN groups helping families give COVID-19 victims a dignified funeral media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_yg3m0GoSpqS0PDNkyA2o.jpg?alt=media"
+      },
+      "slug": "yg3m0GoSpqS0PDNkyA2o",
+      "publicationName": "The News Minute",
+      "publicationLogo": "",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "video": {
+        "caption": "Video of The TN groups helping families give COVID-19 victims a dignified funeral media",
+        "url": ""
+      },
+      "updatedAt": { "_seconds": 1612529595, "_nanoseconds": 0 },
+      "reporterName": "Priyanka Thirumurthy",
+      "link": "https://www.thenewsminute.com/article/tn-groups-helping-families-give-covid-19-victims-dignified-funeral-128764",
+      "createdAt": { "_seconds": 1612529595, "_nanoseconds": 0 },
+      "isActive": true,
+      "date": { "_seconds": 1594817561, "_nanoseconds": 212000000 },
+      "id": "yg3m0GoSpqS0PDNkyA2o",
+      "name": "The TN groups helping families give COVID-19 victims a dignified funeral",
+      "description": ""
+    },
+    {
+      "publicationLogo": "",
+      "publicationName": " Nakkheeran TV",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "photo": {
+        "caption": "Photo of புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19 media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_gmjYms0kVlEHnsb2dSLB.jpg?alt=media"
+      },
+      "date": { "_seconds": 1586843767, "_nanoseconds": 162000000 },
+      "name": "புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19",
+      "slug": "gmjYms0kVlEHnsb2dSLB",
+      "id": "gmjYms0kVlEHnsb2dSLB",
+      "createdAt": { "_seconds": 1600495023, "_nanoseconds": 0 },
+      "isActive": true,
+      "video": {
+        "url": "https://www.youtube.com/watch?v=PiXNkACnseg",
+        "caption": "Video of புழு பூத்த உடல்களை... Khaalid Ahamed Founder - Uravugal Trust Interview | COVID 19 media"
+      },
+      "reporterName": "",
+      "link": "",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "description": "",
+      "updatedAt": { "_seconds": 1612191225, "_nanoseconds": 0 }
+    },
+    {
+      "description": "",
+      "updatedAt": { "_seconds": 1612529287, "_nanoseconds": 0 },
+      "photo": {
+        "caption": "Photo of Burial of Unclaimed Dead bodies | Last Rites media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_XF0AZKttzXBp8meHI86J.jpg?alt=media"
+      },
+      "slug": "XF0AZKttzXBp8meHI86J",
+      "createdAt": { "_seconds": 1612529287, "_nanoseconds": 0 },
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "date": { "_seconds": 1584449163, "_nanoseconds": 826000000 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "publicationLogo": "",
+      "name": "Burial of Unclaimed Dead bodies | Last Rites",
+      "publicationName": "Sathiyam TV",
+      "reporterName": "",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=eNBxp_ySSVE",
+        "caption": "Video of Burial of Unclaimed Dead bodies | Last Rites media"
+      },
+      "link": "https://www.youtube.com/watch?v=eNBxp_ySSVE",
+      "id": "XF0AZKttzXBp8meHI86J",
+      "isActive": true
+    },
+    {
+      "reporterName": "Merin James",
+      "date": { "_seconds": 1569760267, "_nanoseconds": 36000000 },
+      "isActive": true,
+      "name": "Youngster gives unclaimed bodies a decent farewell",
+      "updatedAt": { "_seconds": 1612528943, "_nanoseconds": 0 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdAt": { "_seconds": 1612528943, "_nanoseconds": 0 },
+      "slug": "N6JxSsRf4JhftLQBWZ2M",
+      "description": "",
+      "video": {
+        "caption": "Video of Youngster gives unclaimed bodies a decent farewell media",
+        "url": ""
+      },
+      "publicationLogo": "",
+      "id": "N6JxSsRf4JhftLQBWZ2M",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "publicationName": "DT Next",
+      "link": "https://www.dtnext.in/News/City/2019/09/29183418/1189514/Youngster-gives-unclaimed-bodies-a-decent-farewell.vpf",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_N6JxSsRf4JhftLQBWZ2M.jpg?alt=media",
+        "caption": "Photo of Youngster gives unclaimed bodies a decent farewell media"
+      }
+    },
+    {
+      "slug": "th2nLOyIG3wo9Th70Kkn",
+      "link": "https://www.youtube.com/watch?v=HPjLgUPSVc0",
+      "publicationName": "CH Times",
+      "createdAt": { "_seconds": 1612191793, "_nanoseconds": 0 },
+      "description": "",
+      "id": "th2nLOyIG3wo9Th70Kkn",
+      "publicationLogo": "",
+      "date": { "_seconds": 1559142102, "_nanoseconds": 91000000 },
+      "updatedAt": { "_seconds": 1612191793, "_nanoseconds": 0 },
+      "video": {
+        "url": "https://www.youtube.com/watch?v=HPjLgUPSVc0",
+        "caption": "Video of Uravugal Trust Founder Interview media"
+      },
+      "name": "Uravugal Trust Founder Interview",
+      "isActive": true,
+      "reporterName": "",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "photo": {
+        "caption": "Photo of Uravugal Trust Founder Interview media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_th2nLOyIG3wo9Th70Kkn.jpg?alt=media"
+      }
+    },
+    {
+      "id": "OBWsPGeGtuPXGA11GRbh",
+      "publicationLogo": "",
+      "description": "",
+      "updatedAt": { "_seconds": 1612529067, "_nanoseconds": 0 },
+      "isActive": true,
+      "video": {
+        "url": "",
+        "caption": "Video of Dignity For the Dead: 23-YO Has Helped Give 250 Unclaimed Bodies Their Last Rites media"
+      },
+      "link": "https://www.thebetterindia.com/178694/chennai-hero-buries-unidentified-bodes-dignity-death-india/",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "slug": "OBWsPGeGtuPXGA11GRbh",
+      "reporterName": "Vidya Raja",
+      "publicationName": "The Better India",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdAt": { "_seconds": 1612529067, "_nanoseconds": 0 },
+      "name": "Dignity For the Dead: 23-YO Has Helped Give 250 Unclaimed Bodies Their Last Rites",
+      "photo": {
+        "caption": "Photo of Dignity For the Dead: 23-YO Has Helped Give 250 Unclaimed Bodies Their Last Rites media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_OBWsPGeGtuPXGA11GRbh.jpg?alt=media"
+      },
+      "date": { "_seconds": 1554813814, "_nanoseconds": 74000000 }
+    },
+    {
+      "updatedAt": { "_seconds": 1612427260, "_nanoseconds": 0 },
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "reporterName": "Divya Nair",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fmedia%2Foriginal_VTgpr74864lXBIiysZP7.jpg?alt=media",
+        "caption": "Photo of This 23 year old is the hero of Chennai media"
+      },
+      "description": "",
+      "name": "This 23 year old is the hero of Chennai",
+      "publicationName": "Rediff",
+      "date": { "_seconds": 1547195152, "_nanoseconds": 711000000 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "isActive": true,
+      "createdAt": { "_seconds": 1612427260, "_nanoseconds": 0 },
+      "slug": "VTgpr74864lXBIiysZP7",
+      "publicationLogo": "",
+      "video": { "url": "", "caption": "Video of This 23 year old is the hero of Chennai media" },
+      "id": "VTgpr74864lXBIiysZP7",
+      "link": "https://www.rediff.com/getahead/report/this-23-year-old-is-the-hero-of-chennai/20190111.htm"
+    }
+  ],
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "receipt": {
+    "autoNextId": 15,
+    "onlineNextId": 1000,
+    "baseImage": { "url": "" },
+    "fields": [],
+    "offNextId": 21,
+    "nextId": 12
   },
+  "ops": {
+    "spreadSheetId": "1oUsijw7MegONgRn6Wj7fsUf1XtYNULYZX9Vi4jAZYIA",
+    "offlinePaymentRow": 724,
+    "settlementRow": 5,
+    "settlementSheetId": "1oUsijw7MegONgRn6Wj7fsUf1XtYNULYZX9Vi4jAZYIA",
+    "receiptVersion": 2
+  },
+  "shortUrl": "https://grs.one/",
+  "reachOut": {
+    "website": "http://uravugaltrust.com/",
+    "phone1": "+919087087063",
+    "instagram": "https://www.instagram.com/uravugaltrust/",
+    "phone2": "+917010751396",
+    "email": "uravugaltrust17@gmail.com",
+    "linkedin": "",
+    "twitter": "",
+    "youtube": "https://www.youtube.com/channel/UCtM1jcbxoAjYkRDMT-D-xZw",
+    "facebook": "https://www.facebook.com/uravugaltrust/"
+  },
+  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "aggregate": {
+    "photo": 7,
+    "subscription": {
+      "currentCollected": 200,
+      "totalCount": 1,
+      "amount": 0,
+      "count": 0,
+      "totalCollected": 200,
+      "currentCount": 1
+    },
+    "event": 0,
+    "avgRating": 0,
+    "award": 0,
+    "volunteer": {
+      "attendedSelf": 0,
+      "joined": 0,
+      "registered": 0,
+      "hoursSelf": 0,
+      "unattendedSelf": 0,
+      "attendedVerified": 0,
+      "unattendedVerified": 0,
+      "required": 0,
+      "hoursVerified": 0
+    },
+    "project": 2,
+    "review": 0,
+    "mediaRecognition": 16,
+    "follower": 2,
+    "testimonial": 0,
+    "admin": 0,
+    "donation": { "collected": 0, "count": 0, "required": 0 },
+    "upcomingEvent": 0
+  },
+  "activeIn": [ { "name": "Chennai", "id": 3100 } ],
+  "activities": [ "dead body burial" ],
+  "shortCode": "",
   "causes": [ "Senior Citizens", " Homeless people" ],
-  "access": { "fundraiser": false, "event": false, "profile": true, "receipt": true }
+  "accountId": "",
+  "address": "21, Abdulla Street Srirampuram,\nSakthi Nagar, Sankarapuram, Choolaimedu,\nChennai, Tamil Nadu 600094",
+  "awards": [],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=EFvlzdyJq-U",
+    "id": "",
+    "caption": "Caption of Uravugal Trust video"
+  },
+  "logo": {
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_logo.jpg?alt=media",
+    "caption": "Caption of Uravugal Trust photo",
+    "id": ""
+  },
+  "vision": "To create a nation free from homelessness",
+  "name": "Uravugal Trust",
+  "createdAt": { "_seconds": 1594866668, "_nanoseconds": 22000000 },
+  "mission": [
+    "Not just life, death deserves some dignity too. With the same core aspect, we have started 'Uravugal Trust' towards burial of unknown and homeless corpses. This was started by Mr.Khaalid Ahamed (Founder and President) with their friends in the year 2017. Our team comprises of youngsters from age 18 - 25 who have come forward understanding the depth of this cause and the need to stand by such families during the time of death. Almost 80% of our volunteers are college students across Chennai."
+  ],
+  "description": "We do the final rites of the mortal remains of homeless and unknown corpses. Unfortunately, these people have been ignored by their children and society during their lifetime and they end up on the streets where they beg and do whatever they could to have few square meals a day. Right from the inception of this organization we have buried close to 950+ dead bodies of homeless and sick people, old people dying on the roads, people dying due to natural calamities, small kids who passed away while treatment. We don't ask a rupee from the grieving family to perform the last rites. We undertake everything. \n\nApart from this, we have also rescued and rehabilitated 50+ old aged homeless people and relocated them to old age homes.",
+  "priority": 100,
+  "state": { "name": "Tamil Nadu", "id": 31 },
+  "whyHelpMatters": [ { "text": "To serve helpless souls, get peace", "icon": "checkmark-circle-outline" } ],
+  "isActive": true,
+  "legal": {
+    "regDeed": { "regNo": "861/2017", "date": "2020-07-16T07:44:10.444+05:30", "file": "" },
+    "legal80g": { "file": "", "date": "2020-07-16T07:33:03.457+05:30", "regNo": "" },
+    "regNo": "861/2017",
+    "legal12a": { "file": "", "regNo": "AAATU8453D", "date": "2020-07-16T07:33:03.457+05:30" },
+    "fcra": { "file": "", "date": "2020-07-16T07:33:03.458+05:30", "regNo": "" },
+    "panNo": "AAATU8453D",
+    "bank": {
+      "ifscCode": "UTIB0001009",
+      "bankName": "Axis Bank",
+      "accountNo": "918020042973683",
+      "accountName": "Uravugal Trust"
+    }
+  },
+  "id": "6rmWbKOxpTyAhGybdAlB",
+  "district": { "name": "Chennai", "id": 3100 },
+  "whyVolunteerHere": [ { "text": "To serve helpless souls, get peace", "icon": "checkmark-circle-outline" } ],
+  "status": 3,
+  "slug": "uravugal-trust",
+  "projects": [
+    {
+      "id": "yzc1Y9MAwFxsdXxh2igk",
+      "photo": {
+        "caption": "Photo of Anbuku kaikudupom project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fproject%2Foriginal_yzc1Y9MAwFxsdXxh2igk.jpg?alt=media"
+      },
+      "updatedAt": { "_seconds": 1612537070, "_nanoseconds": 0 },
+      "aggregate": {
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "volunteer": {
+          "unattendedVerified": 0,
+          "required": 0,
+          "subscribed": 0,
+          "registered": 0,
+          "attendedVerified": 0,
+          "joined": 0,
+          "recurringFundSupported": 0,
+          "attendedSelf": 0,
+          "fundSupported": 0,
+          "unattendedSelf": 0,
+          "hoursSelf": 0,
+          "donated": 0,
+          "hoursVerified": 0
+        },
+        "subscription": {
+          "months": 0,
+          "totalCollected": 0,
+          "totalCount": 0,
+          "currentCount": 0,
+          "required": 0,
+          "currentCollected": 0
+        }
+      },
+      "parent": "",
+      "link": "",
+      "createdAt": { "_seconds": 1612537022, "_nanoseconds": 0 },
+      "description": "Visiting and supporting old age home, Rescuing aged people from roadside, First Aiding abandoned people, Providing food once in a while, Seasonal help like provide/ distributing mufflers and blankets in the wintertime",
+      "sdg": {
+        "slug": "",
+        "photo": { "caption": "", "url": "" },
+        "name": "",
+        "link": "",
+        "description": "",
+        "id": 0
+      },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "isActive": true,
+      "name": "Anbuku kaikudupom",
+      "date": { "_seconds": 1612537022, "_nanoseconds": 0 },
+      "slug": "anbuku-kaikudupom",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
+    },
+    {
+      "slug": "burial---final-rites",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "aggregate": {
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "volunteer": {
+          "registered": 0,
+          "hoursVerified": 0,
+          "required": 0,
+          "unattendedSelf": 0,
+          "fundSupported": 0,
+          "attendedSelf": 0,
+          "recurringFundSupported": 0,
+          "subscribed": 0,
+          "donated": 0,
+          "hoursSelf": 0,
+          "attendedVerified": 0,
+          "joined": 0,
+          "unattendedVerified": 0
+        },
+        "subscription": {
+          "required": 0,
+          "currentCollected": 0,
+          "currentCount": 0,
+          "totalCollected": 0,
+          "months": 0,
+          "totalCount": 0
+        }
+      },
+      "updatedAt": { "_seconds": 1612538198, "_nanoseconds": 0 },
+      "parent": "",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "link": "",
+      "description": "We do the final rites of the mortal remains of homeless and unknown corpses. Unfortunately, these people have been ignored by their children and society during their lifetime and they end up on the streets where they beg and do whatever they could to have few square meals a day. Right from the inception of this organization we have buried dead bodies of homeless and sick people, old people dying on the roads, people dying due to natural calamities, small kids who passed away while treatment. We don't ask a rupee from the grieving family to perform the last rites. We undertake everything.\n\nWe also provide free ambulance service for outstation. (We do charge for diesel from the family who can afford)\n\nAlso provide financial support for the burial to the low economic family.",
+      "createdAt": { "_seconds": 1612536947, "_nanoseconds": 0 },
+      "name": "Burial - Final Rites",
+      "date": { "_seconds": 1612536947, "_nanoseconds": 0 },
+      "id": "vLBFxDh3ZYO4IotWebA5",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Fproject%2Foriginal_vLBFxDh3ZYO4IotWebA5.jpg?alt=media",
+        "caption": "Photo of Burial - Final Rites project"
+      },
+      "sdg": {
+        "link": "",
+        "description": "",
+        "slug": "",
+        "id": 0,
+        "photo": { "url": "", "caption": "" },
+        "name": ""
+      },
+      "isActive": true
+    }
+  ],
+  "fullUrl": "https://thegrassroots.app/chennai/ngo/uravugal-trust",
+  "access": { "fundraiser": false, "receipt": true, "profile": true, "event": false }
 }

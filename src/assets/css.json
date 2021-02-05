@@ -1,0 +1,648 @@
+{
+  "legal": {
+    "legal80g": { "regNo": "", "date": { "_seconds": 1597689000, "_nanoseconds": 0 }, "file": "" },
+    "regDeed": { "file": "", "date": { "_seconds": 1597689000, "_nanoseconds": 0 }, "regNo": "" },
+    "bank": { "bankName": "", "accountNo": "", "accountName": "", "ifscCode": "" },
+    "legal12a": { "date": { "_seconds": 1597689000, "_nanoseconds": 0 }, "regNo": null, "file": null },
+    "fcra": { "file": "", "regNo": "", "date": { "_seconds": 1597689000, "_nanoseconds": 0 } }
+  },
+  "description": "Social Services are vital in creating a caring, inclusive and productive society. In Chennai, a group of young individuals came together to play a significant role in developing our city by donating their time, effort and money. Their vision was to share their privileged way of life to those who are in need of support. They wanted to see a society with equality.\n\nSince its inception in the year 2007, the number of volunteers increased from only an handful to over 1500. Students from colleges and Institutions have shown great interest in community service programmes orgainised by Chennai Social Service.\n\nChennai Social Service appreciates and is proud of all the young volunteers who opt to serve and improve the city through CSS led community service. CSS believes that these young people will instill a sense of responsibility towards helping needy in the minds of next generation.\n\nPeople of CSS live by their motto \"Share your Living\". To make their hopes and dreams a reality, the community activities at Chennai Social Service are organised by nine different teams, each having their own vision statement. These visions together combine to form the overall vision of CSS. ",
+  "team": [
+    {
+      "id": "OuiFen4qtFilNaNlI9cE",
+      "name": "Sathish Kumar",
+      "hobbies": "",
+      "reachOut": {
+        "website": "",
+        "linkedin": "",
+        "phone2": "",
+        "phone1": "+919840019007",
+        "facebook": "https://www.facebook.com/nSathishkumar",
+        "instagram": "",
+        "youtube": "",
+        "twitter": "",
+        "email": "nsksathishkumar@gmail.com"
+      },
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "role": "Founder",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fteam%2Foriginal_OuiFen4qtFilNaNlI9cE.jpg?alt=media",
+        "caption": "Photo of Sathish Kumar team"
+      },
+      "since": { "_seconds": 0, "_nanoseconds": 0 }
+    }
+  ],
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_cover3.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_cover8.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_cover9.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_cover10.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_cover2.jpg?alt=media"
+  ],
+  "bank": { "bankName": "", "accountNo": "", "ifscCode": "", "accountName": "" },
+  "oid": "-Kz3cb-ICXVUiEXKV-48",
+  "district": { "id": 3100, "name": "Chennai" },
+  "name": "Chennai Social Service",
+  "sdg": [
+    {
+      "name": "Climate Action",
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-13-climate-action.html",
+      "description": "Take urgent action to combat climate change and its impacts",
+      "id": 13,
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-13.png?alt=media&token=0d7b3160-9863-4e3f-8cf0-d399a2ccfdd4",
+        "caption": ""
+      },
+      "slug": ""
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-4.png?alt=media&token=47d37538-1ae3-4f33-a174-4b38a8e0e033",
+        "caption": ""
+      },
+      "id": 4,
+      "description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "slug": "",
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-4-quality-education.html",
+      "name": "Quality Education"
+    },
+    {
+      "slug": "",
+      "name": "Reduced Inequalities",
+      "id": 10,
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-10-reduced-inequalities.html",
+      "description": "Reduce Inequality within and among countries",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-10.png?alt=media&token=1ce172e2-6fd3-48dc-be57-7de0fc791714",
+        "caption": ""
+      }
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-2.png?alt=media&token=9ab7cbbd-3807-48f8-a295-e1f67a3c68fe",
+        "caption": ""
+      },
+      "id": 2,
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-2-zero-hunger.html",
+      "description": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+      "slug": "",
+      "name": "Zero Hunger"
+    }
+  ],
+  "aggregate": {
+    "subscription": { "required": 10000, "count": 0, "amount": 0 },
+    "review": 0,
+    "mediaRecognition": 8,
+    "award": 0,
+    "admin": 0,
+    "photo": 13,
+    "avgRating": 0,
+    "volunteer": {
+      "hoursSelf": 0,
+      "attendedVerified": 0,
+      "attendedSelf": 0,
+      "joined": 1,
+      "registered": 0,
+      "required": 0,
+      "hoursVerified": 0
+    },
+    "event": 1,
+    "follower": 1,
+    "recurringFund": 1,
+    "upcomingEvent": 0,
+    "testimonial": 0,
+    "donation": { "count": 0, "required": 0, "collected": 0 },
+    "project": 6
+  },
+  "video": { "url": "", "caption": "Caption of Chennai Social Service video" },
+  "slug": "chennai-social-service",
+  "projects": [
+    {
+      "name": "Aravanaipu",
+      "description": "This is an initiative to highlight the importance of caring for senior citizens & destitute children who have been pushed to the brink of total neglect and apathy by this society. The team shall identify the places and gauge their immediate needs and also organize regular get together with these elderly people on birthday, festivities and religious functions.",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_u7Drg2JHRez8IhNkR2pu.jpg?alt=media",
+        "caption": "Photo of Aravanaipu project"
+      },
+      "date": { "_seconds": 1611472536, "_nanoseconds": 0 },
+      "isActive": true,
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "link": "http://chennaisocialservice.org/others.html",
+      "slug": "aravanaipu",
+      "aggregate": {
+        "donation": { "required": 0, "count": 0, "collected": 0 },
+        "subscription": {
+          "months": 0,
+          "currentCount": 0,
+          "totalCount": 0,
+          "required": 0,
+          "totalCollected": 0,
+          "currentCollected": 0
+        },
+        "volunteer": {
+          "joined": 0,
+          "subscribed": 0,
+          "unattendedVerified": 0,
+          "attendedSelf": 0,
+          "recurringFundSupported": 0,
+          "hoursVerified": 0,
+          "donated": 0,
+          "fundSupported": 0,
+          "registered": 0,
+          "unattendedSelf": 0,
+          "hoursSelf": 0,
+          "attendedVerified": 0,
+          "required": 0
+        }
+      },
+      "id": "u7Drg2JHRez8IhNkR2pu",
+      "parent": "",
+      "updatedAt": { "_seconds": 1612527426, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1591348337, "_nanoseconds": 0 },
+      "sdg": {
+        "slug": "",
+        "description": "",
+        "name": "",
+        "photo": { "caption": "", "url": "" },
+        "link": "",
+        "id": 0
+      },
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2"
+    },
+    {
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "slug": "nalanda",
+      "link": "http://chennaisocialservice.org/nalanda.html",
+      "isActive": true,
+      "name": "Nalanda",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_pyVQl7MmDnp9Kb73ML3m.jpg?alt=media",
+        "caption": "Photo of Nalanda project"
+      },
+      "id": "pyVQl7MmDnp9Kb73ML3m",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "parent": "",
+      "createdAt": { "_seconds": 1591348270, "_nanoseconds": 0 },
+      "updatedAt": { "_seconds": 1612527450, "_nanoseconds": 0 },
+      "description": "To establish a student-community with a sense of responsibility towards their society and country which can be achieved through practicing and encouragement of 'Good Habits' as devised by 'Munaivar Poonthuraiyaan'.",
+      "date": { "_seconds": 1611472526, "_nanoseconds": 0 },
+      "sdg": {
+        "link": "",
+        "photo": { "caption": "", "url": "" },
+        "description": "",
+        "id": 0,
+        "slug": "",
+        "name": ""
+      },
+      "aggregate": {
+        "volunteer": {
+          "unattendedSelf": 0,
+          "attendedSelf": 0,
+          "hoursSelf": 0,
+          "registered": 0,
+          "subscribed": 0,
+          "joined": 0,
+          "donated": 0,
+          "hoursVerified": 0,
+          "unattendedVerified": 0,
+          "recurringFundSupported": 0,
+          "required": 0,
+          "fundSupported": 0,
+          "attendedVerified": 0
+        },
+        "subscription": {
+          "months": 0,
+          "currentCollected": 0,
+          "required": 0,
+          "currentCount": 0,
+          "totalCount": 0,
+          "totalCollected": 0
+        },
+        "donation": { "collected": 0, "count": 0, "required": 0 }
+      }
+    },
+    {
+      "isActive": true,
+      "photo": {
+        "caption": "Photo of V-scribe project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_lkKxSibwLkLnO8v6i4Ht.jpg?alt=media"
+      },
+      "slug": "v-scribe",
+      "sdg": {
+        "slug": "",
+        "name": "",
+        "link": "",
+        "photo": { "url": "", "caption": "" },
+        "id": 0,
+        "description": ""
+      },
+      "link": "http://chennaisocialservice.org/v-scribe.html",
+      "aggregate": {
+        "donation": { "count": 0, "required": 0, "collected": 0 },
+        "volunteer": {
+          "registered": 0,
+          "donated": 0,
+          "hoursVerified": 0,
+          "fundSupported": 0,
+          "attendedSelf": 0,
+          "hoursSelf": 0,
+          "recurringFundSupported": 0,
+          "unattendedSelf": 0,
+          "subscribed": 0,
+          "unattendedVerified": 0,
+          "joined": 0,
+          "attendedVerified": 0,
+          "required": 0
+        },
+        "subscription": {
+          "currentCollected": 0,
+          "months": 0,
+          "required": 0,
+          "currentCount": 0,
+          "totalCount": 0,
+          "totalCollected": 0
+        }
+      },
+      "id": "lkKxSibwLkLnO8v6i4Ht",
+      "updatedAt": { "_seconds": 1612155209, "_nanoseconds": 0 },
+      "updatedBy": "PhivOaY58hVnZW6JbbInWIIlv2K2",
+      "name": "V-scribe",
+      "date": { "_seconds": 1611472516, "_nanoseconds": 0 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "parent": "",
+      "createdAt": { "_seconds": 1591348184, "_nanoseconds": 0 },
+      "description": "Without scribes to assist them, writing exams is a difficult task for all differently abled students. Chennai Social Service's V Scribe team supports differently abled students by recording their course contents, tutoring them and offering scribe services during their exams.\n\nV Scribe volunteers have provided their services as a scribe for more than 3000 exams for college and school exams.\n\nV Scribe also conducted CSGAB (College Students & Graduates Association for Blind) elections from 2009 to 2012 at Takker Bapa Vidyalaya. Regular cultural and sports meet were also conducted for 3 years.\n\nV Scribe also has organized sports meet for differently abled for 4 years in various disciplines like athletics, chess, carom etc.., These cultural events take up a special space in CSS Calender.\n\nChennai Social Service's signature event, Vegam, was organised in 2013 at Loyola college. Vegam is an athletic event for the differently abled. More than 500 students from various schools participated in Vegam 2013."
+    },
+    {
+      "isActive": true,
+      "link": "http://chennaisocialservice.org/environment-care-group.html",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_zlLP7PSxgXWWAEYXMEtC.jpg?alt=media",
+        "caption": "Photo of Environment Care Group project"
+      },
+      "parent": "",
+      "aggregate": {
+        "volunteer": {
+          "hoursVerified": 0,
+          "attendedVerified": 0,
+          "attendedSelf": 0,
+          "subscribed": 0,
+          "joined": 0,
+          "unattendedSelf": 0,
+          "fundSupported": 0,
+          "registered": 0,
+          "required": 0,
+          "hoursSelf": 0,
+          "recurringFundSupported": 0,
+          "unattendedVerified": 0,
+          "donated": 0
+        },
+        "subscription": {
+          "totalCollected": 0,
+          "required": 0,
+          "totalCount": 0,
+          "currentCollected": 0,
+          "months": 0,
+          "currentCount": 0
+        },
+        "donation": { "collected": 0, "count": 0, "required": 0 }
+      },
+      "description": "Environment Care Group’ known as ECG is a popular team amongst CSS volunteers. The group is committed to greener Chennai and is in the process of helping people realize and plant more trees in their neighborhoods.",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "slug": "environment-care-group",
+      "updatedAt": { "_seconds": 1612527406, "_nanoseconds": 0 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdAt": { "_seconds": 1591348304, "_nanoseconds": 0 },
+      "id": "zlLP7PSxgXWWAEYXMEtC",
+      "name": "Environment Care Group",
+      "sdg": {
+        "photo": { "url": "", "caption": "" },
+        "id": 0,
+        "description": "",
+        "slug": "",
+        "link": "",
+        "name": ""
+      },
+      "date": { "_seconds": 1599984130, "_nanoseconds": 0 }
+    },
+    {
+      "id": "OfuGUbMzne6rhRVF0KKM",
+      "parent": "",
+      "slug": "red-drops",
+      "description": "Chennai Social Service's Red Drops is a team allocated for handling emergency blood requests in the city. Red Drops was active from the year 2009 and has supported more than 100 individuals by aranging donors to donate blood in times of emergency.\n\nAt Red Drops, priority is given to individuals who are underprivileged. Red Drops also know that donating blood is a selfless act and voluntary in nature so we do not encourage any requests that are requested or donated with a commercial motive.\n\nRed Drops also have been a mentor and supporter for all those good souls who organised a blood camp in their locality or institutions.",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "updatedAt": { "_seconds": 1612145106, "_nanoseconds": 0 },
+      "updatedBy": "PhivOaY58hVnZW6JbbInWIIlv2K2",
+      "date": { "_seconds": 1599984040, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1591348147, "_nanoseconds": 0 },
+      "photo": {
+        "caption": "Photo of Red Drops project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_OfuGUbMzne6rhRVF0KKM.jpg?alt=media"
+      },
+      "link": "http://chennaisocialservice.org/red-drops.html",
+      "aggregate": {
+        "subscription": {
+          "totalCount": 0,
+          "currentCollected": 0,
+          "required": 0,
+          "currentCount": 0,
+          "totalCollected": 0,
+          "months": 0
+        },
+        "donation": { "collected": 0, "count": 0, "required": 0 },
+        "volunteer": {
+          "donated": 0,
+          "recurringFundSupported": 0,
+          "hoursSelf": 0,
+          "unattendedSelf": 0,
+          "unattendedVerified": 0,
+          "required": 0,
+          "hoursVerified": 0,
+          "subscribed": 0,
+          "registered": 0,
+          "joined": 0,
+          "attendedSelf": 0,
+          "fundSupported": 0,
+          "attendedVerified": 0
+        }
+      },
+      "isActive": true,
+      "name": "Red Drops",
+      "sdg": {
+        "description": "",
+        "name": "",
+        "photo": { "caption": "", "url": "" },
+        "slug": "",
+        "id": 0,
+        "link": ""
+      }
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fproject%2Foriginal_EIwFEy5sPcekkE6bBcoE.jpg?alt=media",
+        "caption": "Photo of Food Bank project"
+      },
+      "createdAt": { "_seconds": 1591348227, "_nanoseconds": 0 },
+      "description": "While thousands of humans and animals die due to starvation, tons of food goes to the garbage as waste in restaurants, parties and even in houses. Chennai Social Service's Food Bank team collect food from places where it is in excess and distribute it to the people and the animals in need.",
+      "updatedBy": "PhivOaY58hVnZW6JbbInWIIlv2K2",
+      "sdg": {
+        "id": 0,
+        "description": "",
+        "name": "",
+        "link": "",
+        "photo": { "url": "", "caption": "" },
+        "slug": ""
+      },
+      "link": "http://chennaisocialservice.org/food-bank.html",
+      "id": "EIwFEy5sPcekkE6bBcoE",
+      "aggregate": {
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "volunteer": {
+          "required": 0,
+          "donated": 0,
+          "unattendedSelf": 0,
+          "registered": 0,
+          "subscribed": 0,
+          "fundSupported": 0,
+          "hoursSelf": 0,
+          "attendedVerified": 0,
+          "attendedSelf": 0,
+          "hoursVerified": 0,
+          "unattendedVerified": 0,
+          "joined": 0,
+          "recurringFundSupported": 0
+        },
+        "subscription": {
+          "totalCount": 0,
+          "currentCollected": 0,
+          "required": 0,
+          "currentCount": 0,
+          "months": 0,
+          "totalCollected": 0
+        }
+      },
+      "parent": "",
+      "name": "Food Bank",
+      "updatedAt": { "_seconds": 1612157055, "_nanoseconds": 0 },
+      "date": { "_seconds": 1599984001, "_nanoseconds": 0 },
+      "slug": "food-bank",
+      "isActive": true,
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
+    }
+  ],
+  "activities": [ "Blood Needs", " Scribing", " Food bank ", "Awareness Sessions" ],
+  "shortUrl": "https://grs.one/",
+  "priority": 100,
+  "whyHelpMatters": [ { "icon": "checkmark-circle-outline", "text": "" } ],
+  "causes": [ "Children and Youth", " Education", " People with Disabilities" ],
+  "media": [
+    {
+      "publicationLogo": "",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "video": {
+        "url": "",
+        "caption": "Video of Share and care: This Chennai NGO helps organise people to volunteer at various underprivileged sections of the society media"
+      },
+      "reporterName": "Bennisha Thurai",
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "isActive": true,
+      "id": "cS3LOkxJZngbmT1EGHNb",
+      "name": "Share and care: This Chennai NGO helps organise people to volunteer at various underprivileged sections of the society",
+      "slug": "cS3LOkxJZngbmT1EGHNb",
+      "createdAt": { "_seconds": 1612527608, "_nanoseconds": 0 },
+      "updatedAt": { "_seconds": 1612527608, "_nanoseconds": 0 },
+      "description": "",
+      "link": "https://www.edexlive.com/live-story/2017/jun/17/share-and-care-this-chennai-ngo-helps-organise-people-to-volunteer-at-various-underprivileged-secti-647.html",
+      "publicationName": "Edex Live",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_cS3LOkxJZngbmT1EGHNb.jpg?alt=media",
+        "caption": "Photo of Share and care: This Chennai NGO helps organise people to volunteer at various underprivileged sections of the society media"
+      },
+      "date": { "_seconds": 1497701906, "_nanoseconds": 215000000 }
+    },
+    {
+      "description": "",
+      "id": "bO4XJZjf7gGdGm86v0RW",
+      "isActive": true,
+      "publicationName": "Asian Book of Records",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "date": { "_seconds": 1468835919, "_nanoseconds": 671000000 },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_bO4XJZjf7gGdGm86v0RW.jpg?alt=media",
+        "caption": "Photo of Most activities performed by Special Children media"
+      },
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "name": "Most activities performed by Special Children",
+      "createdAt": { "_seconds": 1612519215, "_nanoseconds": 0 },
+      "slug": "bO4XJZjf7gGdGm86v0RW",
+      "video": { "caption": "Video of Most activities performed by Special Children media", "url": "" },
+      "link": "https://www.asiabookofrecords.com/most-activities-performed-by-special-children/",
+      "updatedAt": { "_seconds": 1612519215, "_nanoseconds": 0 },
+      "publicationLogo": "",
+      "reporterName": ""
+    },
+    {
+      "isActive": true,
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_rBlDirjLVUq5CjTc2TOD.jpg?alt=media",
+        "caption": "Photo of Most activities performed by Differently abled children media"
+      },
+      "date": { "_seconds": 1424684400, "_nanoseconds": 271000000 },
+      "updatedAt": { "_seconds": 1612519090, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1612519090, "_nanoseconds": 0 },
+      "slug": "rBlDirjLVUq5CjTc2TOD",
+      "description": "",
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "video": {
+        "url": "",
+        "caption": "Video of Most activities performed by Differently abled children media"
+      },
+      "id": "rBlDirjLVUq5CjTc2TOD",
+      "link": "https://indiabookofrecords.in/most-activities-performed-by-differently-abled-children/",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "reporterName": "",
+      "publicationName": "Indian book of Records",
+      "publicationLogo": "",
+      "name": "Most activities performed by Differently abled children"
+    },
+    {
+      "id": "Sdwzk86sRDtYSnaJITIB",
+      "link": "https://www.thehindu.com/features/metroplus/on-a-different-track/article6916950.ece",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_Sdwzk86sRDtYSnaJITIB.jpg?alt=media",
+        "caption": "Photo of On a different track media"
+      },
+      "updatedAt": { "_seconds": 1612519278, "_nanoseconds": 0 },
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "name": "On a different track",
+      "date": { "_seconds": 1424426432, "_nanoseconds": 205000000 },
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "createdAt": { "_seconds": 1612519278, "_nanoseconds": 0 },
+      "description": "",
+      "isActive": true,
+      "video": { "url": "", "caption": "Video of On a different track media" },
+      "publicationName": "The Hindu",
+      "slug": "Sdwzk86sRDtYSnaJITIB",
+      "reporterName": "",
+      "publicationLogo": ""
+    },
+    {
+      "name": "Pushing For ‘Vegam’ in Differently-abled Children",
+      "updatedAt": { "_seconds": 1612517961, "_nanoseconds": 0 },
+      "id": "TFxELHaUjfEacDc6nZq1",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "video": { "caption": "Video of Pushing For ‘Vegam’ in Differently-abled Children media", "url": "" },
+      "reporterName": "",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_TFxELHaUjfEacDc6nZq1.jpg?alt=media",
+        "caption": "Photo of Pushing For ‘Vegam’ in Differently-abled Children media"
+      },
+      "isActive": true,
+      "date": { "_seconds": 1423561123, "_nanoseconds": 850000000 },
+      "description": "",
+      "createdAt": { "_seconds": 1612517961, "_nanoseconds": 0 },
+      "publicationName": "The New Indian Express",
+      "slug": "TFxELHaUjfEacDc6nZq1",
+      "publicationLogo": "",
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "link": "https://www.newindianexpress.com/cities/chennai/2015/feb/10/Pushing-For-%E2%80%98Vegam%E2%80%99-in-Differently-abled-Children-715582.html"
+    },
+    {
+      "isActive": true,
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "publicationName": "The Hindu",
+      "slug": "Kj8M3IbcJPTRzk6amS7e",
+      "reporterName": "Hema Vijay",
+      "link": "https://www.thehindu.com/features/metroplus/society/be-a-sport/article5605781.ece",
+      "updatedAt": { "_seconds": 1612517976, "_nanoseconds": 0 },
+      "name": "Be a Sport",
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "id": "Kj8M3IbcJPTRzk6amS7e",
+      "video": { "url": "", "caption": "Video of Be a Sport media" },
+      "createdAt": { "_seconds": 1612517917, "_nanoseconds": 0 },
+      "date": { "_seconds": 1390383473, "_nanoseconds": 911000000 },
+      "publicationLogo": "",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_Kj8M3IbcJPTRzk6amS7e.jpg?alt=media",
+        "caption": "Photo of Be a Sport media"
+      },
+      "description": ""
+    },
+    {
+      "reporterName": "",
+      "video": { "url": "", "caption": "Video of Want a tree? Send an sms media" },
+      "slug": "iqYdfP0hB00CjaIHYE3r",
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_iqYdfP0hB00CjaIHYE3r.jpg?alt=media",
+        "caption": "Photo of Want a tree? Send an sms media"
+      },
+      "date": { "_seconds": 1248783067, "_nanoseconds": 935000000 },
+      "link": "https://timesofindia.indiatimes.com/city/chennai/Want-a-tree-Send-an-sms/articleshow/4827658.cms",
+      "description": "",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "updatedAt": { "_seconds": 1612527116, "_nanoseconds": 0 },
+      "publicationName": "Times of India",
+      "publicationLogo": "",
+      "isActive": true,
+      "id": "iqYdfP0hB00CjaIHYE3r",
+      "createdAt": { "_seconds": 1612527116, "_nanoseconds": 0 },
+      "name": "Want a tree? Send an sms"
+    },
+    {
+      "publicationLogo": "",
+      "date": { "_seconds": 1248610212, "_nanoseconds": 674000000 },
+      "reporterName": "",
+      "name": "Novel SMS scheme to raise tree population",
+      "slug": "c4DOdI09dlAptCGT9Vgy",
+      "id": "c4DOdI09dlAptCGT9Vgy",
+      "description": "",
+      "video": { "caption": "Video of Novel SMS scheme to raise tree population media", "url": "" },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Fmedia%2Foriginal_c4DOdI09dlAptCGT9Vgy.jpg?alt=media",
+        "caption": "Photo of Novel SMS scheme to raise tree population media"
+      },
+      "isActive": true,
+      "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "updatedAt": { "_seconds": 1612527054, "_nanoseconds": 0 },
+      "link": "https://www.newindianexpress.com/cities/chennai/2009/jul/26/novel-sms-scheme-to-raise-tree-population-71163.html",
+      "publicationName": "New Indian Express",
+      "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+      "createdAt": { "_seconds": 1612527054, "_nanoseconds": 0 }
+    }
+  ],
+  "logo": {
+    "caption": "Caption of Chennai Social Service photo",
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F71CJnfEkwRkHX90onkUR%2Foriginal_logo.jpg?alt=media"
+  },
+  "status": 3,
+  "state": { "name": "Tamil Nadu", "id": 31 },
+  "ops": {
+    "spreadsheetId": "19SGW1F9p-U5uEMRVCjOEHb6cVTfFR655fI2a_xqrMgs",
+    "settlementRow": 10,
+    "receiptVersion": 2,
+    "settlementSheetId": "19SGW1F9p-U5uEMRVCjOEHb6cVTfFR655fI2a_xqrMgs",
+    "offlinePaymentRow": 0
+  },
+  "updatedAt": { "_seconds": 1611499174, "_nanoseconds": 0 },
+  "mission": [ "" ],
+  "id": "71CJnfEkwRkHX90onkUR",
+  "address": "Rajani’s Gothanda Graha, Ground Floor, Old No: 55, New No: 83, 10th Avenue,\nAshok Nagar, Chennai - 600 083.\nTamilnadu, India.",
+  "shortCode": "",
+  "vision": "Chennai Social Service's Vision is to see a better society with equality where people can support themselves for their betterment and to make people to know their responsibilities to take care of themselves and the society with in which they live.",
+  "reachOut": {
+    "twitter": "",
+    "youtube": "",
+    "website": "http://chennaisocialservice.org/",
+    "email": "admin@chennaisocialservice.org",
+    "phone1": "+919840019007",
+    "linkedin": "",
+    "phone2": "+919894062532",
+    "facebook": "https://www.facebook.com/chennaisocialservice.org/",
+    "instagram": ""
+  },
+  "review": [],
+  "whyVolunteerHere": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "updatedBy": "PhivOaY58hVnZW6JbbInWIIlv2K2",
+  "access": { "event": true, "receipt": true, "profile": true, "fundraiser": true }
+}

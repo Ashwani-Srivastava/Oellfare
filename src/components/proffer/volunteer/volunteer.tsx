@@ -159,7 +159,7 @@ export class ProfferVolunteer {
                         <div class="row">
                             <div class="col col-lg-5 col-md-5">
                                 <div class="img-holder">
-                                    <img src="/assets/proffer/images/cta-s1-pic.jpg" />
+                                    <img src="/assets/images/help-001x640.jpg" />
                                 </div>
                             </div>
                             <div class="col col-lg-6 col-lg-offset-1 col-md-10 col-md-offset-1">

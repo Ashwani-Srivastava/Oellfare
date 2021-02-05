@@ -48,18 +48,20 @@ export class ProfferHome {
                             { this.ngo.photos.slice(0, 3).map(p => (
 
                             <div class="swiper-slide">
-                                <div class="slide-inner slide-bg-image" data-background={p}>
+                                <div class="slide-inner slide-bg-image" data-background={p} style={{ 'background-blend-mode': 'darken', 'background-color': 'rgba(0,0,0,0.8)' }}>
                                     <div class="container">
                                         <div data-swiper-parallax="300" class="slide-title">
-                                            <h2>Help <span>someone's dream</span> come true.</h2>
+                                            <h2> <span> For the betterment of </span> Humanity... </h2>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p>Magazine and housed in a nice, gilded frame. It showed a lady fitted out with hat and fur boa who sat upright, raising a heavy fur muff that</p>
+                                            <p> Join us in giving the Departed, their deserving final rites. </p>
                                         </div>
                                         <div class="clearfix"></div>
+                                        { /**
                                         <div data-swiper-parallax="500" class="slide-btns">
                                             <a href="#" class="theme-btn-s2">Donate Now <i class="fi flaticon-heart-1"></i></a> 
                                         </div>
+                                           */ }
                                          <div class="video-btns">
                                             <a href="https://www.youtube.com/embed/EFvlzdyJq-U?autoplay=1" class="video-btn" data-type="iframe" tabindex="0"><i class="fi flaticon-play-1"></i></a> 
                                         </div>
@@ -177,7 +179,7 @@ export class ProfferHome {
                                             <div class="progress">
                                                 <div class="progress-bar" data-percent="85"></div>
                                             </div>
-                                            <h3> <a href='#'> From field { index + 1 } </a> </h3>
+                                            <h3> <a href='#'> </a> </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +228,7 @@ export class ProfferHome {
                                 </div>
                             </div>
                         </div>
-                        <div class="right-col data-bg-image" data-background="/assets/proffer/images/about.jpg">
+                        <div class="right-col data-bg-image" data-background={ this.ngo.team[0].photo.url }>
                             <div class="img-holder">
                                 { /**  <img src="/assets/proffer/images/about.jpg" />  */ } 
                             </div>
@@ -295,72 +297,10 @@ export class ProfferHome {
                 { /**  end events-section  */ } 
 
 
-                { /**  start partner-section  */ } 
-                <section class="partner-section">
-                    <h2 class="hidden">Partners</h2>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-xs-12">
-                                <div class="partners-slider">
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-1.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-2.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-3.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-4.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-5.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-6.png" />
-                                    </div>
-                                    <div>
-                                        <img src="/assets/proffer/images/partners/img-4.png" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> { /**  end container  */ } 
-                </section>
-                { /**  end partner-section  */ } 
-
-
-                { /**  start cta-s1-section  */ } 
-                <section class="cta-s1-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-lg-5 col-md-5">
-                                <div class="img-holder">
-                                    <img src="/assets/proffer/images/cta-s1-pic.jpg" />
-                                </div>
-                            </div>
-                            <div class="col col-lg-6 col-lg-offset-1 col-md-7">
-                                <div class="info-col">
-                                    <div class="section-title">
-                                        <span>#Events</span>
-                                        <h2>We will <span>togather</span> make the world better</h2>
-                                    </div>
-
-                                    <div class="details">
-                                        <p>Magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the windowIt  showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window</p>
-                                        <a href="#" class="theme-btn-s6"><i class="fi flaticon-like"></i> Donate now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> { /**  end container  */ } 
-                </section>
-                { /**  end cta-s1-section  */ } 
 
 
                 { /**  start cta-s2-section  */ } 
-                <section class="cta-s2-section">
+                <section class="cta-s2-section" style={{ 'margin-top': '120px' }} >
                     <div class="container">
                         <div class="row">
                             <div class="col col-xs-12">
@@ -413,45 +353,6 @@ export class ProfferHome {
                     </div> { /**  end container  */ } 
                 </section>: null }
                 { /**  end blog-section  */ } 
-
-
-                { /**  start instagram-section  */ } 
-                <section class="instagram-section">
-                    <h2 class="hidden">Instagran</h2>
-                    <div class="instagram-grids">
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-1.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-2.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-3.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-4.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-5.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-6.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-7.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-8.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-9.jpg" /></a>
-                        </div>
-                        <div class="grid">
-                            <a href="#"><img src="/assets/proffer/images/instagram/img-10.jpg" /></a>
-                        </div>
-                    </div>
-                </section>
-                { /**  end instagram-section  */ } 
 
                 <proffer-footer ngo={this.ngo}></proffer-footer>
 
