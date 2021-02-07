@@ -7,9 +7,12 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
-//import { Fundraiser         }   from    'fundraiser/fundraiser.model';
+import { HelmetService      }   from    'common/helmet.service';
+import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
+import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
 import { PaymentState       }   from    'payment/payment.model';
 import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
@@ -26,8 +29,8 @@ declare var $:any;
 })
 export class ProfferDonate {
 
-    @Prop() ngo                 :   any                 =   ngo;
-    @Prop() fund                :   any                 =   fund;
+    @Prop() ngo                 :   any                 =   new Ngo(ngo);
+    @Prop() fund                :   any                 =   new Fundraiser(fund);
     @State() me                 :   Volunteer           =   null;
 
     /**
@@ -111,6 +114,13 @@ export class ProfferDonate {
         Logger.info('Donate :: Initialize :: ');
 
         DialogService.presentDefaultLoader();
+
+        /*
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => this.ngo = n);
+         */
 
         AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
 
@@ -216,21 +226,43 @@ export class ProfferDonate {
                     <div class="col col-md-8">
                         <div class="donate-area-wrapper">
 
-                            <input type="button" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="Login with Grassroots" />
+                            { !this.isLoggedIn ?
+                            <input type="button" 
+                                class="give-submit give-btn" 
+                                id="give-purchase-button" 
+                                name="give-purchase" 
+                                onClick={() => this.openAuthDrawer()} 
+                                style={{ 'width': '100%' }} 
+                                value="Login with Grassroots" /> : null }
 
-                            <form id="give-form-232-1" class="give-form give-form-232 give-form-type-multi" action="https://wpocean.com/wp/nasarna/donations/ensure-education-for-every-poor-children/?payment-mode=manual" data-id="232-1" data-currency_symbol="&#36;" data-currency_code="USD" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="2" method="post">
-
+                            <form id="give-form-232-1" class="give-form give-form-232 give-form-type-multi" data-id="232-1" data-currency_symbol="&#36;" data-currency_code="USD" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="2">
 
                                 <div id="give_purchase_form_wrap">
                                     <fieldset id="give_checkout_user_info" class="">
                                         <legend> Donation details </legend>
+ 
+                                        { this.isLoggedIn ?
+                                        <div class="col-md-12">
+                                            <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
+                                        </div> : null }
+
 
                                         <p id="give-email-wrap" class="form-row form-row-wide">
 
                                             <div class="give-donation-amount form-row-wide give-custom-amount-focus-in">
                                                 <span class="give-currency-symbol give-currency-position-before">₹</span>   
                                                 <label class="give-hidden" >Donation Amount:</label>
-                                                <input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="tel" value="1000" autocomplete="off" data-amount="1000" />
+                                                <input class="give-text-input give-amount-top required"
+                                                    id="give-amount"
+                                                    name="give-amount"
+                                                    type="number"
+                                                    value="1000"
+                                                    onInput={ (e) => this.handleCommonInput(e, 'donationAmount') } 
+                                                    min={100}
+                                                    autocomplete="off"
+                                                    data-amount="1000"
+                                                    required
+                                                    disabled={ !this.isLoggedIn } />
                                             </div>
 
                                         </p>
@@ -243,14 +275,26 @@ export class ProfferDonate {
                                                     <i class="give-icon give-icon-question"></i>
                                                 </span>            
                                             </label>
-                                            <input class="give-input required" type="text" name="give_referred_by" placeholder="Referred by" id="give-referred-by"
-                                            value="" required aria-required="true" />
+                                            <input class="give-input"
+                                                type="text" 
+                                                name="give_referred_by"
+                                                placeholder="Referred by"
+                                                id="give-referred-by"
+                                                onInput={ (e) => this.handleCommonInput(e, 'referredBy') } 
+                                                value="" aria-required="true"
+                                                disabled={ !this.isLoggedIn } />
                                         </p>
 
                                         <p id="give-anonymous-donation-wrap" class="form-row form-row-wide">
                                             <label class="give-label" >
-                                                <input type="checkbox" class="give-input" name="give_anonymous_donation" id="give-anonymous-donation" value="1"
-                                                 /> Make this an anonymous donation.                    
+                                                <input type="checkbox" 
+                                                    class="give-input" 
+                                                    name="give_anonymous_donation" 
+                                                    id="give-anonymous-donation" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'isAnonymous') }
+                                                    value="1"
+                                                    disabled={ !this.isLoggedIn } />
+                                                    Make this an anonymous donation.                    
                                                 <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="First Name is used to personalize your donation record.">
                                                     <i class="give-icon give-icon-question"></i>
                                                 </span>
@@ -265,13 +309,28 @@ export class ProfferDonate {
                                                 </span>             
                                             </label>
 
-                                            <textarea class="give-input" name="give_comment" placeholder="Why am I donating?" id="give-comment"></textarea>
+                                            <textarea class="give-input" 
+                                                name="give_comment" 
+                                                placeholder="Why am I donating?" 
+                                                onInput={ (e) => this.handleCommonInput(e, 'whyDonate') } 
+                                                cols={30} rows={7} 
+                                                id="give-comment"
+                                                disabled={ !this.isLoggedIn } >
+                                            </textarea>
                                         </p>
                                     </fieldset>
 
                                     <fieldset id="give_purchase_submit" class="give-donation-submit">
                                         <div class="give-submit-button-wrap give-clearfix">
-                                            <input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="Donate Now" data-before-validation-label="Donate Now"/>
+                                            <input type="button" 
+                                                onClick={() => this.makeDonation()}
+                                                style={{ 'width': '100%' }}
+                                                class="give-submit give-btn" 
+                                                id="give-purchase-button" 
+                                                name="give-purchase" 
+                                                value="Donate Now" 
+                                                data-before-validation-label="Donate Now"
+                                                disabled={ !this.isLoggedIn } />
                                             <span class="give-loading-animation"></span>
                                         </div>
                                     </fieldset>

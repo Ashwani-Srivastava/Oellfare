@@ -8,7 +8,7 @@ import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { HelmetService      }   from    'common/helmet.service';
-//import { Fundraiser         }   from    'fundraiser/fundraiser.model';
+import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
@@ -28,7 +28,7 @@ import * as fund                from    'assets/fund.json';
 export class CharityDonate {
 
     @Prop() ngo                 :   any                 =   new Ngo(ngo);
-    @Prop() fund                :   any                 =   fund;
+    @Prop() fund                :   any                 =   new Fundraiser(fund);
     @State() me                 :   Volunteer           =   null;
 
     /**
