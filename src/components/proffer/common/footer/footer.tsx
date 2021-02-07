@@ -17,12 +17,12 @@ export class ProfferFooter {
                             <div class="col col-lg-3 col-md-3 col-sm-6">
                                 <div class="widget about-widget">
                                     <div class="widget-title">
-                                        <h3>
+                                        <h3 class='text-center'>
                                             <span class="hidden">About us</span>
                                             <img src={ this.ngo.logo.url } />
                                         </h3>
                                     </div>
-                                    <div class="social-icons">
+                                    <div class="social-icons text-center">
                                         <ul>
 
                                             { this.ngo.reachOut.facebook.length !== 0 ?
@@ -49,6 +49,7 @@ export class ProfferFooter {
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col col-lg-3 col-md-3 col-sm-6">
                                 <div class="widget contact-widget service-link-widget">
                                     <div class="widget-title">
@@ -56,35 +57,41 @@ export class ProfferFooter {
                                     </div>
                                     <ul>
                                         <li> { this.ngo.address } </li>
-                                        <li><span>Phone:</span> { this.ngo.reachOut.phone1 }</li>
-                                        <li><span>Email:</span> { this.ngo.reachOut.email } </li>
+                                        <li><span>Phone:</span> <a href={`tel:${this.ngo.reachOut.phone1}`}> { this.ngo.reachOut.phone1 } </a> </li>
+                                        <li><span>Email:</span> <a href={`mailto:${this.ngo.reachOut.email}`}> { this.ngo.reachOut.email } </a> </li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="col col-lg-3 col-md-3 col-sm-6">
                                 <div class="widget link-widget">
                                     <div class="widget-title">
                                         <h3>Quick Links</h3>
                                     </div>
+
                                     <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Our services</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                        <li><a href="#">Meet team</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Testimonials</a></li>
+                                        <li> <a> <ion-router-link href='/about' color='light'> About us </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/projects' color='light'> Our Projects </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/contact' color='light'> Contact us </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/about/legal' color='light'> Legal </ion-router-link> </a> </li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="col col-lg-3 col-md-3 col-sm-6">
-                                <div class="widget newsletter-widget">
+                                <div class="widget link-widget">
                                     <div class="widget-title">
                                         <h3> Join us </h3>
                                     </div>
-                                    <p>You will be notified when somthing new will be appear.</p>
+
+                                    <ul>
+                                        <li> <a> <ion-router-link href='/volunteer' color='light'> Share your Time </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/donate' color='light'> Fund us </ion-router-link> </a> </li>
+                                    </ul>
+
+
                                     { /** 
+                                    <p>You will be notified when somthing new will be appear.</p>
                                     <form>
                                         <div class="input-1">
                                             <input type="email" class="form-control" placeholder="Email Address *" required />

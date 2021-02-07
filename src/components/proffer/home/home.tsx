@@ -24,6 +24,20 @@ export class ProfferHome {
         console.log('Home :: componentDidLoad');
     }
 
+    coverText = [{
+        header                  :   'For the betterment of Humanity...',
+        subHeader               :   'Join us in giving the Departed, their deserving final rites.',
+        length                  :   5
+    }, {
+        header                  :   'No one is Alone',
+        subHeader               :   'As long as We are here.',
+        length                  :   4
+    }, {
+        header                  :   'Started by a bunch of College students',
+        subHeader               :   'To give Love, to those who really need it.',
+        length                  :   7
+    }];
+
     render() {
         return (
 
@@ -45,16 +59,19 @@ export class ProfferHome {
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
 
-                            { this.ngo.photos.slice(0, 3).map(p => (
+                            { this.ngo.photos.slice(0, 3).map((p, index) => (
 
                             <div class="swiper-slide">
-                                <div class="slide-inner slide-bg-image" data-background={p} style={{ 'background-blend-mode': 'darken', 'background-color': 'rgba(0,0,0,0.8)' }}>
+                                <div class="slide-inner slide-bg-image" data-background={p} style={{ 'background-blend-mode': 'darken', 'background-color': 'rgba(0,0,0,0.7)' }}>
                                     <div class="container">
                                         <div data-swiper-parallax="300" class="slide-title">
-                                            <h2> <span> For the betterment of </span> Humanity... </h2>
+                                            <h2> 
+                                                <span> { this.coverText[index].header.split(' ').slice(0, this.coverText[index].length - 2).join(' ') } </span>
+                                                { this.coverText[index].header.split(' ').slice(this.coverText[index].length - 2).join(' ') }
+                                            </h2>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p> Join us in giving the Departed, their deserving final rites. </p>
+                                            <p> { this.coverText[index].subHeader } </p>
                                         </div>
                                         <div class="clearfix"></div>
                                         { /**
@@ -135,16 +152,16 @@ export class ProfferHome {
                                         <div class="goal-raised">
                                             <div>
                                                 <span>Donation goal </span>
-                                                <h3>Rs. { fund.donation.required } </h3>
+                                                <h3>₹{ fund.donation.required } </h3>
                                             </div>
                                             <div>
                                                 <span>Donation raised </span>
-                                                <h3>Rs. { fund.donation.collected } </h3>
+                                                <h3>₹{ fund.donation.collected } </h3>
                                             </div>
                                         </div>
 
                                         <ion-router-link href="/donate"> 
-                                            <a href='#' class="theme-btn-s3"> <i class="fi flaticon-like"></i>
+                                            <a class="theme-btn-s3"> <i class="fi flaticon-like"></i>
                                                     Donate Now
                                             </a>
                                         </ion-router-link>
@@ -167,13 +184,14 @@ export class ProfferHome {
                         </div>
                         <div class="content-area causes-slider">
 
-                            { this.ngo.photos.map((p, index) => (
+                            { this.ngo.photos.map(p => (
                             <div class="item">
                                 <div class="inner">
                                     <div class="img-holder">
                                         <img src={ p } style={{ 'height': '300px', 'object-fit': 'cover' }} />
                                     </div>
 
+                                    { /*
                                     <div class="overlay">
                                         <div class="overlay-content">
                                             <div class="progress">
@@ -182,6 +200,8 @@ export class ProfferHome {
                                             <h3> <a href='#'> </a> </h3>
                                         </div>
                                     </div>
+                                       */ }
+
                                 </div>
                             </div>
                             )) }
@@ -261,6 +281,7 @@ export class ProfferHome {
                             </div>
                             <div class="col col-md-7">
 
+                                { /*
                                 <div class="events-slider-holder">
                                     <div class="events-slider">
 
@@ -290,6 +311,8 @@ export class ProfferHome {
                                     </div>
 
                                 </div>
+                                   */ }
+                                   <h2 class='text-center'> <br/> <br/> Events coming soon... </h2>
                             </div>
                         </div>
                     </div> { /**  end container  */ } 
@@ -306,7 +329,7 @@ export class ProfferHome {
                             <div class="col col-xs-12">
                                 <div class="col col-md-8">
                                     <div class="details">
-                                        <h3> Death is not the greatest loss in life; the greatest loss is what dies inside us while we live. </h3>
+                                        <h3> Death is not the greatest loss in life; The greatest loss is what dies inside us while we live. </h3>
                                     </div>
                                 </div>
                                 <div class="col col-md-4">

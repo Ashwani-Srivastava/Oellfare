@@ -1,64 +1,64 @@
 {
-  "status": 0,
-  "slug": "general-donation",
-  "video": { "caption": "", "url": "" },
+  "donationSlot": [],
   "coordinators": [
     {
+      "id": "jR3GYhnHVmVh6Eg5VQrfysZZKgw1",
+      "email": "uravugaltrust17@gmail.com",
+      "name": "Uravugal Trust",
+      "photo": { "url": "", "caption": "" },
+      "phone": "+917708095712",
       "priority": 0,
-      "email": "saiy2k@gmail.com",
       "ngo": {
-        "id": "jjewCbG2olNnNYlxxTRa",
-        "slug": "gfoi",
+        "slug": "uravugal-trust",
         "logo": { "url": "", "caption": "" },
-        "name": "GFoI"
-      },
-      "name": "saiy2k",
-      "id": "8ugfTOyf1hgMQkTep2VddWntdN43",
-      "photo": { "caption": "", "url": "" },
-      "phone": "+919952998132"
+        "name": "Uravugal Trust",
+        "id": "6rmWbKOxpTyAhGybdAlB"
+      }
     }
   ],
-  "createdBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
-  "id": "uRY8PLS9FOKHKjyb3aHG",
-  "donation": { "collected": 0, "required": 50000, "count": 0 },
-  "createdAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "status": 0,
+  "donation": { "count": 0, "collected": 0, "required": 100000 },
+  "createdAt": { "_seconds": 1612657277, "_nanoseconds": 575000000 },
+  "recentUpdate": [],
+  "name": "Support for Van maintenance",
+  "updatedAt": { "_seconds": 1612657277, "_nanoseconds": 575000000 },
+  "cause": { "id": 0, "name": "" },
+  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "isBroadcasted": false,
+  "donationBtnText": "Donate",
   "commission": 5,
-  "fullUrl": "",
-  "shortUrl": "",
-  "state": { "id": 31, "name": "Tamil Nadu" },
-  "startDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
+  "donationMax": 10000,
+  "video": { "url": "https://www.youtube.com/watch?v=EFvlzdyJq-U", "caption": "" },
+  "project": { "id": "vLBFxDh3ZYO4IotWebA5", "name": "Burial - Final Rites" },
+  "endDate": { "_seconds": 1612657277, "_nanoseconds": 576000000 },
   "donationMin": 100,
-  "donationSlot": [],
+  "district": { "name": "Chennai", "id": 3100 },
   "coverPhoto": [
     {
       "caption": "",
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Ffundraiser%2FuRY8PLS9FOKHKjyb3aHG%2Foriginal_cover.jpg?alt=media&token=3521bb76-d114-4f12-ac68-4d53a895852e"
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Ffundraiser%2FckecgQNfse0QCIWJGd9I%2Foriginal_cover.jpg?alt=media&token=59252231-053d-4480-bf48-6189b51dd0fa"
     }
   ],
-  "aboutProject": "About the Project",
-  "isBroadcasted": false,
-  "project": { "name": "", "id": "" },
-  "shortCode": "",
   "aggregate": { "update": 0, "fork": 0 },
-  "donationBtnText": "Donate",
-  "updatedBy": "8ugfTOyf1hgMQkTep2VddWntdN43",
-  "donationMax": 10000,
-  "ngo": {
-    "logo": {
-      "caption": "Caption of GFoI photo",
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FjjewCbG2olNnNYlxxTRa%2Foriginal_logo.jpg?alt=media"
-    },
-    "name": "GFoI",
-    "slug": "gfoi",
-    "id": "jjewCbG2olNnNYlxxTRa"
-  },
-  "block": { "id": 0, "name": "" },
-  "district": { "id": 3100, "name": "Chennai" },
-  "aboutNgo": "About the Ngo",
-  "endDate": { "_seconds": 1612262375, "_nanoseconds": 718000000 },
-  "updatedAt": { "_seconds": 1612262375, "_nanoseconds": 717000000 },
+  "aboutNgo": "We do the final rites of the mortal remains of homeless and unknown corpses. Unfortunately, these people have been ignored by their children and society during their lifetime and they end up on the streets where they beg and do whatever they could to have few square meals a day. Right from the inception of this organization we have buried close to 950+ dead bodies of homeless and sick people, old people dying on the roads, people dying due to natural calamities, small kids who passed away while treatment. We don't ask a rupee from the grieving family to perform the last rites. We undertake everything. \n\nApart from this, we have also rescued and rehabilitated 50+ old aged homeless people and relocated them to old age homes.",
+  "slug": "support-for-van-maintenance",
+  "id": "ckecgQNfse0QCIWJGd9I",
   "isActive": true,
-  "cause": { "id": 0, "name": "" },
-  "name": "General Donation",
-  "recentUpdate": []
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "startDate": { "_seconds": 1612657277, "_nanoseconds": 576000000 },
+  "block": { "id": 0, "name": "" },
+  "aboutProject": "We have 2 Vans that services across Tamil nadu. And we need funds for their maintenance. Every rupee donated will go in the service of honoring a homeless soul in their final moments of departure.",
+  "shortUrl": "",
+  "shortCode": "",
+  "ngo": {
+    "name": "Uravugal Trust",
+    "id": "6rmWbKOxpTyAhGybdAlB",
+    "logo": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2F6rmWbKOxpTyAhGybdAlB%2Foriginal_logo.jpg?alt=media",
+      "caption": "Caption of Uravugal Trust photo"
+    },
+    "slug": "uravugal-trust"
+  },
+  "fullUrl": "",
+  "state": { "id": 31, "name": "Tamil Nadu" }
 }

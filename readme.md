@@ -1,3 +1,10 @@
+## To change theem
+ * Just change the respective tags in app-root
+
+## To change NGO
+ * Update src/assets/ngo.json, src/assets/fund.json with the json files of the Ngo, that is needed
+
+
 # Ionic PWA Toolkit
 
 The PWA Toolkit is a starting point for building Progressive Web Apps using Ionic and Stencil.
