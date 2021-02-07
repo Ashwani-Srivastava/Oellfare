@@ -243,9 +243,10 @@ export class ProfferVolunteer {
         </form> : null }
 
 
+                { this.me?.isJoined ?
                 <div class="fullwidth">
                     <h5> Already Volunteering as { this.me?.name }. Would you like to <a href='#' onClick={() =>  this.unjoinNgo() }> Unjoin </a> </h5>
-                </div>
+                </div>: null }
 
                 { /* Show profile here (For Later) */ }
 

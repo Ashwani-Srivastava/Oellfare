@@ -157,6 +157,7 @@ export class AppRoot {
 
 
     // Parallax background
+        /*
     function bgParallax() {
         if ($(".parallax").length) {
             $(".parallax").each(function() {
@@ -174,6 +175,7 @@ export class AppRoot {
             });
         }
     }
+         */
 
 
 
@@ -181,7 +183,7 @@ export class AppRoot {
         = MAIN HERO SLIDER
     -------------------------------------------*/
     var menu = [];
-    jQuery('.swiper-slide').each( function(index){
+    jQuery('.swiper-slide').each( function(_index){
         menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
     });
     var interleaveOffset = 0.5;
@@ -234,13 +236,13 @@ export class AppRoot {
         }
     };
 
-    var swiper = new Swiper(".swiper-container", swiperOptions);
+    new Swiper(".swiper-container", swiperOptions);
 
     $(".swiper-pagination").wrapInner( "<div class='container'><div class='inner'></div></div>");
 
     // DATA BACKGROUND IMAGE
     var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function(indx){
+    sliderBgSetting.each(function(_indx){
         if ($(this).attr("data-background")){
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
@@ -386,6 +388,7 @@ export class AppRoot {
     /*------------------------------------------
         = MASONRY GALLERY SETTING
     -------------------------------------------*/
+        /*
     function masonryGridSetting() {
         if ($('.masonry-gallery').length) {
             var $grid =  $('.masonry-gallery').masonry({
@@ -399,6 +402,7 @@ export class AppRoot {
             });
         }
     }
+         */
 
 
     /*------------------------------------------
@@ -418,7 +422,7 @@ export class AppRoot {
 
     function stickyMenu($targetMenu, $toggleClass) {
         var st = $(window).scrollTop();
-        var mainMenuTop = $('.site-header .navigation');
+        //var mainMenuTop = $('.site-header .navigation');
 
         if ($(window).scrollTop() > 1000) {
             if (st > lastScrollTop) {
@@ -616,7 +620,7 @@ export class AppRoot {
     -------------------------------------------*/
     if ($(".odometer").length) {
         $('.odometer').appear();
-        $(document.body).on('appear', '.odometer', function(e) {
+        $(document.body).on('appear', '.odometer', function(_e) {
             var odo = $(".odometer");
             odo.each(function() {
                 var countNumber = $(this).attr("data-count");

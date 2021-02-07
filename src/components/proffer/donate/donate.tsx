@@ -91,6 +91,20 @@ export class ProfferDonate {
             body.removeClass("body-overlay");
             return false;
         })
+
+
+        if ($(".progress-bar").length) {
+            var $progress_bar = $('.progress-bar');
+            $progress_bar.appear();
+            $(document.body).on('appear', '.progress-bar', function() {
+                var current_item = $(this);
+                if (!current_item.hasClass('appeared')) {
+                    var percent = current_item.data('percent');
+                    current_item.css('width', percent + '%').addClass('appeared').append('<span>' + percent + '%' + '</span>');
+                }
+                
+            });
+        };
     }
 
     private async initialize() {
@@ -167,189 +181,157 @@ export class ProfferDonate {
 
         return (
 
-        <div id="fh5co-wrapper">
-            <div id="fh5co-page">
- 
-                <proffer-header ngo={this.ngo}></proffer-header>
+        <div class="page-wrapper">
 
-                <div class="fh5co-hero">
-                    <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center">
-                        <img src='/assets/charity/images/thank-010x1024.jpg' class='cover-image' />
-                        <div class="desc animate-box">
-                            <h2><strong>Donate</strong> for Impact</h2>
+            <proffer-header ngo={this.ngo}></proffer-header>
+
+            { /** start page-title  */ }
+            <section class="page-title" style={{ 'background': 'url(/assets/charity/images/thank-010x1024.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
+                <div class="page-title-container">
+                    <div class="page-title-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-xs-12">
+                                    <h2> Donate </h2>
+                                    <ol class="breadcrumb">
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> Donate </li>
+                                    </ol>
+                                </div>
+                            </div> { /** end row  */ }
+                        </div> { /** end container  */ }
+                    </div>
+                </div>
+            </section>
+            { /** end page-title  */ }
+
+
+
+
+
+        { /** start case-single-section  */ }
+        <section class="case-single-section">
+            <div class="container">
+                <div class="row donate-area-bottom">
+                    <div class="col col-md-8">
+                        <div class="donate-area-wrapper">
+
+                            <input type="button" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="Login with Grassroots" />
+
+                            <form id="give-form-232-1" class="give-form give-form-232 give-form-type-multi" action="https://wpocean.com/wp/nasarna/donations/ensure-education-for-every-poor-children/?payment-mode=manual" data-id="232-1" data-currency_symbol="&#36;" data-currency_code="USD" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="2" method="post">
+
+
+                                <div id="give_purchase_form_wrap">
+                                    <fieldset id="give_checkout_user_info" class="">
+                                        <legend> Donation details </legend>
+
+                                        <p id="give-email-wrap" class="form-row form-row-wide">
+
+                                            <div class="give-donation-amount form-row-wide give-custom-amount-focus-in">
+                                                <span class="give-currency-symbol give-currency-position-before">₹</span>   
+                                                <label class="give-hidden" >Donation Amount:</label>
+                                                <input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="tel" value="1000" autocomplete="off" data-amount="1000" />
+                                            </div>
+
+                                        </p>
+
+                                        <p id="give-email-wrap" class="form-row form-row-wide">
+                                            <label class="give-label" >
+                                            Referred by
+                                                <span class="give-required-indicator">*</span>
+                                                <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="First Name is used to personalize your donation record.">
+                                                    <i class="give-icon give-icon-question"></i>
+                                                </span>            
+                                            </label>
+                                            <input class="give-input required" type="text" name="give_referred_by" placeholder="Referred by" id="give-referred-by"
+                                            value="" required aria-required="true" />
+                                        </p>
+
+                                        <p id="give-anonymous-donation-wrap" class="form-row form-row-wide">
+                                            <label class="give-label" >
+                                                <input type="checkbox" class="give-input" name="give_anonymous_donation" id="give-anonymous-donation" value="1"
+                                                 /> Make this an anonymous donation.                    
+                                                <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="First Name is used to personalize your donation record.">
+                                                    <i class="give-icon give-icon-question"></i>
+                                                </span>
+                                            </label>
+                                        </p>
+
+                                        <p id="give-comment-wrap" class="form-row form-row-wide">
+                                            <label class="give-label" >
+                                            Why am I donating?                                     
+                                                <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="First Name is used to personalize your donation record.">
+                                                    <i class="give-icon give-icon-question"></i>
+                                                </span>             
+                                            </label>
+
+                                            <textarea class="give-input" name="give_comment" placeholder="Why am I donating?" id="give-comment"></textarea>
+                                        </p>
+                                    </fieldset>
+
+                                    <fieldset id="give_purchase_submit" class="give-donation-submit">
+                                        <div class="give-submit-button-wrap give-clearfix">
+                                            <input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="Donate Now" data-before-validation-label="Donate Now"/>
+                                            <span class="give-loading-animation"></span>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
-                </div>
-                
-                <div id="fh5co-contact" class="animate-box">
-                    <div class="container">
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="/assets/images/donate-001x600.jpg" style={{ 'width': '100%' }} />
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <h3 class="section-title">Why Giving?</h3>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="feature-text">
-                                                    <h3> 1. You can reap social, physical, mental, and spiritual benefits. </h3>
-                                                    <p> By giving your time to a charity, you get the opportunity to build your social circles by working with like-minded people. </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="feature-text">
-                                                    <h3> 2. Giving promotes feelings of happiness. </h3>
-                                                    <p> Helping others feels good. When you donate to a charity that is important to you, you not only help them continue their vital work, you’re also improving your emotional wellbeing, a win-win situation! </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="feature-text">
-                                                    <h3> 3. Giving to Charity strengthens personal values. </h3>
-                                                    <p> Having the power to improve the lives of others is, to many people, a privilege, and one that comes with its own sense of obligation.  </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                    <div class="col col-md-4">
+                        <div class="case-single-sidebar">
+                            <div class="widget contact-widget">
+                                <div>
+                                    <p> Our phone number: </p>
+                                    <h4> { this.ngo.reachOut.phone1 } </h4>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="row">
+                                <div>
+                                    <p>Our email address:</p>
+                                    <h4> { this.ngo.reachOut.email } </h4>
+                                </div>
+                            </div>
 
-                                        { !this.isLoggedIn ?
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="button" onClick={() => this.openAuthDrawer()} value="Login with Grassroots" class="btn btn-primary" style={{ 'width': '100%' }} />
-                                            </div>
-                                        </div> : null }
-
-                                        <div class="col-md-12">
-                                            <h3 class="section-title">Donation Details</h3>
+                            { /*
+                            <div class="widget urgent-case-widget">
+                                <div class="cases">
+                                    <div class="case">
+                                        <div class="img-holder">
+                                            <img src="/assets/proffer/images/case-single/case-widget/img-1.jpg" alt="" />
                                         </div>
-                
-                                        { this.isLoggedIn ?
-                                        <div class="col-md-12">
-                                            <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
-                                        </div> : null }
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <select class='form-control' disabled={ !this.isLoggedIn } >
-                                                    <option> General Donation </option>
-                                                </select>
-                                            </div>
+                                        <div class="details">
+                                            <h4><a href="#">For your insurance business, employees, or clients</a></h4>
+                                            <span class="g-r">Goal: $9000 Raised: $5000</span>
                                         </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="number" 
-                                                    onInput={ (e) => this.handleCommonInput(e, 'donationAmount') } 
-                                                    min={100}
-                                                    class="form-control" 
-                                                    placeholder="Amount"
-                                                    disabled={ !this.isLoggedIn } />
-                                            </div>
+                                    </div>
+                                    <div class="case">
+                                        <div class="img-holder">
+                                            <img src="/assets/proffer/images/case-single/case-widget/img-3.jpg" alt="" />
                                         </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" 
-                                                    onInput={ (e) => this.handleCommonInput(e, 'referredBy') } 
-                                                    class="form-control" 
-                                                    placeholder="Referred by"
-                                                    disabled={ !this.isLoggedIn } />
-                                            </div>
+                                        <div class="details">
+                                            <h4><a href="#">Be prepared for life’s Once you’ve picked your vorite</a></h4>
+                                            <span class="g-r">Goal: $9000 Raised: $5000</span>
                                         </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group form-control">
-                                                <input type="checkbox" 
-                                                    onInput={ (e) => this.handleCommonInput(e, 'isAnonymous') }
-                                                    style={{ 'width': '18px', 'height': '18px' }} 
-                                                    id="anonymous" name="anonymous" value="yes"
-                                                    disabled={ !this.isLoggedIn } />
-                                                <span style={{ 'padding-left': '16px' }} > Make Anonymous </span>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea class="form-control" 
-                                                    onInput={ (e) => this.handleCommonInput(e, 'whyDonate') } 
-                                                    cols={30} rows={7} 
-                                                    placeholder="Why am I donating?"
-                                                    disabled={ !this.isLoggedIn } ></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="button" 
-                                                    onClick={() => this.makeDonation()}
-                                                    value="Donate" 
-                                                    class="btn btn-primary" 
-                                                    style={{ 'width': '100%' }}
-                                                    disabled={ !this.isLoggedIn } />
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                               */ }
+
+                        </div>
                     </div>
                 </div>
+            </div> { /** end container  */ }
+        </section>
+        { /** end case-single-section  */ }
 
-                <div id="fh5co-blog-section" class="fh5co-section-gray">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                                <h3> Our Donations </h3>
-                                <p> We meant it, when we say we take 'Transparency and Trust' close to the Heart. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row row-bottom-padded-md">
 
-                            <div class='col-md-8 col-md-offset-2'>
-                                <table style={{ 'width': '100%' }}>
-                                    <tr>
-                                        <th> Receipt # </th>
-                                        <th> Donor Name </th>
-                                        <th> Date </th>
-                                        <th> Amount </th>
-                                        <th> Towards </th>
-                                    </tr>
-                                {this.ngo.media.slice(0, 3).map(_m => (
-                                    <tr>
-                                        <td> ON-10002 </td>
-                                        <td> Subash </td>
-                                        <td> Jan 25, 2017 </td>
-                                        <td> Rs. 1000 </td>
-                                        <td> General Donation </td>
-                                    </tr>
-                                )) }
-                                </table>
 
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                                <a class="btn btn-primary btn-lg"> Load more </a>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
 
-                <proffer-footer ngo={this.ngo}></proffer-footer>
-            </div>
+                
+
+            <proffer-footer ngo={this.ngo}></proffer-footer>
         </div>
 
         );
