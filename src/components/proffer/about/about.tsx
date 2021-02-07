@@ -32,7 +32,7 @@ export class ProfferAbout {
 
 
             { /** start page-title  */ }
-            <section class="page-title">
+            <section class="page-title" style={{ 'background': 'url(/assets/images/team-008x1440.jpg) center center/cover no-repeat local'}}>
                 <div class="page-title-container">
                     <div class="page-title-wrapper">
                         <div class="container">
@@ -40,8 +40,8 @@ export class ProfferAbout {
                                 <div class="col col-xs-12">
                                     <h2>About us</h2>
                                     <ol class="breadcrumb">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>About us</li>
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> About us </li>
                                     </ol>
                                 </div>
                             </div> { /** end row  */ }

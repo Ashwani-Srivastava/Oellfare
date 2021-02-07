@@ -18,7 +18,7 @@ export class PressCoverage {
 
 
             { /** start page-title  */ }
-            <section class="page-title">
+            <section class="page-title" style={{ 'background': 'url(/assets/images/press-004x1024.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
                 <div class="page-title-container">
                     <div class="page-title-wrapper">
                         <div class="container">
@@ -26,9 +26,9 @@ export class PressCoverage {
                                 <div class="col col-xs-12">
                                     <h2> Press Coverage </h2>
                                     <ol class="breadcrumb">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="index.html">About us</a></li>
-                                        <li>Press Coverage</li>
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/about' color='light'> About us </ion-router-link> </a> </li>
+                                        <li> Press Coverage </li>
                                     </ol>
                                 </div>
                             </div> { /** end row  */ }

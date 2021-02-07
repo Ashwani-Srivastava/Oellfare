@@ -26,107 +26,200 @@ export class ProfferLegalPage {
 
         return (
 
-        <div id="fh5co-wrapper">
-            <div id="fh5co-page">
-                <proffer-header ngo={this.ngo}></proffer-header>
+        <div class="page-wrapper">
 
-                <div class="fh5co-hero">
-                    <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center">
-                        <img src='/assets/charity/images/books-001x1024.jpg' class='cover-image' />
-                        <div class="desc animate-box">
-                            <h2> Legal </h2>
-                            <span> Transparency and Trust </span>
+            <proffer-header ngo={this.ngo}></proffer-header>
+
+            { /** start page-title  */ }
+            <section class="page-title" style={{ 'background': 'url(/assets/charity/images/books-001x1024.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
+                <div class="page-title-container">
+                    <div class="page-title-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-xs-12">
+                                    <h2> Legal </h2>
+                                    <ol class="breadcrumb">
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/about' color='light'> About us </ion-router-link> </a> </li>
+                                        <li> Legal </li>
+                                    </ol>
+                                </div>
+                            </div> { /** end row  */ }
+                        </div> { /** end container  */ }
+                    </div>
+                </div>
+            </section>
+            { /** end page-title  */ }
+
+            { /** start event-single-section */ }
+            <section class="event-single-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-10 col-lg-offset-1">
+                            <div class="row">
+                                <div class="col col-md-9">
+
+
+
+
+        <section class="shop-single-section section-padding" style={{ 'padding-top': '0px' }}>
+            <div class="container" style={{ 'width': '100%' }} >
+
+                <div class="row">
+                    <div class="col col-xs-12">
+
+                        <div class="product-info" style={{ 'margin-top': '0px' }}>
+
+                                    <h3 style={{ 'margin-top': '0px' }}> Annual reports </h3>
+
+                                    <div class="row">
+                                        <div class="col col-xs-12">
+                                            <div class="client-rv">
+                                                <div class="client-pic">
+                                                    <i class="fi flaticon-pdf"></i>
+                                                </div>
+                                                <div class="details">
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <h3> IT Filing </h3>
+
+                                    <div class="row">
+                                        <div class="col col-xs-12">
+                                            <div class="client-rv">
+                                                <div class="client-pic">
+                                                    <i class="fi flaticon-pdf"></i>
+                                                </div>
+                                                <div class="details">
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-rating-time">
+                                                        <div class="name-rating">
+                                                            <div>
+                                                                <h4> 2019 - 2020 Annual report </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1 month ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div id="fh5co-features">
-                    <div class="container">
 
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-                                <h3> Legal documents </h3>
+
+
+
+                                </div>
+                                <div class="col col-md-3">
+                                    <div class="event-info">
+                                        <h3> Registration </h3>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-guarantee"></i>
+                                                <h5> Registration No </h5>
+                                                <p> { this.ngo.legal.regNo } </p>
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-guarantee"></i>
+                                                <h5> Pan No. </h5>
+                                                <p> { this.ngo.legal.panNo } </p>
+                                            </li>
+
+                                            { /*
+                                            <li>
+                                                <i class="fi flaticon-down-arrow-3"></i>
+                                                <h5> 12A </h5>
+                                                <p> { this.ngo.legal.legal12a } </p>
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-like"></i>
+                                                <h5> 80G </h5>
+                                                <p> { this.ngo.legal.legal80g } </p>
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-envelope"></i>
+                                                <h5>Contact</h5>
+                                                <p>example@demo.com</p>
+                                            </li>
+                                               */ }
+                                        </ul>
+                                    </div>
+                                </div>  
                             </div>
+
                         </div>
-
-                        <div class="row">
-
-                            <div class="col-md-4">
-                                <div class="feature-text">
-                                    <h3> Registration Deed </h3>
-                                    <p> Registration No: 123/2018 </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-text">
-                                    <h3> Pan Card </h3>
-                                    <p> Pan No: 1AHDB9488 </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-text">
-                                    <h3> 12A Certificate </h3>
-                                    <p> Certificate No: SJSF830/2020 </p>
-                                </div>
-                            </div>
-                        
-                        </div>
-
-
                     </div>
-                </div>
+                </div> { /** end container */ }
+            </section>
+            { /** end event-single-section */ }
 
-                <div id="fh5co-features" class="fh5co-section-gray">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-1">
-                                <div class="row">
-                                    <div class="col-md-12 text-center heading-section animate-box">
-                                        <h3> Annual reports </h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="feature-text">
-                                        <p> 2019 - 2020 Annaul report </p>
-                                        <p> 2018 - 2019 Annaul report </p>
-                                        <p> 2017 - 2018 Annaul report </p>
-                                        <p> 2016 - 2017 Annaul report </p>
-                                        <p> 2015 - 2016 Annaul report </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-md-offset-2">
- 
-                                <div class="row">
-                                    <div class="col-md-12 text-center heading-section animate-box">
-                                        <h3> Audit Reports </h3>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="feature-text">
-                                        <p> 2019 - 2020 Annaul report </p>
-                                        <p> 2018 - 2019 Annaul report </p>
-                                        <p> 2017 - 2018 Annaul report </p>
-                                        <p> 2016 - 2017 Annaul report </p>
-                                        <p> 2015 - 2016 Annaul report </p>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
 
             <proffer-footer ngo={this.ngo}></proffer-footer>
         </div>
-    </div>
 
 
         );
