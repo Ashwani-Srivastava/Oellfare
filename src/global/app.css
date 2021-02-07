@@ -42,6 +42,14 @@
     overflow-y                  :   scroll !important;
 }
 
+@media (max-width: 991px) {
+
+    ion-router-link {
+        color                   :   #202020;
+    }
+
+}
+
 /**
  * END: Proffer
  */

@@ -32,7 +32,7 @@ export class ProfferAbout {
 
 
             { /** start page-title  */ }
-            <section class="page-title" style={{ 'background': 'url(/assets/images/team-008x1440.jpg) center center/cover no-repeat local'}}>
+            <section class="page-title" style={{ 'background': 'url(/assets/images/team-008x1440.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
                 <div class="page-title-container">
                     <div class="page-title-wrapper">
                         <div class="container">

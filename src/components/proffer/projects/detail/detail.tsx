@@ -1,6 +1,6 @@
 import { Component, h, Prop,
          State              }   from    '@stencil/core';
-import * as ngo                 from    '../../../../assets/ngo.json';
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'proffer-projects-detail',
@@ -13,50 +13,76 @@ export class ProfferProjectsDetail {
 
     @State() project            :   any                 =   {};
 
+    constructor () {
+        console.log('Project Detail :: Constructor');
+    }
+
     async componentWillLoad() {
-        console.log(`Project :: ${this.projectSlug} :: Component will load`, this.projectSlug);
+        console.log(`Project :: ${this.projectSlug} :: Component will load`);
 
         this.project            =   (this.ngo.projects.filter(p => p.slug === this.projectSlug))[0];
 
         console.log(this.project);
     }
 
+    async componentDidLoad() {
+        console.log(`Project :: ${this.projectSlug} :: Component did load`);
+    }
+
     render() {
         console.log(`Project :: ${this.projectSlug} :: Render`);
         return (
-        <div id="fh5co-wrapper">
-            <div id="fh5co-page">
-                <proffer-header ngo={this.ngo}></proffer-header>
 
-                <div class="fh5co-hero">
-                    <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center">
-                        <img src={this.project.photo.url} class='cover-image' style={{ 'width': '100%', 'fiter': 'brightness(0.75)' }} />
-                        <div class="desc animate-box">
-                            <h2> { this.project.name } </h2>
-                            <span> Our Project </span>
-                        </div>
-                    </div>
-                </div>
+        <div class="page-wrapper">
+            <proffer-header ngo={this.ngo}></proffer-header>
 
-                <div id="fh5co-services-section">
 
-                    <div class="container">
-                        <div class="row text-center">
-                            <div class="col-md-12">
-                                <div class="services animate-box">
-                                    <p> { this.project.description } </p>
+            { /** start page-title  */ }
+            <section class="page-title" style={{ 'background': `url(${this.project.photo.url}) center center/cover no-repeat local`, 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
+                <div class="page-title-container">
+                    <div class="page-title-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-xs-12">
+                                    <h2> { this.project.name }  </h2>
+                                    <ol class="breadcrumb">
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> <a> <ion-router-link href='/projects' color='light'> Projects </ion-router-link> </a> </li>
+                                        <li> { this.project.name } </li>
+                                    </ol>
                                 </div>
-                            </div>
-                        </div>
+                            </div> { /** end row  */ }
+                        </div> { /** end container  */ }
                     </div>
-
                 </div>
+            </section>
+            { /** end page-title  */ }
+
+
+        { /** start blog-single-section */ }
+        <section class="blog-single-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-10 col-md-offset-1">
+
+                        <div class="blog-content">
+                            <div class="post format-standard-image">
+                                <p> { this.project.description } </p>
+                            </div>
+                        </div>                        
+
+                    </div>
+                </div>
+            </div> { /**  end container  */ } 
+        </section>
+        { /**  end blog-single-section  */ } 
+
+
 
 
             <proffer-footer ngo={this.ngo}></proffer-footer>
         </div>
-        </div>
+
         );
     }
 

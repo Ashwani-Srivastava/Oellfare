@@ -38,10 +38,10 @@ export class ProfferHeader {
                                 <a> <ion-router-link href='/about' color={location.pathname.startsWith('/about') ? 'danger' : 'light'}> About us </ion-router-link> </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a> <ion-router-link href='/about/press-coverage' color='dark'> Press Coverage </ion-router-link> </a>
+                                        <a> <ion-router-link href='/about/press-coverage' color={location.pathname.startsWith('/about') ? 'danger' : 'dark'}> Press Coverage </ion-router-link> </a>
                                     </li>
                                     <li>
-                                        <a> <ion-router-link href='/about/legal' color='dark'> Legal </ion-router-link> </a>
+                                        <a> <ion-router-link href='/about/legal' color={location.pathname.startsWith('/about') ? 'danger' : 'dark'}> Legal </ion-router-link> </a>
                                     </li>
                                 </ul>
                             </li>

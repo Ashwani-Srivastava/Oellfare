@@ -1,5 +1,5 @@
 import { Component, h, Prop }   from    '@stencil/core';
-import * as ngo                 from    '../../../assets/ngo.json';
+import * as ngo                 from    'assets/ngo.json';
 
 @Component({
     tag                         :   'proffer-projects',
@@ -23,48 +23,67 @@ export class ProfferProjects {
 
     render() {
 
-        if(!this.ngo) return '';
-
         return (
 
-        <div id="fh5co-wrapper">
-            <div id="fh5co-page">
+        <div class="page-wrapper">
                 <proffer-header ngo={this.ngo}></proffer-header>
 
-                <div class="fh5co-hero">
-                    <div class="fh5co-overlay"></div>
-                    <div class="fh5co-cover text-center">
-                        <img src='/assets/charity/images/projects-001x1024.jpg' class='cover-image' />
-                        <div class="desc animate-box">
-                            <h2> Our Projects </h2>
+            { /** start page-title  */ }
+            <section class="page-title" style={{ 'background': 'url(/assets/charity/images/projects-001x1024.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
+                <div class="page-title-container">
+                    <div class="page-title-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-xs-12">
+                                    <h2> Projects </h2>
+                                    <ol class="breadcrumb">
+                                        <li> <a> <ion-router-link href='/' color='light'> Home </ion-router-link> </a> </li>
+                                        <li> Projects </li>
+                                    </ol>
+                                </div>
+                            </div> { /** end row  */ }
+                        </div> { /** end container  */ }
+                    </div>
+                </div>
+            </section>
+            { /** end page-title  */ }
+
+
+            { this.ngo.projects.length > 0 ?
+            <section class="shop-pg-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="shop-grids">
+                                { this.ngo.projects.map(p => (
+                                <div class="grid">
+                                    <div class="img-cart">
+                                        <div class="img-holder">
+                                            <img src={ p.photo.url } />
+                                        </div>
+                                        <div class="cart-details">
+                                            <ul>
+                                                <li><a href={`/projects/${p.slug}`} class="theme-btn-s8"> View Project </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <h4><a href={`/projects/${p.slug}`}> { p.name } </a></h4>
+                                        { /*
+                                        <del>$25.00</del>
+                                        <span class="price">$22.00</span>
+                                           */ }
+                                    </div>
+                                </div>
+                                )) }
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                { this.ngo.projects.length > 0 ?
-                <div id="fh5co-services-section">
-
-                    <div class="container">
-                        <div class="row text-center">
-                            { this.ngo.projects.map(p => (
-                            <div class="col-md-4 col-sm-6">
-                                <div class="services animate-box">
-                                    <img style={{ 'margin-top': '-1em', 'margin-bottom': '2em', 'height': '200px' }} src={ p.photo.url } />
-                                    <h3> { p.name } </h3>
-                                    <p style={{ 'max-height': '80px' }}> { p.description.length < 100 ? p.description : p.description.substring(0, 100) + '...' } </p>
-                                    <p><a> <ion-router-link href={`/projects/${p.slug}`}> Learn more... </ion-router-link> </a></p>
-                                
-                                </div>
-                            </div>
-                            )) }
-                        </div>
-                    </div>
-
-                </div> : null }
-
+            </section>: null }
 
             <proffer-footer ngo={this.ngo}></proffer-footer>
-        </div>
         </div>
 
         );
