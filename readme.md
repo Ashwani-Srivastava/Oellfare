@@ -1,6 +1,8 @@
 ## To change theem
  * Just change the respective tags in app-root
- * Comment out/in respective stylesheets links and scripts in index.html
+ * Comment out/in respective stylesheets links and scripts in src/index.html
+ * Comment out/in respective styles in src/global/app.css
+
 
 ## To change NGO
  * Update src/assets/ngo.json, src/assets/fund.json with the json files of the Ngo, that is needed

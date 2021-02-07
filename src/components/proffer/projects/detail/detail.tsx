@@ -2,6 +2,8 @@ import { Component, h, Prop,
          State              }   from    '@stencil/core';
 import * as ngo                 from    'assets/ngo.json';
 
+declare var $:any;
+
 @Component({
     tag                         :   'proffer-projects-detail',
     styleUrl                    :   'detail.css'
@@ -27,6 +29,29 @@ export class ProfferProjectsDetail {
 
     async componentDidLoad() {
         console.log(`Project :: ${this.projectSlug} :: Component did load`);
+
+        var navbar = $(".navigation-holder").last();
+        var openBtn = $(".navbar-header .open-btn").last();
+        var closeBtn = $(".navigation-holder .close-navbar").last();
+        var body = $(".page-wrapper").last();
+
+        console.log(navbar);
+
+        openBtn.on("click", function() {
+            if (!navbar.hasClass("slideInn")) {
+                navbar.addClass("slideInn");
+                body.addClass("body-overlay");
+            }
+            return false;
+        })
+
+        closeBtn.on("click", function() {
+            if (navbar.hasClass("slideInn")) {
+                navbar.removeClass("slideInn");
+            }
+            body.removeClass("body-overlay");
+            return false;
+        })
     }
 
     render() {

@@ -1,14 +1,17 @@
 {
-  "projects": {
-    "default": "gr-live"
-  },
-  "targets": {
-    "gr-live": {
-      "hosting": {
-        "css": [
-          "css-grassroots"
-        ]
-      }
-    }
-  }
+    "projects": {
+        "default": "gr-live"
+    },
+        "targets": {
+            "gr-live": {
+                "hosting": {
+                    "css": [
+                        "css-grassroots"
+                    ],
+                    "gr-preview1": [
+                        "gr-preview1"
+                    ]
+                }
+            }
+        }
 }
