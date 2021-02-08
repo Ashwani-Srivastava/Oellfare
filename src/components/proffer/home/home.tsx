@@ -1,8 +1,8 @@
 import { Component, h, Prop }   from    '@stencil/core';
+
+import { ProfferBase        }   from    '../base/base'
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
-
-declare var $:any;
 
 @Component({
     tag                         :   'proffer-home',
@@ -25,28 +25,9 @@ export class ProfferHome {
     async componentDidLoad() {
         console.log('Home :: componentDidLoad');
 
-        var navbar = $(".navigation-holder").last();
-        var openBtn = $(".navbar-header .open-btn").last();
-        var closeBtn = $(".navigation-holder .close-navbar").last();
-        var body = $(".page-wrapper").last();
-
-        console.log(navbar);
-
-        openBtn.on("click", function() {
-            if (!navbar.hasClass("slideInn")) {
-                navbar.addClass("slideInn");
-                body.addClass("body-overlay");
-            }
-            return false;
-        })
-
-        closeBtn.on("click", function() {
-            if (navbar.hasClass("slideInn")) {
-                navbar.removeClass("slideInn");
-            }
-            body.removeClass("body-overlay");
-            return false;
-        })
+        ProfferBase.setupEssentials();
+        ProfferBase.initWow();
+        ProfferBase.hidePreloader();
     }
 
     coverText = [{
@@ -67,15 +48,6 @@ export class ProfferHome {
         return (
 
             <div class="page-wrapper">
-
-                { /**  start preloader  */ } 
-                <div class="preloader">
-                    <div class="preloader-inner">
-                        <div class="double-bounce1"></div>
-                        <div class="double-bounce2"></div>
-                    </div>
-                </div>
-                { /**  end preloader  */ } 
 
                 <proffer-header ngo={this.ngo}></proffer-header>
 

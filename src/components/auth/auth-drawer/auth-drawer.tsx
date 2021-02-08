@@ -230,11 +230,17 @@ export class AuthDrawerComponent {
 
                     { !this.isLoggedIn ?
                     <ion-item lines='none' class='ion-no-padding'> 
-                        <ion-button onClick={() => this.googleSignupTapped() } style={{ 'width': '100%', 'height': '44px' }} >
+                        <ion-button onClick={() => this.googleSignupTapped() } style={{ 'width': '100%', 'height': '44px', 'font-size': '16px' }} >
                             <ion-icon name="logo-google" slot="start"> </ion-icon>
                             {this.mode === 'login' ? 'Login with Gmail': 'Sign Up'}
                         </ion-button>
                     </ion-item> : null }
+
+                    <ion-row class="pt-16 pb-16 mb-16">
+                        <ion-label class='ff-regular'>
+                            Supports: <b>Chrome/Firefox</b> in <b>Android, PC</b>
+                        </ion-label>
+                    </ion-row>
 
                     <ion-item class="br-t br-r br-l br-rt" disabled={ !this.isLoggedIn }>
 						<ion-label position="floating" class="gry-color ff-regular">
@@ -293,12 +299,6 @@ export class AuthDrawerComponent {
 							Login
 						</ion-button>
 					</div>
-
-                    <ion-row class="pt-16 pb-16 mb-16">
-                        <ion-label class='ff-regular'>
-                            Supports: <b>Chrome/Firefox</b> in <b>Android, PC</b>
-                        </ion-label>
-                    </ion-row>
 
                     <ion-row>
                         <ion-label class="ff-regular" color="dark">

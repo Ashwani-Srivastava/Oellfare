@@ -236,7 +236,7 @@ export class ProfferVolunteer {
                         value="Join as a Volunteer"
                         class="theme-btn-s6"
                         style={{ 'width': '100%' }}
-                        disabled={ !this.isLoggedIn } > <i class="fi flaticon-like"></i> Join a a Volunteer </button>
+                        disabled={ !this.isLoggedIn } > <i class="fi flaticon-like"></i> Join as a Volunteer </button>
 
                 </div>
 

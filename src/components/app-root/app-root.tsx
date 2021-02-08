@@ -8,7 +8,6 @@ import { Logger             }   from    'common/logger';
 declare var $: any;
 declare var jQuery: any;
 declare var Swiper: any;
-declare var WOW: any;
 
 @Component({
     tag                         :   'app-root',
@@ -75,108 +74,6 @@ export class AppRoot {
     }
 
     loadProfferScripts() {
-
-
-    /*------------------------------------------
-        = ALL ESSENTIAL FUNCTIONS
-    -------------------------------------------*/
-
-    // Toggle mobile navigation
-    function toggleMobileNavigation() {
-
-        /*
-        var navbar = $(".navigation-holder").last();
-        var openBtn = $(".navbar-header .open-btn").last();
-        var closeBtn = $(".navigation-holder .close-navbar").last();
-        var body = $(".page-wrapper").last();
-
-        console.log(navbar);
-
-        openBtn.on("click", function() {
-            if (!navbar.hasClass("slideInn")) {
-                navbar.addClass("slideInn");
-                body.addClass("body-overlay");
-            }
-            return false;
-        })
-
-        closeBtn.on("click", function() {
-            if (navbar.hasClass("slideInn")) {
-                navbar.removeClass("slideInn");
-            }
-            body.removeClass("body-overlay");
-            return false;
-        })
-         */
-
-    }
-
-        //toggleMobileNavigation();
-
-
-    // Function for toggle class for small menu
-    function toggleClassForSmallNav() {
-        var windowWidth = window.innerWidth;
-        var mainNav = $("#navbar > ul");
-
-        if (windowWidth <= 991) {
-            mainNav.addClass("small-nav");
-        } else {
-            mainNav.removeClass("small-nav");
-        }
-    }
-
-    toggleClassForSmallNav();
-
-
-    // Function for small menu
-    function smallNavFunctionality() {
-        var windowWidth = window.innerWidth;
-        var mainNav = $(".navigation-holder");
-        var smallNav = $(".navigation-holder > .small-nav");
-        var subMenu = smallNav.find(".sub-menu");
-        var megamenu = smallNav.find(".mega-menu");
-        var menuItemWidthSubMenu = smallNav.find(".menu-item-has-children > a");
-
-        if (windowWidth <= 991) {
-            subMenu.hide();
-            megamenu.hide();
-            menuItemWidthSubMenu.on("click", function(e) {
-                var $this = $(this);
-                $this.siblings().slideToggle();
-                 e.preventDefault();
-                e.stopImmediatePropagation();
-            })
-        } else if (windowWidth > 991) {
-            mainNav.find(".sub-menu").show();
-            mainNav.find(".mega-menu").show();
-        }
-    }
-
-    smallNavFunctionality();
-
-
-    // Parallax background
-        /*
-    function bgParallax() {
-        if ($(".parallax").length) {
-            $(".parallax").each(function() {
-                var height = $(this).position().top;
-                var resize     = height - $(window).scrollTop();
-                var doParallax = -(resize/5);
-                var positionValue   = doParallax + "px";
-                var img = $(this).data("bg-image");
-
-                $(this).css({
-                    backgroundImage: "url(" + img + ")",
-                    backgroundPosition: "50%" + positionValue,
-                    backgroundSize: "cover"
-                });
-            });
-        }
-    }
-         */
-
 
 
     /*------------------------------------------
@@ -260,34 +157,6 @@ export class AppRoot {
         }
     })
 
-
-
-    /*------------------------------------------
-        = HIDE PRELOADER
-    -------------------------------------------*/
-    function preloader() {
-        if($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
-
-                //active wow
-                wow.init();
-
-
-            });
-        }
-    }
-
-
-    /*------------------------------------------
-        = WOW ANIMATION SETTING
-    -------------------------------------------*/
-    var wow = new WOW({
-        boxClass:     'wow',      // default
-        animateClass: 'animated', // default
-        offset:       0,          // default
-        mobile:       true,       // default
-        live:         true        // default
-    });
 
 
     /*------------------------------------------
@@ -541,25 +410,6 @@ export class AppRoot {
     progressBar();
 
 
-    // set two coloumn height equial
-    function setTwoColEqHeight($col1, $col2) {
-        var firstCol = $col1,
-            secondCol = $col2,
-            firstColHeight = $col1.innerHeight(),
-            secondColHeight = $col2.innerHeight();
-
-        if (firstColHeight > secondColHeight) {
-            secondCol.css({
-                "height": firstColHeight + 1 + "px"
-            })
-        } else {
-            firstCol.css({
-                "height": secondColHeight + 1 + "px"
-            })
-        }
-    }
-
-
     /*------------------------------------------
         = EVENTS SLIDER S2
     -------------------------------------------*/
@@ -692,7 +542,6 @@ export class AppRoot {
         = CASE SINGLE PAGE DONATION FUNCTION
     -------------------------------------------*/
     if($(".give-form").length) {
-        console.log("Ha ha ha");
         var tempGiveAmount = $(".give-text-input");
         var finalGiveAmount = $(".give-final-total-amount");
         var giveAmountBtn = $(".give-donation-level-btn");
@@ -789,64 +638,6 @@ export class AppRoot {
     
 
     /*------------------------------------------
-        = CONTACT FORM SUBMISSION
-    -------------------------------------------*/
-    if ($("#contact-form-main").length) {
-        $("#contact-form-main").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-
-                email: "required",
-
-                phone: "required",
-                
-                subject: {
-                    required: true
-                }
-
-
-            },
-
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email address",
-                phone: "Please enter your phone number",
-                subject: "Please select your contact subject"
-            },
-
-            submitHandler: function (form) {
-                $.ajax({
-                    type: "POST",
-                    url: "mail-contact.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
-
-        });
-    }
-
-
-
-    /*------------------------------------------
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/
     $("body").append("<a href='#' class='back-to-top'><i class='ti-arrow-circle-up'></i></a>");
@@ -869,37 +660,6 @@ export class AppRoot {
 
 
 
-
-    /*==========================================================================
-        WHEN DOCUMENT LOADING
-    ==========================================================================*/
-        //$(window).on('load', function() {
-
-        //setTimeout(() => {
-
-            console.log('win load');
-
-            preloader();
-
-            //set about section equal height
-            if($(".about-section").length) {
-                setTwoColEqHeight($(".about-section .left-col"), $(".about-section .right-col"));
-            }
-
-            //set campain section equal height
-            if($(".campain-section").length) {
-                setTwoColEqHeight($(".campain-section .left-col"), $(".campain-section .right-col"));
-            }
-
-            toggleMobileNavigation();
-
-            smallNavFunctionality();
-        //}, 2000);
-
-        //});
-
-
-
     /*==========================================================================
         WHEN WINDOW SCROLL
     ==========================================================================*/
@@ -916,29 +676,6 @@ export class AppRoot {
     /*==========================================================================
         WHEN WINDOW RESIZE
     ==========================================================================*/
-    $(window).on("resize", function() {
-        
-        toggleClassForSmallNav();
-
-        //set about section equal height
-        if($(".about-section").length) {
-            setTwoColEqHeight($(".about-section .left-col"), $(".about-section .right-col"));
-        }
-
-        //set campain section equal height
-        if($(".campain-section").length) {
-            setTwoColEqHeight($(".campain-section .left-col"), $(".campain-section .right-col"));
-        }
-
-
-        clearTimeout($.data(this, 'resizeTimer'));
-
-        $.data(this, 'resizeTimer', setTimeout(function() {
-            smallNavFunctionality();
-        }, 200));
-
-    });
-
 
     }
 

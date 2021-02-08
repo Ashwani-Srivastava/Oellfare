@@ -1,7 +1,10 @@
-## To change theem
+## To change theme
  * Just change the respective tags in app-root
  * Comment out/in respective stylesheets links and scripts in src/index.html
  * Comment out/in respective styles in src/global/app.css
+
+ * TODO
+   * Separate index.html, app-root, app.css, app.ts for each theme
 
 
 ## To change NGO

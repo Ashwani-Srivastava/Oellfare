@@ -22,7 +22,11 @@ export class ProfferHeader {
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img style={{ 'width': '44px'}} src={this.ngo.logo.url} /></a>
+                        <a class="navbar-brand">
+                            <ion-router-link href='/'> 
+                                <img style={{ 'width': '44px'}} src={this.ngo.logo.url} />
+                            </ion-router-link>
+                        </a>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse navbar-left navigation-holder">
