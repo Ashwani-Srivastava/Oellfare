@@ -1,6 +1,6 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
-import { ProfferBase        }   from    '../base/base'
+import { ProfferBase        }   from    'proffer/base/base'
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
 
@@ -26,8 +26,7 @@ export class ProfferHome {
         console.log('Home :: componentDidLoad');
 
         ProfferBase.setupEssentials();
-        ProfferBase.initWow();
-        ProfferBase.hidePreloader();
+        ProfferBase.setupHeroSlider();
     }
 
     coverText = [{

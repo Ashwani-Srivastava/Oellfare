@@ -30,7 +30,10 @@
             "payment/*" : [ "components/payment/*"  ],
             "recurring-fund/*": [ "components/recurring-fund/*"      ],
             "sdg/*"     : [ "components/sdg/*"      ],
-            "volunteer/*":[ "components/volunteer/*"]
+            "volunteer/*":[ "components/volunteer/*"],
+
+            "proffer/*" :[ "components/proffer/*"],
+            "charity/*" :[ "components/charity/*"]
         }
 
     },

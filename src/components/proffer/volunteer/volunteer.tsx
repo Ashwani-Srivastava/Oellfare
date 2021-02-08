@@ -4,6 +4,7 @@ import { modalController    }   from    "@ionic/core";
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { ProfferBase        }   from    'proffer/base/base'
 import { AuthService        }   from    'auth/auth.service';
 import { ConfirmResponse,
          DialogService      }   from    'common/dialog.service';
@@ -12,8 +13,6 @@ import { Logger             }   from    'common/logger';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 
 import * as ngo                 from    'assets/ngo.json';
-
-declare var $:any;
 
 /**
  * 3 States:
@@ -64,28 +63,7 @@ export class ProfferVolunteer {
     async componentDidLoad() {
         console.log('Volunteer :: Component did load');
 
-        var navbar = $(".navigation-holder").last();
-        var openBtn = $(".navbar-header .open-btn").last();
-        var closeBtn = $(".navigation-holder .close-navbar").last();
-        var body = $(".page-wrapper").last();
-
-        console.log(navbar);
-
-        openBtn.on("click", function() {
-            if (!navbar.hasClass("slideInn")) {
-                navbar.addClass("slideInn");
-                body.addClass("body-overlay");
-            }
-            return false;
-        })
-
-        closeBtn.on("click", function() {
-            if (navbar.hasClass("slideInn")) {
-                navbar.removeClass("slideInn");
-            }
-            body.removeClass("body-overlay");
-            return false;
-        })
+        ProfferBase.setupEssentials();
     }
 
     private async openAuthDrawer() {

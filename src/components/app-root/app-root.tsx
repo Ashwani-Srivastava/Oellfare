@@ -79,84 +79,6 @@ export class AppRoot {
     /*------------------------------------------
         = MAIN HERO SLIDER
     -------------------------------------------*/
-    var menu = [];
-    jQuery('.swiper-slide').each( function(_index){
-        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
-    });
-    var interleaveOffset = 0.5;
-    var swiperOptions = {
-        loop: true,
-        speed: 1000,
-        parallax: true,
-        autoplay: {
-            delay: 6500,
-            disableOnInteraction: false,
-        },
-        watchSlidesProgress: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        on: {
-            progress: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    var slideProgress = swiper.slides[i].progress;
-                    var innerOffset = swiper.width * interleaveOffset;
-                    var innerTranslate = slideProgress * innerOffset;
-                    swiper.slides[i].querySelector(".slide-inner").style.transform =
-                    "translate3d(" + innerTranslate + "px, 0, 0)";
-                }      
-            },
-
-            touchStart: function() {
-              var swiper = this;
-              for (var i = 0; i < swiper.slides.length; i++) {
-                swiper.slides[i].style.transition = "";
-              }
-            },
-
-            setTransition: function(speed) {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = speed + "ms";
-                    swiper.slides[i].querySelector(".slide-inner").style.transition =
-                    speed + "ms";
-                }
-            }
-        }
-    };
-
-    new Swiper(".swiper-container", swiperOptions);
-
-    $(".swiper-pagination").wrapInner( "<div class='container'><div class='inner'></div></div>");
-
-    // DATA BACKGROUND IMAGE
-    var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function(_indx){
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
-    var dataBgImage = $(".data-bg-image");
-
-    // Data Background image setting
-    dataBgImage.each(function() {
-
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-            $(this).css("background-size", "cover");
-            $(this).css("background-position", "center center");
-        }
-    })
-
 
 
     /*------------------------------------------
@@ -287,30 +209,6 @@ export class AppRoot {
         cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
     }
 
-    var lastScrollTop = '';
-
-    function stickyMenu($targetMenu, $toggleClass) {
-        var st = $(window).scrollTop();
-        //var mainMenuTop = $('.site-header .navigation');
-
-        if ($(window).scrollTop() > 1000) {
-            if (st > lastScrollTop) {
-                // hide sticky menu on scroll down
-                $targetMenu.removeClass($toggleClass);
-
-            } else {
-                // active sticky menu on scroll up
-                $targetMenu.addClass($toggleClass);
-            }
-
-        } else {
-            $targetMenu.removeClass($toggleClass);
-        }
-
-        lastScrollTop = st;
-    }
-
-
     /*------------------------------------------
         = Header search toggle
     -------------------------------------------*/
@@ -387,49 +285,6 @@ export class AppRoot {
                 }
             }
         })
-    }
-
-
-    /*------------------------------------------
-        = PROGRESS BAR
-    -------------------------------------------*/
-    function progressBar() {
-        if ($(".progress-bar").length) {
-            var $progress_bar = $('.progress-bar');
-            $progress_bar.appear();
-            $(document.body).on('appear', '.progress-bar', function() {
-                var current_item = $(this);
-                if (!current_item.hasClass('appeared')) {
-                    var percent = current_item.data('percent');
-                    current_item.css('width', percent + '%').addClass('appeared').append('<span>' + percent + '%' + '</span>');
-                }
-                
-            });
-        };
-    }
-    progressBar();
-
-
-    /*------------------------------------------
-        = EVENTS SLIDER S2
-    -------------------------------------------*/
-    if ($(".events-slider").length) {
-
-        var i = (".events-slider-nav .slider-prev"),
-            s = (".events-slider-nav .slider-next");
-
-        $(".events-slider").slick({
-            prevArrow: i,
-            nextArrow: s,
-            adaptiveHeight: !0,
-            slidesToShow: 3,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }]
-        });
     }
 
 
@@ -626,56 +481,6 @@ export class AppRoot {
         });
     }
 
-
-    // Animated scroll specific section
-    if ($("#scroll").length) {
-        $('#scroll').on('click', function(e){     
-            e.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000, "easeInOutExpo");
-            return false;
-        });
-    }
-    
-
-    /*------------------------------------------
-        = BACK TO TOP BTN SETTING
-    -------------------------------------------*/
-    $("body").append("<a href='#' class='back-to-top'><i class='ti-arrow-circle-up'></i></a>");
-
-    function toggleBackToTopBtn() {
-        var amountScrolled = 1000;
-        if ($(window).scrollTop() > amountScrolled) {
-            $("a.back-to-top").addClass("animate-b-t-t");
-        } else {
-            $("a.back-to-top").removeClass("animate-b-t-t");
-        }
-    }
-
-    $(".back-to-top").on("click", function() {
-        $("html,body").animate({
-            scrollTop: 0
-        }, 700);
-        return false;
-    })
-
-
-
-    /*==========================================================================
-        WHEN WINDOW SCROLL
-    ==========================================================================*/
-    $(window).on("scroll", function() {
-
-		if ($(".site-header").length) {
-            stickyMenu( $('.site-header .navigation'), "sticky-on" );
-        }
-
-        toggleBackToTopBtn();
-    });
-
-
-    /*==========================================================================
-        WHEN WINDOW RESIZE
-    ==========================================================================*/
 
     }
 
