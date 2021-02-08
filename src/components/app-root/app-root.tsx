@@ -1,4 +1,5 @@
-import { Build, Component, h }   from    '@stencil/core';
+import { Build, Component,
+         h, Listen }   from    '@stencil/core';
 
 import { AuthService        }   from    'auth/auth.service';
 import { ConfigService      }   from    'common/config.service';
@@ -75,375 +76,392 @@ export class AppRoot {
 
     loadProfferScripts() {
 
-    /*------------------------------------------
-        = ACTIVE POPUP IMAGE
-    -------------------------------------------*/
-    if ($(".fancybox").length) {
-        $(".fancybox").fancybox({
-            openEffect  : "elastic",
-            closeEffect : "elastic",
-            wrapCSS     : "project-fancybox-title-style"
-        });
-    }
+        /*------------------------------------------
+            = ACTIVE POPUP IMAGE
+        -------------------------------------------*/
+        if ($(".fancybox").length) {
+            $(".fancybox").fancybox({
+                openEffect  : "elastic",
+                closeEffect : "elastic",
+                wrapCSS     : "project-fancybox-title-style"
+            });
+        }
 
 
-    /*------------------------------------------
-        = POPUP VIDEO
-    -------------------------------------------*/
-    if ($(".video-btn").length) {
-        $(".video-btn").on("click", function(){
-            $.fancybox({
-                href: this.href,
-                type: $(this).data("type"),
-                'title'         : this.title,
-                helpers     : {
-                    title : { type : 'inside' },
-                    media : {}
+        /*------------------------------------------
+            = POPUP VIDEO
+        -------------------------------------------*/
+        if ($(".video-btn").length) {
+            $(".video-btn").on("click", function(){
+                $.fancybox({
+                    href: this.href,
+                    type: $(this).data("type"),
+                    'title'         : this.title,
+                    helpers     : {
+                        title : { type : 'inside' },
+                        media : {}
+                    },
+
+                    beforeShow : function(){
+                        $(".fancybox-wrap").addClass("gallery-fancybox");
+                    }
+                });
+                return false
+            });
+        }
+
+
+        /*------------------------------------------
+            = ACTIVE GALLERY POPUP IMAGE
+        -------------------------------------------*/
+        if ($(".popup-gallery").length) {
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+
+                gallery: {
+                  enabled: true
                 },
 
-                beforeShow : function(){
-                    $(".fancybox-wrap").addClass("gallery-fancybox");
+                zoom: {
+                    enabled: true,
+
+                    duration: 300,
+                    easing: 'ease-in-out',
+                    opener: function(openerElement) {
+                        return openerElement.is('img') ? openerElement : openerElement.find('img');
+                    }
                 }
             });
-            return false
-        });
-    }
+        }
 
 
-    /*------------------------------------------
-        = ACTIVE GALLERY POPUP IMAGE
-    -------------------------------------------*/
-    if ($(".popup-gallery").length) {
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-
-            gallery: {
-              enabled: true
-            },
-
-            zoom: {
-                enabled: true,
-
-                duration: 300,
-                easing: 'ease-in-out',
-                opener: function(openerElement) {
-                    return openerElement.is('img') ? openerElement : openerElement.find('img');
-                }
-            }
-        });
-    }
-
-
-    /*------------------------------------------
-        = FUNCTION FORM SORTING GALLERY
-    -------------------------------------------*/
-    function sortingGallery() {
-        if ($(".sortable-gallery .gallery-filters").length) {
-            var $container = $('.gallery-container');
-            $container.isotope({
-                filter:'*',
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false,
-                }
-            });
-
-            $(".gallery-filters li a").on("click", function() {
-                $('.gallery-filters li .current').removeClass('current');
-                $(this).addClass('current');
-                var selector = $(this).attr('data-filter');
+        /*------------------------------------------
+            = FUNCTION FORM SORTING GALLERY
+        -------------------------------------------*/
+        function sortingGallery() {
+            if ($(".sortable-gallery .gallery-filters").length) {
+                var $container = $('.gallery-container');
                 $container.isotope({
-                    filter:selector,
+                    filter:'*',
                     animationOptions: {
                         duration: 750,
                         easing: 'linear',
                         queue: false,
                     }
                 });
-                return false;
+
+                $(".gallery-filters li a").on("click", function() {
+                    $('.gallery-filters li .current').removeClass('current');
+                    $(this).addClass('current');
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({
+                        filter:selector,
+                        animationOptions: {
+                            duration: 750,
+                            easing: 'linear',
+                            queue: false,
+                        }
+                    });
+                    return false;
+                });
+            }
+        }
+
+        sortingGallery();
+
+
+        /*------------------------------------------
+            = MASONRY GALLERY SETTING
+        -------------------------------------------*/
+            /*
+        function masonryGridSetting() {
+            if ($('.masonry-gallery').length) {
+                var $grid =  $('.masonry-gallery').masonry({
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-item',
+                    percentPosition: true
+                });
+
+                $grid.imagesLoaded().progress( function() {
+                    $grid.masonry('layout');
+                });
+            }
+        }
+             */
+
+
+        /*------------------------------------------
+            = STICKY HEADER
+        -------------------------------------------*/
+        // Function for clone an element for sticky menu
+        function cloneNavForSticyMenu($ele, $newElmClass) {
+            $ele.addClass('original').clone().insertAfter($ele).addClass($newElmClass).removeClass('original');
+        }
+
+        // clone home style 1 navigation for sticky menu
+        if ($('.site-header .navigation').length) {
+            cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
+        }
+
+        /*------------------------------------------
+            = Header search toggle
+        -------------------------------------------*/
+        if($(".header-search-form-wrapper").length) {
+            var searchToggleBtn = $(".search-toggle-btn");
+            var searchToggleBtnIcon = $(".search-toggle-btn i");
+            var searchContent = $(".header-search-form");
+            var body = $("body");
+
+            searchToggleBtn.on("click", function(e) {
+                searchContent.toggleClass("header-search-content-toggle");
+                searchToggleBtnIcon.toggleClass("fi flaticon-search ti-close");
+                e.stopPropagation();
+            });
+
+            body.on("click", function() {
+                searchContent.removeClass("header-search-content-toggle");
+                searchToggleBtnIcon.removeClass("ti-close");
+                searchToggleBtnIcon.addClass("fi flaticon-search");
+
+            }).find(searchContent).on("click", function(e) {
+                e.stopPropagation();
             });
         }
-    }
-
-    sortingGallery();
 
 
-    /*------------------------------------------
-        = MASONRY GALLERY SETTING
-    -------------------------------------------*/
-        /*
-    function masonryGridSetting() {
-        if ($('.masonry-gallery').length) {
-            var $grid =  $('.masonry-gallery').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                percentPosition: true
+        /*------------------------------------------
+            = Header shopping cart toggle
+        -------------------------------------------*/
+        if($(".mini-cart").length) {
+            var cartToggleBtn = $(".cart-toggle-btn");
+            var cartContent = $(".mini-cart-content");
+            var body = $("body");
+
+            cartToggleBtn.on("click", function(e) {
+                cartContent.toggleClass("mini-cart-content-toggle");
+                e.stopPropagation();
             });
 
-            $grid.imagesLoaded().progress( function() {
-                $grid.masonry('layout');
+            body.on("click", function() {
+                cartContent.removeClass("mini-cart-content-toggle");
+            }).find(cartContent).on("click", function(e) {
+                e.stopPropagation();
             });
         }
-    }
-         */
 
 
-    /*------------------------------------------
-        = STICKY HEADER
-    -------------------------------------------*/
-    // Function for clone an element for sticky menu
-    function cloneNavForSticyMenu($ele, $newElmClass) {
-        $ele.addClass('original').clone().insertAfter($ele).addClass($newElmClass).removeClass('original');
-    }
+        /*------------------------------------------
+            = PARTNERS SLIDER
+        -------------------------------------------*/
+        if ($(".partners-slider").length) {
+            $(".partners-slider").owlCarousel({
+                autoplay:true,
+                smartSpeed: 300,
+                margin: 30,
+                loop:true,
+                autoplayHoverPause:true,
+                dots: false,
+                responsive: {
+                    0 : {
+                        items: 2
+                    },
 
-    // clone home style 1 navigation for sticky menu
-    if ($('.site-header .navigation').length) {
-        cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
-    }
+                    550 : {
+                        items: 3
+                    },
 
-    /*------------------------------------------
-        = Header search toggle
-    -------------------------------------------*/
-    if($(".header-search-form-wrapper").length) {
-        var searchToggleBtn = $(".search-toggle-btn");
-        var searchToggleBtnIcon = $(".search-toggle-btn i");
-        var searchContent = $(".header-search-form");
-        var body = $("body");
+                    992 : {
+                        items: 4
+                    },
 
-        searchToggleBtn.on("click", function(e) {
-            searchContent.toggleClass("header-search-content-toggle");
-            searchToggleBtnIcon.toggleClass("fi flaticon-search ti-close");
-            e.stopPropagation();
-        });
-
-        body.on("click", function() {
-            searchContent.removeClass("header-search-content-toggle");
-            searchToggleBtnIcon.removeClass("ti-close");
-            searchToggleBtnIcon.addClass("fi flaticon-search");
-
-        }).find(searchContent).on("click", function(e) {
-            e.stopPropagation();
-        });
-    }
-
-
-    /*------------------------------------------
-        = Header shopping cart toggle
-    -------------------------------------------*/
-    if($(".mini-cart").length) {
-        var cartToggleBtn = $(".cart-toggle-btn");
-        var cartContent = $(".mini-cart-content");
-        var body = $("body");
-
-        cartToggleBtn.on("click", function(e) {
-            cartContent.toggleClass("mini-cart-content-toggle");
-            e.stopPropagation();
-        });
-
-        body.on("click", function() {
-            cartContent.removeClass("mini-cart-content-toggle");
-        }).find(cartContent).on("click", function(e) {
-            e.stopPropagation();
-        });
-    }
-
-
-    /*------------------------------------------
-        = PARTNERS SLIDER
-    -------------------------------------------*/
-    if ($(".partners-slider").length) {
-        $(".partners-slider").owlCarousel({
-            autoplay:true,
-            smartSpeed: 300,
-            margin: 30,
-            loop:true,
-            autoplayHoverPause:true,
-            dots: false,
-            responsive: {
-                0 : {
-                    items: 2
-                },
-
-                550 : {
-                    items: 3
-                },
-
-                992 : {
-                    items: 4
-                },
-
-                1200 : {
-                    items: 5
+                    1200 : {
+                        items: 5
+                    }
                 }
-            }
-        });
-    }
-
-
-    /*------------------------------------------
-        = FUNFACT
-    -------------------------------------------*/
-    if ($(".odometer").length) {
-        $('.odometer').appear();
-        $(document.body).on('appear', '.odometer', function(_e) {
-            var odo = $(".odometer");
-            odo.each(function() {
-                var countNumber = $(this).attr("data-count");
-                $(this).html(countNumber);
             });
-        });
-    }
+        }
 
 
-    /*------------------------------------------
-        = CAMPAIN SLIDER
-    -------------------------------------------*/
-    $('.campain-slider').slick({
-        vertical: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        verticalSwiping: true,
-        loop: true,
-        nextArrow: '<button><i class="fi flaticon-down-arrow-1"></i></button>',
-        prevArrow: '<button><i class="fi flaticon-down-arrow-1"></i></button>',
-    }); 
+
+        /*------------------------------------------
+            = CAMPAIN SLIDER
+        -------------------------------------------*/
+        $('.campain-slider').slick({
+            vertical: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            verticalSwiping: true,
+            loop: true,
+            nextArrow: '<button><i class="fi flaticon-down-arrow-1"></i></button>',
+            prevArrow: '<button><i class="fi flaticon-down-arrow-1"></i></button>',
+        }); 
 
 
-    
-    /*------------------------------------------
-        = TESTIMONIALS SLIDER
-    -------------------------------------------*/
-    if ($(".testimonials-slider").length) {
-        $(".testimonials-slider").owlCarousel({
-            items: 1,
-            autoplay: false,
-            smartSpeed: 300,
-            loop:true,
-            autoplayHoverPause:true,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
-        });
-    }
+        
+        /*------------------------------------------
+            = TESTIMONIALS SLIDER
+        -------------------------------------------*/
+        if ($(".testimonials-slider").length) {
+            $(".testimonials-slider").owlCarousel({
+                items: 1,
+                autoplay: false,
+                smartSpeed: 300,
+                loop:true,
+                autoplayHoverPause:true,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
+            });
+        }
 
-    
-    /*------------------------------------------
-        = TESTIMONIALS SLIDER
-    -------------------------------------------*/
-    if ($(".testimonials-slider-s2").length) {
-        $(".testimonials-slider-s2").owlCarousel({
-            autoplay: false,
-            smartSpeed: 300,
-            loop:true,
-            autoplayHoverPause:true,
-            margin: 30,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
-            responsive: {
-                0 : {
-                    items: 1
-                },
+        
+        /*------------------------------------------
+            = TESTIMONIALS SLIDER
+        -------------------------------------------*/
+        if ($(".testimonials-slider-s2").length) {
+            $(".testimonials-slider-s2").owlCarousel({
+                autoplay: false,
+                smartSpeed: 300,
+                loop:true,
+                autoplayHoverPause:true,
+                margin: 30,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
+                responsive: {
+                    0 : {
+                        items: 1
+                    },
 
-                768 : {
-                    items: 2
+                    768 : {
+                        items: 2
+                    }
                 }
-            }
-        });
-    }
+            });
+        }
 
 
-    /*------------------------------------------
-        = CASE SINGLE PAGE DONATION FUNCTION
-    -------------------------------------------*/
-    if($(".give-form").length) {
-        var tempGiveAmount = $(".give-text-input");
-        var finalGiveAmount = $(".give-final-total-amount");
-        var giveAmountBtn = $(".give-donation-level-btn");
+        /*------------------------------------------
+            = CASE SINGLE PAGE DONATION FUNCTION
+        -------------------------------------------*/
+        if($(".give-form").length) {
+            var tempGiveAmount = $(".give-text-input");
+            var finalGiveAmount = $(".give-final-total-amount");
+            var giveAmountBtn = $(".give-donation-level-btn");
 
-        giveAmountBtn.each(function() {
-            var $this = $(this);
-            var dataValue = $this.attr("value");
+            giveAmountBtn.each(function() {
+                var $this = $(this);
+                var dataValue = $this.attr("value");
 
-            $this.on("click", function() {
-                tempGiveAmount.attr("value", dataValue);
-                finalGiveAmount.attr("data-total", dataValue);
-                finalGiveAmount.text(dataValue);
-                console.log(dataValue);
+                $this.on("click", function() {
+                    tempGiveAmount.attr("value", dataValue);
+                    finalGiveAmount.attr("data-total", dataValue);
+                    finalGiveAmount.text(dataValue);
+                    console.log(dataValue);
+                })
+                
             })
-            
-        })
-    }
+        }
 
 
-    /*------------------------------------------
-        = POST SLIDER
-    -------------------------------------------*/
-    if($(".post-slider".length)) {
-        $(".post-slider").owlCarousel({
-            mouseDrag: false,
-            smartSpeed: 500,
-            margin: 30,
-            loop:true,
-            nav: true,
-            navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
-            dots: false,
-            items: 1
-        });
-    }  
+        /*------------------------------------------
+            = POST SLIDER
+        -------------------------------------------*/
+        if($(".post-slider".length)) {
+            $(".post-slider").owlCarousel({
+                mouseDrag: false,
+                smartSpeed: 500,
+                margin: 30,
+                loop:true,
+                nav: true,
+                navText: ['<i class="fi flaticon-back"></i>','<i class="fi flaticon-next"></i>'],
+                dots: false,
+                items: 1
+            });
+        }  
 
 
-    /*------------------------------------------
-        = SHOP DETAILS PAGE PRODUCT SLIDER
-    -------------------------------------------*/
-    if ($(".shop-single-slider").length) {
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            focusOnSelect: true,
-            prevArrow: '<i class="nav-btn nav-btn-lt ti-arrow-left"></i>',
-            nextArrow: '<i class="nav-btn nav-btn-rt ti-arrow-right"></i>',
+        /*------------------------------------------
+            = SHOP DETAILS PAGE PRODUCT SLIDER
+        -------------------------------------------*/
+        if ($(".shop-single-slider").length) {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                focusOnSelect: true,
+                prevArrow: '<i class="nav-btn nav-btn-lt ti-arrow-left"></i>',
+                nextArrow: '<i class="nav-btn nav-btn-rt ti-arrow-right"></i>',
 
-            responsive: [
-                {
-                    breakpoint: 500,
-                    settings: {
-                    slidesToShow: 3,
-                        infinite: true
+                responsive: [
+                    {
+                        breakpoint: 500,
+                        settings: {
+                        slidesToShow: 3,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 2
+                        }
                     }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }
-            ]
+                ]
 
-        });
+            });
+        }
+
+
+        /*------------------------------------------
+            = TOUCHSPIN FOR PRODUCT SINGLE PAGE
+        -------------------------------------------*/
+        if ($("input[name='product-count']").length) {
+            $("input[name='product-count']").TouchSpin({
+                verticalbuttons: true
+            });
+        }
+
+
     }
 
+    @Listen("swUpdate", { target: 'window' })
+    async onServiceWorkerUpdate() {
+        const registration = await navigator.serviceWorker.getRegistration();
 
-    /*------------------------------------------
-        = TOUCHSPIN FOR PRODUCT SINGLE PAGE
-    -------------------------------------------*/
-    if ($("input[name='product-count']").length) {
-        $("input[name='product-count']").TouchSpin({
-            verticalbuttons: true
-        });
-    }
+        if (!registration?.waiting) {
+            // If there is no waiting registration, this is the first service
+            // worker being installed.
+            return;
+        }
 
+        const toast = document.createElement('ion-toast');
+        toast.message = 'New version available';
+        toast.buttons = [{
+            text: 'Update',
+            role: 'cancel',
+            handler: () => {
+                console.log('Cancel clicked');
+            }
+        }];
+        toast.duration = 5000;
 
+        document.body.appendChild(toast);
+        await toast.present();
+
+        const { role } = await toast.onWillDismiss();
+
+        if (role === 'reload') {
+            registration.waiting.postMessage("skipWaiting");
+        }
     }
 
 }

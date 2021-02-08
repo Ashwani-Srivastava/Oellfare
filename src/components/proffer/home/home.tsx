@@ -27,8 +27,9 @@ export class ProfferHome {
         console.log('Home :: componentDidLoad');
 
         ProfferBase.setupEssentials();
-        ProfferBase.setupHeroSlider();
         ProfferBase.setupCausesSlider();
+        ProfferBase.setupHeroSlider();
+        ProfferBase.setupOdometer();
     }
 
     coverText = [{
@@ -246,9 +247,9 @@ export class ProfferHome {
                                 </div>
                             </div>
                         </div>
-                        <div class="right-col data-bg-image" data-background={ this.ngo.team[0].photo.url }>
+                        <div class="right-col data-bg-image">
                             <div class="img-holder">
-                                { /**  <img src="/assets/proffer/images/about.jpg" />  */ } 
+                                <img src={ this.ngo.team[0].photo.url } /> 
                             </div>
                         </div>
                     </div> { /**  end content-area  */ } 
@@ -340,6 +341,72 @@ export class ProfferHome {
                     </div> { /**  end container  */ } 
                 </section>
                 { /**  end cta-s2-section  */ } 
+
+            { /** start about-section-s2 */ }
+            <section class="about-section-s2" style={{ 'margin-top': '64px' }}>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="about-area">
+                                <div class="section-title">
+                                    <span>#Join us</span>
+                                    <h2>Help us make this world a fairer place for all </h2>
+                                </div>
+                                <a class="theme-btn-s4"> <ion-router-link href='/volunteer' color='danger'> Volunteer with us </ion-router-link> </a>
+                                <img src="/assets/images/begin-002x960.jpg" style={{ 'display': 'block' }} />
+                                </div>
+                            </div>
+                            <div class="col col-lg-4 col-md-5">
+                                <div class="fun-fact-area">
+                                    <div class="fun-fact-grids clearfix">
+                                        <div class="grid">
+                                            <div class="info">
+                                                <div>
+                                                    <h3><span class="odometer" data-count="10">10</span>+</h3>
+                                                </div>
+                                                <div>
+                                                    <p> Articles </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid">
+                                            <div class="info">
+                                                <div>
+                                                    <h3><span class="odometer" data-count="12">12</span></h3>
+                                                </div>
+                                                <div>
+                                                    <p> Awards received </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid">
+                                            <div class="info">
+                                                <div>
+                                                    <h3><span class="odometer" data-count="1156">1156</span>+</h3>
+                                                </div>
+                                                <div>
+                                                    <p> Bodies buried</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid">
+                                            <div class="info">
+                                                <div>
+                                                    <h3><span class="odometer" data-count="46">46</span>+</h3>
+                                                </div>
+                                                <div>
+                                                    <p> People rescue </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div> { /** end container */ }
+                </section>
+                { /** end about-section-s2 */ }
+
 
 
                 { /**  start blog-section  */ } 

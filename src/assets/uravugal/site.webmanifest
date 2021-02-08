@@ -8,9 +8,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#000000",
-    "background_color": "#000000",
-    "start_url": "https://uravugaltrust.com/",
+    "theme_color": "#020202",
+    "background_color": "#020202",
+    "start_url": "https://gr-preview1.web.app/",
     "display": "standalone",
     "orientation": "portrait"
 }

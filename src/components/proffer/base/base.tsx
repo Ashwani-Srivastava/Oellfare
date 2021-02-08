@@ -31,6 +31,22 @@ export class ProfferBase {
 
     }
 
+    public static setupOdometer() {
+
+        if ($(".odometer").length) {
+            $('.odometer').appear();
+            $('.page-wrapper').last().on('appear', '.odometer', function(_e) {
+                var odo = $(".odometer");
+                console.log(odo);
+                odo.each(function() {
+                    var countNumber = $(this).attr("data-count");
+                    $(this).html(countNumber);
+                });
+            });
+        }
+
+    }
+
     public static setupHeroSlider() {
         var menu = [];
         jQuery('.swiper-slide').each( function(_index){
@@ -152,6 +168,8 @@ export class ProfferBase {
     }
 
     public static setupCausesSlider() {
+
+        setTimeout(() => {
         if($(".causes-slider").length) {
             $('.causes-slider').owlCarousel({
                 center: true,
@@ -179,10 +197,10 @@ export class ProfferBase {
                 }
             })
         }
+        }, 200);
     }
 
     private static setupGotoTop() {
-        console.log('setupgoto top');
         $(".page-wrapper").last().append("<a href='#' class='back-to-top'><i class='ti-arrow-circle-up'></i></a>");
 
         $(".back-to-top").last().on("click", function() {
@@ -205,10 +223,12 @@ export class ProfferBase {
 
     // set two coloumn height equial
     private static setTwoColEqHeight($col1, $col2) {
+
         var firstCol = $col1,
             secondCol = $col2,
             firstColHeight = $col1.innerHeight(),
             secondColHeight = $col2.innerHeight();
+
 
         if (firstColHeight > secondColHeight) {
             secondCol.css({
@@ -219,8 +239,8 @@ export class ProfferBase {
                 "height": secondColHeight + 1 + "px"
             })
         }
-    }
 
+    }
 
     private static setupScrollHandlers() {
         $('.page-wrapper').last().on("scroll", function() {
@@ -270,8 +290,6 @@ export class ProfferBase {
         const openBtn = $(".navbar-header .open-btn").last();
         const closeBtn = $(".navigation-holder .close-navbar").last();
         const body = $(".page-wrapper").last();
-
-        console.log(navbar);
 
         openBtn.on("click", function() {
             if (!navbar.hasClass("slideInn")) {

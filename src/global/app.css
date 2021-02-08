@@ -44,7 +44,7 @@
 
 @media (max-width: 991px) {
 
-    ion-router-link {
+    .small-nav > li > a > ion-router-link {
         color                   :   #202020;
     }
 
