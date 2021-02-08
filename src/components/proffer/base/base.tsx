@@ -151,6 +151,36 @@ export class ProfferBase {
 
     }
 
+    public static setupCausesSlider() {
+        if($(".causes-slider").length) {
+            $('.causes-slider').owlCarousel({
+                center: true,
+                loop:true,
+                dots: false,
+                responsive:{
+                    1300:{
+                        items:4,
+                        margin: 20,
+                    },
+
+                    992:{
+                        margin: 0,
+                        items:3
+                    },
+
+                    500:{
+                        items:2
+                    },
+
+                    300:{
+                        items:1,
+                        dots: true,
+                    }
+                }
+            })
+        }
+    }
+
     private static setupGotoTop() {
         console.log('setupgoto top');
         $(".page-wrapper").last().append("<a href='#' class='back-to-top'><i class='ti-arrow-circle-up'></i></a>");

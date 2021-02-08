@@ -75,12 +75,6 @@ export class AppRoot {
 
     loadProfferScripts() {
 
-
-    /*------------------------------------------
-        = MAIN HERO SLIDER
-    -------------------------------------------*/
-
-
     /*------------------------------------------
         = ACTIVE POPUP IMAGE
     -------------------------------------------*/
@@ -253,38 +247,6 @@ export class AppRoot {
         }).find(cartContent).on("click", function(e) {
             e.stopPropagation();
         });
-    }
-
-
-    /*------------------------------------------
-        = causes-slider
-    -------------------------------------------*/
-    if($(".causes-slider").length) {
-        $('.causes-slider').owlCarousel({
-            center: true,
-            loop:true,
-            dots: false,
-            responsive:{
-                1300:{
-                    items:4,
-                    margin: 20,
-                },
-
-                992:{
-                    margin: 0,
-                    items:3
-                },
-
-                500:{
-                    items:2
-                },
-
-                300:{
-                    items:1,
-                    dots: true,
-                }
-            }
-        })
     }
 
 

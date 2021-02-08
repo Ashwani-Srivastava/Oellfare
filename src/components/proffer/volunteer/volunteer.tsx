@@ -9,6 +9,7 @@ import { AuthService        }   from    'auth/auth.service';
 import { ConfirmResponse,
          DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
+import { HelmetService      }   from    'common/helmet.service'
 import { Logger             }   from    'common/logger';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 
@@ -250,6 +251,8 @@ export class ProfferVolunteer {
 
 
                 <proffer-footer ngo={this.ngo}></proffer-footer>
+
+                { HelmetService.render(this.ngo, 'Volunteer') }
 
             </div>
         );

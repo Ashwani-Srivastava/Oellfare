@@ -1,0 +1,16 @@
+{
+    "name": "Uravugal Trust",
+    "short_name": "Uravugal Trust",
+    "icons": [
+        {
+            "src": "/assets/uravugal/icon/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "start_url": "https://uravugaltrust.com/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

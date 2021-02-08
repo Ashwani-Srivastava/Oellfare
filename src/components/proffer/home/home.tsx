@@ -1,6 +1,7 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
 import { ProfferBase        }   from    'proffer/base/base'
+import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
 
@@ -27,6 +28,7 @@ export class ProfferHome {
 
         ProfferBase.setupEssentials();
         ProfferBase.setupHeroSlider();
+        ProfferBase.setupCausesSlider();
     }
 
     coverText = [{
@@ -374,6 +376,8 @@ export class ProfferHome {
                 { /**  end blog-section  */ } 
 
                 <proffer-footer ngo={this.ngo}></proffer-footer>
+
+                { HelmetService.render(this.ngo, 'Home') }
 
             </div>
 

@@ -9,7 +9,7 @@ import { ProfferBase        }   from    'proffer/base/base'
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
-//import { HelmetService      }   from    'common/helmet.service';
+import { HelmetService      }   from    'common/helmet.service';
 import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
@@ -351,12 +351,10 @@ export class ProfferDonate {
 
 
 
-
-
-
-                
-
             <proffer-footer ngo={this.ngo}></proffer-footer>
+
+                { HelmetService.render(this.ngo, 'Donate') }
+
         </div>
 
         );

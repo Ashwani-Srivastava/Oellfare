@@ -1,6 +1,7 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
 import { ProfferBase        }   from    'proffer/base/base'
+import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 
 @Component({
@@ -88,6 +89,8 @@ export class ProfferProjects {
             </section>: null }
 
             <proffer-footer ngo={this.ngo}></proffer-footer>
+
+            { HelmetService.render(this.ngo, 'Projects') }
         </div>
 
         );
