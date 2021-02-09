@@ -107,7 +107,7 @@ export class ProfferHeader {
 
                             <ion-router-link href="/donate"> 
                                 <a class="theme-btn-s1"> <i class="fi flaticon-like"></i>
-                                        Donate Now
+                                    Donate Now
                                 </a>
                             </ion-router-link>
 

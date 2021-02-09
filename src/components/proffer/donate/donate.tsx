@@ -104,6 +104,8 @@ export class ProfferDonate {
     private async makeDonation(): Promise<any> {
         console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
 
+        //TODO: UI Validation
+
         await DialogService.presentDefaultLoader();
         const pay               =   await PaymentService.initiateDonation(this.fund, this.ngo, AuthService.me, this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
 

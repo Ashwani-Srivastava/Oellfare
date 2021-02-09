@@ -1,6 +1,7 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
 import { ProfferBase        }   from    'proffer/base/base'
+import { DialogService      }   from    'common/dialog.service';
 import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 
@@ -11,6 +12,11 @@ import * as ngo                 from    'assets/ngo.json';
 export class ProfferContact {
 
     @Prop() ngo                 :   any                 =   ngo
+
+    private formValue           :   any                 =   {
+        name                    :   '',
+        query                   :   ''
+    };
 
     constructor () {
         console.log('Contact :: Constructor');
@@ -24,6 +30,30 @@ export class ProfferContact {
         console.log('Contact :: Component did load');
 
         ProfferBase.setupEssentials();
+    }
+
+    private handleCommonInput(e, fieldName: string): void {
+        this.formValue[fieldName]=  e.target.value;
+    }
+
+    private async sendMessage() {
+        debugger;
+
+        const name              =   this.formValue.name;
+        const query             =   this.formValue.query;
+
+        if (name.length < 2) {
+            await DialogService.presentAlert('Error', 'Please enter your name');
+            return;
+        }
+
+        if (query.length < 10) {
+            await DialogService.presentAlert('Error', 'Your query should be atleast 10 characters in length');
+            return;
+        }
+
+        window.location.href    =   `https://wa.me/${this.ngo.reachOut.phone1}?text=Hi. I am ${name}. ${query}`;
+
     }
 
     render() {
@@ -94,43 +124,40 @@ export class ProfferContact {
                             <div class="row">
                                 <div class="col col-md-4">
                                     <div class="contact-text">
-                                        <h3>Still have query, then fill out the form!</h3>
+                                        <h3>Fill out the form to reach us through Whatsapp!</h3>
                                     </div>
                                 </div>
                                 <div class="col col-md-8">
                                     <div class="contact-form">
-                                        <form method="post" class="contact-validation-active" id="contact-form-main">
-                                            <div>
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name*" />
+                                        <form class="contact-validation-active">
+                                            <div class='fullwidth'>
+                                                <input type="text" 
+                                                    class="form-control" 
+                                                    name="name" 
+                                                    id="name" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'name') } 
+                                                    placeholder="Name*" />
                                             </div>
-                                            <div>
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*" />
-                                            </div>
-                                            <div>
-                                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone*" />
-                                            </div>
-                                            <div>
-                                                <select name="subject" class="form-control">
-                                                    <option disabled={false} selected>Contact subject</option>
-                                                    <option>Subject 1</option>
-                                                    <option>Subject 2</option>
-                                                    <option>Subject 3</option>
-                                                </select>
-                                            </div>
+
                                             <div class="fullwidth">
-                                                <textarea class="form-control" name="note"  id="note" placeholder="Case Description..."></textarea>
+                                                <textarea class="form-control" 
+                                                    name="note"  
+                                                    id="note" 
+                                                    onInput={ (e) => this.handleCommonInput(e, 'query') } 
+                                                    placeholder="Your query...">
+                                                </textarea>
                                             </div>
-                                            <div class="submit-area">
-                                                <button type="submit" class="theme-btn-s6"><i class="fi flaticon-like"></i> Submit It Now</button>
-                                                <div id="loader">
-                                                    <i class="ti-reload"></i>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix error-handling-messages">
-                                                <div id="success">Thank you</div>
-                                                <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                            </div>
+
                                         </form>
+
+                                            <div>
+                                                <button 
+                                                    onClick={() => this.sendMessage()}
+                                                    class="theme-btn-s6">
+                                                    <i class="fi flaticon-like"></i>
+                                                    Connect through Whatsapp
+                                                </button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
