@@ -42,10 +42,10 @@ export class ProfferHeader {
                                 <a> <ion-router-link href='/about' color={location.pathname.startsWith('/about') ? 'danger' : 'light'}> About us </ion-router-link> </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a> <ion-router-link href='/about/press-coverage' color={location.pathname.startsWith('/about') ? 'danger' : 'dark'}> Press Coverage </ion-router-link> </a>
+                                        <a> <ion-router-link href='/about/press-coverage' color={location.pathname.startsWith('/about/press-coverage') ? 'danger' : 'dark'}> Press Coverage </ion-router-link> </a>
                                     </li>
                                     <li>
-                                        <a> <ion-router-link href='/about/legal' color={location.pathname.startsWith('/about') ? 'danger' : 'dark'}> Legal </ion-router-link> </a>
+                                        <a> <ion-router-link href='/about/legal' color={location.pathname.startsWith('/about/legal') ? 'danger' : 'dark'}> Legal </ion-router-link> </a>
                                     </li>
                                 </ul>
                             </li>
@@ -73,10 +73,36 @@ export class ProfferHeader {
                                 <a> <ion-router-link href='/contact' color={location.pathname.startsWith('/contact') ? 'danger' : 'light'}> Contact </ion-router-link> </a>
                             </li>
 
+
+
+                            { this.ngo.reachOut.facebook.length !== 0 ?
+                                <li class='social'><a class='social' href={ this.ngo.reachOut.facebook } target='_blank' ><i class="ti-facebook"></i></a></li>
+                            : null }
+
+                            { this.ngo.reachOut.twitter.length !== 0 ?
+                                <li class='social'><a class='social' href={ this.ngo.reachOut.twitter } target='_blank' ><i class="ti-twitter"></i></a></li>
+                            : null }
+
+                            { this.ngo.reachOut.instagram.length !== 0 ?
+                                <li class='social'><a class='social' href={ this.ngo.reachOut.instagram } target='_blank' ><i class="ti-instagram"></i></a></li>
+                            : null }
+
+                            { this.ngo.reachOut.linkedin.length !== 0 ?
+                                <li class='social'><a class='social' href={ this.ngo.reachOut.linkedin } target='_blank' ><i class="ti-linkedin"></i></a></li>
+                            : null }
+
+                            { this.ngo.reachOut.youtube.length !== 0 ?
+                                <li class='social'><a class='social' href={ this.ngo.reachOut.youtube } target='_blank' ><i class="ti-youtube"></i></a></li>
+                            : null }
+
+                            
+
+
                         </ul>
                     </div>{ /**  end of nav-collapse  */ } 
 
                     <div class="cart-search-contact">
+
                         <div class="donate-btn">
 
                             <ion-router-link href="/donate"> 

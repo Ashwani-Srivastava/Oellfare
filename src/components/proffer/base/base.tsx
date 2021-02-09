@@ -172,6 +172,8 @@ export class ProfferBase {
         setTimeout(() => {
         if($(".causes-slider").length) {
             $('.causes-slider').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 5000,
                 center: true,
                 loop:true,
                 dots: false,
@@ -224,21 +226,23 @@ export class ProfferBase {
     // set two coloumn height equial
     private static setTwoColEqHeight($col1, $col2) {
 
-        var firstCol = $col1,
-            secondCol = $col2,
-            firstColHeight = $col1.innerHeight(),
-            secondColHeight = $col2.innerHeight();
+        setTimeout(() => {
+            var firstCol = $col1,
+                secondCol = $col2,
+                firstColHeight = $col1.innerHeight(),
+                secondColHeight = $col2.innerHeight();
 
 
-        if (firstColHeight > secondColHeight) {
-            secondCol.css({
-                "height": firstColHeight + 1 + "px"
-            })
-        } else {
-            firstCol.css({
-                "height": secondColHeight + 1 + "px"
-            })
-        }
+            if (firstColHeight > secondColHeight) {
+                secondCol.css({
+                    "height": firstColHeight + 1 + "px"
+                })
+            } else {
+                firstCol.css({
+                    "height": secondColHeight + 1 + "px"
+                })
+            }
+        }, 200);
 
     }
 

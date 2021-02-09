@@ -111,7 +111,7 @@ export class ProfferFooter {
                         <div class="row">
                             <div class="separator"></div>
                             <div class="col col-xs-12">
-                                <p class="copyright">Copyright &copy; 2020 Proffer. All rights reserved</p>
+                                <p class="copyright">Copyright &copy; 2020 Uravugal Trust. All rights reserved</p>
                                 <div class="extra-link">
                                     <ul>
                                         <li>Powered by <a href="https://thegrassroots.app/" style={{ 'text-decoration': 'underline' }}>Grassroots</a></li>

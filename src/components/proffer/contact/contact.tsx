@@ -34,7 +34,7 @@ export class ProfferContact {
                 <proffer-header ngo={this.ngo}></proffer-header>
 
                 { /** start page-title */ }
-                <section class="page-title">
+                <section class="page-title" style={{ 'background': 'url(/assets/images/contact-001x1024.jpg) center center/cover no-repeat local', 'background-color': 'rgba(0, 0, 0, 0.5)'}}>
                     <div class="page-title-container">
                         <div class="page-title-wrapper">
                             <div class="container">
@@ -144,7 +144,7 @@ export class ProfferContact {
                 <section class="contact-map-section">
                     <h2 class="hidden">Contact map</h2>
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.278682013113!2d80.2276578!3d13.0630411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10fa5ee3a9fe959d!2sUravugal%20Trust!5e0!3m2!1sen!2sin!4v1612789479917!5m2!1sen!2sin" ></iframe>
                     </div>
                 </section>
                 { /** end contact-map */ }

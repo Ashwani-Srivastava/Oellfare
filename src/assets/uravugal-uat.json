@@ -37,7 +37,20 @@
     "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FY5Cys25yYFmxFQ0F209F%2Foriginal_cover6.jpg?alt=media",
     "https://firebasestorage.googleapis.com/v0/b/gr-auto-repo.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FY5Cys25yYFmxFQ0F209F%2Foriginal_cover7.jpg?alt=media"
   ],
-  "legal": { "regNo": "", "fcraNo": "", "_80GNo": "", "panNo": "", "_12ANo": "" },
+  "legal": {
+    "regDeed": { "regNo": "861/2017", "date": "2020-07-16T07:44:10.444+05:30", "file": "" },
+    "legal80g": { "file": "", "date": "2020-07-16T07:33:03.457+05:30", "regNo": "" },
+    "regNo": "861/2017",
+    "legal12a": { "file": "", "regNo": "AAATU8453D", "date": "2020-07-16T07:33:03.457+05:30" },
+    "fcra": { "file": "", "date": "2020-07-16T07:33:03.458+05:30", "regNo": "" },
+    "panNo": "AAATU8453D",
+    "bank": {
+      "ifscCode": "UTIB0001009",
+      "bankName": "Axis Bank",
+      "accountNo": "918020042973683",
+      "accountName": "Uravugal Trust"
+    }
+  },
   "bank": { "bankName": "", "accountName": "", "ifscCode": "", "accountNo": "" },
   "slug": "uravugal-trust",
   "shortUrl": "https://grs.one/",

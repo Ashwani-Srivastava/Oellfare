@@ -1,1 +1,19 @@
+.site-header #navbar > ul > li > a.social {
+    padding-left                :   8px !important;
+    padding-right               :   8px !important;
+}
 
+@media (max-width: 991px) {
+
+    .site-header #navbar > ul > li.social {
+        display                 :   inline;
+        top                     :   20px;
+        padding-bottom          :   20px;
+    }
+
+    .site-header #navbar > ul > li > a.social {
+        padding                 :   10px 0px 10px 35px !important;
+        display                 :   inline;
+    }
+
+}

@@ -51,7 +51,7 @@ export class AppRoot {
                     <ion-route url="/volunteer" component="charity-volunteer" />
                        */ }
 
-                    <ion-route url="/" component="proffer-home" />
+                    <ion-route url="/" component="proffer-homea" />
                     <ion-route url="/about" component="proffer-about" />
                     <ion-route url="/about/press-coverage" component="proffer-press-coverage" />
                     <ion-route url="/about/legal" component="proffer-legal" />
