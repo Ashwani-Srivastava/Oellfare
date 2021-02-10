@@ -60,12 +60,17 @@ export class AuthServiceController {
     private timerID             :   any                 =   0;
     public confirmationResult   :   any;
 
+    public ngoId                :   string              =   '';
+
     constructor() {
         Logger.info('Auth Service :: Constructor');
     }
 
-    async initialize() {
+    async initialize(ngoId: string) {
+
         Logger.info('Auth Service :: Initialize');
+
+        this.ngoId              =   ngoId
 
         this.state$             =   new BehaviorSubject('');
         
@@ -89,7 +94,7 @@ export class AuthServiceController {
                     localStorage.setItem('userid', firebaseUser.uid);
 
                     const vol   =   this.prepareUserdata(firebaseUser);
-                    const ref   =   FirestoreService.fetchSingleSubDocument('Ngo', 'jjewCbG2olNnNYlxxTRa', 'Volunteer', vol.id, Volunteer);
+                    const ref   =   FirestoreService.fetchSingleSubDocument('Ngo', ngoId, 'Volunteer', vol.id, Volunteer);
 
                     return ref.pipe(
                         map(_vol => {
@@ -151,7 +156,7 @@ export class AuthServiceController {
      */
 
     public saveProfile(vol: Volunteer): Promise<void> {
-        return FirestoreService.addSubDocument('Ngo', 'jjewCbG2olNnNYlxxTRa', 'Volunteer', vol.id, vol.toJson());
+        return FirestoreService.addSubDocument('Ngo', this.ngoId, 'Volunteer', vol.id, vol.toJson());
     }
 
     public getAuth(): any {

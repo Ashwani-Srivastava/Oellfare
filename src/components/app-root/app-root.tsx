@@ -1,10 +1,12 @@
 import { Build, Component,
-         h, Listen }   from    '@stencil/core';
+         h, Listen, Prop    }   from    '@stencil/core';
 
 import { AuthService        }   from    'auth/auth.service';
 import { ConfigService      }   from    'common/config.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { Logger             }   from    'common/logger';
+
+import * as ngo                 from    'assets/ngo.json';
 
 declare var $: any;
 declare var jQuery: any;
@@ -16,11 +18,13 @@ declare var Swiper: any;
 })
 export class AppRoot {
 
+    @Prop() ngo                 :   any                 =   ngo;
+
     constructor() {
         Logger.info(`AppRoot Component :: Constructor :: App version :: v${ConfigService.appVersion}`);
 
         if (Build.isBrowser) {
-            AuthService.initialize();
+            AuthService.initialize(this.ngo.id);
         }
     }
 
@@ -63,6 +67,13 @@ export class AppRoot {
 
                 </ion-router>
                 <ion-nav />
+
+                <ion-fab horizontal="start" vertical="bottom">
+                    <ion-fab-button color='primary' href={`https://api.whatsapp.com/send?phone=${this.ngo.reachOut.phone1}&text=Hi. I like to support ${this.ngo.name}.`}>
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
+
             </ion-app>
         );
     }

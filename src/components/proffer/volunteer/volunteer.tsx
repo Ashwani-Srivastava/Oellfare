@@ -189,25 +189,26 @@ export class ProfferVolunteer {
                                         </div> : null }
 
 
-            { !this.me?.isJoined ?
-            <form method="post" class="contact-validation-active" id="contact-form-main">
-                <div>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Name*" disabled={ !this.isLoggedIn } value={ this.me?.name } />
-                </div>
+            { !this.me?.isJoined ? <span>
+                <form method="post" class="contact-validation-active" id="contact-form-main">
+                    <div>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Name*" disabled={ !this.isLoggedIn } value={ this.me?.name } />
+                    </div>
 
-                <div>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*" disabled={ !this.isLoggedIn } value={ this.me?.email } />
-                </div>
+                    <div>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email*" disabled={ !this.isLoggedIn } value={ this.me?.email } />
+                    </div>
 
-                <div class="fullwidth">
-                    <textarea class="form-control" 
-                        name="note"  id="note" 
-                        onInput={ (e) => this.handleCommonInput(e, 'whyVolunteer') } 
-                        cols={30} rows={7} 
-                        placeholder="Why I am joining?" 
-                        disabled={ !this.isLoggedIn } ></textarea>
-                </div>
+                    <div class="fullwidth">
+                        <textarea class="form-control" 
+                            name="note"  id="note" 
+                            onInput={ (e) => this.handleCommonInput(e, 'whyVolunteer') } 
+                            cols={30} rows={7} 
+                            placeholder="Why I am joining?" 
+                            disabled={ !this.isLoggedIn } ></textarea>
+                    </div>
 
+                </form> 
                 <div class="submit-area">
 
                     <button type="submit" 
@@ -217,9 +218,7 @@ export class ProfferVolunteer {
                         style={{ 'width': '100%' }}
                         disabled={ !this.isLoggedIn } > <i class="fi flaticon-like"></i> Join as a Volunteer </button>
 
-                </div>
-
-        </form> : null }
+                </div> </span> : null }
 
 
                 { this.me?.isJoined ?

@@ -106,6 +106,7 @@ export class ProfferFooter {
                         </div>
                     </div> { /**  end container  */ } 
                 </div>
+
                 <div class="lower-footer">
                     <div class="container">
                         <div class="row">
@@ -121,6 +122,7 @@ export class ProfferFooter {
                         </div>
                     </div>
                 </div>
+
             </footer>
         );
     }

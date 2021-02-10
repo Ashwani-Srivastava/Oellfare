@@ -39,10 +39,10 @@ export class ProfferDonate {
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
-    private donationAmount      :   number              =   0
+    private donationAmount      :   number              =   1000;
     private whyDonate           :   string              =   '';
     private referredBy          :   string              =   '';
-    private isAnonymous         :   boolean             =   false
+    private isAnonymous         :   boolean             =   false;
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -104,7 +104,10 @@ export class ProfferDonate {
     private async makeDonation(): Promise<any> {
         console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
 
-        //TODO: UI Validation
+        if (this.donationAmount < 100) {
+            await DialogService.presentAlert('Error', 'Donation amount should be atleast Rs. 100');
+            return;
+        }
 
         await DialogService.presentDefaultLoader();
         const pay               =   await PaymentService.initiateDonation(this.fund, this.ngo, AuthService.me, this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
@@ -210,9 +213,8 @@ export class ProfferDonate {
                                         <legend> Donation details </legend>
  
                                         { this.isLoggedIn ?
-                                        <div class="col-md-12">
                                             <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
-                                        </div> : null }
+                                        : null }
 
 
                                         <p id="give-email-wrap" class="form-row form-row-wide">
@@ -319,31 +321,6 @@ export class ProfferDonate {
                                 </div>
                             </div>
 
-                            { /*
-                            <div class="widget urgent-case-widget">
-                                <div class="cases">
-                                    <div class="case">
-                                        <div class="img-holder">
-                                            <img src="/assets/proffer/images/case-single/case-widget/img-1.jpg" alt="" />
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="#">For your insurance business, employees, or clients</a></h4>
-                                            <span class="g-r">Goal: $9000 Raised: $5000</span>
-                                        </div>
-                                    </div>
-                                    <div class="case">
-                                        <div class="img-holder">
-                                            <img src="/assets/proffer/images/case-single/case-widget/img-3.jpg" alt="" />
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="#">Be prepared for life’s Once you’ve picked your vorite</a></h4>
-                                            <span class="g-r">Goal: $9000 Raised: $5000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                               */ }
-
                         </div>
                     </div>
                 </div>
@@ -352,10 +329,9 @@ export class ProfferDonate {
         { /** end case-single-section  */ }
 
 
+        <proffer-footer ngo={this.ngo}></proffer-footer>
 
-            <proffer-footer ngo={this.ngo}></proffer-footer>
-
-                { HelmetService.render(this.ngo, 'Donate') }
+        { HelmetService.render(this.ngo, 'Donate') }
 
         </div>
 

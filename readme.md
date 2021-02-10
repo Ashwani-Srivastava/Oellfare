@@ -8,6 +8,7 @@
 
 
 ## To change NGO
+ * Update AppRoot.NgoId
  * Update src/assets/ngo.json, src/assets/fund.json with the json files of the Ngo, that is needed
 
 

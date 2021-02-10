@@ -12,6 +12,7 @@ export class ProfferHeader {
         return (
 
         <header id="header" class="site-header header-style-1">
+
             <nav class="navigation navbar navbar-default">
                 <div class="container-fluid">
 

@@ -12,7 +12,7 @@ class HelmetServiceController {
         return (
             <Helmet>
                 <title> { UtilityService.getMetaTitle(`${pageName} - ${ngo.name} Ngo`) } </title>
-                <meta name="description" content={ `${pageName} - ${ ngo.name } ngo in ${ ngo.district.name } working for ${ ngo.description }` } />
+                <meta name="description" content={ `${pageName} - ${ ngo.name } in ${ ngo.district.name }. ${ ngo.description }` } />
                 <meta name="keywords" content={ `${ ngo.name }, ngo, ${ ngo.district.name }, ${ ngo.causes.join(', ') }` } />
 
                 <meta property="og:title" content={ UtilityService.getMetaTitle(`${pageName} - ${ngo.name} Ngo`) }/>
