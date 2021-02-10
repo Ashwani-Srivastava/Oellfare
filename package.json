@@ -9,6 +9,7 @@
     ],
     "scripts": {
         "build": "stencil build",
+        "config": "node scripts/pre.js --theme=alor",
         "start": "stencil build --dev --watch --serve",
         "live": "stencil build --watch --serve",
         "test": "stencil test --spec --e2e",
@@ -27,6 +28,7 @@
         "@ionic/core": "^5.3.2",
         "@stencil/core": "^2.0.1",
         "@stencil/helmet": "^0.3.2",
+        "preprocess": "^3.2.0",
         "workbox-build": "^4.3.1"
     }
 }
