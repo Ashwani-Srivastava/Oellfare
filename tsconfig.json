@@ -32,8 +32,9 @@
             "sdg/*"     : [ "components/sdg/*"      ],
             "volunteer/*":[ "components/volunteer/*"],
 
-            "proffer/*" :[ "components/proffer/*"],
-            "charity/*" :[ "components/charity/*"]
+            "alor/*"    :[ "templates/alor/*"],
+            "proffer/*" :[ "templates/proffer/*"],
+            "charity/*" :[ "templates/charity/*"]
         }
 
     },

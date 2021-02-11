@@ -1,4 +1,10 @@
 var pp = require('preprocess');
+
+/**
+ * TODO:
+ * Copy assets/${ngoName}.json to assets/ngo.json
+ * Copy assets/${ngoName}-fund.json to assets/fund.json
+ */
  
 //npm run config theme=alor
 //npm run config theme=charity

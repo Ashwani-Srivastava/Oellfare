@@ -8,12 +8,13 @@ import { Logger             }   from    'common/logger';
 
 import * as ngo                 from    'assets/ngo.json';
 
+declare var $: any;
+
 @Component({
     tag                         :   'alor-root',
     styleUrl                    :   'root.css',
 })
 export class AlorRoot {
-
 
     @Prop() ngo                 :   any                 =   ngo;
 
@@ -78,7 +79,6 @@ export class AlorRoot {
 
     async componentDidLoad() {
         Logger.info('App root :: will load');
-
     }
 
     @Listen("swUpdate", { target: 'window' })
