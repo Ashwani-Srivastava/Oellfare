@@ -56,7 +56,6 @@ export class AlorHome {
             .fetchNgo(this.ngo.id)
             .pipe(takeWhile(_p => this.alive))
             .subscribe(n => {
-                debugger;
                 this.ngo = n;
             });
     }
@@ -542,110 +541,34 @@ export class AlorHome {
                 { /** //liton */ },
             </div>,
 
-            <div id="news" class="news">
-                { /** news */ },
-                <div class="container">
-                    <h3>NEWS</h3>
-                    <div class="news-grids">
-                        <div class="col-md-5 news-grid">
-                            <div class="news-grd">
-                                <img src="/assets/alor/images/15.jpg" alt=" " />
-                                <div class="video">
-                                    <a href="#"><img src="/assets/alor/images/8.png" alt=" " /></a>
-                                </div>
-                            </div>
-                            <div class="news-grd-text">
-                                <p class="date">25 MAY 2015</p>
-                                <h4>Why do children end up on the streets?</h4>
-                                <p class="children">Children end up on the streets for a mixture of 
-                                    reasons, though poverty is usually at the heart of the problem. 
-                                    In the countries where we work, conflict and poverty combine to 
-                                    force children onto the streets. In many cases a child's family 
-                                    can no longer afford to care for them properly or may need their 
-                                    help to supplement the family income and help put food on the table.</p>
-                                <div class="more1">
-                                    <a href="#" class="hvr-bounce-to-right">Read More</a>
-                                </div>
-                                <div class="edit">
-                                    <p>Hasan</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7 news-grid">
-                            <div class="news-income">
-                                <div class="news-grid-left">
-                                    <img class="steel" src="/assets/alor/images/16.jpg" alt=" " />
-                                    <div class="gallery">
-                                        <a href="#"><img src="/assets/alor/images/9.png" alt=" " /></a>
-                                    </div>
-                                </div>
-                                <div class="news-grid-right">
-                                    <div class="news-grd-text1">
-                                        <p class="date">01 DECEMBER 2014</p>
-                                        <h4>BeReviews was a awesome envent in dhaka</h4>
-                                        <p class="children">With a blow from the top-maul Ahab knocked 
-                                            off the steel head of the lance, and then handing to the steel</p>
-                                        <div class="more1">
-                                            <a href="#" class="hvr-bounce-to-right">Read More</a>
-                                        </div>
-                                        <div class="edit">
-                                            <p>Litoon Dev</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="news-income">
-                                <div class="news-grid-left">
-                                    <img class="steel" src="/assets/alor/images/17.jpg" alt=" " />
-                                    <div class="gallery">
-                                        <a href="#"><img src="/assets/alor/images/10.png" alt=" " /></a>
-                                    </div>
-                                </div>
-                                <div class="news-grid-right">
-                                    <div class="news-grd-text1">
-                                        <p class="date">03 NOVEMBER 2014</p>
-                                        <h4>Play list of old bangle music and gajal countries</h4>
-                                        <p class="children">With a blow from the top-maul Ahab knocked 
-                                            off the steel head of the lance, and then handing to the steel</p>
-                                        <div class="more1">
-                                            <a href="#" class="hvr-bounce-to-right">Read More</a>
-                                        </div>
-                                        <div class="edit">
-                                            <p>Rabbani</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                { /** //news */ },
-            </div>,
-
             <div id="contact" class="contact">
                 { /** contact */ },
                 <div class="container">
                     <div class="contact-header">
-                        <h3>CONTACT ALOR BHUBON</h3>
+                        <h3>CONTACT US</h3>
                     </div>
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.1973950112197!2d90.39410240000001!3d23.7403393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bfe09f2fc9%3A0x1da49bc0abfd4f7a!2sShahbagh%2C+Dhaka%2C+Bangladesh!5e0!3m2!1sen!2sin!4v1432554662723" frameborder="0" style={{ 'border' : '0' }}></iframe>
                         <div class="map-color">
                             <div class="contact-info">
                                 <h4>Contact Info</h4>
-                                <p>252, Elephant Road, Al-Baraka Tower,
-                                    <span>Kataban Road, Dhaka, Bangladesh</span>
-                                    Phone Number: 01918-009393</p>
+
+                                <p>
+                                    { this.ngo.address } <br/>
+                                    Mobile: { this.ngo.reachOut.phone1 } <br/>
+                                    Email: { this.ngo.reachOut.email }
+                                </p>
+
+                                <h4>Contact us</h4>
+                                <p></p>
+                                <button> Signup with Grassroots </button>
                                 <form>
                                     <input type="text" value="Name" required={true} />
                                     <input type="email" value="Email" required={true} />
                                     <input type="text" value="Subject" required={true} />
                                     <textarea required={true} >Message...</textarea>
-                                    <input type="submit" value="Send Message" />
                                 </form>
+                                <input type="button" value="Send Message" />
                             </div>
                             <div class="clearfix"> </div>
                         </div>

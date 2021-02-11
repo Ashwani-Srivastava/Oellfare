@@ -12,6 +12,11 @@
  * Update src/assets/ngo.json, src/assets/fund.json with the json files of the Ngo, that is needed
 
 
+## Customization Parameters:
+### Alor - Baby Needs Foundation
+To change template orange to Ngo Logo blue, rotated 'hue' of all images in Photoshop by -150.
+
+
 # Ionic PWA Toolkit
 
 The PWA Toolkit is a starting point for building Progressive Web Apps using Ionic and Stencil.

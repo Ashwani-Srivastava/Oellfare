@@ -32,9 +32,33 @@ export class ProfferHeader {
                                 </ion-router-link>
                             </a> </li>
 
+                            <li class={location.pathname.startsWith('/about') ? 'cap' : ''}> <a>
+                                <ion-router-link href='/about'>
+                                    About us
+                                </ion-router-link>
+                            </a> </li>
+
+                            <li class={location.pathname.startsWith('/projects') ? 'cap' : ''}> <a>
+                                <ion-router-link href='/projects'>
+                                    Projects
+                                </ion-router-link>
+                            </a> </li>
+
+                            <li class={location.pathname.startsWith('/donate') ? 'cap' : ''}> <a>
+                                <ion-router-link href='/donate'>
+                                    Donate
+                                </ion-router-link>
+                            </a> </li>
+
                             <li class={location.pathname.startsWith('/volunteer') ? 'cap' : ''}> <a>
                                 <ion-router-link href='/volunteer'>
                                     Volunteer
+                                </ion-router-link>
+                            </a> </li>
+
+                            <li class={location.pathname.startsWith('/contact') ? 'cap' : ''}> <a>
+                                <ion-router-link href='/contact'>
+                                    Contact
                                 </ion-router-link>
                             </a> </li>
 

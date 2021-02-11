@@ -53,15 +53,7 @@ export class AlorRoot {
                     <ion-route url="/volunteer" component="charity-volunteer" />
                        */ }
 
-                    <ion-route url="/" component="alor-home" />
-                    <ion-route url="/about" component="alor-about" />
-                    <ion-route url="/about/press-coverage" component="alor-press-coverage" />
-                    <ion-route url="/about/legal" component="alor-legal" />
-                    <ion-route url="/contact" component="alor-contact" />
-                    <ion-route url="/donate" component="alor-donate" />
-                    <ion-route url="/projects" component="alor-projects" />
-                    <ion-route url="/projects/:projectSlug" component="alor-projects-detail" />
-                    <ion-route url="/volunteer" component="alor-volunteer" />
+                    <ion-route url="/" component="alor-home-single" />
 
                 </ion-router>
                 <ion-nav />
