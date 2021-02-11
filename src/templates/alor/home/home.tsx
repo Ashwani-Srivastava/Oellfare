@@ -1,7 +1,15 @@
-import { Component, h, Prop }   from    '@stencil/core';
+import { Build, Component, h,
+         Prop               }   from    '@stencil/core';
+
+import { filter, takeWhile  }   from    'rxjs/operators';
 
 import { AlorBase           }   from    'alor/base/base'
+import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service'
+import { Logger             }   from    'common/logger';
+import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
+
 import * as ngo                 from    'assets/ngo.json';
 //import * as fund                from    'assets/fund.json';
 
@@ -11,12 +19,46 @@ import * as ngo                 from    'assets/ngo.json';
 })
 export class AlorHome {
 
-    @Prop() ngo                 :   any                 =   ngo;
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    private alive               :   boolean             =   true;
+
+    private coverSlideOptions   :   any                 =   {
+        autoplay: {
+            delay: 4000
+        }
+    };
+
+    async componentWillLoad() {
+        console.log('Home :: Component will load');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+        }
+
+    }
 
     async componentDidLoad() {
-        console.log('Home :: componentDidLoad');
+        console.log('Home :: Component did load');
 
         AlorBase.setupEssentials();
+    }
+
+    private async initialize() {
+        Logger.info('Home :: Initialize :: ');
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => {
+                debugger;
+                this.ngo = n;
+            });
     }
 
     render() {
@@ -24,114 +66,21 @@ export class AlorHome {
 
             <alor-header ngo={this.ngo}></alor-header>,
 
-            <div class="banner">
-                { /** banner */ },
-                <div class="container">
-                    <div  id="top" class="callbacks_container wow fadeInUp" data-wow-delay="0.5s">
-                        <ul class="rslides" id="slider3">
-                            <li>
-                                <div class="banner-info">
-                                    <h1>WELCOME TO ALOR BHUBON</h1>
-                                    <a href="#" class="hvr-bounce-to-right read">Read More</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="banner-info">
-                                    <h1>WELCOME TO CHARITY WELFARE</h1>
-                                    <a href="#" class="hvr-bounce-to-right read">Read More</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="banner-info">
-                                    <h1>WELCOME TO BHUBON WELFARE</h1>
-                                    <a href="#" class="hvr-bounce-to-right read">Read More</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                { /** //banner */ },
-            </div>,
-
-
-            <div class="banner-bottom">
-                { /** banner-bottom */ },
-                <div class="container">
-                    <div class="banner-bottom-grids">
-                        <div class="forced">
-                            <p>"Let every children forced to be on street have education."</p>
-                        </div>
-                        <div class="donate">
-                            <div class="Alor">
-                                <p>–Munzurul Hasan, Alor Bhubon</p>
-                            </div>
-                            <div class="us">
-                                <a href="#" class="hvr-bounce-to-right read">Donate Us</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                { /** //banner-bottom */ },
+            <div class="banner">;
+                <ion-slides style={{ 'height': '100%' }} id='coverSlides' options={this.coverSlideOptions} >
+                    { this.ngo.photos.slice(0, 3).map(p => (
+                        <ion-slide>
+                            <img src={p} style={{ 'width': '100%', 'object-fit': 'cover' }} />
+                        </ion-slide>
+                    )) }
+                </ion-slides>
             </div>,
 
             <div id="history" class="history">
                 { /** history */ },
                 <div class="container">
-                    <h3>HISTORY</h3>
-                    <p class="libero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lobortis, ante interdum vehicula pretium, dui enim porta lectus,
-                        non euismod tortor ante eu libero. Aenean blandit luctus tortor vitae interdum.
-                        Etiam egestas purus lorem, eget tempus odio placerat id. Integer eu gravida nibh.</p>
-                    <div class="history-grids">
-                        <div class="col-md-6 history-grid">
-                            <img class="one" src="/assets/alor/images/1.png" alt=" " />
-                        </div>
-                        <div class="col-md-6 history-grid">
-                            <div class="history-grid1">
-                                <div class="history-grid-left">
-                                    <span> </span>
-                                </div>
-                                <div class="history-grid-right">
-                                    <h4>Dhaka Branch</h4>
-                                    <p>We Open in Jamalpur Branch in 2010</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="history-grid1">
-                                <div class="history-grid-left1">
-                                    <span> </span>
-                                </div>
-                                <div class="history-grid-right">
-                                    <h4>Manikgonj Branch</h4>
-                                    <p>We Open in Jamalpur Branch in 2010</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="history-grid1">
-                                <div class="history-grid-left2">
-                                    <span> </span>
-                                </div>
-                                <div class="history-grid-right">
-                                    <h4>Jamalpur Branch</h4>
-                                    <p>We Open in Jamalpur Branch in 2010</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="history-grid1">
-                                <div class="history-grid-left3">
-                                    <span> </span>
-                                </div>
-                                <div class="history-grid-right">
-                                    <h4>Natore Branch</h4>
-                                    <p>We Open in Jamalpur Branch in 2010</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                    <h3>Our Vision</h3>
+                    <h5 class="text-center" style={{ 'font-size': '1.5em' }} > { this.ngo.vision } </h5>
                 </div>
                 { /** //history */ },
             </div>,
@@ -140,8 +89,7 @@ export class AlorHome {
                 { /** lorum */ },
                 <div class="container">
                     <div class="lorum-info">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            <span>In lobortis, ante interdum vehicula</span></h3>
+                        <h3>Children have neither past nor future. They enjoy the present, which very few of us do. <br/> - Jean De La Bruyere - </h3>
                     </div>
                 </div>
                 { /** //lorum */ },
@@ -151,57 +99,34 @@ export class AlorHome {
                 { /** about */ },
                 <div class="container">
                     <h3>ABOUT US</h3>
-                    <div class="about-top-text">
-                        <p>"We believe in a world where no child ever has to live on the streets"</p>
-                    </div>
-                    <p class="unique">Over the past 45 years,we worked in over 4 District to provide youth with practical, 
-                        hands-on-skills that they can apply to entrepreneurial endeavors and entry-level jobs.
-                        We do not believe in providing hand-outs. Our goal is to provide sustainable skills 
-                        through education, which can be used over a long period of time. Through a unique 
-                        Train-the-Trainer model, Street Kids provides educational workshops on relevant 
-                        business skills to Master Trainers and Youth Workers based in developing countries.</p>
                     <div class="about-grids">
                         <div class="col-md-6 about-grid">
-                            <h2>Child Friendly Stations</h2>
+                            <h2>A Glimpse into our Activities</h2>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{'width': '60%' }} >
                                     <span class="sr-only">60% Complete</span>
                                 </div>
                             </div>
                             <div class="about-grid-fig">
-                                <img src="/assets/alor/images/2.jpg" alt=" " />
+                                <img src="/assets/baby-needs/video.jpg" alt=" " />
                                 <a class="play-icon popup-with-zoom-anim" href="#small-dialog">
                                     <span> </span>
                                 </a>
                                 <div id="small-dialog" class="mfp-hide">
-                                    <iframe src="https://player.vimeo.com/video/10260175?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0"></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQr-Lt2PtTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 about-grid">
-                            <h2 class="community">Community Level</h2>
+                            <h2 class="community">What we do?</h2>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{'width': '60%;' }}>
                                     <span class="sr-only">60% Complete</span>
                                 </div>
                             </div>
                             <div class="mission-vision">
-                                <div class="mission-grid">
-                                    <h4>Our Mission:</h4>
-                                    <div class="mission">
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            In lobortis, ante interdum vehicula pretium"</p>
-                                    </div>
-                                </div>
                                 <div class="vission-grid">
-                                    <h4>Our Vission:</h4>
-                                    <div class="mission">
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            In lobortis, ante interdum vehicula pretium"</p>
-                                    </div>
-                                </div>
-                                <div class="more">
-                                    <a href="#" class="hvr-bounce-to-right">Read More</a>
+                                    <p> {this.ngo.description } </p>
                                 </div>
                             </div>
                         </div>
@@ -215,140 +140,26 @@ export class AlorHome {
                 { /** activities */ },
                 <div class="container">
                     <h3>OUR ACTIVITIES</h3>
-                    <p class="libero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lobortis, ante interdum vehicula pretium, dui enim porta lectus,
-                        non euismod tortor ante eu libero. Aenean blandit luctus tortor vitae interdum.
-                        Etiam egestas purus lorem, eget tempus odio placerat id. Integer eu gravida nibh.</p>
                     <div class="activities-grids">
-                        <div class="col-md-4 activities-grid">
+                        <div class="col-md-6 activities-grid">
                             <div class="activities-grid-left">
                                 <span> </span>
                             </div>
                             <div class="activities-grid-right">
-                                <h4>Street Level</h4>
-                                <p>At street level we strive to meet the immediate needs of children 
-                                    at risk on the streets and platforms of India today. We have created 
-                                    a number of ‘child friendly stations’ with the help and engagement 
-                                    of the people who work at them, who now look out for and help children 
-                                    alone and at risk.</p>
+                                <h4>Toy Distribution</h4>
+                                <p> We collect and distribute Toys </p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                        <div class="col-md-4 activities-grid">
+                        <div class="col-md-6 activities-grid">
                             <div class="activities-grid-left1">
                                 <span> </span>
                             </div>
                             <div class="activities-grid-right">
-                                <h4>Community Level</h4>
-                                <p>At community level we work to make children on the streets 
-                                    visible to society and to help people understand the issues that 
-                                    cause children to run away and that face them on the streets and 
-                                    on the platforms. We invest time and skills in preventative intervention, 
-                                    with the aim of creating ‘safety nets’ within communities to catch 
-                                    children who are at risk of running away before they do so.</p>
+                                <h4>Dress Distribution</h4>
+                                <p> We collect and distribute Dresses. </p>
                             </div>
                             <div class="clearfix"> </div>
-                        </div>
-                        <div class="col-md-4 activities-grid">
-                            <div class="activities-grid-left2">
-                                <span> </span>
-                            </div>
-                            <div class="activities-grid-right">
-                                <h4>Government Level</h4>
-                                <p>At government level we work to persuade policy makers that 
-                                    children living on the streets should be higher on India’s 
-                                    political agenda and that government policies should provide greater 
-                                    protection and opportunity for them</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="history-faq-grids">
-                        <div class="col-md-6 history-faq-grid">
-                            <h4>Our History</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ 'width': '60%' }}>
-                                    <span class="sr-only">60% Complete</span>
-                                </div>
-                            </div>
-                            <div class="sap_tabs">	
-                                <div id="horizontalTab" style={{'display': 'block', 'width': '100%', 'margin': '0px' }}>
-                                    <ul class="resp-tabs-list">
-                                        <li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab"><span>2010</span></li>
-                                        <li class="resp-tab-item grid2" aria-controls="tab_item-1" role="tab"><span>2011</span></li>
-                                        <li class="resp-tab-item grid3" aria-controls="tab_item-2" role="tab"><span>2012</span></li>
-                                        <li class="resp-tab-item grid5" aria-controls="tab_item-3" role="tab"><span>2014</span></li>
-                                        <div class="clear"></div>
-                                    </ul>				  	 
-                                    <div class="resp-tabs-container">
-                                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                                            <div class="facts">
-                                                <ul class="tab_list">
-                                                    <li><a href="#">It is a long established fact that a reader will be distracted by the readable content of a page when 
-                                                            looking at its layout.</a></li>
-                                                    <li><a href="#">The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
-                                                            of letters readable English</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                                            <div class="facts">
-                                                <ul class="tab_list">
-                                                    <li><a href="#">The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
-                                                            of letters readable English</a></li>
-                                                    <li><a href="#">It is a long established fact that a reader will be distracted by the readable content of a page when 
-                                                            looking at its layout.</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-                                            <div class="facts">
-                                                <ul class="tab_list">
-                                                    <li><a href="#">It is a long established fact that a reader will be distracted by the readable content of a page when 
-                                                            looking at its layout.</a></li>
-                                                    <li><a href="#">The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
-                                                            of letters readable English</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
-                                            <div class="facts">
-                                                <ul class="tab_list">
-                                                    <li><a href="#">The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
-                                                            of letters readable English</a></li>
-                                                    <li><a href="#">It is a long established fact that a reader will be distracted by the readable content of a page when 
-                                                            looking at its layout.</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 history-faq-grid">
-                            <h4>Faq</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ 'width': '60%' }}>
-                                    <span class="sr-only">60% Complete</span>
-                                </div>
-                            </div>
-                            <div class="faq-info">
-                                <div class="eiusmod">
-                                    <p class="para">Enim eiusmod high life accusamus?</p>
-                                    <p class="para1">Anim pariatur cliche reprehenderit, enim eiusmod 
-                                        high life accusamus terry richardson ad squid. 3 wolf moon officia 
-                                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa 
-                                        nesciunt laborum.</p>
-                                </div>
-                                <div class="keffiyeh">
-                                    <p>Nihil anim keffiyeh helvetica?</p>
-                                </div>
-                                <div class="butcher">
-                                    <p>Vegan excepteur butcher vice lomo?</p>
-                                </div>
-                            </div>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -582,7 +393,7 @@ export class AlorHome {
             </div>,
 
             <div id="team" class="team">
-                { /** team */ },
+            { this.ngo.team.length > 0 ?
                 <div class="container">
                     <h3>MEET OUR TEAM</h3>
                     <div class="team-grids">
@@ -664,9 +475,9 @@ export class AlorHome {
                         </div>
                         <div class="clearfix"> </div>
                     </div>
-                </div>
-                { /** //team */ },
+                </div>: null }
             </div>,
+
 
             <div class="liton">
                 { /** liton */ },
@@ -848,5 +659,14 @@ export class AlorHome {
 
         ];
     }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
+    }
+
 
 }

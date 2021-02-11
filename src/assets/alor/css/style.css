@@ -1,3 +1,68 @@
+:root {
+  --ion-color-primary: #1565F6;
+  --ion-color-primary-rgb: 21,101,246;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #1259d8;
+  --ion-color-primary-tint: #2c74f7;
+
+  --ion-color-secondary: #fb752d;
+  --ion-color-secondary-rgb: 251,117,45;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0,0,0;
+  --ion-color-secondary-shade: #dd6728;
+  --ion-color-secondary-tint: #fb8342;
+
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82,96,255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255,255,255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45,211,111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255,255,255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255,196,9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0,0,0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235,68,90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34,36,40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146,148,156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244,245,248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
 /*--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -52,7 +117,7 @@ body a:hover{
 	margin:0 10px;
 }
 .logo-right ul li a{
-	color:#f9a32d;
+	color:var(--ion-color-primary);
 	font-size:14px;
 	letter-spacing:1px;
 	text-decoration:none;
@@ -61,14 +126,12 @@ body a:hover{
 }
 .logo-right ul li a:hover,.logo-right ul li.cap a{
 	padding:2.8em 0em 0;
-	border-top:3px solid #f9a32d;
+	border-top:3px solid var(--ion-color-primary);
 	text-decoration:none;
 }
 /*-- //header --*/
 /*-- banner --*/
 .banner{
-	background:url(../images/banner.jpg) no-repeat 0px 0px;
-	background-size:cover;
 	min-height:555px;
 	margin: 1em 0 0;
 }
@@ -85,7 +148,7 @@ body a:hover{
 }
 .banner-info a{
 	padding:10px 30px;
-	background:#fb752d;
+	background:var(--ion-color-secondary);
 	color:#fff;
 	font-size:18px;
 	border-bottom:3px solid #377ca1;
@@ -104,7 +167,7 @@ body a:hover{
 }
 .banner-info a:hover{
 	text-decoration:none;
-	color:#fb752d;
+	color:var(--ion-color-secondary);
 }
 /*-- //banner --*/
 /* Bounce To Right */
@@ -452,7 +515,7 @@ ul.social-slide li i.mac{
 }
 .us a{
 	padding:10px 30px;
-	background:#fb752d;
+	background:var(--ion-color-secondary);
 	color:#fff;
 	font-size:18px;
 	border-bottom:3px solid #377ca1;
@@ -471,7 +534,7 @@ ul.social-slide li i.mac{
 }
 .us a:hover{
 	text-decoration:none;
-	color:#fb752d;
+	color:var(--ion-color-secondary);
 }
 /*-- //banner-bottom --*/
 /*-- history --*/
@@ -479,7 +542,7 @@ ul.social-slide li i.mac{
 	padding:6em 0;
 }
 .history h3{
-	color:#fcb759;
+	color: var(--ion-color-primary-shade);
 	font-size:40px;
 	margin:0;
 	text-align:center;
@@ -569,7 +632,7 @@ ul.social-slide li i.mac{
 	margin:1em 0 0 2em;
 }
 .history-grid-right h4{
-	color:#fa7c28;
+	color:var(--ion-color-primary-shade);
 	margin:0 0 .3em;
 	font-size:18px;
 	font-weight:500;
@@ -612,7 +675,7 @@ ul.social-slide li i.mac{
 	padding:6em 0;
 }
 .about h3{
-	color:#fcb759;
+	color: var(--ion-color-primary-shade);
 	font-size:40px;
 	margin:0 0 1em;
 	text-align:center;
@@ -660,7 +723,7 @@ p.unique{
 .about-grid h2{
 	font-size:1.8em;
 	margin:0 0 .5em;
-	color:#fa7c28;
+	color:var(--ion-color-primary-shade);
 	font-weight:600;
 }
 .progress-bar {
@@ -694,7 +757,7 @@ h2.community{
 	position:relative;
 }
 .mission-grid h4{
-	color: #fa7c28;
+	color: var(--ion-color-primary-shade);
 	margin: 0 0 .3em;
 	font-size: 18px;
 	font-weight: 600;
@@ -720,7 +783,7 @@ h2.community{
 	margin:1.5em 0 0;
 }
 .vission-grid h4{
-	color: #fa7c28;
+	color: var(--ion-color-primary-shade);
 	margin: 0 0 .3em;
 	font-size: 17px;
 	font-weight: 600;
@@ -730,7 +793,7 @@ h2.community{
 }
 .more a{
 	padding: 8px 20px;
-	background: #fb752d;
+	background: var(--ion-color-secondary);
 	color: #fff;
 	font-size: 14px;
 	border-bottom: 3px solid #377ca1;
@@ -749,7 +812,7 @@ h2.community{
 }
 .more a:hover {
   text-decoration: none;
-  color: #fb752d;
+  color: var(--ion-color-secondary);
 }
 /*-- //about --*/
 /*-- activities --*/
@@ -757,7 +820,7 @@ h2.community{
 	padding:6em 0;
 }
 .activities h3 {
-  color: #fcb759;
+  color:  var(--ion-color-primary-shade);
   font-size: 40px;
   margin: 0;
   text-align: center;
@@ -829,7 +892,7 @@ h2.community{
 	width: 73%;
 }
 .activities-grid-right h4{
-	color: #fa7c28;
+	color: var(--ion-color-primary-shade);
 	margin: 0 0 .3em;
 	font-size: 18px;
 	font-weight: 600;
@@ -846,7 +909,7 @@ h2.community{
 .history-faq-grid h4{
 	font-size: 1.8em;
 	margin: 0 0 .5em;
-	color: #fa7c28;
+	color: var(--ion-color-primary-shade);
 	font-weight: 600;
 }
 /******** SAP ************/
@@ -1092,7 +1155,7 @@ p.para1{
 	padding:6em 0;
 }
 .team h3{
-	color: #fcb759;
+	color: var(--ion-color-primary-shade);
 	font-size: 40px;
 	margin: 0;
 	text-align: center;
@@ -1110,7 +1173,7 @@ p.para1{
 	padding:0 !important;
 }
 .team-grid h4{
-	color:#fa7c28;
+	color:var(--ion-color-primary-shade);
 	font-size: 25px;
 	margin:.5em 0 .7em;
 	font-weight: 600;
@@ -1230,7 +1293,7 @@ p.tortor{
 	padding:6em 0;
 }
 .news h3{
-	color: #fcb759;
+	color:  var(--ion-color-primary-shade);
 	font-size: 40px;
 	margin: 0;
 	text-align: center;
@@ -1278,7 +1341,7 @@ p.children{
 }
 .more1 a{
 	padding: 8px 20px;
-	background: #fb752d;
+	background: var(--ion-color-secondary);
 	color: #fff;
 	font-size: 14px;
 	border-bottom: 3px solid #377ca1;
@@ -1297,7 +1360,7 @@ p.children{
 }
 .more1 a:hover {
   text-decoration: none;
-  color: #fb752d;
+  color: var(--ion-color-secondary);
 }
 .more1 {
   margin: 1em 0 1.5em;
@@ -1386,7 +1449,7 @@ img.steel{
 .contact-info h4{
 	font-size:25px;
 	margin:0;
-	color:#fa7c28;
+	color:var(--ion-color-primary-shade);
 }
 .contact-info p{
 	font-size: 15px;
@@ -1424,7 +1487,7 @@ img.steel{
 	border:none;
 	padding: 8px 0px;
 	width:30%;
-	background: #fb752d;
+	background: var(--ion-color-secondary);
 	color: #fff;
 	font-size: 15px;
 	border-bottom: 3px solid #377ca1;
@@ -1442,7 +1505,7 @@ img.steel{
 }
 .contact-info input[type="submit"]:hover{
 	background:#fff;
-	color:#fb752d;
+	color:var(--ion-color-secondary);
 }
 /*-- //news --*/
 /*-- our-childrens --*/
@@ -1451,7 +1514,7 @@ img.steel{
 	background:#f5f5f5;
 }
 .our-childrens h3{
-	color: #fcb759;
+	color:  var(--ion-color-primary-shade);
 	font-size: 40px;
 	margin: 0;
 	text-align: center;
