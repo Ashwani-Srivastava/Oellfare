@@ -5,6 +5,15 @@
         "targets": {
             "gr-live": {
                 "hosting": {
+                    "gr-oscared": [
+                        "gr-oscared"
+                    ],
+                    "gr-daivadoni": [
+                        "gr-daivadoni"
+                    ],
+                    "gr-babyneeds": [
+                        "gr-babyneeds"
+                    ],
                     "css": [
                         "css-grassroots"
                     ],

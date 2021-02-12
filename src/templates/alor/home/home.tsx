@@ -5,7 +5,7 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 
 import { AlorBase           }   from    'alor/base/base'
 import { AuthService        }   from    'auth/auth.service';
-import { HelmetService      }   from    'common/helmet.service'
+//import { HelmetService      }   from    'common/helmet.service'
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
 import { NgoService         }   from    'ngo/ngo.service';

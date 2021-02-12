@@ -1,5 +1,47 @@
 {
   "hosting": [{
+        "site": "gr-daivadoni",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }{
+        "site": "gr-oscared",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }{
+        "site": "gr-babyneeds",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }, {
         "site": "css-grassroots",
         "rewrites": [
             {

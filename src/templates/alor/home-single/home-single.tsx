@@ -365,8 +365,11 @@ export class AlorHomeSingle {
                 { /** contact */ },
             </div>,
 
-            <alor-footer ngo={this.ngo}></alor-footer>
+            <alor-footer ngo={this.ngo}></alor-footer>,
 
+            <span>
+            { HelmetService.render(this.ngo, 'Home') }
+            </span>
         ];
     }
 
