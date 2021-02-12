@@ -13,7 +13,7 @@
             "**/.*",
             "**/node_modules/**"
         ]
-    }{
+    }, {
         "site": "gr-oscared",
         "rewrites": [
             {
@@ -27,7 +27,7 @@
             "**/.*",
             "**/node_modules/**"
         ]
-    }{
+    }, {
         "site": "gr-babyneeds",
         "rewrites": [
             {

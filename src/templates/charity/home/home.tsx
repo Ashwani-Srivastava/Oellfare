@@ -338,12 +338,6 @@ export class CharityHome {
 
         </div>,
 
-        <ion-fab slot="fixed" horizontal="end" vertical="bottom">
-            <ion-fab-button color='secondary' href={`https://api.whatsapp.com/send?phone=${this.ngo.reachOut.phone1}&text=Hi. I like to support ${this.ngo.name}.`}>
-                <ion-icon name="logo-whatsapp"></ion-icon>
-            </ion-fab-button>
-        </ion-fab>
-
         ];
 
     }
