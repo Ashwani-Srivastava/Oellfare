@@ -1,0 +1,303 @@
+{
+  "state": { "name": "Tamil Nadu", "id": 31 },
+  "bank": { "accountNo": "", "ifscCode": "", "bankName": "", "accountName": "" },
+  "updatedAt": { "_seconds": 1612936915, "_nanoseconds": 0 },
+  "address": "134/19, Hammempuram 1st street, Melapalayam, Tirunelveli - 627005.",
+  "video": { "url": "", "caption": "Caption of OSCAR Education and Charitable Trust video" },
+  "createdBy": "sWWxXwXCEHMo86M0hnOEsqBdMES2",
+  "reachOut": {
+    "phone2": "7010585460",
+    "phone1": "8608106559",
+    "linkedin": "",
+    "youtube": "",
+    "instagram": "",
+    "twitter": "",
+    "facebook": "",
+    "email": "sathyabama615@gmail.com",
+    "website": "https://oscared.org/"
+  },
+  "shortUrl": "https://grs.one/",
+  "causes": [],
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover1.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover2.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover3.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover4.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover5.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_cover6.jpg?alt=media"
+  ],
+  "oid": "",
+  "gateway": { "id": "", "razorpay": { "accountId": "" }, "lotuspay": { "accountId": "" }, "name": "" },
+  "shortCode": "",
+  "testimonial": [],
+  "legal": {
+    "fcraNo": "",
+    "regNo": "54/ 2015",
+    "panNo": "AAATO4964D",
+    "bank": {
+      "bankName": "Indian bank",
+      "accountNo": "6931432270",
+      "accountName": "Oscar Education and Charitable Trust",
+      "ifscCode": "IDIB000P008"
+    },
+    "_12ANo": "CIT(EXEMPTION)CHE/12AA/2019-20/A/10779.",
+    "darpanNo": "TN/2018/0191737",
+    "_80GNo": "CIT ( EXEMPTION)CHE/80G/2020- 21/A/10151"
+  },
+  "createdAt": { "_seconds": 1612936915, "_nanoseconds": 533000000 },
+  "team": [
+    {
+      "id": "oCLyvxsZt9JQcVpBJiMh",
+      "role": "Founder",
+      "photo": {
+        "caption": "Photo of Sathyabama team",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Fteam%2Foriginal_oCLyvxsZt9JQcVpBJiMh.jpg?alt=media"
+      },
+      "hobbies": "",
+      "name": "Sathyabama",
+      "reachOut": {
+        "youtube": "",
+        "facebook": "",
+        "phone1": "",
+        "linkedin": "",
+        "website": "",
+        "email": "",
+        "twitter": "",
+        "phone2": "",
+        "instagram": ""
+      },
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 }
+    }
+  ],
+  "aggregate": {
+    "award": 0,
+    "photo": 6,
+    "avgRating": 0,
+    "volHoursPerWeek": 0,
+    "subscription": {
+      "totalCollected": 0,
+      "currentCollected": 0,
+      "required": 0,
+      "currentCount": 0,
+      "months": 0,
+      "totalCount": 0
+    },
+    "volunteer": {
+      "hoursVerified": 0,
+      "attendedSelf": 0,
+      "hoursSelf": 0,
+      "fundSupported": 0,
+      "unattendedVerified": 0,
+      "unattendedSelf": 0,
+      "recurringFundSupported": 0,
+      "donated": 0,
+      "subscribed": 0,
+      "joined": 0,
+      "attendedVerified": 0,
+      "registered": 0,
+      "required": 0
+    },
+    "mediaRecognition": 1,
+    "follower": 0,
+    "fund": 0,
+    "project": 2,
+    "event": 0,
+    "admin": 0,
+    "recurringFund": 0,
+    "upcomingEvent": 0,
+    "testimonial": 0,
+    "donation": { "required": 0, "count": 0, "collected": 0 },
+    "volPerWeek": 0,
+    "review": 0
+  },
+  "nextReceiptNumber": 1000,
+  "id": "rdYkw6SBHECOJn2AXeoV",
+  "district": { "id": 3126, "name": "Tirunelveli" },
+  "isActive": true,
+  "logo": {
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_logo.jpg?alt=media",
+    "caption": "Caption of OSCAR Education and Charitable Trust photo"
+  },
+  "activeIn": [],
+  "review": [],
+  "priority": 100,
+  "awards": [],
+  "description": "பாரபட்சமற்ற அனைவருக்கும் கல்வி.\nபெண்களுக்கு தடையில்லாத கல்வி. பெண்ணின் முன்னேற்றம் நாட்டின் முன்னேற்றம்.கல்வி என்பது ஏட்டறிவு மட்டுமன்றி தொழிற்கல்வியும் கல்வி தான்.பெண்களுக்கு சமுதாய முன்னேற்றம் ஏற்பட தொழிற்கல்வியும் பயிற்சி மேற்கொள்ள படுகிறது. \nபெண் கள் நலம் குழந்தை கள் நலம் சமுக விழிப்புணர்வு ஏற்படுத்தி வருகிறது.",
+  "receipt": { "fields": [], "nextId": 1000, "baseImage": "" },
+  "whyVolunteerHere": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "sdg": [
+    {
+      "name": "Peace, Justice and Strong Institutions",
+      "id": 16,
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-16-peace-justice-and-strong-institutions.html",
+      "description": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+      "slug": "",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-16.png?alt=media&token=fc290fdd-0745-49c3-8709-e16ab203de79",
+        "caption": ""
+      }
+    },
+    {
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-4-quality-education.html",
+      "description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-4.png?alt=media&token=47d37538-1ae3-4f33-a174-4b38a8e0e033",
+        "caption": ""
+      },
+      "id": 4,
+      "slug": "",
+      "name": "Quality Education"
+    }
+  ],
+  "activities": [ "women education", " women empowerment" ],
+  "slug": "oscar-education-and-charitable-trust",
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "status": 3,
+  "mission": [ "" ],
+  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "fullUrl": "https://thegrassroots.app/tirunelveli/ngo/oscar-education-and-charitable-trust",
+  "vision": "அனைவருக்கும் பாரபட்சமற்ற கல்வி முன்னேற்றம் மற்றும் பெண்கள் கல்வி முன்னேற்றம் தொழில்கல்வி  பயிற்சி மேற்கொள்ள படுகிறது",
+  "admin": [],
+  "access": { "fundraiser": false, "event": false, "profile": true, "receipt": false, "form": false },
+  "media": [
+    {
+      "date": { "_seconds": 1612841074, "_nanoseconds": 868000000 },
+      "description": "",
+      "updatedAt": { "_seconds": 1613100322, "_nanoseconds": 0 },
+      "slug": "Gd3SjbGMzZ4i9W6h28WX",
+      "reporterName": "",
+      "name": "OscarEd providing free Tuition to support children in Tirunelveli",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "publicationName": "The Hindu",
+      "photo": {
+        "caption": "Photo of OscarEd providing free Tuition to support children in Tirunelveli media",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Fmedia%2Foriginal_Gd3SjbGMzZ4i9W6h28WX.jpg?alt=media"
+      },
+      "video": {
+        "url": "",
+        "caption": "Video of OscarEd providing free Tuition to support children in Tirunelveli media"
+      },
+      "createdAt": { "_seconds": 1613100322, "_nanoseconds": 0 },
+      "isActive": true,
+      "publicationLogo": "",
+      "id": "Gd3SjbGMzZ4i9W6h28WX",
+      "link": ""
+    }
+  ],
+  "projects": [
+    {
+      "createdAt": { "_seconds": 1613100261, "_nanoseconds": 0 },
+      "parent": "",
+      "isActive": true,
+      "slug": "free-tuition-center",
+      "link": "",
+      "aggregate": {
+        "subscription": {
+          "currentCount": 0,
+          "totalCollected": 0,
+          "currentCollected": 0,
+          "totalCount": 0,
+          "months": 0,
+          "required": 0
+        },
+        "volunteer": {
+          "hoursVerified": 0,
+          "unattendedSelf": 0,
+          "unattendedVerified": 0,
+          "donated": 0,
+          "hoursSelf": 0,
+          "joined": 0,
+          "attendedVerified": 0,
+          "required": 0,
+          "recurringFundSupported": 0,
+          "subscribed": 0,
+          "fundSupported": 0,
+          "registered": 0,
+          "attendedSelf": 0
+        },
+        "donation": { "required": 0, "count": 0, "collected": 0 }
+      },
+      "name": "Free Tuition center",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Fproject%2Foriginal_XuJ4E6a2NcF9dRWHc4L0.jpg?alt=media",
+        "caption": "Photo of Free Tuition center project"
+      },
+      "id": "XuJ4E6a2NcF9dRWHc4L0",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "date": { "_seconds": 1613100261, "_nanoseconds": 0 },
+      "updatedAt": { "_seconds": 1613100261, "_nanoseconds": 0 },
+      "description": "Education is the most powerful weapon which you can use to change the world. - Nelson Mandela. In the same spirit we are providing free Tuition center to around 100 Kids in Melapalayam, Tirunelveli. Class I to VIII",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "sdg": {
+        "name": "",
+        "link": "",
+        "photo": { "url": "", "caption": "" },
+        "description": "",
+        "id": 0,
+        "slug": ""
+      }
+    },
+    {
+      "isActive": true,
+      "aggregate": {
+        "subscription": {
+          "currentCollected": 0,
+          "required": 0,
+          "months": 0,
+          "totalCount": 0,
+          "currentCount": 0,
+          "totalCollected": 0
+        },
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "volunteer": {
+          "joined": 0,
+          "hoursSelf": 0,
+          "attendedVerified": 0,
+          "unattendedVerified": 0,
+          "donated": 0,
+          "fundSupported": 0,
+          "hoursVerified": 0,
+          "subscribed": 0,
+          "required": 0,
+          "attendedSelf": 0,
+          "unattendedSelf": 0,
+          "recurringFundSupported": 0,
+          "registered": 0
+        }
+      },
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "id": "YzIxrvaQDDVwMrdSEB7G",
+      "name": "Tailoring Institute",
+      "slug": "tailoring-institute",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "updatedAt": { "_seconds": 1613100161, "_nanoseconds": 0 },
+      "date": { "_seconds": 1613100161, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1613100161, "_nanoseconds": 0 },
+      "description": "Providing free Tailoring coaching to all women in Tirunelveli, so they can lead their life by themselves with pride and dignity.",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Fproject%2Foriginal_YzIxrvaQDDVwMrdSEB7G.jpg?alt=media",
+        "caption": "Photo of Tailoring Institute project"
+      },
+      "parent": "",
+      "link": "",
+      "sdg": {
+        "slug": "",
+        "id": 0,
+        "link": "",
+        "name": "",
+        "description": "",
+        "photo": { "caption": "", "url": "" }
+      }
+    }
+  ],
+  "name": "OSCAR Education and Charitable Trust",
+  "ops": {
+    "offlinePaymentRow": 0,
+    "spreadSheetId": "",
+    "settlementRow": 0,
+    "receiptVersion": 2,
+    "settlementSheetId": ""
+  }
+}

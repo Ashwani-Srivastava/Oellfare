@@ -19,7 +19,7 @@ export class ProfferHeader {
                     <div class="logo">
                         <ion-router-link href='/'> 
                             <img style={{ 'width': '48px'}} src={this.ngo.logo.url} />
-                            <h1 style={{ 'font-size': '1.2em', 'display': 'inline' }}> Baby Needs Foundation </h1>
+                            <h1 style={{ 'font-size': '1.2em', 'display': 'inline' }}> { this.ngo.name } </h1>
                         </ion-router-link>
                     </div>
                     <div class="logo-right">
