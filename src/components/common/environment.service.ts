@@ -18,7 +18,7 @@ class EnvironmentServiceController {
         }
 
         this.config             =   win.config;
-        console.log('EnvironmentService :: init :: ', this.config);
+        //console.log('EnvironmentService :: init :: ', this.config);
 
     }
 

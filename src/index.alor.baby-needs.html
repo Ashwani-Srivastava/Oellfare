@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Ngo Website </title>
+
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="Welcome to the Ionic PWA Toolkit. You can use this starter to build fast PWAs using Ionic and Stencil!">
+        <meta name="theme-color" content="#3880ff">
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Ionic PWA">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <meta http-equiv="x-ua-compatible" content="IE=Edge">
+
+        <script type="module" src="/build/app.esm.js"></script>
+        <script nomodule src="/build/app.js"></script>
+
+        <link href="/build/app.css" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/baby-needs/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/x-icon" href="/assets/baby-needs/icon/favicon.ico">
+        <link rel="manifest" href="/assets/baby-needs/site.webmanifest">
+
+        <link href="/assets/alor/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/assets/alor/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/assets/alor/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="/assets/alor/css/swipebox.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <script src="/assets/alor/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/assets/alor/js/move-top.js"></script>
+        <script type="text/javascript" src="/assets/alor/js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){		
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <alor-root></alor-root>
+
+        <script src="/assets/alor/js/responsiveslides.min.js" type="text/javascript" ></script>
+        <script src="/assets/alor/js/modernizr.custom.min.js" type="text/javascript" ></script>    
+        <script src="/assets/alor/js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <script src="/assets/alor/js/easyResponsiveTabs.js" type="text/javascript"></script>
+        <script src="/assets/alor/js/jquery.swipebox.min.js"></script> 
+        <script src="/assets/alor/js/jquery.wmuSlider.js"></script> 
+
+    </body>
+
+</html>

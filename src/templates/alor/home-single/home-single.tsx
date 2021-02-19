@@ -2,9 +2,11 @@ import { Build, Component, h,
     Prop               }   from    '@stencil/core';
 
 import { filter, takeWhile  }   from    'rxjs/operators';
+import * as marked        	from    'marked';
 
 import { AlorBase           }   from    'alor/base/base'
 import { AuthService        }   from    'auth/auth.service';
+import { DialogService      }   from    'common/dialog.service';
 import { HelmetService      }   from    'common/helmet.service'
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
@@ -21,6 +23,14 @@ export class AlorHomeSingle {
 
     @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
     private alive               :   boolean             =   true;
+    private showDonation        :   boolean 		=   false;
+
+    private formValue           :   any                 =   {
+        name                    :   '',
+        subject                 :   '',
+        query                   :   ''
+    };
+
 
     private coverSlideOptions   :   any                 =   {
         autoplay: {
@@ -60,7 +70,40 @@ export class AlorHomeSingle {
             });
     }
 
+    private handleCommonInput(e, fieldName: string): void {
+        this.formValue[fieldName]=  e.target.value;
+    }
+
+    private async sendMessage() {
+
+        const name              =   this.formValue.name;
+        const subject           =   this.formValue.subject;
+        const query             =   this.formValue.query;
+
+        if (name.length < 2) {
+            await DialogService.presentAlert('Error', 'Please enter your name');
+            return;
+        }
+
+        if (subject.length < 2) {
+            await DialogService.presentAlert('Error', 'Please select your Support type');
+            return;
+        }
+
+/*
+        if (query.length < 10) {
+            await DialogService.presentAlert('Error', 'Your query should be atleast 10 characters in length');
+            return;
+        }
+*/
+
+        window.location.href    =   `https://wa.me/${this.ngo.reachOut.phone1}?text=Hi. I am ${name}. Contacting you for ${subject}. ${query}`;
+
+    }
+
     render() {
+
+	console.log('marked: ', marked);
         return [
 
         <alor-header-single ngo={this.ngo}></alor-header-single>,
@@ -76,26 +119,26 @@ export class AlorHomeSingle {
         </div>,
 
         <div id="history" class="history">
-            { /** history */ },
+            { /** history */ }
             <div class="container">
                 <h3>Our Vision</h3>
                 <h5 class="text-center" style={{ 'font-size': '1.5em' }} > { this.ngo.vision } </h5>
             </div>
-            { /** //history */ },
+            { /** //history */ }
         </div>,
 
         <div class="lorum">
-            { /** lorum */ },
+            { /** lorum */ }
             <div class="container">
                 <div class="lorum-info">
                     <h3>Children have neither past nor future. They enjoy the present, which very few of us do. <br/> - Jean De La Bruyere - </h3>
                 </div>
             </div>
-            { /** //lorum */ },
+            { /** //lorum */ }
         </div>,
 
         <div id="about" class="about">
-            { /** about */ },
+            { /** about */ }
             <div class="container">
                 <h3>ABOUT US</h3>
                 <div class="about-grids">
@@ -125,18 +168,33 @@ export class AlorHomeSingle {
                         </div>
                         <div class="mission-vision">
                             <div class="vission-grid">
-                                <p> {this.ngo.description } </p>
+                                <p innerHTML={ marked.parse(this.ngo.description) }> </p>
                             </div>
                         </div>
                     </div>
+                    { this.ngo.name === 'Baby Needs Foundation' ?
+		    <div class="col-md-6 col-md-offset-6 about-grid">
+                        <h2 class="community"> How we work? </h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{'width': '60%;' }}>
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                        <div class="mission-vision">
+                            <div class="vission-grid">
+                                <p> Worried about how we are going to do this? Please check our video so you can easily understand.</p>
+                                <p> As we receive donors from one location we will try to get the same location volunteer to deliver in the needful orphanages also in the same location. So it will easy for the volunteers. Others which cannot be delivered will be kept stock and then delivered. </p>
+                            </div>
+                        </div>
+                    </div>: null }
                     <div class="clearfix"> </div>
                 </div>
             </div>
-            { /** //about */ },
+            { /** //about */ }
         </div>,
 
         <div id="activities" class="activities">
-            { /** activities */ },
+            { /** activities */ }
             <div class="container">
                 <h3>OUR ACTIVITIES</h3>
                 <div class="activities-grids">
@@ -154,11 +212,12 @@ export class AlorHomeSingle {
                 <div class="clearfix"> </div>
             </div>
         </div>
-            { /** //activities */ },
+            { /** //activities */ }
         </div>,
 
+    <span> { this.ngo.media.length > 0 ? 
         <div class="liton">
-            { /** liton */ },
+            { /** liton */ }
             <div class="container">
                 <div class="lton-inf">
                     <div class="wmuSlider example1">
@@ -189,8 +248,8 @@ export class AlorHomeSingle {
                 </div>
             </div>
         </div>
-        { /** //liton */ },
-    </div>,
+        { /** //liton */ }
+    </div>: null } </span>,
 
     <span> { this.ngo.team.length > 0 ? 
     <div id="team" class="team">
@@ -201,7 +260,7 @@ export class AlorHomeSingle {
                 { this.ngo.team.map(member => (
                 <div class="col-xs-6 col-md-4 col-lg-3 team-grid">
                     <div class="thumbnail team-grid-main">
-                        <img src={ member.photo.url } alt=" " style={{ 'height': '30vh', 'object-fit': 'contain' }} />
+                        <img src={ member.photo.url } alt=" " style={{ 'height': '36vh', 'width': '100%', 'object-fit': 'cover' }} />
                         <div class="caption pretium">
                             <h4> { member.name } </h4>
                             <p class="founder"> { member.role } </p>
@@ -214,101 +273,24 @@ export class AlorHomeSingle {
         </div>
     </div>: null } </span>,
 
-    <div id="news" class="news">
+	<span> { this.showDonation ?
+    <div id="donate" class="news">
         <div class="container">
-            <h3> Activities </h3>
-            <div class="news-grids">
-
-                <div class="col-md-5 news-grid">
-                    <div class="news-grd">
-                        <img src="/assets/alor/images/15.jpg" alt=" " />
-                        <div class="video">
-                            <a href="#"><img src="/assets/alor/images/8.png" alt=" " /></a>
-                        </div>
-                    </div>
-                    <div class="news-grd-text">
-                        <p class="date">25 MAY 2021</p>
-                        <h4> Velachery Street Children - Toy Distribution </h4>
-                        <p class="children">
-                            We are distributing toys to Street children is Velachery. Need 5 volunteers coming Sunday. To donate toys, you can reach out to +91 9876543210.
-                            We are distributing toys to Street children is Velachery. Need 5 volunteers coming Sunday. To donate toys, you can reach out to +91 9876543210.
-                        </p>
-                        <div class="more1">
-                            <a href="#" class="hvr-bounce-to-right"> Volunteer here </a>
-                        </div>
-                        <div class="edit">
-                            <p> Lourdhu Diana </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-7 news-grid">
-                    <div class="news-income">
-                        <div class="news-grid-left">
-                            <img class="steel" src="/assets/alor/images/16.jpg" alt=" " />
-                            <div class="gallery">
-                                <a href="#"><img src="/assets/alor/images/9.png" alt=" " /></a>
-                            </div>
-                        </div>
-                        <div class="news-grid-right">
-                            <div class="news-grd-text1">
-                                <p class="date">01 JUNE 2021</p>
-                                <h4> Karunai Illam - Home visit</h4>
-                                <p class="children">
-            We are distributing toys to Street children is Velachery. Need 5 volunteers coming Sunday. To donate toys, you can reach out to +91 9876543210.
-        </p>
-        <div class="more1">
-            <a href="#" class="hvr-bounce-to-right"> Volunteer here </a>
-        </div>
-        <div class="edit">
-            <p> Lourdhu Diana </p>
-        </div>
-    </div>
-</div>
-<div class="clearfix"> </div>
-                            </div>
-
-                            <div class="news-income">
-                                <div class="news-grid-left">
-                                    <img class="steel" src="/assets/alor/images/17.jpg" alt=" " />
-                                    <div class="gallery">
-                                        <a href="#"><img src="/assets/alor/images/10.png" alt=" " /></a>
-                                    </div>
-                                </div>
-                                <div class="news-grid-right">
-                                    <div class="news-grd-text1">
-                                        <p class="date">25 DECEMBER 2021</p>
-                                        <h4> Christmas Children outing </h4>
-                                        <p class="children">
-            We are distributing toys to Street children is Velachery. Need 5 volunteers coming Sunday. To donate toys, you can reach out to +91 9876543210.
-        </p>
-        <div class="more1">
-            <a href="#" class="hvr-bounce-to-right">Volunteer here</a>
-        </div>
-        <div class="edit">
-            <p> Manickam </p>
-        </div>
-    </div>
-</div>
-<div class="clearfix"> </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-            </div>,
+            <h3> Donation </h3>
+	</div>
+    </div>: null} </span>,
 
             <div id="volunteer" class="contact">
-                { /** contact */ },
+                { /** contact */ }
                 <div class="container">
                     <div class="contact-header">
-                        <h3>CONTACT US</h3>
+                        <h3> SUPPORT US </h3>
                     </div>
                     <div class="map">
                         <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=chennai%20lighthou&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         <div class="map-color">
                             <div class="contact-info">
-                                <h4>Contact Info</h4>
+                                <h4> Contact us </h4>
 
                                 <p>
                                     { this.ngo.address } <br/>
@@ -316,26 +298,34 @@ export class AlorHomeSingle {
                                     Email: { this.ngo.reachOut.email }
                                 </p>
 
-                                <h4>Contact us</h4>
+                                <h4>Donate Toys / Volunteer with us</h4>
                                 <p></p>
                                 <form>
-                                    <input type="text" value="Name" required={true} />
-                                    <select required>
-                                        <option> Like to Volunteer </option>
-                                        <option> Donate Toy </option>
-                                        <option> General Enquiry </option>
+                                    <input type="text" 
+					placeholder="Name" 
+                                        onInput={ (e) => this.handleCommonInput(e, 'name') } 
+					required={true} />
+                                    <select 
+					onInput={(e) => this.handleCommonInput(e, 'subject')}
+					required>
+                                        <option value='Volunteering'> Like to Volunteer </option>
+                                        <option value='Toy Donation'> Donate Toy </option>
+                                        <option value='General Enquiry'> General Enquiry </option>
                                     </select>
-                                    <input type="text" value="Subject" required={true} />
-                                    <textarea required={true} >Message...</textarea>
+                                    <textarea 
+                                        onInput={ (e) => this.handleCommonInput(e, 'query') } 
+					required={true} placeholder='Message...'></textarea>
                                 </form>
-                                <input type="button" value="Send Message" />
+                                <input type="button" 
+                                        onClick={() => this.sendMessage()}
+					value="Send Message" />
                             </div>
                             <div class="clearfix"> </div>
                         </div>
                     </div>
 
                 </div>
-                { /** contact */ },
+                { /** contact */ }
             </div>,
 
             <alor-footer ngo={this.ngo}></alor-footer>,

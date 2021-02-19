@@ -1,0 +1,22 @@
+{
+    "name": "Baby Needs Foundation",
+    "short_name": "Baby Needs",
+    "icons": [
+        {
+            "src": "/assets/baby-needs/icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/baby-needs/icon/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#3880ff",
+    "background_color": "#3880ff",
+    "start_url": "https://babyneedsfoundation.in/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

@@ -7,6 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class ProfferHeader {
 
     @Prop() ngo                 :   any                 =   {};
+    private showDonation        :   boolean 		=   false;
 
     componentDidLoad() {
         console.log('location pathname: ', location.pathname);
@@ -38,6 +39,11 @@ export class ProfferHeader {
                                 Our Activities
                             </a> </li>
 
+                            { this.showDonation ?  
+                            <li> <a href="#donate">
+                                Donation
+                            </a> </li> : null }
+
                             <li> <a href="#volunteer">
                                 Volunteer
                             </a> </li>
@@ -66,5 +72,4 @@ export class ProfferHeader {
             </div>
         );
     }
-
 }

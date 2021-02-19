@@ -56,7 +56,7 @@ class UtilityServiceController {
             script.src          =   path;
 
             script.onload       =   () => {
-                resolve();
+                resolve(1);
             };
             script.onerror      =   (err) => {
                 reject(err);

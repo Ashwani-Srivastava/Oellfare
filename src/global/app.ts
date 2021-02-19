@@ -29,6 +29,6 @@ export default () => {
         key                     :   'rzp_live_JRVjeL7iLec4Ck'
     };
 
-    console.log(win.config);
+    //console.log(win.config);
 
 };
