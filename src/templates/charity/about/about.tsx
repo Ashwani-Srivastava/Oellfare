@@ -3,6 +3,8 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
@@ -43,6 +45,7 @@ export class CharityAbout {
 
     async componentDidLoad() {
         console.log('About :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {

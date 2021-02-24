@@ -37,7 +37,6 @@ export class ProfferBase {
             $('.odometer').appear();
             $('.page-wrapper').last().on('appear', '.odometer', function(_e) {
                 var odo = $(".odometer");
-                console.log(odo);
                 odo.each(function() {
                     var countNumber = $(this).attr("data-count");
                     $(this).html(countNumber);
@@ -249,8 +248,6 @@ export class ProfferBase {
     private static setupScrollHandlers() {
         $('.page-wrapper').last().on("scroll", function() {
 
-            console.log('scrolling.....');
-
             if ($(".site-header").length) {
                 ProfferBase.stickyMenu( $('.site-header .navigation'), "sticky-on" );
             }
@@ -262,8 +259,6 @@ export class ProfferBase {
     private static setupResizeHandlers() {
 
         $(window).on("resize", function() {
-
-            console.log('resizing');
 
             ProfferBase.toggleClassForSmallNav();
 

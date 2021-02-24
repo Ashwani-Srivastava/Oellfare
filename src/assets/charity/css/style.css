@@ -476,7 +476,6 @@ figure {
   position: relative;
   z-index: 2;
   font-size: 22px;
-  text-transform: uppercase;
   margin-top: 35px;
   font-weight: 700;
   float: left;
@@ -1340,7 +1339,7 @@ figure {
   bottom: 0;
   z-index: 99;
   background: #222;
-  right: -240px;
+  right: -256px;
   width: 240px;
   padding: 20px;
   overflow-y: scroll !important;

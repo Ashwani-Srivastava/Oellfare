@@ -3,6 +3,8 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
@@ -43,6 +45,7 @@ export class LegalPage {
 
     async componentDidLoad() {
         console.log('About - Legal :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {
@@ -108,6 +111,7 @@ export class LegalPage {
                     </div>
                 </div>
 
+                { /*
                 <div id="fh5co-features" class="fh5co-section-gray">
 
                     <div class="container">
@@ -154,6 +158,7 @@ export class LegalPage {
                     </div>
 
                 </div>
+                */ }
 
             <charity-footer ngo={this.ngo}></charity-footer>
 

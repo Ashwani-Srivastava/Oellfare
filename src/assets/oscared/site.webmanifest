@@ -1,0 +1,22 @@
+{
+    "name": "OSCAR Education and Charitable Trust",
+    "short_name": "Oscared",
+    "icons": [
+        {
+            "src": "/assets/oscared/icon/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/oscared/icon/apple-touch-icon.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#2C328A",
+    "background_color": "#2C328A",
+    "start_url": "https://oscared.org/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

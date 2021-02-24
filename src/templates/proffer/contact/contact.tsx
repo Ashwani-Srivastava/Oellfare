@@ -104,12 +104,15 @@ export class ProfferContact {
                                     <div class="grid">
                                         <i class="fi flaticon-email"></i>
                                         <h4>Email Address</h4>
-                                        <p> { this.ngo.reachOut.email } <br/> <br/> </p>
+                                        <p> <a href={`mailto:${this.ngo.reachOut.email}`} style={{ 'color': 'white', 'text-decoration': 'underline' }}>{ this.ngo.reachOut.email }</a> <br/> <br/> </p>
                                     </div>
                                     <div class="grid">
                                         <i class="fi flaticon-call"></i>
                                         <h4>Phone Number</h4>
-                                        <p> { this.ngo.reachOut.phone1 } <br/> { this.ngo.reachOut.phone2 } </p>
+                                        <p> <a href={`tel:${this.ngo.reachOut.phone1}`} style={{ 'color': 'white', 'text-decoration': 'underline' }}>{ this.ngo.reachOut.phone1 }</a> 
+                                            <br/>
+                                            <a href={`tel:${this.ngo.reachOut.phone2}`} style={{ 'color': 'white', 'text-decoration': 'underline' }}>{ this.ngo.reachOut.phone2 }</a>
+                                        </p>
                                     </div>
                                     <div class="grid">
                                         <i class="fi flaticon-alarm"></i>

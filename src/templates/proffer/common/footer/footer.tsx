@@ -53,12 +53,23 @@ export class ProfferFooter {
                             <div class="col col-lg-3 col-md-3 col-sm-6">
                                 <div class="widget contact-widget service-link-widget">
                                     <div class="widget-title">
-                                        <h3>Address Location</h3>
+                                        <h3> Contact us </h3>
                                     </div>
                                     <ul>
-                                        <li> { this.ngo.address } </li>
-                                        <li><span>Phone:</span> <a href={`tel:${this.ngo.reachOut.phone1}`}> { this.ngo.reachOut.phone1 } </a> </li>
-                                        <li><span>Email:</span> <a href={`mailto:${this.ngo.reachOut.email}`}> { this.ngo.reachOut.email } </a> </li>
+                                        <li> 
+                                            <ion-icon name="location-outline" style={{ 'font-size': '1.5em' }} ></ion-icon> <br/>
+                                            <a> <ion-router-link href='/contact' color='light'> { this.ngo.address} </ion-router-link> </a>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="call-outline" style={{ 'font-size': '1.5em' }} ></ion-icon> <br/>
+                                            <a href={`tel:${this.ngo.reachOut.phone1}`} style={{ 'color': 'white' }}> { this.ngo.reachOut.phone1 } </a>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="mail-outline" style={{ 'font-size': '1.5em' }} ></ion-icon> <br/>
+                                            <a href={`mailto:${this.ngo.reachOut.email}`} style={{ 'color': 'white' }}> { this.ngo.reachOut.email } </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

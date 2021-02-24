@@ -4,11 +4,13 @@ import { modalController    }   from    "@ionic/core";
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
-import { HelmetService      }   from    'common/helmet.service';
 import { Fundraiser         }   from    'fundraiser/fundraiser.model';
+import { HelmetService      }   from    'common/helmet.service';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
@@ -55,7 +57,10 @@ export class CharityDonate {
                 this.openAuthDrawer();
             }
 
-            AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
                 this.initialize();
             });
 
@@ -69,6 +74,7 @@ export class CharityDonate {
 
     async componentDidLoad() {
         console.log('Donate :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {
@@ -221,7 +227,7 @@ export class CharityDonate {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select class='form-control' disabled={ !this.isLoggedIn } >
-                                                    <option> General Donation </option>
+                                                    <option> { this.fund.name } </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -287,6 +293,7 @@ export class CharityDonate {
                     </div>
                 </div>
 
+            { /*
                 <div id="fh5co-blog-section" class="fh5co-section-gray">
                     <div class="container">
                         <div class="row">
@@ -330,6 +337,7 @@ export class CharityDonate {
 
                     </div>
                 </div>
+                */ }
 
                 <charity-footer ngo={this.ngo}></charity-footer>
 

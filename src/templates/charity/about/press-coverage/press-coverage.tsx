@@ -3,6 +3,8 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
@@ -34,8 +36,13 @@ export class PressCoverage {
 
         }
 
-
     }
+
+    async componentDidLoad() {
+        console.log('About - Press Coverage :: Component did load');
+        CharityBase.setupEssentials();
+    }
+
 
     private async initialize() {
         Logger.info('About - Press Coverage :: Initialize :: ');

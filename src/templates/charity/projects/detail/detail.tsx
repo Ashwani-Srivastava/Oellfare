@@ -3,6 +3,8 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
@@ -40,6 +42,11 @@ export class CharityProjectsDetail {
         }
 
         console.log(this.project);
+    }
+
+    async componentDidLoad() {
+        Logger.info(`Prject :: ${this.projectSlug} :: Component did load`);
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {

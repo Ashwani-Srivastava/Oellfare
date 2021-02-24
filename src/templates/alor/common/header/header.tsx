@@ -9,7 +9,6 @@ export class ProfferHeader {
     @Prop() ngo                 :   any                 =   {};
 
     componentDidLoad() {
-        console.log('location pathname: ', location.pathname);
     }
 
     render() {

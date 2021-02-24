@@ -1,5 +1,19 @@
 {
   "hosting": [{
+        "site": "gr-preview4",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }, {
         "site": "gr-daivadoni",
         "rewrites": [
             {
@@ -57,6 +71,20 @@
         ]
     }, {
         "site": "gr-preview1",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }, {
+        "site": "gr-preview3",
         "rewrites": [
             {
                 "source": "**",

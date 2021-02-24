@@ -1,0 +1,55 @@
+{
+  "aboutNgo": "Thozhan is a social reforming group with a motto to transform the youth into leaders. By means of various activities, Thozhan provides a platform for all volunteers to become a warrior now and a leader then. Their aim is to transform each and every aspiring individual into a Leader.",
+  "isBroadcasted": true,
+  "recentUpdate": [],
+  "donationMin": 250,
+  "ngo": { "id": "DRl4IBHNfDdxwDCkp6Ql", "name": "Thozhan", "slug": "thozhan" },
+  "donationMax": 20000,
+  "aboutProject": "Dear All,</br> With our farmers community battling in freezing weather fighting for all our future, as announced we are providing them a Winter Care package, which is the least we could do for those who feed us.  </br> </br> The package consists the following: </br> 1. Tarpaulin sheet </br> 2. Woollen blanket </br> 3. Sweater</br> 4. Woollen cap</br> 5. Woollen gloves</br> 6. Woollen Socks</br> </br> We are ordering 1000 of each item and each package of these 6 items comes to approximately Rs 875. We want to raise this fund within the next 5 days so we could help the farmers warm and safe.  </br> </br> Please do open your hearts and send how much ever you can. Also share it with your family and friends and any organisation you are a part of. Thank you all so much. ![Protest 1](https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Ffundraiser%2FN9QJIpw18vHjGwV3Jz0T%2F512_pic2.jpg?alt=media&token=3b80c45c-adde-49c9-a3f3-dd9f3116257b)  ![Protest 2](https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Ffundraiser%2FN9QJIpw18vHjGwV3Jz0T%2F512_pic1.jpg?alt=media&token=f8fd6556-5e03-442f-975f-9b7800f68481)",
+  "shortUrl": "https://grs.one/thozhan-farmers",
+  "coverPhoto": [
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Ffundraiser%2FN9QJIpw18vHjGwV3Jz0T%2F968_cover.jpg?alt=media&token=cda46615-a6ab-4f00-9c8d-2283fe8a0b84"
+    }
+  ],
+  "name": "To Farmers With Love",
+  "id": "N9QJIpw18vHjGwV3Jz0T",
+  "video": { "url": "" },
+  "donation": { "required": 300000, "count": 6, "collected": 12600 },
+  "project": { "id": "", "name": "" },
+  "startDate": { "_seconds": 1608834600, "_nanoseconds": 0 },
+  "state": { "name": "Tamil Nadu", "id": 31 },
+  "commission": 0,
+  "donationBtnText": "Support Farmers",
+  "donationSlot": [
+    { "amount": 250, "default": false },
+    { "default": false, "amount": 500 },
+    { "default": false, "amount": 1000 },
+    { "default": true, "amount": 2500 },
+    { "amount": 5000, "default": false },
+    { "amount": 10000, "default": false }
+  ],
+  "slug": "to-farmers-with-love",
+  "aggregate": { "fork": 0, "update": 0 },
+  "district": { "id": 31, "name": "Chennai" },
+  "fullUrl": "https://thegrassroots.app/chennai/ngo/thozhan/fundraiser/2020/12/to-farmers-with-love/",
+  "coordinators": [
+    {
+      "name": "Chandra Mohan",
+      "email": "chadru@arappor.com",
+      "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+      "phone": "+919600041079"
+    },
+    {
+      "name": "Radhakrishnan",
+      "email": "sarmrk@gmail.com",
+      "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+      "phone": "+919941142188"
+    }
+  ],
+  "recipient": { "pn": "", "pa": "" },
+  "cause": { "id": 1, "name": "No Povery" },
+  "status": 1,
+  "block": { "id": 3100001, "name": "Chennai" },
+  "endDate": { "_seconds": 1612031400, "_nanoseconds": 0 }
+}

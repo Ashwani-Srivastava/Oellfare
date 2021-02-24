@@ -3,7 +3,10 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
+import { DialogService      }   from    'common/dialog.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
@@ -20,6 +23,11 @@ export class CharityContact {
     @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
 
     private alive               :   boolean             =   true;
+
+    private formValue           :   any                 =   {
+        name                    :   '',
+        query                   :   ''
+    };
 
     constructor () {
         console.log('Contact :: Constructor');
@@ -42,6 +50,7 @@ export class CharityContact {
 
     async componentDidLoad() {
         console.log('Contact :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {
@@ -50,6 +59,30 @@ export class CharityContact {
             .fetchNgo(this.ngo.id)
             .pipe(takeWhile(_p => this.alive))
             .subscribe(n => this.ngo = n);
+    }
+
+        private handleCommonInput(e, fieldName: string): void {
+        this.formValue[fieldName]=  e.target.value;
+    }
+
+    private async sendMessage() {
+        debugger;
+
+        const name              =   this.formValue.name;
+        const query             =   this.formValue.query;
+
+        if (name.length < 2) {
+            await DialogService.presentAlert('Error', 'Please enter your name');
+            return;
+        }
+
+        if (query.length < 10) {
+            await DialogService.presentAlert('Error', 'Your query should be atleast 10 characters in length');
+            return;
+        }
+
+        window.location.href    =   `https://wa.me/${this.ngo.reachOut.phone1}?text=Hi. I am ${name}. ${query}`;
+
     }
 
     render() {
@@ -79,8 +112,8 @@ export class CharityContact {
                                     <h3 class="section-title">Our Address</h3>
                                     <ul class="contact-info">
                                         <li><i class="icon-location-pin"></i> { this.ngo.address } </li>
-                                        <li><i class="icon-phone2"></i>+91 { this.ngo.reachOut.phone1 } </li>
-                                        <li><i class="icon-mail"></i><a href="#"> { this.ngo.reachOut.email } </a></li>
+                                        <li><i class="icon-phone2"></i> { this.ngo.reachOut.phone1 } </li>
+                                        <li><i class="icon-mail"></i><a href=""> { this.ngo.reachOut.email } </a></li>
                                         <li><i class="icon-globe2"></i><a href="#"> { this.ngo.reachOut.website } </a></li>
                                     </ul>
                                 </div>
@@ -88,7 +121,7 @@ export class CharityContact {
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Name" />
+                                                <input type="text" class="form-control" onInput={ (e) => this.handleCommonInput(e, 'name') } placeholder="Name" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -98,12 +131,12 @@ export class CharityContact {
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea name="" class="form-control" id="" cols={30} rows={7} placeholder="Message"></textarea>
+                                                <textarea name="" class="form-control" id="" onInput={ (e) => this.handleCommonInput(e, 'query')} cols={30} rows={7} placeholder="Message" ></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Send Message" class="btn btn-primary" />
+                                                <input type="button" onClick={() => this.sendMessage()} value="Send Message" class="btn btn-primary" />
                                             </div>
                                         </div>
                                     </div>
@@ -112,7 +145,9 @@ export class CharityContact {
                         </form>
                     </div>
                 </div>
+            { /*
                 <div id="map" class="fh5co-map"></div>
+                */ }
 
                 <charity-footer ngo={this.ngo}></charity-footer>
 
@@ -120,8 +155,7 @@ export class CharityContact {
             </div>
         </div>
 
-    );
-
+        );
     }
 
     connectedCallback() {

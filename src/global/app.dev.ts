@@ -51,6 +51,6 @@ export default () => {
     };
 
 
-    console.log(win.config);
+    //console.log(win.config);
 
 };

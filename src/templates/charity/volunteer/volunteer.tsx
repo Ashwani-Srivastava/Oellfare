@@ -4,6 +4,8 @@ import { modalController    }   from    "@ionic/core";
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { ConfirmResponse,
          DialogService      }   from    'common/dialog.service';
@@ -64,6 +66,7 @@ export class CharityVolunteer {
 
     async componentDidLoad() {
         console.log('Volunteer :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async openAuthDrawer() {
@@ -153,7 +156,7 @@ export class CharityVolunteer {
                 
                 <div id="fh5co-contact" class="animate-box">
                     <div class="container">
-                        <form action="#">
+                        <form>
                             <div class="row">
                                 <div class="col-md-6">
                                     <img src="/assets/images/we-make-a-living.jpg" style={{ 'width': '100%' }} />
@@ -229,7 +232,7 @@ export class CharityVolunteer {
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" 
+                                                <input type="button" 
                                                     onClick={() => this.joinNgo()}
                                                     value="Join as a Volunteer"
                                                     class="btn btn-primary"

@@ -1,7 +1,17 @@
-import { Component, h, Prop }   from    '@stencil/core';
+import { Build, Component,
+         h, Prop            }   from    '@stencil/core';
+
+import { filter, takeWhile  }   from    'rxjs/operators';
 
 import { ProfferBase        }   from    'proffer/base/base'
+
+import { AuthService        }   from    'auth/auth.service';
+import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 import { HelmetService      }   from    'common/helmet.service'
+import { Logger             }   from    'common/logger';
+import { Ngo                }   from    'ngo/ngo.model';
+import { NgoService         }   from    'ngo/ngo.service';
+
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
 
@@ -11,8 +21,10 @@ import * as fund                from    'assets/fund.json';
 })
 export class ProfferHomeA {
 
-    @Prop() ngo                 :   any                 =   ngo;
-    @Prop() fund                :   any                 =   fund;
+    @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
+    @Prop() fund                :   Fundraiser          =   new Fundraiser(fund);
+
+    private alive               :   boolean             =   true;
 
     constructor () {
         console.log('Home :: Constructor');
@@ -21,6 +33,19 @@ export class ProfferHomeA {
 
     async componentWillLoad() {
         console.log('Home :: componentWillLoad');
+
+        if (Build.isBrowser) {
+
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
+                this.initialize();
+            });
+
+
+        }
+
     }
 
     async componentDidLoad() {
@@ -31,6 +56,18 @@ export class ProfferHomeA {
         ProfferBase.setupHeroSlider();
         ProfferBase.setupOdometer();
     }
+
+    private async initialize() {
+        Logger.info('Home :: Initialize :: ');
+        NgoService
+            .fetchNgo(this.ngo.id)
+            .pipe(takeWhile(_p => this.alive))
+            .subscribe(n => {
+                this.ngo = n;
+            });
+
+    }
+
 
     coverText = [{
         header                  :   'For the betterment of Humanity...',
@@ -195,7 +232,7 @@ export class ProfferHomeA {
                     <div class="content-area">
                         <div class="left-col">
                             <div class="about-area" style={{ 'padding-bottom': '0px' }} >
-                                <div class="section-title">
+                                <div class="section-title" style={{ 'margin-top': '2px' }} >
                                     <span>#Our Vision</span>
                                     <h2> 
                                         <span> { this.ngo.vision.split(' ').slice(0, 4).join(' ') } </span>
@@ -409,4 +446,13 @@ export class ProfferHomeA {
 
         );
     }
+
+    connectedCallback() {
+        this.alive              =   true;
+    }
+
+    disconnectedCallback() {
+        this.alive              =   false;
+    }
+
 }

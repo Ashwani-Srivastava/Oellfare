@@ -33,6 +33,8 @@
             "volunteer/*":[ "components/volunteer/*"],
 
             "alor/*"    :[ "templates/alor/*"],
+            "huruma/*"  :[ "templates/huruma/*"],
+            "bolo/*"    :[ "templates/bolo/*"],
             "proffer/*" :[ "templates/proffer/*"],
             "charity/*" :[ "templates/charity/*"]
         }

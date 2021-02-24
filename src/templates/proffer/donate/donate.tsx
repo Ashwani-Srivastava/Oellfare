@@ -3,9 +3,9 @@ import { Build, Component,
 import { modalController    }   from    "@ionic/core";
 
 import { filter, takeWhile  }   from    'rxjs/operators';
+//import * as marked        	    from    'marked';
 
 import { ProfferBase        }   from    'proffer/base/base'
-
 import { AuthService        }   from    'auth/auth.service';
 import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
@@ -14,7 +14,7 @@ import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 //import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
-//import { NgoService         }   from    'ngo/ngo.service';
+import { NgoService         }   from    'ngo/ngo.service';
 import { PaymentState       }   from    'payment/payment.model';
 import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
@@ -30,7 +30,7 @@ import * as fund                from    'assets/fund.json';
 export class ProfferDonate {
 
     @Prop() ngo                 :   any                 =   new Ngo(ngo);
-    @Prop() fund                :   any                 =   new Fundraiser(fund);
+    @Prop() fund                :   Fundraiser          =   new Fundraiser(fund);
     @State() me                 :   Volunteer           =   null;
 
     /**
@@ -57,7 +57,10 @@ export class ProfferDonate {
                 this.openAuthDrawer();
             }
 
-            AuthService.state$.pipe(filter(s => s.length > 0)).subscribe(_s => {
+            AuthService.state$.pipe(
+                takeWhile(_p => this.alive),
+                filter(s => s.length > 0)
+            ).subscribe(_s => {
                 this.initialize();
             });
 
@@ -81,12 +84,10 @@ export class ProfferDonate {
 
         DialogService.presentDefaultLoader();
 
-        /*
         NgoService
             .fetchNgo(this.ngo.id)
             .pipe(takeWhile(_p => this.alive))
             .subscribe(n => this.ngo = n);
-         */
 
         AuthService.vol$.pipe(takeWhile(_f => this.alive)).subscribe(vol => {
 
@@ -310,7 +311,7 @@ export class ProfferDonate {
                     </div>
                     <div class="col col-md-4">
                         <div class="case-single-sidebar">
-                            <div class="widget contact-widget">
+                            <div class="widget contact-widget" style={{ 'background': 'none' }}>
                                 <div>
                                     <p> Our phone number: </p>
                                     <h4> { this.ngo.reachOut.phone1 } </h4>

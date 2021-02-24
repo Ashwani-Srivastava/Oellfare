@@ -3,6 +3,8 @@ import { Build, Component, h,
 
 import { filter, takeWhile  }   from    'rxjs/operators';
 
+import { CharityBase        }   from    'charity/base/base';
+
 import { AuthService        }   from    'auth/auth.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Logger             }   from    'common/logger';
@@ -27,11 +29,11 @@ export class CharityHome {
     };
 
     constructor () {
-        console.log('Home :: Constructor');
+        Logger.log('Home :: Constructor');
     }
 
     async componentWillLoad() {
-        console.log('Home :: Component will load');
+        Logger.log('Home :: Component will load');
 
         if (Build.isBrowser) {
 
@@ -47,7 +49,8 @@ export class CharityHome {
     }
 
     async componentDidLoad() {
-        console.log('Home :: Component did load');
+        Logger.log('Home :: Component did load');
+        CharityBase.setupEssentials();
     }
 
     private async initialize() {
@@ -62,7 +65,7 @@ export class CharityHome {
 
     render() {
 
-        console.log('Home :: Render');
+        Logger.log('Home :: Render');
 
         return [
 
@@ -76,8 +79,8 @@ export class CharityHome {
 
                     <ion-slides style={{ 'height': '100%' }} id='coverSlides' options={this.coverSlideOptions} >
                         { this.ngo.photos.slice(0, 3).map(p => (
-                            <ion-slide>
-                                <img src={p} style={{ 'width': '100%', 'object-fit': 'cover' }} />
+                            <ion-slide style={{ 'height': 'unset' }}>
+                                <img src={p} style={{ 'width': '100%', 'height': '100%', 'max-height': '640px', 'object-fit': 'cover' }} />
                             </ion-slide>
                         )) }
 
@@ -139,13 +142,13 @@ export class CharityHome {
                             :
                         <div class="row row-bottom-padded-md">
                             <div class="col-md-12 text-center animate-box">
-                                <p><ion-img src="assets/images/believe-in-yourselfx1440.jpg" class="img-responsive"></ion-img></p>
+                                <p><ion-img src="/assets/images/tailoring-001x1980.jpg" class="img-responsive"></ion-img></p>
                             </div>
                             <div class="col-md-6 text-center animate-box">
-                                <p><ion-img src="assets/images/dreamx600.jpg" class="img-responsive"></ion-img></p>
+                                <p><ion-img src="/assets/images/tailoring-002x1980.jpg" class="img-responsive"></ion-img></p>
                             </div>
                             <div class="col-md-6 text-center animate-box">
-                                <p><ion-img src="assets/images/motivationx600.jpg" class="img-responsive"></ion-img></p>
+                                <p><ion-img src="/assets/images/tailoring-003x1980.jpg" class="img-responsive"></ion-img></p>
                             </div>
                         </div>
                         }
@@ -208,6 +211,7 @@ export class CharityHome {
                 </div>
 
 
+            { /*
                 <div id="fh5co-content-section" class="fh5co-section-gray">
 
                     <div class="container">
@@ -251,6 +255,7 @@ export class CharityHome {
                     </div>
 
                 </div>
+                */ }
 
                 { this.ngo.projects.length > 0 ?
                 <div id="fh5co-services-section">

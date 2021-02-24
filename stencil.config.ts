@@ -22,7 +22,7 @@ export const config: Config = {
             ]
         },
 
-        baseUrl:'https://gr-preview1.web.app/',
+        baseUrl:'https://oscared.org/',
         prerenderConfig: './prerender.config.ts',
     }],
 };

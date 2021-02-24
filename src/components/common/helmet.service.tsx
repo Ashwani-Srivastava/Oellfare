@@ -8,7 +8,6 @@ class HelmetServiceController {
     constructor() {}
 
     public render(ngo: any, pageName: string) {
-        console.log('HelmetService :: ', EnvironmentService.config);
         return (
             <Helmet>
                 <title> { UtilityService.getMetaTitle(`${pageName} - ${ngo.name} Ngo`) } </title>

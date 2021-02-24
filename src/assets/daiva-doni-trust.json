@@ -1,418 +1,6 @@
 {
-  "receipt": { "baseImage": "", "fields": [], "nextId": 1000 },
-  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" } ],
-  "createdBy": "O6x52xt92xMduX3AXpKA2dNmRY63",
-  "activeIn": [],
-  "photos": [
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover1.jpg?alt=media",
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover2.jpg?alt=media",
-    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover3.jpg?alt=media"
-  ],
-  "ops": {
-    "spreadSheetId": "",
-    "settlementSheetId": "",
-    "offlinePaymentRow": 0,
-    "receiptVersion": 2,
-    "settlementRow": 0
-  },
-  "aggregate": {
-    "event": 0,
-    "subscription": {
-      "required": 0,
-      "months": 0,
-      "currentCollected": 0,
-      "totalCollected": 0,
-      "currentCount": 0,
-      "totalCount": 0
-    },
-    "volPerWeek": 0,
-    "volHoursPerWeek": 0,
-    "review": 0,
-    "donation": { "required": 0, "collected": 0, "count": 0 },
-    "volunteer": {
-      "donated": 0,
-      "hoursVerified": 0,
-      "hoursSelf": 0,
-      "joined": 0,
-      "registered": 0,
-      "attendedSelf": 0,
-      "recurringFundSupported": 0,
-      "fundSupported": 0,
-      "unattendedVerified": 0,
-      "required": 0,
-      "attendedVerified": 0,
-      "unattendedSelf": 0,
-      "subscribed": 0
-    },
-    "recurringFund": 0,
-    "photo": 3,
-    "fund": 0,
-    "project": 3,
-    "admin": 0,
-    "award": 0,
-    "follower": 0,
-    "avgRating": 0,
-    "upcomingEvent": 0,
-    "mediaRecognition": 1,
-    "testimonial": 0
-  },
-  "team": [
-    {
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_Pvhv0tHsiRcP7IMcewfR.jpg?alt=media",
-        "caption": "Photo of Mr. K. Immanuel team"
-      },
-      "role": "Founder & Managing Trustee",
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "id": "Pvhv0tHsiRcP7IMcewfR",
-      "reachOut": {
-        "email": "",
-        "linkedin": "",
-        "website": "",
-        "twitter": "",
-        "facebook": "",
-        "phone1": "",
-        "instagram": "",
-        "phone2": "",
-        "youtube": ""
-      },
-      "hobbies": "",
-      "name": "Mr. K. Immanuel"
-    },
-    {
-      "name": "R. Kasidurai",
-      "reachOut": {
-        "instagram": "",
-        "website": "",
-        "twitter": "",
-        "facebook": "",
-        "phone2": "",
-        "phone1": "",
-        "youtube": "",
-        "email": "",
-        "linkedin": ""
-      },
-      "id": "vb24wgWidHAftM6nARBq",
-      "photo": {
-        "caption": "Photo of R. Kasidurai team",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_vb24wgWidHAftM6nARBq.jpg?alt=media"
-      },
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "hobbies": "",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "role": "Secretary"
-    },
-    {
-      "hobbies": "",
-      "photo": {
-        "caption": "Photo of N. S. Abraham team",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_jp3PrTyH1XQK9KS5lv5d.jpg?alt=media"
-      },
-      "reachOut": {
-        "twitter": "",
-        "website": "",
-        "facebook": "",
-        "linkedin": "",
-        "instagram": "",
-        "email": "",
-        "youtube": "",
-        "phone1": "",
-        "phone2": ""
-      },
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "role": "Treasurer",
-      "name": "N. S. Abraham",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "id": "jp3PrTyH1XQK9KS5lv5d"
-    },
-    {
-      "photo": {
-        "caption": "Photo of K. Gnanaselvan team",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_UZWyFLZqsjIy8wm9ZqqL.jpg?alt=media"
-      },
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "role": "Commitee Member",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "hobbies": "",
-      "name": "K. Gnanaselvan",
-      "id": "UZWyFLZqsjIy8wm9ZqqL",
-      "reachOut": {
-        "twitter": "",
-        "email": "",
-        "linkedin": "",
-        "website": "",
-        "instagram": "",
-        "facebook": "",
-        "phone1": "",
-        "youtube": "",
-        "phone2": ""
-      }
-    },
-    {
-      "hobbies": "",
-      "name": "L.P. Armstrong",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "reachOut": {
-        "instagram": "",
-        "youtube": "",
-        "phone1": "",
-        "email": "",
-        "website": "",
-        "twitter": "",
-        "linkedin": "",
-        "phone2": "",
-        "facebook": ""
-      },
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_LMEun7g3DxX7XAmJG8L8.jpg?alt=media",
-        "caption": "Photo of L.P. Armstrong team"
-      },
-      "id": "LMEun7g3DxX7XAmJG8L8",
-      "to": { "_seconds": 0, "_nanoseconds": 0 },
-      "role": "Commitee Member"
-    },
-    {
-      "role": "Commitee Member",
-      "id": "8sdy2rGhLoqri2QReqHQ",
-      "reachOut": {
-        "phone1": "",
-        "website": "",
-        "youtube": "",
-        "facebook": "",
-        "twitter": "",
-        "linkedin": "",
-        "instagram": "",
-        "email": "",
-        "phone2": ""
-      },
-      "hobbies": "",
-      "name": "A. Mahes Raja",
-      "since": { "_seconds": 0, "_nanoseconds": 0 },
-      "photo": {
-        "caption": "Photo of A. Mahes Raja team",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_8sdy2rGhLoqri2QReqHQ.jpg?alt=media"
-      },
-      "to": { "_seconds": 0, "_nanoseconds": 0 }
-    }
-  ],
-  "createdAt": { "_seconds": 1612373566, "_nanoseconds": 361000000 },
-  "updatedAt": { "_seconds": 1612373566, "_nanoseconds": 0 },
-  "legal": {
-    "regNo": "28/2013",
-    "_80GNo": "",
-    "panNo": "AACTD0605Q",
-    "bank": {
-      "bankName": "STATE BANK OF INDIA",
-      "accountNo": "37147815662",
-      "ifscCode": "SBIN0070209",
-      "accountName": "DAIVA DONI TRUST"
-    },
-    "darpanNo": "TN/2019/0227997",
-    "_12ANo": "12AA2019-2020/1018325503(1).",
-    "fcraNo": ""
-  },
-  "admin": [],
-  "sdg": [
-    {
-      "name": "No Poverty",
-      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-1.png?alt=media&token=76fb2429-e7b3-405d-8901-1bbcd03ebdbc",
-        "caption": ""
-      },
-      "slug": "",
-      "description": "End Poverty in all its forms everywhere",
-      "id": 1
-    },
-    {
-      "name": "Quality Education",
-      "slug": "",
-      "description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
-      "id": 4,
-      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-4-quality-education.html",
-      "photo": {
-        "caption": "",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-4.png?alt=media&token=47d37538-1ae3-4f33-a174-4b38a8e0e033"
-      }
-    }
-  ],
-  "access": { "form": false, "fundraiser": false, "event": false, "receipt": false, "profile": true },
-  "oid": "",
-  "description": "We help poor people by distributing Healthy food to them. We also have 2 tuition centers to give free education to Children in Tirunelveli. And every quarter, we conduct regular medical camps. We run one Tailoring coaching center to empower Women in Kalakad.",
-  "projects": [
-    {
-      "description": "Traditional foods to poor rural people",
-      "slug": "healthy-food-distribution",
-      "parent": "",
-      "date": { "_seconds": 1613097376, "_nanoseconds": 0 },
-      "createdAt": { "_seconds": 1613097376, "_nanoseconds": 0 },
-      "id": "Ehjss8J8jPxVn0GHaFAp",
-      "sdg": {
-        "description": "",
-        "photo": { "url": "", "caption": "" },
-        "slug": "",
-        "link": "",
-        "id": 0,
-        "name": ""
-      },
-      "photo": {
-        "caption": "Photo of Healthy Food Distribution project",
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_Ehjss8J8jPxVn0GHaFAp.jpg?alt=media"
-      },
-      "updatedAt": { "_seconds": 1613097376, "_nanoseconds": 0 },
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "link": "",
-      "name": "Healthy Food Distribution",
-      "isActive": true,
-      "aggregate": {
-        "subscription": {
-          "required": 0,
-          "totalCount": 0,
-          "currentCount": 0,
-          "currentCollected": 0,
-          "months": 0,
-          "totalCollected": 0
-        },
-        "donation": { "count": 0, "collected": 0, "required": 0 },
-        "volunteer": {
-          "required": 0,
-          "hoursSelf": 0,
-          "unattendedVerified": 0,
-          "hoursVerified": 0,
-          "recurringFundSupported": 0,
-          "subscribed": 0,
-          "fundSupported": 0,
-          "donated": 0,
-          "attendedSelf": 0,
-          "joined": 0,
-          "registered": 0,
-          "attendedVerified": 0,
-          "unattendedSelf": 0
-        }
-      }
-    },
-    {
-      "aggregate": {
-        "volunteer": {
-          "fundSupported": 0,
-          "hoursVerified": 0,
-          "joined": 0,
-          "unattendedSelf": 0,
-          "attendedSelf": 0,
-          "subscribed": 0,
-          "donated": 0,
-          "unattendedVerified": 0,
-          "hoursSelf": 0,
-          "recurringFundSupported": 0,
-          "registered": 0,
-          "required": 0,
-          "attendedVerified": 0
-        },
-        "donation": { "required": 0, "count": 0, "collected": 0 },
-        "subscription": {
-          "totalCount": 0,
-          "currentCount": 0,
-          "months": 0,
-          "totalCollected": 0,
-          "required": 0,
-          "currentCollected": 0
-        }
-      },
-      "createdAt": { "_seconds": 1613097343, "_nanoseconds": 0 },
-      "updatedAt": { "_seconds": 1613097343, "_nanoseconds": 0 },
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_4Qwh56A0weSmJb4oYe5u.jpg?alt=media",
-        "caption": "Photo of Tailoring Center project"
-      },
-      "id": "4Qwh56A0weSmJb4oYe5u",
-      "parent": "",
-      "date": { "_seconds": 1613097343, "_nanoseconds": 0 },
-      "isActive": true,
-      "name": "Tailoring Center",
-      "description": "To educate and Empower Women",
-      "sdg": {
-        "photo": { "url": "", "caption": "" },
-        "name": "",
-        "description": "",
-        "link": "",
-        "id": 0,
-        "slug": ""
-      },
-      "link": "",
-      "slug": "tailoring-center",
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
-    },
-    {
-      "link": "",
-      "parent": "",
-      "updatedAt": { "_seconds": 1613097298, "_nanoseconds": 0 },
-      "isActive": true,
-      "name": "Tuition Center",
-      "description": "For underpriviliged Kids",
-      "createdAt": { "_seconds": 1613097298, "_nanoseconds": 0 },
-      "sdg": {
-        "name": "",
-        "slug": "",
-        "id": 0,
-        "photo": { "url": "", "caption": "" },
-        "link": "",
-        "description": ""
-      },
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "aggregate": {
-        "subscription": {
-          "totalCollected": 0,
-          "totalCount": 0,
-          "months": 0,
-          "currentCollected": 0,
-          "currentCount": 0,
-          "required": 0
-        },
-        "donation": { "collected": 0, "required": 0, "count": 0 },
-        "volunteer": {
-          "joined": 0,
-          "fundSupported": 0,
-          "unattendedSelf": 0,
-          "required": 0,
-          "attendedSelf": 0,
-          "donated": 0,
-          "hoursVerified": 0,
-          "unattendedVerified": 0,
-          "subscribed": 0,
-          "hoursSelf": 0,
-          "attendedVerified": 0,
-          "registered": 0,
-          "recurringFundSupported": 0
-        }
-      },
-      "slug": "tuition-center",
-      "id": "aTMQ32j0iNWBlmu1WhzQ",
-      "date": { "_seconds": 1613097298, "_nanoseconds": 0 },
-      "photo": {
-        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_aTMQ32j0iNWBlmu1WhzQ.jpg?alt=media",
-        "caption": "Photo of Tuition Center project"
-      },
-      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
-    }
-  ],
-  "shortCode": "",
-  "awards": [],
-  "state": { "id": 31, "name": "Tamil Nadu" },
-  "reachOut": {
-    "instagram": "",
-    "twitter": "https://twitter.com/immanuelk83",
-    "website": "daivadoni.in",
-    "email": "immanuelk83@gmail.com",
-    "phone2": "+918778526578",
-    "linkedin": "",
-    "phone1": "+919698119163",
-    "facebook": "",
-    "youtube": ""
-  },
-  "nextReceiptNumber": 1000,
+  "causes": [],
+  "state": { "name": "Tamil Nadu", "id": 31 },
   "activities": [
     "Help poor people",
     " Tuition center",
@@ -423,51 +11,473 @@
     " Healthy food",
     " Sports for Rural people"
   ],
-  "bank": { "accountName": "", "accountNo": "", "bankName": "", "ifscCode": "" },
+  "priority": 100,
+  "activeIn": [],
+  "createdBy": "O6x52xt92xMduX3AXpKA2dNmRY63",
+  "id": "SZqtONqDkUd0NVg4GmfB",
+  "name": "Daiva Doni Trust",
+  "isActive": true,
   "slug": "daiva-doni-trust",
-  "address": "9/A I P C Nagarastreet,\nKalalkad Pin - 627501.\nTirunelveli District\nTamil Nadu \nSouth India",
+  "createdAt": { "_seconds": 1612373566, "_nanoseconds": 361000000 },
   "media": [
     {
-      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-      "link": "",
+      "name": "Food and Mask distribution to Old age people",
+      "isActive": true,
       "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "description": "",
+      "reporterName": "",
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
       "video": { "url": "", "caption": "Video of Food and Mask distribution to Old age people media" },
+      "createdAt": { "_seconds": 1613096149, "_nanoseconds": 0 },
+      "publicationName": "Ullatchi Murasu",
+      "updatedAt": { "_seconds": 1613096149, "_nanoseconds": 0 },
+      "publicationLogo": "",
+      "slug": "YrnOErSfaU6mIyNIx8eL",
+      "link": "",
       "photo": {
         "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fmedia%2Foriginal_YrnOErSfaU6mIyNIx8eL.jpg?alt=media",
         "caption": "Photo of Food and Mask distribution to Old age people media"
       },
-      "reporterName": "",
       "date": { "_seconds": 1599704018, "_nanoseconds": 887000000 },
-      "updatedAt": { "_seconds": 1613096149, "_nanoseconds": 0 },
-      "name": "Food and Mask distribution to Old age people",
-      "publicationName": "Ullatchi Murasu",
-      "createdAt": { "_seconds": 1613096149, "_nanoseconds": 0 },
-      "publicationLogo": "",
-      "isActive": true,
-      "id": "YrnOErSfaU6mIyNIx8eL",
-      "slug": "YrnOErSfaU6mIyNIx8eL",
-      "description": ""
+      "id": "YrnOErSfaU6mIyNIx8eL"
     }
   ],
-  "testimonial": [],
-  "id": "SZqtONqDkUd0NVg4GmfB",
+  "bank": { "accountNo": "", "ifscCode": "", "bankName": "", "accountName": "" },
   "mission": [ "" ],
-  "vision": "Charitable and benevolent advancement of all people in india without any distinction of Caste, Religion, Color, Creed or Community.",
-  "priority": 100,
-  "status": 3,
-  "causes": [],
-  "district": { "id": 3126, "name": "Tirunelveli" },
-  "whyVolunteerHere": [ { "icon": "checkmark-circle-outline", "text": "" } ],
-  "logo": {
-    "caption": "Caption of Daiva Doni Trust photo",
-    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_logo.jpg?alt=media"
-  },
-  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "fullUrl": "https://thegrassroots.app/tirunelveli/ngo/daiva-doni-trust",
-  "video": { "caption": "Caption of Daiva Doni Trust video", "url": "" },
-  "gateway": { "id": "", "name": "", "razorpay": { "accountId": "" }, "lotuspay": { "accountId": "" } },
-  "isActive": true,
-  "shortUrl": "https://grs.one/",
   "review": [],
-  "name": "Daiva Doni Trust"
+  "sdg": [
+    {
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html",
+      "id": 1,
+      "slug": "",
+      "description": "End Poverty in all its forms everywhere",
+      "name": "No Poverty",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-1.png?alt=media&token=76fb2429-e7b3-405d-8901-1bbcd03ebdbc",
+        "caption": ""
+      }
+    },
+    {
+      "photo": {
+        "caption": "",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-4.png?alt=media&token=47d37538-1ae3-4f33-a174-4b38a8e0e033"
+      },
+      "description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "id": 4,
+      "slug": "",
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-4-quality-education.html",
+      "name": "Quality Education"
+    }
+  ],
+  "whyVolunteerHere": [ { "icon": "checkmark-circle-outline", "text": "" } ],
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover1.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover2.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover4.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover5.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover6.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_cover7.jpg?alt=media"
+  ],
+  "updatedAt": { "_seconds": 1612373566, "_nanoseconds": 0 },
+  "gateway": { "lotuspay": { "accountId": "" }, "id": "", "razorpay": { "accountId": "" }, "name": "" },
+  "access": { "event": false, "fundraiser": true, "form": false, "receipt": false, "profile": true },
+  "vision": "Charitable and benevolent advancement of all people in india without any distinction of Caste, Religion, Color, Creed or Community.",
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "video": { "caption": "Caption of Daiva Doni Trust video", "url": "" },
+  "fullUrl": "https://thegrassroots.app/tirunelveli/ngo/daiva-doni-trust",
+  "legal": {
+    "fcraNo": "",
+    "bank": {
+      "bankName": "STATE BANK OF INDIA",
+      "ifscCode": "SBIN0070209",
+      "accountName": "DAIVA DONI TRUST",
+      "accountNo": "37147815662"
+    },
+    "regNo": "28/2013",
+    "panNo": "AACTD0605Q",
+    "darpanNo": "TN/2019/0227997",
+    "_80GNo": "",
+    "_12ANo": "12AA2019-2020/1018325503(1)."
+  },
+  "testimonial": [],
+  "shortUrl": "https://grs.one/",
+  "admin": [],
+  "reachOut": {
+    "website": "daivadoni.in",
+    "linkedin": "",
+    "youtube": "",
+    "instagram": "",
+    "facebook": "https://www.facebook.com/imman.uel.9659",
+    "phone2": "+918778526578",
+    "twitter": "https://twitter.com/immanuelk83",
+    "email": "immanuelk83@gmail.com",
+    "phone1": "+919698119163"
+  },
+  "description": "We help poor people by distributing Healthy food to them. We also have 2 tuition centers to give free education to Children in Tirunelveli. And every quarter, we conduct regular medical camps. We run one Tailoring coaching center to empower Women in Kalakad.",
+  "ops": {
+    "settlementSheetId": "1O2OvJZXEfSGP2G46FD9y54rsFrikNdnhdg9SbDh7Y0w",
+    "receiptVersion": 2,
+    "offlinePaymentRow": 1255,
+    "spreadSheetId": "1O2OvJZXEfSGP2G46FD9y54rsFrikNdnhdg9SbDh7Y0w",
+    "settlementRow": 0
+  },
+  "receipt": {
+    "fields": [],
+    "baseImage": "",
+    "autoNextId": 1000,
+    "nextId": 1000,
+    "offNextId": 1000,
+    "onlineNextId": 1001
+  },
+  "district": { "name": "Tirunelveli", "id": 3126 },
+  "team": [
+    {
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "hobbies": "",
+      "role": "Founder & Managing Trustee",
+      "reachOut": {
+        "facebook": "",
+        "linkedin": "",
+        "phone2": "",
+        "instagram": "",
+        "youtube": "",
+        "twitter": "",
+        "email": "",
+        "phone1": "",
+        "website": ""
+      },
+      "id": "Pvhv0tHsiRcP7IMcewfR",
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "photo": {
+        "caption": "Photo of Mr. K. Immanuel team",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_Pvhv0tHsiRcP7IMcewfR.jpg?alt=media"
+      },
+      "name": "Mr. K. Immanuel"
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_vb24wgWidHAftM6nARBq.jpg?alt=media",
+        "caption": "Photo of R. Kasidurai team"
+      },
+      "id": "vb24wgWidHAftM6nARBq",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "reachOut": {
+        "email": "",
+        "phone1": "",
+        "instagram": "",
+        "phone2": "",
+        "youtube": "",
+        "website": "",
+        "linkedin": "",
+        "facebook": "",
+        "twitter": ""
+      },
+      "hobbies": "",
+      "role": "Secretary",
+      "name": "R. Kasidurai"
+    },
+    {
+      "reachOut": {
+        "linkedin": "",
+        "twitter": "",
+        "website": "",
+        "instagram": "",
+        "email": "",
+        "phone1": "",
+        "youtube": "",
+        "facebook": "",
+        "phone2": ""
+      },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_jp3PrTyH1XQK9KS5lv5d.jpg?alt=media",
+        "caption": "Photo of N. S. Abraham team"
+      },
+      "hobbies": "",
+      "name": "N. S. Abraham",
+      "role": "Treasurer",
+      "id": "jp3PrTyH1XQK9KS5lv5d",
+      "to": { "_seconds": 0, "_nanoseconds": 0 }
+    },
+    {
+      "reachOut": {
+        "email": "",
+        "facebook": "",
+        "phone1": "",
+        "youtube": "",
+        "phone2": "",
+        "instagram": "",
+        "website": "",
+        "twitter": "",
+        "linkedin": ""
+      },
+      "name": "K. Gnanaselvan",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_UZWyFLZqsjIy8wm9ZqqL.jpg?alt=media",
+        "caption": "Photo of K. Gnanaselvan team"
+      },
+      "role": "Commitee Member",
+      "id": "UZWyFLZqsjIy8wm9ZqqL",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "hobbies": ""
+    },
+    {
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "id": "LMEun7g3DxX7XAmJG8L8",
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "reachOut": {
+        "website": "",
+        "youtube": "",
+        "phone2": "",
+        "facebook": "",
+        "linkedin": "",
+        "instagram": "",
+        "email": "",
+        "twitter": "",
+        "phone1": ""
+      },
+      "hobbies": "",
+      "role": "Commitee Member",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_LMEun7g3DxX7XAmJG8L8.jpg?alt=media",
+        "caption": "Photo of L.P. Armstrong team"
+      },
+      "name": "L.P. Armstrong"
+    },
+    {
+      "hobbies": "",
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "reachOut": {
+        "website": "",
+        "facebook": "",
+        "twitter": "",
+        "email": "",
+        "phone2": "",
+        "instagram": "",
+        "youtube": "",
+        "phone1": "",
+        "linkedin": ""
+      },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fteam%2Foriginal_8sdy2rGhLoqri2QReqHQ.jpg?alt=media",
+        "caption": "Photo of A. Mahes Raja team"
+      },
+      "id": "8sdy2rGhLoqri2QReqHQ",
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "role": "Commitee Member",
+      "name": "A. Mahes Raja"
+    }
+  ],
+  "nextReceiptNumber": 1000,
+  "shortCode": "",
+  "awards": [],
+  "status": 3,
+  "oid": "",
+  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "logo": {
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_logo.jpg?alt=media",
+    "caption": "Caption of Daiva Doni Trust photo"
+  },
+  "address": "9/A I P C Nagarastreet,\nKalakad Pin - 627501.\nTirunelveli District\nTamil Nadu \nSouth India",
+  "projects": [
+    {
+      "parent": "",
+      "description": "Traditional foods to poor rural people",
+      "sdg": {
+        "id": 0,
+        "slug": "",
+        "photo": { "caption": "", "url": "" },
+        "name": "",
+        "link": "",
+        "description": ""
+      },
+      "aggregate": {
+        "volunteer": {
+          "hoursSelf": 0,
+          "attendedVerified": 0,
+          "registered": 0,
+          "hoursVerified": 0,
+          "joined": 0,
+          "required": 0,
+          "recurringFundSupported": 0,
+          "attendedSelf": 0,
+          "donated": 0,
+          "unattendedVerified": 0,
+          "fundSupported": 0,
+          "unattendedSelf": 0,
+          "subscribed": 0
+        },
+        "subscription": {
+          "totalCollected": 0,
+          "currentCollected": 0,
+          "totalCount": 0,
+          "months": 0,
+          "currentCount": 0,
+          "required": 0
+        },
+        "donation": { "required": 0, "count": 0, "collected": 0 }
+      },
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_Ehjss8J8jPxVn0GHaFAp.jpg?alt=media",
+        "caption": "Photo of Healthy Food Distribution project"
+      },
+      "id": "Ehjss8J8jPxVn0GHaFAp",
+      "slug": "healthy-food-distribution",
+      "updatedAt": { "_seconds": 1613097376, "_nanoseconds": 0 },
+      "createdAt": { "_seconds": 1613097376, "_nanoseconds": 0 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "name": "Healthy Food Distribution",
+      "link": "",
+      "date": { "_seconds": 1613097376, "_nanoseconds": 0 },
+      "isActive": true
+    },
+    {
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "link": "",
+      "aggregate": {
+        "volunteer": {
+          "hoursVerified": 0,
+          "attendedVerified": 0,
+          "subscribed": 0,
+          "hoursSelf": 0,
+          "joined": 0,
+          "unattendedSelf": 0,
+          "required": 0,
+          "registered": 0,
+          "recurringFundSupported": 0,
+          "unattendedVerified": 0,
+          "attendedSelf": 0,
+          "donated": 0,
+          "fundSupported": 0
+        },
+        "donation": { "required": 0, "collected": 0, "count": 0 },
+        "subscription": {
+          "currentCollected": 0,
+          "totalCount": 0,
+          "months": 0,
+          "currentCount": 0,
+          "required": 0,
+          "totalCollected": 0
+        }
+      },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "parent": "",
+      "slug": "tailoring-center",
+      "id": "4Qwh56A0weSmJb4oYe5u",
+      "photo": {
+        "caption": "Photo of Tailoring Center project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_4Qwh56A0weSmJb4oYe5u.jpg?alt=media"
+      },
+      "name": "Tailoring Center",
+      "createdAt": { "_seconds": 1613097343, "_nanoseconds": 0 },
+      "updatedAt": { "_seconds": 1613097343, "_nanoseconds": 0 },
+      "sdg": {
+        "link": "",
+        "slug": "",
+        "photo": { "caption": "", "url": "" },
+        "id": 0,
+        "description": "",
+        "name": ""
+      },
+      "date": { "_seconds": 1613097343, "_nanoseconds": 0 },
+      "description": "To educate and Empower Women",
+      "isActive": true
+    },
+    {
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "link": "",
+      "photo": {
+        "caption": "Photo of Tuition Center project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Fproject%2Foriginal_aTMQ32j0iNWBlmu1WhzQ.jpg?alt=media"
+      },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "date": { "_seconds": 1613097298, "_nanoseconds": 0 },
+      "id": "aTMQ32j0iNWBlmu1WhzQ",
+      "sdg": {
+        "name": "",
+        "slug": "",
+        "id": 0,
+        "photo": { "url": "", "caption": "" },
+        "description": "",
+        "link": ""
+      },
+      "updatedAt": { "_seconds": 1613097298, "_nanoseconds": 0 },
+      "slug": "tuition-center",
+      "parent": "",
+      "aggregate": {
+        "donation": { "required": 0, "count": 0, "collected": 0 },
+        "subscription": {
+          "totalCollected": 0,
+          "required": 0,
+          "totalCount": 0,
+          "currentCount": 0,
+          "currentCollected": 0,
+          "months": 0
+        },
+        "volunteer": {
+          "unattendedVerified": 0,
+          "hoursSelf": 0,
+          "attendedSelf": 0,
+          "attendedVerified": 0,
+          "required": 0,
+          "hoursVerified": 0,
+          "registered": 0,
+          "subscribed": 0,
+          "joined": 0,
+          "fundSupported": 0,
+          "donated": 0,
+          "recurringFundSupported": 0,
+          "unattendedSelf": 0
+        }
+      },
+      "createdAt": { "_seconds": 1613097298, "_nanoseconds": 0 },
+      "description": "For underpriviliged Kids",
+      "name": "Tuition Center",
+      "isActive": true
+    }
+  ],
+  "aggregate": {
+    "award": 0,
+    "follower": 0,
+    "volHoursPerWeek": 0,
+    "event": 0,
+    "avgRating": 0,
+    "volunteer": {
+      "attendedVerified": 0,
+      "required": 0,
+      "hoursSelf": 0,
+      "unattendedVerified": 0,
+      "fundSupported": 0,
+      "unattendedSelf": 0,
+      "donated": 0,
+      "attendedSelf": 0,
+      "hoursVerified": 0,
+      "recurringFundSupported": 0,
+      "joined": 0,
+      "registered": 0,
+      "subscribed": 0
+    },
+    "fund": 0,
+    "review": 0,
+    "testimonial": 0,
+    "volPerWeek": 0,
+    "donation": { "required": 0, "collected": 0, "count": 0 },
+    "upcomingEvent": 0,
+    "mediaRecognition": 1,
+    "admin": 0,
+    "project": 3,
+    "subscription": {
+      "currentCount": 0,
+      "required": 0,
+      "totalCount": 0,
+      "totalCollected": 0,
+      "currentCollected": 0,
+      "months": 0
+    },
+    "photo": 6,
+    "recurringFund": 0
+  }
 }

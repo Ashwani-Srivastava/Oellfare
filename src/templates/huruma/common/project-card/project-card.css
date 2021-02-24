@@ -1,0 +1,15 @@
+:host{
+    display: block;
+}
+
+.project-image{
+    object-fit: contain;
+    max-width: 360px;
+}
+
+.ellipsis{
+    text-overflow: ellipsis ;
+    overflow: hidden ;
+    white-space: nowrap;
+    width: 319px;
+}

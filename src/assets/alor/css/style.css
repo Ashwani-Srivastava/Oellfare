@@ -1461,7 +1461,7 @@ img.steel{
 	display:block;
 }
 
-.contact-info input[type="text"],.contact-info input[type="email"],.contact-info textarea, .contact-info select {
+.contact-info input[type="text"], .contact-info input[type='number'],.contact-info input[type="email"],.contact-info textarea, .contact-info select {
 	outline:none;
 	padding:10px 13px;
 	background:#fff;
@@ -1475,7 +1475,7 @@ img.steel{
 	-ms-border-radius:5px;
 	width:100%;
 }
-.contact-info input[type="email"], .contact-info select {
+.contact-info input[type="email"], .contact-info input[type='number'], .contact-info select {
 	margin:1.5em 0;
 }
 .contact-info textarea{
@@ -2740,7 +2740,7 @@ ul.wmuSliderPagination {
 	.contact-info p {
 		margin: .5em 0 1em;
 	}
-	.contact-info input[type="text"], .contact-info input[type="email"], .contact-info textarea, .contact-info select {
+	.contact-info input[type="text"], .contact-info input[type='number'], .contact-info input[type="email"], .contact-info textarea, .contact-info select {
 	  padding: 7px 13px;
 	  font-size: 12px;
 	}

@@ -1,3 +1,9 @@
+## To Deploy
+ * Update package.json :: prel script to point to right hosting account name
+
+## Before deployment
+ * Update site URL in stencil.config.ts
+
 ## To change theme
  * Just change the respective tags in app-root
  * Comment out/in respective stylesheets links and scripts in src/index.html
@@ -8,7 +14,6 @@
 
 
 ## To change NGO
- * Update AppRoot.NgoId
  * Update src/assets/ngo.json, src/assets/fund.json with the json files of the Ngo, that is needed
 
 

@@ -460,7 +460,7 @@ export class Ngo extends Doc {
     public description          :   string;
     public fullUrl              :   string;
     //public reviews              :   Array<any>;
-    public legal                :   Legal;
+    public legal                :   NgoLegal;
     public logo                 :   Media;
     public media                :   MediaRecognition[];
     public mission              :   string[];
@@ -502,7 +502,7 @@ export class Ngo extends Doc {
         this.description        =   obj.description     ||  '';
         this.fullUrl            =   obj.fullUrl         ||  '';
         //TODO:
-        this.legal              =   new Legal(obj.legal);
+        this.legal              =   new NgoLegal(obj.legal);
         this.logo               =   new Media(obj.logo);
         this.media              =   Doc.parseArray(obj.media, MediaRecognition);
         this.mission            =   obj.mission         ||  [];
