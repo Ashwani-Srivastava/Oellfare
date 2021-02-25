@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class HurumaHeader {
 
-    @Prop() ngo                 :   any                 =   {};
+    @Prop() ngo                 :   any;
 
     render() {
 
@@ -55,8 +55,12 @@ export class HurumaHeader {
                         <div class="logo">
                             <a>
                                 <ion-router-link color='white' href='/'>
-                                    <img src="/assets/huuuma/img/logo.png" class="white-logo" alt="logo" />
-                                    <img src="/assets/huruma/img/logo-2.png" class="black-logo" alt="image" />
+
+                                    { /**
+                                    <img src="/assets/huruma/img/logo-bg.png" class="white-logo" alt="logo" />
+                                    */ }
+                                
+                                    <img src={ this.ngo.logo.url } class="black-logo" alt="image" style={{ 'width': '120px' }}/>
                                 </ion-router-link>
                             </a>
                         </div>
@@ -68,8 +72,8 @@ export class HurumaHeader {
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="#">
-                            <img src="/assets/huruma/img/logo-bg.png" class="white-logo" alt="logo" />
-                            <img src="/assets/huruma/img/logo-2.png" class="black-logo" alt="image" />
+                            <img src={ this.ngo.logo.url } style={{ 'background': 'url(/assets/huruma/img/logo-bg.png)', 'width': '185px', 'height': '165px', 'object-fit': 'contain', 'padding': '16px' }} class="white-logo" alt="logo" />
+                            <img src={ this.ngo.logo.url } class="black-logo" alt="image" style={{ 'width': '120px' }} />
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">

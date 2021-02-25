@@ -75,7 +75,7 @@ export class HurumaBase {
         $('select').niceSelect();
 		
 		// Header Sticky
-        $(window).on('scroll', function() {
+        $('.page-wrapper').on('scroll', function() {
             if ($(this).scrollTop() >150){  
                 $('.navbar-area').addClass("is-sticky");
             }
@@ -272,14 +272,14 @@ export class HurumaBase {
 		// Go to Top
         $(function(){
             // Scroll Event
-            $(window).on('scroll', function(){
-                var scrolled = $(window).scrollTop();
+            $('.page-wrapper').on('scroll', function(){
+                var scrolled = $('.page-wrapper').scrollTop();
                 if (scrolled > 600) $('.go-top').addClass('active');
                 if (scrolled < 600) $('.go-top').removeClass('active');
             });  
             // Click Event
             $('.go-top').on('click', function() {
-                $("html, body").animate({ scrollTop: "0" },  500);
+                $(".page-wrapper").animate({ scrollTop: "0" },  500);
             });
 		});
 

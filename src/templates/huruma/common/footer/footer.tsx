@@ -159,7 +159,7 @@ export class HurumaFooter {
                         <div class="row align-items-center">
                             <div class="col-lg-4">
                                 <div class="copyright-logo">
-                                    <img src="/assets/huruma/img/white-logo.png" alt="image" />
+                                    <img src={ this.ngo.logo.url } alt="image" style={{ 'width': '120px' }} />
                                 </div>
                             </div>
 
