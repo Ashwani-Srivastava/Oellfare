@@ -63,9 +63,9 @@
     --white: #fff;
     --gray: #868e96;
     --gray-dark: #343a40;
-    --primary: #D5734A;
-    --secondary: rgba(0, 153, 153, 0.8);
-    --success: rgba(0, 153, 153, 0.8);
+    --primary: var(--ion-color-primary);
+    --secondary: var(--ion-color-secondary);
+    --success: var(--ion-color-secondary);
     --info: #009999;
     --warning: #cc6633;
     --danger: #a91628;
@@ -78,6 +78,95 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+    /**
+     * OscarEd */
+    --ion-color-primary: #2C328A;
+    --ion-color-primary-rgb: 44,50,138;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #272c79;
+    --ion-color-primary-tint: #414796;
+
+    /*
+       * Baby Needs and Daiva Doni Theme
+    --ion-color-primary: #ff5722;
+    --ion-color-primary-rgb: 255,87,34;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0,0,0;
+    --ion-color-primary-shade: #e04d1e;
+    --ion-color-primary-tint: #ff6838;
+    */
+
+
+    /*
+    --ion-color-primary: #4FC4F5;
+    --ion-color-primary-rgb: 79,196,245;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0,0,0;
+    --ion-color-primary-shade: #46acd8;
+    --ion-color-primary-tint: #61caf6;
+    */
+
+    --ion-color-secondary: rgba(61,194,255, 0.8);
+    --ion-color-secondary-rgb: 61,194,255;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-shade: #36abe0;
+    --ion-color-secondary-tint: #50c8ff;
+
+    --ion-color-tertiary: rgba(255, 0, 0, 0.9);
+    --ion-color-tertiary-rgb: 255,0,0;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255,255,255;
+    --ion-color-tertiary-shade: #e00000;
+    --ion-color-tertiary-tint: #ff1a1a;
+    --ion-color-tertiary-step1: rgba(255, 0, 0, 0.75);
+    --ion-color-tertiary-step2: rgba(255, 0, 0, 0.6);
+    --ion-color-tertiary-step3: rgba(255, 0, 0, 0.45);
+
+    --ion-color-success: #2dd36f;
+    --ion-color-success-rgb: 45,211,111;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255,255,255;
+    --ion-color-success-shade: #28ba62;
+    --ion-color-success-tint: #42d77d;
+
+    --ion-color-warning: #ffc409;
+    --ion-color-warning-rgb: 255,196,9;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0,0,0;
+    --ion-color-warning-shade: #e0ac08;
+    --ion-color-warning-tint: #ffca22;
+
+    --ion-color-danger: #eb445a;
+    --ion-color-danger-rgb: 235,68,90;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255,255,255;
+    --ion-color-danger-shade: #cf3c4f;
+    --ion-color-danger-tint: #ed576b;
+
+    --ion-color-dark: #222428;
+    --ion-color-dark-rgb: 34,36,40;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255,255,255;
+    --ion-color-dark-shade: #1e2023;
+    --ion-color-dark-tint: #383a3e;
+
+    --ion-color-medium: #92949c;
+    --ion-color-medium-rgb: 146,148,156;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: 255,255,255;
+    --ion-color-medium-shade: #808289;
+    --ion-color-medium-tint: #9d9fa6;
+
+    --ion-color-light: #f4f5f8;
+    --ion-color-light-rgb: 244,245,248;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0,0,0;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
 }
 
 @media print {
@@ -543,7 +632,7 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0, 153, 153, 0.8);
+    border-top: 1px solid var(--ion-color-secondary);
 }
 
 small,
@@ -2269,7 +2358,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display: none;
     margin-top: .25rem;
     font-size: .875rem;
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
 }
 
 .valid-tooltip {
@@ -2283,7 +2372,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     font-size: .875rem;
     line-height: 1;
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
     border-radius: .2rem;
 }
 
@@ -2296,7 +2385,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .verso-widget.widget_archive select.is-valid, .was-validated
 .custom-select:valid,
 .custom-select.is-valid {
-    border-color: rgba(0, 153, 153, 0.8);
+    border-color: var(--ion-color-secondary);
 }
 
 .was-validated .form-control:valid:focus, .was-validated .verso-widget select.postform:valid:focus, .verso-widget .was-validated select.postform:valid:focus, .was-validated
@@ -2342,7 +2431,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .was-validated .form-check-input:valid + .form-check-label, .form-check-input.is-valid + .form-check-label {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
 }
 
 .was-validated .custom-control-input:valid ~ .custom-control-indicator, .custom-control-input.is-valid ~ .custom-control-indicator {
@@ -2350,7 +2439,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .was-validated .custom-control-input:valid ~ .custom-control-description, .custom-control-input.is-valid ~ .custom-control-description {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
 }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-indicator, .custom-control-input.is-valid:focus ~ .custom-control-indicator {
@@ -2359,7 +2448,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .was-validated .custom-file-input:valid ~ .custom-file-control, .custom-file-input.is-valid ~ .custom-file-control {
-    border-color: rgba(0, 153, 153, 0.8);
+    border-color: var(--ion-color-secondary);
 }
 
 .was-validated .custom-file-input:valid ~ .custom-file-control::before, .custom-file-input.is-valid ~ .custom-file-control::before {
@@ -2630,8 +2719,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #D5734A;
-    border-color: #D5734A;
+    background-color: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
 }
 
 .btn-primary:hover {
@@ -2646,8 +2735,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
-    background-color: #D5734A;
-    border-color: #D5734A;
+    background-color: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
 }
 
 .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
@@ -2661,8 +2750,8 @@ fieldset[disabled] a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-secondary:hover {
@@ -2677,8 +2766,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active,
@@ -2692,8 +2781,8 @@ fieldset[disabled] a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-success:hover {
@@ -2708,8 +2797,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-success.disabled, .btn-success:disabled {
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-success:not([disabled]):not(.disabled):active, .btn-success:not([disabled]):not(.disabled).active,
@@ -2877,16 +2966,16 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary {
-    color: #D5734A;
+    color: var(--ion-color-primary);
     background-color: transparent;
     background-image: none;
-    border-color: #D5734A;
+    border-color: var(--ion-color-primary);
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #D5734A;
-    border-color: #D5734A;
+    background-color: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -2895,30 +2984,30 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-    color: #D5734A;
+    color: var(--ion-color-primary);
     background-color: transparent;
 }
 
 .btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary:not([disabled]):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #D5734A;
-    border-color: #D5734A;
+    background-color: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
     -webkit-box-shadow: 0 0 0 0.2rem rgba(213, 115, 74, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(213, 115, 74, 0.5);
 }
 
 .btn-outline-secondary {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
     background-color: transparent;
     background-image: none;
-    border-color: rgba(0, 153, 153, 0.8);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-outline-secondary:hover {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
@@ -2927,30 +3016,30 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
     background-color: transparent;
 }
 
 .btn-outline-secondary:not([disabled]):not(.disabled):active, .btn-outline-secondary:not([disabled]):not(.disabled).active,
 .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 153, 153, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(0, 153, 153, 0.5);
 }
 
 .btn-outline-success {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
     background-color: transparent;
     background-image: none;
-    border-color: rgba(0, 153, 153, 0.8);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-outline-success:hover {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
 }
 
 .btn-outline-success:focus, .btn-outline-success.focus {
@@ -2959,15 +3048,15 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
-    color: rgba(0, 153, 153, 0.8);
+    color: var(--ion-color-secondary);
     background-color: transparent;
 }
 
 .btn-outline-success:not([disabled]):not(.disabled):active, .btn-outline-success:not([disabled]):not(.disabled).active,
 .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
-    border-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 153, 153, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(0, 153, 153, 0.5);
 }
@@ -3311,7 +3400,7 @@ tbody.collapse.show {
 .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #D5734A;
+    background-color: var(--ion-color-primary);
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -3764,7 +3853,7 @@ tbody.collapse.show {
 
 .custom-control-input:checked ~ .custom-control-indicator {
     color: #fff;
-    background-color: #D5734A;
+    background-color: var(--ion-color-primary);
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
@@ -3812,7 +3901,7 @@ tbody.collapse.show {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
-    background-color: #D5734A;
+    background-color: var(--ion-color-primary);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
 }
 
@@ -3907,8 +3996,8 @@ tbody.collapse.show {
 }
 
 .custom-file-input:focus ~ .custom-file-control {
-    -webkit-box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #D5734A;
-            box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #D5734A;
+    -webkit-box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem var(--ion-color-primary);
+            box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem var(--ion-color-primary);
 }
 
 .custom-file-control {
@@ -4023,7 +4112,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #D5734A;
+    background-color: var(--ion-color-primary);
 }
 
 .nav-fill .nav-item {
@@ -4943,7 +5032,7 @@ tbody.collapse.show {
 
 .badge-primary {
     color: #fff;
-    background-color: #D5734A;
+    background-color: var(--ion-color-primary);
 }
 
 .badge-primary[href]:focus, .badge-primary[href]:hover {
@@ -4954,7 +5043,7 @@ tbody.collapse.show {
 
 .badge-secondary {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
 }
 
 .badge-secondary[href]:focus, .badge-secondary[href]:hover {
@@ -4965,7 +5054,7 @@ tbody.collapse.show {
 
 .badge-success {
     color: #fff;
-    background-color: rgba(0, 153, 153, 0.8);
+    background-color: var(--ion-color-secondary);
 }
 
 .badge-success[href]:focus, .badge-success[href]:hover {
@@ -5317,8 +5406,8 @@ tbody.collapse.show {
 .list-group-item.active {
     z-index: 1;
     color: #fff;
-    background-color: #D5734A;
-    border-color: #D5734A;
+    background-color: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
 }
 
 .list-group-flush .list-group-item {
@@ -6227,7 +6316,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #D5734A !important;
+    background-color: var(--ion-color-primary) !important;
 }
 
 a.bg-primary:focus, a.bg-primary:hover {
@@ -6235,7 +6324,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .bg-secondary {
-    background-color: rgba(0, 153, 153, 0.8) !important;
+    background-color: var(--ion-color-secondary) !important;
 }
 
 a.bg-secondary:focus, a.bg-secondary:hover {
@@ -6243,7 +6332,7 @@ a.bg-secondary:focus, a.bg-secondary:hover {
 }
 
 .bg-success {
-    background-color: rgba(0, 153, 153, 0.8) !important;
+    background-color: var(--ion-color-secondary) !important;
 }
 
 a.bg-success:focus, a.bg-success:hover {
@@ -6323,15 +6412,15 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .border-primary {
-    border-color: #D5734A !important;
+    border-color: var(--ion-color-primary) !important;
 }
 
 .border-secondary {
-    border-color: rgba(0, 153, 153, 0.8) !important;
+    border-color: var(--ion-color-secondary) !important;
 }
 
 .border-success {
-    border-color: rgba(0, 153, 153, 0.8) !important;
+    border-color: var(--ion-color-secondary) !important;
 }
 
 .border-info {
@@ -8946,7 +9035,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .text-primary {
-    color: #D5734A !important;
+    color: var(--ion-color-primary) !important;
 }
 
 a.text-primary:focus, a.text-primary:hover {
@@ -8954,7 +9043,7 @@ a.text-primary:focus, a.text-primary:hover {
 }
 
 .text-secondary {
-    color: rgba(0, 153, 153, 0.8) !important;
+    color: var(--ion-color-secondary) !important;
 }
 
 a.text-secondary:focus, a.text-secondary:hover {
@@ -8962,7 +9051,7 @@ a.text-secondary:focus, a.text-secondary:hover {
 }
 
 .text-success {
-    color: rgba(0, 153, 153, 0.8) !important;
+    color: var(--ion-color-secondary) !important;
 }
 
 a.text-success:focus, a.text-success:hover {
@@ -13328,7 +13417,7 @@ h1.font-italic, h2.font-italic, h3.font-italic, h4.font-italic, h5.font-italic, 
     border: 0;
     border-left-width: 3px;
     border-style: solid;
-    border-color: rgba(0, 153, 153, 0.8);
+    border-color: var(--ion-color-secondary);
     padding-top: 12px;
     padding-bottom: 12px;
 }
@@ -14050,7 +14139,7 @@ select.form-control:not([size]):not([multiple]), .verso-widget select.postform:n
     z-index: 2000;
     overflow: hidden;
     position: fixed;
-    background: rgba(204, 102, 51, 0.9);
+    background: var(--ion-color-tertiary);
 }
 
 .mfp-wrap {
@@ -15383,7 +15472,7 @@ body.verso-agent-explorer .card > .row [class*="col-xs"] .card-img, body.verso-a
 .countdown-clock-box {
     margin-right: 4px;
     padding-right: 4px;
-    border-right: 1px solid rgba(0, 153, 153, 0.8);
+    border-right: 1px solid var(--ion-color-secondary);
 }
 
 .countdown-clock-box:last-child {
@@ -15923,7 +16012,7 @@ body.verso-agent-explorer .card > .row [class*="col-xs"] .card-img, body.verso-a
     margin-right: 0.5em;
     padding: .3em 1em;
     margin-bottom: 0.5em;
-    background: #D5734A;
+    background: var(--ion-color-primary);
     color: #fff;
     opacity: 0.8;
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -16002,7 +16091,7 @@ body.verso-agent-explorer .card > .row [class*="col-xs"] .card-img, body.verso-a
     top: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(204, 102, 51, 0.9);
+    background-color: var(--ion-color-tertiary);
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16196,8 +16285,8 @@ body.verso-agent-explorer .card > .row [class*="col-xs"] .card-img, body.verso-a
                 column-rule-width: 1px;
         -webkit-column-rule-style: solid;
                 column-rule-style: solid;
-        -webkit-column-rule-color: rgba(0, 153, 153, 0.8);
-                column-rule-color: rgba(0, 153, 153, 0.8);
+        -webkit-column-rule-color: var(--ion-color-secondary);
+                column-rule-color: var(--ion-color-secondary);
     }
 }
 
@@ -16729,7 +16818,7 @@ body.verso-agent-touch .verso-os-animation.animated {
 
 .verso-nav-inner {
     position: relative;
-    background-color: rgba(204, 102, 51, 0.9);
+    background-color: var(--ion-color-tertiary);
 }
 
 .verso-nav-shadow-style-1 .verso-nav-inner:before, .verso-nav-shadow-style-1 .verso-nav-inner:after {
@@ -16926,7 +17015,7 @@ body.verso-agent-touch .verso-os-animation.animated {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: rgba(204, 102, 51, 0.9);
+    background-color: var(--ion-color-tertiary);
 }
 
 .verso-nav-dropdown li a {
@@ -17232,7 +17321,7 @@ body.verso-agent-touch .verso-os-animation.animated {
 }
 
 .verso-header-float .verso-nav .verso-nav-container {
-    background-color: rgba(204, 102, 51, 0.9);
+    background-color: var(--ion-color-tertiary);
     -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 4px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 4px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
     position: relative;
@@ -17366,7 +17455,7 @@ body.verso-agent-touch .verso-os-animation.animated {
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
-        background-color: #D5734A;
+        background-color: var(--ion-color-primary);
         border-radius: 21px;
         -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 3px 1px -2px rgba(0, 0, 0, 0.06);
                 box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 3px 1px -2px rgba(0, 0, 0, 0.06);
@@ -17380,7 +17469,7 @@ body.verso-agent-touch .verso-os-animation.animated {
         color: #fff;
     }
     .verso-nav-list > li.nav-btn.nav-btn-secondary a:after {
-        background-color: rgba(0, 153, 153, 0.8);
+        background-color: var(--ion-color-secondary);
     }
     .verso-nav-widget {
         display: -webkit-box;
@@ -17540,7 +17629,7 @@ body.verso-agent-touch .verso-os-animation.animated {
                 box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.02), 0 4px 5px 0 rgba(0, 0, 0, 0.05), 0 1px 10px 0 rgba(0, 0, 0, 0.01);
     }
     .verso-header-transparent .verso-nav:not(.verso-nav-scrolled) .verso-nav-inner {
-        background-color: rgba(204, 102, 51, 0.9);
+        background-color: var(--ion-color-tertiary);
     }
     .verso-header-transparent .verso-nav:not(.verso-nav-scrolled) .verso-nav-inner:before, .verso-header-transparent .verso-nav:not(.verso-nav-scrolled) .verso-nav-inner:after {
         display: none;
@@ -17736,7 +17825,7 @@ body.verso-agent-touch .verso-os-animation.animated {
 }
 
 .verso-event-day-current, .tribe-events-present {
-    background: rgba(0, 153, 153, 0.8) !important;
+    background: var(--ion-color-secondary) !important;
     color: #fff;
 }
 
@@ -24229,7 +24318,7 @@ body.verso-agent-touch .verso-os-animation.animated {
     content: "";
     width: 12px;
     height: 12px;
-    background: rgba(0, 153, 153, 0.8);
+    background: var(--ion-color-secondary);
     left: 0;
     top: 10px;
     border-radius: 50%;
@@ -24247,7 +24336,7 @@ body.verso-agent-touch .verso-os-animation.animated {
     top: 0;
     bottom: 0;
     left: 6px;
-    background: rgba(0, 153, 153, 0.8);
+    background: var(--ion-color-secondary);
     opacity: 0.2;
     z-index: 1;
 }
@@ -24393,19 +24482,19 @@ body.verso-agent-touch .verso-os-animation.animated {
 }
 
 .verso-demo-bg-orange-45 {
-    background-color: rgba(204, 102, 51, 0.45);
+    background-color: var(--ion-color-tertiary-step3);
 }
 
 .verso-demo-bg-orange-60 {
-    background-color: rgba(204, 102, 51, 0.6);
+    background-color: var(--ion-color-tertiary-step2);
 }
 
 .verso-demo-bg-orange-75 {
-    background-color: rgba(204, 102, 51, 0.75);
+    background-color: var(--ion-color-tertiary-step1);
 }
 
 .verso-demo-bg-orange-90 {
-    background-color: rgba(204, 102, 51, 0.9);
+    background-color: var(--ion-color-tertiary);
 }
 
 .verso-demo-bg-white {
