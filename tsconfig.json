@@ -33,10 +33,11 @@
             "volunteer/*":[ "components/volunteer/*"],
 
             "alor/*"    :[ "templates/alor/*"],
-            "huruma/*"  :[ "templates/huruma/*"],
             "bolo/*"    :[ "templates/bolo/*"],
+            "charity/*" :[ "templates/charity/*"],
+            "huruma/*"  :[ "templates/huruma/*"],
             "proffer/*" :[ "templates/proffer/*"],
-            "charity/*" :[ "templates/charity/*"]
+            "verso/*"   :[ "templates/verso/*"]
         }
 
     },
