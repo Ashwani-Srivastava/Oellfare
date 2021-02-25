@@ -44,7 +44,7 @@ export class VersoHome {
 
     render() {
         return (
-    <div class="verso-content-box verso-content-box-move-behind">
+    <div id='page-wrapper' class="page-wrapper verso-content-box verso-content-box-move-behind">
 
                 <verso-header ngo={this.ngo}></verso-header>
         { /** Header */ }

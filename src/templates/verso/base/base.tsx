@@ -88,12 +88,15 @@ export class VersoBase {
                     'animation-delay': osAnimationDelay
                 });
 
+                console.log(osElement);
+
                 new Waypoint({
+                    context: document.getElementById('page-wrapper'),
                     element: osElement[0],
                     handler: function() {
                         $(this.element).addClass('animated').addClass(osAnimationClass);
                     },
-                    offset: '90%'
+                    offset: '90%',
                 });
             });
         }
@@ -397,11 +400,13 @@ export class VersoBase {
 
         if($header.length > 0) {
             new Waypoint.Sticky({
+                context: document.getElementById('page-wrapper'),
                 element: $header[0],
                 stuckClass: 'verso-nav-stuck'
             });
 
             new Waypoint({
+                context: document.getElementById('page-wrapper'),
                 element: document.body,
                 offset: -200,
                 handler: function(direction) {
@@ -418,6 +423,7 @@ export class VersoBase {
      Back to top button
         /*******************/
         new Waypoint({
+            context: document.getElementById('page-wrapper'),
             element: document.body,
             offset: -200,
             handler: function(direction) {
