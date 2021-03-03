@@ -43,12 +43,17 @@ export class CharityRoot {
 
                     <ion-route url="/" component="huruma-home" />
                     <ion-route url="/about" component="huruma-about" />
+                    <ion-route url="/about/awards" component="huruma-awards" />
                     <ion-route url="/about/press-coverage" component="huruma-press-coverage" />
                     <ion-route url="/about/legal" component="huruma-legal" />
                     <ion-route url="/contact" component="huruma-contact" />
                     <ion-route url="/donate" component="huruma-donate" />
+                    <ion-route url="/donate/champion" component="huruma-champion" />
                     <ion-route url="/projects" component="huruma-projects" />
                     <ion-route url="/projects/:projectSlug" component="huruma-projects-detail" />
+                    <ion-route url="/activities" component="huruma-activities" />
+                    <ion-route url="/activities/milestones" component="huruma-activities-milestones" />
+                    <ion-route url="/activities/:activityId/:activitySlug" component="huruma-activity" />
                     <ion-route url="/volunteer" component="huruma-volunteer" />
 
                 </ion-router>

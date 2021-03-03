@@ -1,3 +1,7 @@
 :host {
   display: block;
 }
+.single-causes img {
+  width: 520px;
+  height: 360px;
+}

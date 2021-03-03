@@ -14,7 +14,7 @@ export class BoloFooter {
 			<footer class="dark">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 sm-mb10">
+						<div class="col-md-6 sm-mb10 text-center text-md-right">
 							<div class="mt10"> 
                                 Built with 
                                 &nbsp; <i style={{ 'color': 'red' }} class="fa fa-heart fa-lg"></i> &nbsp;
@@ -22,7 +22,7 @@ export class BoloFooter {
                             </div>
 						</div>
 
-						<div class="col-md-6 text-left text-md-right">
+						<div class="col-md-6 text-center text-md-right">
 							<div class="social-icons">
 
                                 { this.ngo.reachOut.facebook.length > 0 ?

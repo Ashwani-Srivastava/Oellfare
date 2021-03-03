@@ -1,0 +1,642 @@
+[
+  {
+    "name": "100 Signal TAC",
+    "volunteer": {
+      "recurringFundSupported": 0,
+      "hoursSelf": 0,
+      "attendedVerified": 0,
+      "attendedSelf": 0,
+      "hoursVerified": 0,
+      "fundSupported": 0,
+      "donated": 0,
+      "joined": 0,
+      "required": 100,
+      "unattendedVerified": 0,
+      "unattendedSelf": 0,
+      "registered": 0,
+      "subscribed": 0
+    },
+    "block": { "id": 310000, "name": "Thiruvottiyur" },
+    "isWriteupMade": false,
+    "updatedAt": { "_seconds": 1614047219, "_nanoseconds": 857000000 },
+    "startDate": { "_seconds": 1408057219, "_nanoseconds": 475000000 },
+    "donation": { "required": 0, "collected": 0, "count": 0 },
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "district": { "id": 3100, "name": "Chennai" },
+    "address": "Across Chennai",
+    "description": "A massive road safety awareness campaign was conducted in 100 traffic signals across Chennai and a few parts of Tamil Nadu at the same day and same time in August 2014.",
+    "writeUpText": "Event happened good",
+    "isActive": true,
+    "flag": { "isWriteupMade": true },
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "isBroadcasted": false,
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "sdg": {
+      "name": "",
+      "slug": "",
+      "link": "",
+      "id": 0,
+      "photo": { "url": "", "caption": "" },
+      "description": ""
+    },
+    "eventType": { "name": "", "id": "" },
+    "coordinators": [
+      {
+        "phone": "9941142188",
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "email": "sarmrk@gmail.com",
+        "name": "Radhakrishnan",
+        "photo": { "url": "", "caption": "" },
+        "ngo": {
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "logo": { "caption": "", "url": "" },
+          "slug": "thozhan",
+          "name": "Thozhan"
+        },
+        "priority": 1
+      }
+    ],
+    "ngo": {
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "name": "Thozhan",
+      "slug": "thozhan",
+      "logo": { "url": "", "caption": "" }
+    },
+    "slug": "100-signal-tac",
+    "state": { "name": "TamilNadu", "id": 31 },
+    "project": { "name": "Accident Free Nation", "id": "q98SzEjCA4wiU8ftRmnO" },
+    "writeupText": "",
+    "endDate": { "_seconds": 1408068019, "_nanoseconds": 475000000 },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "coverPhoto": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2F100-signal-tac%2FIMG20210214071037.jpg?alt=media",
+        "caption": ""
+      }
+    ],
+    "createdAt": { "_seconds": 1614047219, "_nanoseconds": 857000000 },
+    "video": { "caption": "Video of 100 Signal TAC", "url": "" },
+    "id": "NMJM1KLXanca35U3580A",
+    "shortCode": "2014-100-tac1"
+  },
+  {
+    "donation": { "collected": 0, "required": 0, "count": 0 },
+    "coverPhoto": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2Fmodel-signal%2FIMG20210214071037.jpg?alt=media",
+        "caption": ""
+      }
+    ],
+    "eventType": { "name": "", "id": "" },
+    "project": { "name": "Accident Free Nation", "id": "q98SzEjCA4wiU8ftRmnO" },
+    "district": { "id": 3100, "name": "Chennai" },
+    "writeupText": "",
+    "description": "The Model Signal project is a major stepping stone in creating an Accident Free Nation. The primary goal of the model signal is safety and usage of technology on the road. The idea is to implement a signal where all existing rules and frameworks will be followed. All the functionalities in the signal would be completely automated, all violators be fined, thus effectively reducing the traffic violations and hence the traffic accidents Our R&D team is working on ideating and conceptualizing an improved version of this model signal. The implementation of model signal would be a leap step in resolving the road safety issues in the country. We submitted this proposal in 2016 to the Greater Chennai Traffic Police and are in discussion with officials regarding matters of implementation and improvisation of the system.",
+    "coordinators": [
+      {
+        "email": "sarmrk@gmail.com",
+        "photo": { "caption": "", "url": "" },
+        "ngo": {
+          "name": "Thozhan",
+          "slug": "thozhan",
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "logo": { "url": "", "caption": "" }
+        },
+        "name": "Radhakrishnan",
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "priority": 1,
+        "phone": "9941142188"
+      }
+    ],
+    "cause": { "name": "Sustainable Cities and Communities", "id": 11 },
+    "video": { "url": "", "caption": "Video of Model Signal" },
+    "id": "NSbiSNOj50dlhQP1mG1x",
+    "startDate": { "_seconds": 1455481839, "_nanoseconds": 716000000 },
+    "createdAt": { "_seconds": 1614049013, "_nanoseconds": 687000000 },
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "sdg": {
+      "photo": { "url": "", "caption": "" },
+      "link": "",
+      "id": 0,
+      "slug": "",
+      "description": "",
+      "name": ""
+    },
+    "endDate": { "_seconds": 1455481839, "_nanoseconds": 716000000 },
+    "state": { "id": 31, "name": "TamilNadu" },
+    "address": "Ashok Nagar, Chennai",
+    "shortCode": "thozhan-model-signal",
+    "ngo": {
+      "slug": "thozhan",
+      "logo": { "url": "", "caption": "" },
+      "name": "Thozhan",
+      "id": "DRl4IBHNfDdxwDCkp6Ql"
+    },
+    "updatedAt": { "_seconds": 1614049013, "_nanoseconds": 687000000 },
+    "isActive": true,
+    "name": "Model Signal",
+    "volunteer": {
+      "registered": 0,
+      "required": 100,
+      "attendedSelf": 0,
+      "hoursVerified": 0,
+      "hoursSelf": 0,
+      "fundSupported": 0,
+      "unattendedVerified": 0,
+      "recurringFundSupported": 0,
+      "joined": 0,
+      "unattendedSelf": 0,
+      "donated": 0,
+      "attendedVerified": 0,
+      "subscribed": 0
+    },
+    "slug": "model-signal",
+    "isBroadcasted": false,
+    "isWriteupMade": false,
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "writeUpText": "Happened well",
+    "flag": { "isWriteupMade": true },
+    "block": { "id": 310000, "name": "Thiruvottiyur" }
+  },
+  {
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "updatedAt": { "_seconds": 1614048538, "_nanoseconds": 865000000 },
+    "id": "YLbbxg3HjrTstd0Nzz9C",
+    "coverPhoto": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2Ffootboard-awareness-campaign%2FIMG20210214071037.jpg?alt=media",
+        "caption": ""
+      }
+    ],
+    "isWriteupMade": false,
+    "project": { "name": "Accident Free Nation", "id": "q98SzEjCA4wiU8ftRmnO" },
+    "block": { "id": 310000, "name": "Thiruvottiyur" },
+    "description": "On the account of 67th Republic Day, in January 2016, we conducted a special drive at 67 bus stops across Chennai on the same day and time to create awareness about the dangers of foot boarding.",
+    "sdg": {
+      "id": 0,
+      "description": "",
+      "name": "",
+      "slug": "",
+      "link": "",
+      "photo": { "url": "", "caption": "" }
+    },
+    "endDate": { "_seconds": 1456173031, "_nanoseconds": 194000000 },
+    "video": { "caption": "Video of Footboard Awareness Campaign", "url": "" },
+    "volunteer": {
+      "attendedSelf": 0,
+      "registered": 0,
+      "unattendedSelf": 0,
+      "subscribed": 0,
+      "donated": 0,
+      "required": 100,
+      "fundSupported": 0,
+      "recurringFundSupported": 0,
+      "attendedVerified": 0,
+      "hoursVerified": 0,
+      "unattendedVerified": 0,
+      "hoursSelf": 0,
+      "joined": 0
+    },
+    "startDate": { "_seconds": 1453494631, "_nanoseconds": 194000000 },
+    "shortCode": "2016-footboard-awareness",
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "slug": "footboard-awareness-campaign",
+    "flag": { "isWriteupMade": true },
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "isBroadcasted": false,
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "createdAt": { "_seconds": 1614048538, "_nanoseconds": 865000000 },
+    "eventType": { "name": "", "id": "" },
+    "state": { "id": 31, "name": "TamilNadu" },
+    "donation": { "required": 0, "count": 0, "collected": 0 },
+    "address": "Across Chennai",
+    "writeupText": "",
+    "name": "Footboard Awareness Campaign",
+    "isActive": true,
+    "writeUpText": "Good event",
+    "district": { "name": "Chennai", "id": 3100 },
+    "ngo": {
+      "logo": { "url": "", "caption": "" },
+      "slug": "thozhan",
+      "name": "Thozhan",
+      "id": "DRl4IBHNfDdxwDCkp6Ql"
+    },
+    "coordinators": [
+      {
+        "priority": 1,
+        "email": "sarmrk@gmail.com",
+        "name": "Radhakrishnan",
+        "phone": "9941142188",
+        "ngo": {
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "logo": { "url": "", "caption": "" },
+          "name": "Thozhan",
+          "slug": "thozhan"
+        },
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "photo": { "url": "", "caption": "" }
+      }
+    ]
+  },
+  {
+    "sdg": {
+      "description": "",
+      "name": "",
+      "id": 0,
+      "slug": "",
+      "link": "",
+      "photo": { "url": "", "caption": "" }
+    },
+    "writeUpText": "Good One",
+    "project": { "name": "Accident Free Nation", "id": "q98SzEjCA4wiU8ftRmnO" },
+    "state": { "id": 31, "name": "TamilNadu" },
+    "startDate": { "_seconds": 1471213821, "_nanoseconds": 127000000 },
+    "isBroadcasted": false,
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "address": "Across Chennai",
+    "eventType": { "id": "", "name": "" },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "shortCode": "2016-100-signal",
+    "updatedAt": { "_seconds": 1614049379, "_nanoseconds": 49000000 },
+    "cause": { "name": "Sustainable Cities and Communities", "id": 11 },
+    "block": { "name": "Thiruvottiyur", "id": 310000 },
+    "endDate": { "_seconds": 1471213821, "_nanoseconds": 127000000 },
+    "id": "hdU1PkdJhpWCkeEtOpn8",
+    "district": { "name": "Chennai", "id": 3100 },
+    "donation": { "collected": 0, "count": 0, "required": 0 },
+    "name": "100 Signal TAC",
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "video": { "url": "", "caption": "Video of 100 Signal TAC" },
+    "isWriteupMade": false,
+    "coordinators": [
+      {
+        "photo": { "url": "", "caption": "" },
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "ngo": {
+          "logo": { "url": "", "caption": "" },
+          "name": "Thozhan",
+          "slug": "thozhan",
+          "id": "DRl4IBHNfDdxwDCkp6Ql"
+        },
+        "phone": "9941142188",
+        "email": "sarmrk@gmail.com",
+        "name": "Radhakrishnan",
+        "priority": 1
+      }
+    ],
+    "ngo": {
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "logo": { "url": "", "caption": "" },
+      "name": "Thozhan",
+      "slug": "thozhan"
+    },
+    "description": "A massive road safety awareness campaign was conducted in 100 traffic signals across Chennai and a few parts of Tamil Nadu at the same day and same time in August 2015 with 100 Yama. This campaign was recognized by India Book of Records as “Largest Traffic Awareness Campaign in India”",
+    "coverPhoto": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2F100-signal-tac%2FIMG20210214071037.jpg?alt=media",
+        "caption": ""
+      }
+    ],
+    "writeupText": "",
+    "volunteer": {
+      "attendedVerified": 0,
+      "joined": 0,
+      "donated": 0,
+      "fundSupported": 0,
+      "unattendedSelf": 0,
+      "hoursSelf": 0,
+      "subscribed": 0,
+      "required": 100,
+      "registered": 0,
+      "hoursVerified": 0,
+      "recurringFundSupported": 0,
+      "unattendedVerified": 0,
+      "attendedSelf": 0
+    },
+    "createdAt": { "_seconds": 1614049379, "_nanoseconds": 49000000 },
+    "slug": "100-signal-tac",
+    "flag": { "isWriteupMade": true },
+    "isActive": true
+  },
+  {
+    "coordinators": [
+      {
+        "priority": 1,
+        "name": "Radhakrishnan",
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "photo": { "url": "", "caption": "" },
+        "email": "sarmrk@gmail.com",
+        "phone": "9941142188",
+        "ngo": {
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "name": "Thozhan",
+          "slug": "thozhan",
+          "logo": { "url": "", "caption": "" }
+        }
+      }
+    ],
+    "project": { "id": "q98SzEjCA4wiU8ftRmnO", "name": "Accident Free Nation" },
+    "shortCode": "2015-100-signal-tac",
+    "updatedAt": { "_seconds": 1614048435, "_nanoseconds": 169000000 },
+    "isBroadcasted": false,
+    "startDate": { "_seconds": 1439593228, "_nanoseconds": 323000000 },
+    "slug": "100-signal-tac",
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "isActive": true,
+    "coverPhoto": [
+      {
+        "caption": "",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2F100-signal-tac%2FIMG20210214071037.jpg?alt=media"
+      }
+    ],
+    "sdg": {
+      "link": "",
+      "description": "",
+      "slug": "",
+      "id": 0,
+      "name": "",
+      "photo": { "url": "", "caption": "" }
+    },
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "video": { "url": "", "caption": "Video of 100 Signal TAC" },
+    "donation": { "required": 0, "collected": 0, "count": 0 },
+    "endDate": { "_seconds": 1439604028, "_nanoseconds": 323000000 },
+    "block": { "id": 310000, "name": "Thiruvottiyur" },
+    "writeupText": "",
+    "flag": { "isWriteupMade": true },
+    "district": { "id": 3100, "name": "Chennai" },
+    "ngo": {
+      "logo": { "url": "", "caption": "" },
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "name": "Thozhan",
+      "slug": "thozhan"
+    },
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "description": "A massive road safety awareness campaign was conducted in 100 traffic signals across Chennai and a few parts of Tamil Nadu at the same day and same time in August 2015.",
+    "eventType": { "name": "", "id": "" },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "writeUpText": "",
+    "createdAt": { "_seconds": 1614048435, "_nanoseconds": 169000000 },
+    "name": "100 Signal TAC",
+    "volunteer": {
+      "hoursVerified": 0,
+      "attendedVerified": 0,
+      "donated": 0,
+      "hoursSelf": 0,
+      "recurringFundSupported": 0,
+      "unattendedVerified": 0,
+      "registered": 0,
+      "unattendedSelf": 0,
+      "attendedSelf": 0,
+      "subscribed": 0,
+      "joined": 0,
+      "fundSupported": 0,
+      "required": 100
+    },
+    "isWriteupMade": false,
+    "state": { "id": 31, "name": "TamilNadu" },
+    "address": "Across Chennai",
+    "id": "mBPYSYVbtobKvYCqfhc9"
+  },
+  {
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "slug": "safety-torch-run",
+    "eventType": { "name": "", "id": "" },
+    "project": { "name": "Accident Free Nation", "id": "q98SzEjCA4wiU8ftRmnO" },
+    "address": "Throughout Chennai",
+    "startDate": { "_seconds": 1420936203, "_nanoseconds": 94000000 },
+    "isBroadcasted": false,
+    "state": { "id": 31, "name": "TamilNadu" },
+    "writeUpText": "Good one",
+    "shortCode": "2015-safety-torch-run",
+    "volunteer": {
+      "unattendedVerified": 0,
+      "recurringFundSupported": 0,
+      "attendedVerified": 0,
+      "donated": 0,
+      "subscribed": 0,
+      "joined": 0,
+      "hoursSelf": 0,
+      "required": 100,
+      "attendedSelf": 0,
+      "fundSupported": 0,
+      "unattendedSelf": 0,
+      "registered": 0,
+      "hoursVerified": 0
+    },
+    "coverPhoto": [
+      {
+        "caption": "",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2Fsafety-torch-run%2FIMG20210214071037.jpg?alt=media"
+      }
+    ],
+    "sdg": {
+      "description": "",
+      "link": "",
+      "photo": { "url": "", "caption": "" },
+      "name": "",
+      "id": 0,
+      "slug": ""
+    },
+    "district": { "id": 3100, "name": "Chennai" },
+    "donation": { "required": 0, "count": 0, "collected": 0 },
+    "ngo": {
+      "logo": { "url": "", "caption": "" },
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "name": "Thozhan",
+      "slug": "thozhan"
+    },
+    "isWriteupMade": false,
+    "endDate": { "_seconds": 1420947003, "_nanoseconds": 94000000 },
+    "flag": { "isWriteupMade": true },
+    "coordinators": [
+      {
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "ngo": {
+          "slug": "thozhan",
+          "logo": { "url": "", "caption": "" },
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "name": "Thozhan"
+        },
+        "priority": 1,
+        "photo": { "caption": "", "url": "" },
+        "email": "sarmrk@gmail.com",
+        "phone": "9941142188",
+        "name": "Radhakrishnan"
+      }
+    ],
+    "writeupText": "",
+    "video": { "url": "", "caption": "Video of Safety Torch Run" },
+    "id": "oVPny0gV4dVLyFMcN007",
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "isActive": true,
+    "createdAt": { "_seconds": 1614047752, "_nanoseconds": 765000000 },
+    "block": { "name": "Thiruvottiyur", "id": 310000 },
+    "name": "Safety Torch Run",
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "updatedAt": { "_seconds": 1614047752, "_nanoseconds": 765000000 },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "description": "On the account of Road safety week and 65th Republic day, we organized a 65 km relay rally for “Safety Torch Run” on 11 January 2015. People who follow road safety rules in their daily life carried a flame of light torch and went through critical spots in Chennai to spread road safety messages. Reiterating the necessities of wearing helmet and seat belt, educating them about safe road crossing by interacting with them about following rules etc. were some of the activities."
+  },
+  {
+    "createdAt": { "_seconds": 1614049140, "_nanoseconds": 512000000 },
+    "description": "“Cheers to Safety”\n\nIn 2016, 3 of our warriors have covered 400+ Km in cycle starting from Chennai – Thindivanam – Villupuram -Puducherry meeting thousands of people in schools, colleges, public places to spread awareness about road safety in a span of 3 days.",
+    "name": "400kms Cycle Rally",
+    "sdg": {
+      "slug": "",
+      "id": 0,
+      "photo": { "url": "", "caption": "" },
+      "description": "",
+      "link": "",
+      "name": ""
+    },
+    "block": { "id": 310000, "name": "Thiruvottiyur" },
+    "volunteer": {
+      "attendedSelf": 0,
+      "recurringFundSupported": 0,
+      "required": 100,
+      "hoursSelf": 0,
+      "unattendedVerified": 0,
+      "joined": 0,
+      "subscribed": 0,
+      "hoursVerified": 0,
+      "fundSupported": 0,
+      "unattendedSelf": 0,
+      "attendedVerified": 0,
+      "donated": 0,
+      "registered": 0
+    },
+    "ngo": {
+      "logo": { "url": "", "caption": "" },
+      "slug": "thozhan",
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "name": "Thozhan"
+    },
+    "video": { "caption": "Video of 400kms Cycle Rally", "url": "" },
+    "project": { "id": "q98SzEjCA4wiU8ftRmnO", "name": "Accident Free Nation" },
+    "writeUpText": "Awesome one",
+    "flag": { "isWriteupMade": true },
+    "isWriteupMade": false,
+    "isBroadcasted": false,
+    "updatedAt": { "_seconds": 1614049140, "_nanoseconds": 512000000 },
+    "startDate": { "_seconds": 1455921014, "_nanoseconds": 462000000 },
+    "slug": "400kms-cycle-rally",
+    "writeupText": "",
+    "donation": { "required": 0, "count": 0, "collected": 0 },
+    "shortCode": "400kms-cycle-rally",
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "coordinators": [
+      {
+        "phone": "9941142188",
+        "ngo": {
+          "slug": "thozhan",
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "logo": { "url": "", "caption": "" },
+          "name": "Thozhan"
+        },
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "photo": { "url": "", "caption": "" },
+        "name": "Radhakrishnan",
+        "priority": 1,
+        "email": "sarmrk@gmail.com"
+      }
+    ],
+    "eventType": { "id": "", "name": "" },
+    "district": { "name": "Chennai", "id": 3100 },
+    "endDate": { "_seconds": 1613961014, "_nanoseconds": 462000000 },
+    "isActive": true,
+    "id": "osvCJ8wvWOqxbtQfoJuU",
+    "state": { "id": 31, "name": "TamilNadu" },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "address": "Chennai – Thindivanam – Villupuram -Puducherry",
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "coverPhoto": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2F400kms-cycle-rally%2FIMG20210214071037.jpg?alt=media",
+        "caption": ""
+      }
+    ],
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2"
+  },
+  {
+    "project": { "id": "q98SzEjCA4wiU8ftRmnO", "name": "Accident Free Nation" },
+    "name": "Bike Rally",
+    "id": "qWL7u43kqm5aio1ulCQz",
+    "coverPhoto": [
+      {
+        "caption": "",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2Fthozhan%2Fevents%2Fbike-rally%2FIMG20210214071037.jpg?alt=media"
+      }
+    ],
+    "flag": { "isWriteupMade": true },
+    "slug": "bike-rally",
+    "eventType": { "name": "", "id": "" },
+    "coordinators": [
+      {
+        "photo": { "url": "", "caption": "" },
+        "name": "Radhakrishnan",
+        "phone": "9941142188",
+        "ngo": {
+          "id": "DRl4IBHNfDdxwDCkp6Ql",
+          "slug": "thozhan",
+          "logo": { "caption": "", "url": "" },
+          "name": "Thozhan"
+        },
+        "id": "CXb6U6xEDnYhXoEIxeBH5XS55qW2",
+        "email": "sarmrk@gmail.com",
+        "priority": 1
+      }
+    ],
+    "video": { "url": "", "caption": "Video of Bike Rally" },
+    "isBroadcasted": false,
+    "createdAt": { "_seconds": 1614047625, "_nanoseconds": 850000000 },
+    "isActive": true,
+    "writeUpText": "Good one",
+    "createdBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2",
+    "shortCode": "2014-bike-rally",
+    "sdg": {
+      "photo": { "url": "", "caption": "" },
+      "slug": "",
+      "name": "",
+      "description": "",
+      "link": "",
+      "id": 0
+    },
+    "block": { "id": 310000, "name": "Thiruvottiyur" },
+    "updatedAt": { "_seconds": 1614047625, "_nanoseconds": 850000000 },
+    "district": { "name": "Chennai", "id": 3100 },
+    "ngo": {
+      "slug": "thozhan",
+      "logo": { "url": "", "caption": "" },
+      "id": "DRl4IBHNfDdxwDCkp6Ql",
+      "name": "Thozhan"
+    },
+    "location": { "_latitude": 38.8951, "_longitude": -77.0364 },
+    "cause": { "id": 11, "name": "Sustainable Cities and Communities" },
+    "writeupText": "",
+    "donation": { "count": 0, "collected": 0, "required": 0 },
+    "startDate": { "_seconds": 1413772250, "_nanoseconds": 544000000 },
+    "isWriteupMade": false,
+    "endDate": { "_seconds": 1413783050, "_nanoseconds": 544000000 },
+    "volunteer": {
+      "donated": 0,
+      "fundSupported": 0,
+      "required": 100,
+      "attendedVerified": 0,
+      "hoursVerified": 0,
+      "joined": 0,
+      "subscribed": 0,
+      "unattendedSelf": 0,
+      "hoursSelf": 0,
+      "recurringFundSupported": 0,
+      "attendedSelf": 0,
+      "unattendedVerified": 0,
+      "registered": 0
+    },
+    "description": "A bike rally was organized on October of 2014 by selecting the people who took oath to follow traffic rules and they rode wearing safety gears and created awareness to the public highlighting the importance of Safety Gears.",
+    "state": { "id": 31, "name": "TamilNadu" },
+    "address": "Ascendos IT Park, Taramani",
+    "updatedBy": "v2zWFLoqPngVeZjDgYL8qD2T0IA2"
+  }
+]

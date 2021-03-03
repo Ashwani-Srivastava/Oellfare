@@ -1,0 +1,11 @@
+.hello {
+  height: 270px;
+}
+.shadow {
+  padding: None;
+  margin: None;
+}
+.play-button {
+  position: absolute;
+  left: 100px;
+}

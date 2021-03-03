@@ -1,7 +1,7 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
 import { HurumaBase         }   from    'huruma/base/base'
-//import { DialogService      }   from    'common/dialog.service';
+import { DialogService      }   from    'common/dialog.service';
 import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 
@@ -9,16 +9,16 @@ import * as ngo                 from    'assets/ngo.json';
     tag: 'huruma-contact',
     styleUrl: 'contact.css',
 })
-export class HurumaContact {
+ export class HurumaContact {
 
     @Prop() ngo                 :   any                 =   ngo
 
-    /*
+    
     private formValue           :   any                 =   {
         name                    :   '',
         query                   :   ''
     };
-    */
+
 
     constructor () {
         console.log('Contact :: Constructor');
@@ -35,7 +35,7 @@ export class HurumaContact {
 
     }
 
-    /*
+    
     private handleCommonInput(e, fieldName: string): void {
         this.formValue[fieldName]=  e.target.value;
     }
@@ -45,6 +45,8 @@ export class HurumaContact {
 
         const name              =   this.formValue.name;
         const query             =   this.formValue.query;
+
+        console.log(1);
 
         if (name.length < 2) {
             await DialogService.presentAlert('Error', 'Please enter your name');
@@ -57,23 +59,119 @@ export class HurumaContact {
         }
 
         window.location.href    =   `https://wa.me/${this.ngo.reachOut.phone1}?text=Hi. I am ${name}. ${query}`;
-
     }
-    */
+    
 
     render() {
 
-        return [
+        return (
+            <div class="page-wrapper">
+                <huruma-header ngo={this.ngo}></huruma-header>,
 
-            <huruma-header ngo={this.ngo}></huruma-header>,
+                <section class="contact-section ptb-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="contact-info-address">
+                                    <h3>Quick Contact </h3>
 
-            <h1> Contact us </h1>,
+                                    <div class="info-contact">
+                                        <i class="flaticon-pin"></i>
+                                        <h3>Location</h3>
+                                        <span>{this.ngo.address}</span>
+                                    </div>
 
-            <huruma-footer ngo={this.ngo}></huruma-footer>,
+                                    <div class="info-contact">
+                                        <i class="flaticon-call"></i>
+                                        <h3>Call Us</h3>
+                                        <span><a href="tel:+882-569-756">{this.ngo.reachOut.phone1}</a></span>
+                                    </div>
 
-            <span> { HelmetService.render(this.ngo, 'Contact') } </span>
+                                    <div class="info-contact">
+                                        <i class="flaticon-email"></i>
+                                        <h3>Email Us</h3>
+                                        <span>
+                                            <a href="mailto:hello@plamb.com">
+                                                {this.ngo.reachOut.email}
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
 
-        ];
+                            <div class="col-lg-8">
+                                <div class="contact-area">
+                                    <div class="contact-content">
+                                        <h2>Let’s talk!</h2>
+                                        <h5>Fill out the form to reach us through Whatsapp!</h5>
+                                    </div>
+
+                                    <div class="contact-form">
+                                        <form id="contactForm">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <input 
+                                                        type="text" 
+                                                        name="name" 
+                                                        id="name" 
+                                                        class="form-control" 
+                                                        required data-error="Please enter your name" 
+                                                        onInput={ (e) => this.handleCommonInput(e, 'name')}
+                                                        placeholder="Name"/>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea 
+                                                        name="message" 
+                                                        class="form-control" 
+                                                        id="message" 
+                                                        required data-error="Write your query" 
+                                                        onInput={ (e) => this.handleCommonInput(e, 'query')}
+                                                        placeholder="Your Query"></textarea>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="send-btn">
+                                                        <button 
+                                                            onClick={() => this.sendMessage()}
+                                                            type="submit" 
+                                                            class="default-btn">
+                                                            Contact us
+                                                            <i class="flaticon-right"></i>
+                                                            <span></span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* //  <!-- End Contact Area -->
+
+                // <!-- Start Map Area -->  */}
+                <div class="map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.97757859632!2d80.18950631536964!3d13.037099116963866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266d4377f9d27%3A0xd881baee6613b9e6!2sThozhan%20Trust!5e0!3m2!1sen!2sin!4v1614349751839!5m2!1sen!2sin"></iframe>
+                </div>
+                {/* //  <!-- End Map Area -->  */}
+
+                <huruma-footer ngo={this.ngo}></huruma-footer>,
+
+                <span> { HelmetService.render(this.ngo, 'Contact') } </span>
+            </div>
+
+        );
 
     }
 

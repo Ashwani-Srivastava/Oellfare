@@ -35,17 +35,40 @@ export class HurumaProjectsDetail {
     }
 
     render() {
+        var image=this.project.photo.url;
         console.log(`Project :: ${this.projectSlug} :: Render`);
         return [
+            <div class="page-wrapper">
+            <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            
+            <huruma-title name={this.project.name} bg-image={image}></huruma-title>
+            
+        <section class="causes-details-area ptb-100" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="causes-details-desc">
 
-            <huruma-header ngo={this.ngo}></huruma-header>,
+                            <div class="causes-details-text">
+                                <div class="progress pink">
+                                </div>
+                                
+                                <h3>{this.project.name}</h3>
+								<p>{this.project.description}</p>
+                                  
+                                </div>
 
-            <h1> Projects - { this.projectSlug }</h1>,
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
             <huruma-footer ngo={this.ngo}></huruma-footer>,
 
             <span> { HelmetService.render(this.ngo, this.project.name) } </span>
-
+            </div>
         ];
     }
 

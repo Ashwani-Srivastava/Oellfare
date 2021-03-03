@@ -1,7 +1,7 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
 import { VersoBase          }   from    'verso/base/base'
-import { DialogService      }   from    'common/dialog.service';
+//import { DialogService      }   from    'common/dialog.service';
 import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 
@@ -13,10 +13,12 @@ export class VersoContact {
 
     @Prop() ngo                 :   any                 =   ngo
 
+    /*
     private formValue           :   any                 =   {
         name                    :   '',
         query                   :   ''
     };
+    */
 
     constructor () {
         console.log('Contact :: Constructor');
@@ -32,6 +34,7 @@ export class VersoContact {
         VersoBase.setupEssentials();
     }
 
+    /*
     private handleCommonInput(e, fieldName: string): void {
         this.formValue[fieldName]=  e.target.value;
     }
@@ -55,6 +58,7 @@ export class VersoContact {
         window.location.href    =   `https://wa.me/${this.ngo.reachOut.phone1}?text=Hi. I am ${name}. ${query}`;
 
     }
+    */
 
     render() {
 

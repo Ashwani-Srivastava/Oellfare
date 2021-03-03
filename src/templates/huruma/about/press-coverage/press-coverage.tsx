@@ -21,18 +21,91 @@ export class HurumaPressCoverage {
 
 
     render() {
-
+        //var image='url('+this.ngo.photos[6]+')';
+        var image=this.ngo.photos[6];
         return [
+            <div class="page-wrapper">
 
-            <huruma-header ngo={this.ngo}></huruma-header>,
+            <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            
+            <huruma-title name='Press Coverage' bg-image={image}></huruma-title>
 
-            <h1> About us - Press Coverage </h1>,
+      { /** Start Causes Area  */ }
+      <section class="causes-section pt-100 pb-70">
+          <div class="container">
+              <div class="section-title">
+                  <span>
+                      <i class="flaticon-ribbon"></i>
+                      Our Causes
+                  </span>
+                  <h2>Our Press Coverage</h2>
+                      
+                  </div>
+
+              <div class="row my-row justify-content-md-around align-items-stretch">
+              { this.ngo.media.slice(0) .map(p => (
+                           <div class="col-lg-4 col-md-6">
+                           <div class="single-causes">
+                               <img src={p.photo.url} alt="image"/ >
+                               <div class="icon">
+                                   <i class="flaticon-book-1"></i>
+                               </div>
+   
+                               <div class="causes-content">
+                                   {/* <span>{p.photo.caption}</span> */}
+                                   <h3>{p.name}</h3>
+                                   <p>{p.publicationName}</p>
+   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                          )) }
+
+                  
+              </div>
+          </div>
+      </section>
+      { /** End Causes Area  */ }
+
+
+     
+
+              
 
             <huruma-footer ngo={this.ngo}></huruma-footer>,
 
-            <span> { HelmetService.render(this.ngo, 'Press Coverage') } </span>
+            <span> { HelmetService.render(this.ngo, 'Projects') } </span>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
         ];
+
 
     }
 
 }
+
+
+
+
+
+
+

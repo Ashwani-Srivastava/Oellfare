@@ -9,7 +9,7 @@ import * as ngo                 from    'assets/ngo.json';
     tag: 'proffer-contact',
     styleUrl: 'contact.css',
 })
-export class ProfferContact {
+ export class ProfferContact {
 
     @Prop() ngo                 :   any                 =   ngo
 
@@ -76,8 +76,8 @@ export class ProfferContact {
                                             <li>Contact us</li>
                                         </ol>
                                     </div>
-                                </div> { /** end row */ }
-                            </div> { /** end container */ }
+                                </div> 
+                            </div> 
                         </div>
                     </div>
                 </section>

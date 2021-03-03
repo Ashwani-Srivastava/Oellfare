@@ -27,6 +27,19 @@ export class HurumaLegalPage {
         HurumaBase.setupEssentials();
     }
 
+    private legalData = [{
+        'name': '2018 - 2019 IT Audit',
+        'date': 'August, 2019',
+        'url': 'https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Flegal%2FFY%202018-2019.pdf?alt=media&token=c7fffb36-6d83-4ce0-8691-8f24e4e89614'
+    }, {
+        'name': '2017 - 2018 IT Audit',
+        'date': 'August, 2018',
+        'url': 'https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Flegal%2FFY%202017-2018.pdf?alt=media&token=5eceb397-309c-4210-b62b-977a8ef08225'
+    }, {
+        'name': '2016 - 2017 IT Audit',
+        'date': 'January, 2018',
+        'url': 'https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FDRl4IBHNfDdxwDCkp6Ql%2Flegal%2FFY%202016-2017.pdf?alt=media&token=a5a5a2a0-4c26-4936-b007-30bbd19f76f4'
+    }];
 
     render() {
 
@@ -34,23 +47,9 @@ export class HurumaLegalPage {
 
         <div class="page-wrapper">
 
-            <huruma-header ngo={this.ngo}></huruma-header>
+            <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
 
-            <div class="page-title-area">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="page-title-content">
-                                <h2>About us</h2>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>Contact</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <huruma-title name='Legal' parent='About us' bg-image='/assets/images/books-001x1024.jpg'></huruma-title>
 
             <section class="contact-section ptb-100">
                 <div class="container">
@@ -92,35 +91,21 @@ export class HurumaLegalPage {
                                     <section class="widget widget_huruma_posts_thumb">
                                         <h3 class="widget-title"> Annual IT Filing </h3>
 
+
+                                        { this.legalData.map(doc => (
                                         <article class="item">
-                                            <a href="#" class="thumb">
-                                                <span class="fullimage cover bg1" role="img"></span>
-                                            </a>
+                                            <i class="flaticon-email thumb" style={{ 'width': '40px', 'height': '40px', 'font-size': '32px' }}></i>
                                             <div class="info">
-                                                <time dateTime="2019-06-30">June 30, 2020</time>
+                                                <time dateTime="2019-06-30"> { doc.date } </time>
                                                 <h4 class="title usmall">
-                                                    <a href="#"> 2019 - 2020 IT Audit </a>
+                                                    <a href={ doc.url }> { doc.name } </a>
                                                 </h4>
                                             </div>
 
                                             <div class="clear"></div>
                                         </article>
+                                        )) }
 
-
-                                        
-                                        <article class="item">
-                                            <a href="#" class="thumb">
-                                                <span class="fullimage cover bg4" role="img"></span>
-                                            </a>
-                                            <div class="info">
-                                                <time dateTime="2019-06-30">June 30, 2020</time>
-                                                <h4 class="title usmall">
-                                                    <a href="#"> 2018 - 2019 IT Audit </a>
-                                                </h4>
-                                            </div>
-
-                                            <div class="clear"></div>
-                                        </article>
                                     </section>
                                 </div>
                             </div>

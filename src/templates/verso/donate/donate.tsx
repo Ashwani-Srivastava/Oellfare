@@ -15,8 +15,8 @@ import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
 import { NgoService         }   from    'ngo/ngo.service';
-import { PaymentState       }   from    'payment/payment.model';
-import { PaymentService     }   from    'payment/payment.service';
+//import { PaymentState       }   from    'payment/payment.model';
+//import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 import { UtilityService     }   from    'common/utility.service';
 
@@ -39,10 +39,10 @@ export class VersoDonate {
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
-    private donationAmount      :   number              =   1000;
-    private whyDonate           :   string              =   '';
-    private referredBy          :   string              =   '';
-    private isAnonymous         :   boolean             =   false;
+    //private donationAmount      :   number              =   1000;
+    //private whyDonate           :   string              =   '';
+    //private referredBy          :   string              =   '';
+    //private isAnonymous         :   boolean             =   false;
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -99,8 +99,10 @@ export class VersoDonate {
             DialogService.dismissDefaultLoader();
             DialogService.presentAlert('Auth Error', JSON.stringify(error));
         }); 
+
     }
 
+    /*
     private async makeDonation(): Promise<any> {
         console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
 
@@ -129,6 +131,7 @@ export class VersoDonate {
 
         //await DialogService.presentToast('Donated');
     }
+    */
 
 
     private async openAuthDrawer() {
@@ -146,6 +149,7 @@ export class VersoDonate {
 
     }
 
+    /*
     private handleCommonInput(e, fieldName: string): void {
         console.log(e.target.value, fieldName);
         if (fieldName === 'donationAmount') {
@@ -156,6 +160,7 @@ export class VersoDonate {
             this[fieldName]     =   e.target.value;
         }
     }
+    */
 
 
     render() {

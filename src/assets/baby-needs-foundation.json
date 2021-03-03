@@ -1,0 +1,213 @@
+{
+  "status": 3,
+  "address": "Chennai, India",
+  "mission": [ "" ],
+  "bank": { "bankName": "", "accountName": "", "accountNo": "", "ifscCode": "" },
+  "sdg": [
+    {
+      "description": "Ensure healthy lives and promote well-being for all at all ages",
+      "name": "Good health and Well-being",
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-3-good-health-and-well-being.html",
+      "slug": "",
+      "id": 3,
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-3.png?alt=media&token=17986484-2beb-4b27-95f6-c0cc288ce095",
+        "caption": ""
+      }
+    },
+    {
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fmaster%2Fsdg-filled%2F512x512-16.png?alt=media&token=fc290fdd-0745-49c3-8709-e16ab203de79",
+        "caption": ""
+      },
+      "slug": "",
+      "id": 16,
+      "link": "https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-16-peace-justice-and-strong-institutions.html",
+      "description": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+      "name": "Peace, Justice and Strong Institutions"
+    }
+  ],
+  "slug": "baby-needs-foundation",
+  "district": { "name": "Chennai", "id": 3100 },
+  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "activeIn": [],
+  "media": [],
+  "createdBy": "jT5RQ2uDfROQHR1UKJ7oVDWw2cZ2",
+  "id": "P0e21ytcxYXHoBUCDwQj",
+  "fullUrl": "https://thegrassroots.app/chennai/ngo/baby-needs-foundation-",
+  "projects": [
+    {
+      "slug": "toy-distribution",
+      "date": { "_seconds": 1613001760, "_nanoseconds": 0 },
+      "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "name": "Toy Distribution",
+      "description": "To give Toys to needy babys and make them happy",
+      "parent": "",
+      "photo": {
+        "caption": "Photo of Toy Distribution project",
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Fproject%2Foriginal_WKMzLVqPJ2EbRQARU5dn.jpg?alt=media"
+      },
+      "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+      "aggregate": {
+        "donation": { "required": 0, "count": 0, "collected": 0 },
+        "volunteer": {
+          "subscribed": 0,
+          "recurringFundSupported": 0,
+          "hoursSelf": 0,
+          "unattendedVerified": 0,
+          "attendedVerified": 0,
+          "donated": 0,
+          "unattendedSelf": 0,
+          "fundSupported": 0,
+          "hoursVerified": 0,
+          "attendedSelf": 0,
+          "joined": 0,
+          "registered": 0,
+          "required": 0
+        },
+        "subscription": {
+          "months": 0,
+          "currentCollected": 0,
+          "required": 0,
+          "totalCollected": 0,
+          "totalCount": 0,
+          "currentCount": 0
+        }
+      },
+      "updatedAt": { "_seconds": 1613001760, "_nanoseconds": 0 },
+      "link": "",
+      "isActive": true,
+      "id": "WKMzLVqPJ2EbRQARU5dn",
+      "sdg": {
+        "name": "",
+        "link": "",
+        "id": 0,
+        "photo": { "caption": "", "url": "" },
+        "slug": "",
+        "description": ""
+      },
+      "createdAt": { "_seconds": 1613001760, "_nanoseconds": 0 }
+    }
+  ],
+  "isActive": true,
+  "nextReceiptNumber": 1000,
+  "logo": {
+    "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_logo.jpg?alt=media",
+    "caption": "Caption of Baby Needs Foundation photo"
+  },
+  "createdAt": { "_seconds": 1612621219, "_nanoseconds": 724000000 },
+  "oid": "",
+  "admin": [],
+  "ops": {
+    "spreadSheetId": "",
+    "receiptVersion": 2,
+    "settlementRow": 0,
+    "settlementSheetId": "",
+    "offlinePaymentRow": 0
+  },
+  "activities": [ "Toy giving", " Dress distribution", " Orphanage support" ],
+  "name": "Baby Needs Foundation",
+  "team": [
+    {
+      "to": { "_seconds": 0, "_nanoseconds": 0 },
+      "since": { "_seconds": 0, "_nanoseconds": 0 },
+      "hobbies": "",
+      "role": "Founder",
+      "photo": {
+        "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Fteam%2Foriginal_ersmu1NsxyzaHCLj87Ar.jpg?alt=media",
+        "caption": "Photo of Lourdhu Diana team"
+      },
+      "id": "ersmu1NsxyzaHCLj87Ar",
+      "reachOut": {
+        "facebook": "",
+        "instagram": "",
+        "email": "",
+        "linkedin": "",
+        "twitter": "",
+        "youtube": "",
+        "phone2": "",
+        "website": "",
+        "phone1": ""
+      },
+      "name": "Lourdhu Diana"
+    }
+  ],
+  "testimonial": [],
+  "shortCode": "",
+  "impactPrimitive": { "toysDistributed": 24, "dressDistributed": 16 },
+  "state": { "id": 31, "name": "Tamil Nadu" },
+  "priority": 100,
+  "photos": [
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_cover1.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_cover2.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_cover3.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_cover4.jpg?alt=media",
+    "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FP0e21ytcxYXHoBUCDwQj%2Foriginal_cover5.jpg?alt=media"
+  ],
+  "gateway": { "name": "", "id": "", "razorpay": { "accountId": "" }, "lotuspay": { "accountId": "" } },
+  "review": [],
+  "causes": [],
+  "reachOut": {
+    "phone1": "+918124089394",
+    "youtube": "",
+    "facebook": "https://www.facebook.com/babyneedsfoundation/",
+    "website": "",
+    "linkedin": "",
+    "instagram": "https://instagram.com/babyneedsfoundation",
+    "phone2": "+919500137374",
+    "email": "babyneedsfoundation@gmail.com",
+    "twitter": ""
+  },
+  "video": { "caption": "Caption of Baby Needs Foundation video", "url": "" },
+  "description": "Our country is surrounded by all kinds of people from high class to the poverty stricken people. \nWe the **organisation is going to be a bridge between the orphanages and donors.**\n * Still many dream to play with toys\n * Still many dream to wear shoes\n * Still many dream to wear good dresses.\n\nWe are not asking your money. We are asking your things which is not in use, not in fit. But in good quality to use for others.\n\n\nYou can donate anything by giving your\n * Children dresses\n * Your dresses\n * Shoes\n * Toys\n * Blankets\n * Beds\n * Food\n * Milk\n * Breads\n * Biscuit Health mix\n\nby filling the [Volunteer form](#section-volunteer)\n\nIf you're interested to join our wonderful organisation, You're almost welcome\nBy filling the [same form](#section-volunteer).\n\nIf any orphanages is going through our website, please check below link to see the stocks we have now in our hand.\n\n",
+  "whyVolunteerHere": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "aggregate": {
+    "testimonial": 0,
+    "fund": 0,
+    "upcomingEvent": 0,
+    "volunteer": {
+      "hoursSelf": 0,
+      "unattendedSelf": 0,
+      "hoursVerified": 0,
+      "joined": 0,
+      "subscribed": 0,
+      "fundSupported": 0,
+      "recurringFundSupported": 0,
+      "attendedSelf": 0,
+      "unattendedVerified": 0,
+      "donated": 0,
+      "required": 0,
+      "attendedVerified": 0,
+      "registered": 0
+    },
+    "volHoursPerWeek": 0,
+    "mediaRecognition": 0,
+    "donation": { "required": 0, "collected": 0, "count": 0 },
+    "admin": 0,
+    "photo": 5,
+    "award": 0,
+    "avgRating": 0,
+    "review": 0,
+    "recurringFund": 0,
+    "follower": 0,
+    "volPerWeek": 0,
+    "project": 1,
+    "subscription": {
+      "currentCount": 0,
+      "months": 0,
+      "totalCollected": 0,
+      "totalCount": 0,
+      "required": 0,
+      "currentCollected": 0
+    },
+    "event": 0
+  },
+  "shortUrl": "https://grs.one/",
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
+  "receipt": { "fields": [], "baseImage": "", "nextId": 1000 },
+  "access": { "event": false, "receipt": false, "form": false, "profile": true, "fundraiser": false },
+  "updatedAt": { "_seconds": 1612621219, "_nanoseconds": 0 },
+  "vision": "To create awareness about how important the childhood days are to everyone.",
+  "legal": { "fcraNo": "", "_80GNo": "", "regNo": "", "panNo": "", "_12ANo": "" },
+  "awards": []
+}

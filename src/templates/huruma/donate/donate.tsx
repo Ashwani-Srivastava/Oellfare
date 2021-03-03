@@ -11,7 +11,7 @@ import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { HelmetService      }   from    'common/helmet.service';
 import { Fundraiser         }   from    'fundraiser/fundraiser.model';
-//import { FundraiserService  }   from    'fundraiser/fundraiser.service';
+// import { FundraiserService  }   from    'fundraiser/fundraiser.service';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
 import { NgoService         }   from    'ngo/ngo.service';
@@ -117,6 +117,7 @@ export class HurumaDonate {
 
     }
 
+    
     /*
     private async makeDonation(): Promise<any> {
         console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
@@ -157,20 +158,170 @@ export class HurumaDonate {
             this[fieldName]     =   e.target.value;
         }
     }
-
     */
+
+    
 
     render() {
 
         return [
+        <div class="page-wrapper">
 
-        <huruma-header ngo={this.ngo}></huruma-header>,
+            <huruma-header ngo={this.ngo}></huruma-header>
 
-        <h1> Donate </h1>,
+            <section class="causes-details-area ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="causes-details-desc">
+                                
+                                <div class="causes-details-payment">
+                                    <div class="payment-method">
+                                        <h3>Donation Details</h3>
+                                    </div>
 
-        <huruma-footer ngo={this.ngo}></huruma-footer>,
+                                    <form class="contact-form">
+                                        <div class="row">
 
-        <span> { HelmetService.render(this.ngo, 'Donate') } </span>
+                                            <div class="col-lg-12 mb-3">
+                                                <div class="causes-details-btn">
+                                                    <a href="#" class="default-btn">
+                                                        Login with Grassroots
+                                                        <span></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" id="first-name" class="form-control" placeholder="Fundraiser" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" class="form-control" placeholder="Donation Amount" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input type="text" name="text" class="form-control" placeholder="Referred by" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input type="checkbox" 
+                                                        style={{ 'width': '18px', 'height': '18px' }} 
+                                                        id="anonymous" name="anonymous" value="yes"
+                                                        disabled={ !this.isLoggedIn } />
+                                                    <span style={{ 'padding-left': '16px' }} > Make Anonymous </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" style={{ 'height': '120px' }} placeholder="Why I am donating" > </textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="causes-details-btn">
+                                                    <a href="/donate" class="default-btn">
+                                                        Donate Now
+                                                        <span></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12">
+                            <aside class="widget-area" id="secondary">
+
+                                <section class="widget widget_huruma_posts_thumb">
+                                    <h3 class="widget-title"> Recent Donors </h3>
+
+                                    <article class="item">
+                                        <a href="#" class="thumb">
+                                            <span class="fullimage cover bg1" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time dateTime="2019-06-30">June 30, 2020</time>
+                                            <h4 class="title usmall">
+                                                <a href="#"> Anbu </a>
+                                                <p> Rs. 2000 </p>
+                                            </h4>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </article>
+
+                                    <article class="item">
+                                        <a href="#" class="thumb">
+                                            <span class="fullimage cover bg2" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time dateTime="2019-06-30">June 30, 2020</time>
+                                            <h4 class="title usmall">
+                                                <a href="#"> Shiva </a>
+                                                <p> Rs. 5000 </p>
+                                            </h4>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </article>
+
+                                    <article class="item">
+                                        <a href="#" class="thumb">
+                                            <span class="fullimage cover bg3" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time dateTime="2019-06-30">June 30, 2020</time>
+                                            <h4 class="title usmall">
+                                                <a href="#"> Prakash</a>
+                                                <p> Rs. 3000 </p>
+                                            </h4>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </article>
+                                    
+                                    <article class="item">
+                                        <a href="#" class="thumb">
+                                            <span class="fullimage cover bg4" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time dateTime="2019-06-30">June 30, 2020</time>
+                                            <h4 class="title usmall">
+                                                <a href="#"> Gandhi </a>
+                                                <p> Rs. 5000 </p>
+                                            </h4>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </article>
+                                </section>
+
+                                
+
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <huruma-footer ngo={this.ngo}></huruma-footer>
+
+            <span> { HelmetService.render(this.ngo, 'Donate') } </span>
+
+        </div>
+        
 
         ];
 

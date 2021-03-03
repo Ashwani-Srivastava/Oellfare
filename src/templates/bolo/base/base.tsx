@@ -150,7 +150,7 @@ export class BoloBase {
 
 
     public static nativeInit() {
-        console.log('native initing');
+        //console.log('native initing');
         var sh = jQuery('#de-sidebar').css("height");
         var dh = jQuery(window).innerHeight();
         var h = parseInt(sh) - parseInt(dh);
@@ -677,7 +677,7 @@ export class BoloBase {
         $.scrollTo = $.fn.scrollTo = function(x, y, options){
             var space = 69;
 
-            console.log('$.fn.scroll to');
+            //console.log('$.fn.scroll to');
             $(function(){
                 var mx = window.matchMedia("(max-width: 992px)");
                 if (mx.matches) {
@@ -700,13 +700,13 @@ export class BoloBase {
                 }
             }, options);
 
-            console.log('y value is :' + y);
+            //console.log('y value is :' + y);
             return this.each(function(){
                 var elem = $(this);
-                console.log('for each', elem);
-                console.log('y value is :', ($('#wrapper').scrollTop()));
-                console.log('y value is :' + ($(y).offset().top));
-                console.log('y value is :' + ($(y).offset().top + options.gap.y - space));
+                //console.log('for each', elem);
+                //console.log('y value is :', ($('#wrapper').scrollTop()));
+                //console.log('y value is :' + ($(y).offset().top));
+                //console.log('y value is :' + ($(y).offset().top + options.gap.y - space));
                 elem.stop().animate({
                     scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x,
                     scrollTop: !isNaN(Number(y)) ? y : $('#wrapper').scrollTop() + $(y).offset().top + options.gap.y - space // *edited
@@ -1163,7 +1163,7 @@ export class BoloBase {
         jQuery("#homepage nav a, .scroll-to").on("click", function(evn) {
             if (this.href.indexOf('#') != -1) {
                 evn.preventDefault();
-                console.log('scroll to: ', this.hash);
+                //console.log('scroll to: ', this.hash);
                 jQuery('#wrapper').scrollTo(this.hash, this.hash);
             }
         });

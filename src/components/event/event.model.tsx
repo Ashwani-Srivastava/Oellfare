@@ -1,4 +1,4 @@
-import { Doc, DocRef        }   from    "common/common.model";
+import { Doc, DocRef, Media }   from    "common/common.model";
 import { Coordinator        }   from    "ngo/coordinator/coordinator.model";
 import { Block, District    }   from    "location/location.model";
 import { State              }   from    "location/location.model";
@@ -40,6 +40,7 @@ export class Event extends Doc {
 
     public address            :    string;
     public coordinators       :    Coordinator[];
+    public coverPhoto         :    Media[];
     public coverPhotoName     :    string[];
     public coverURL           :    string;
     public description        :    string;
@@ -86,6 +87,7 @@ export class Event extends Doc {
         this.isWriteupMade   =    obj.isWriteupMade || false;
 
         this.address         =    obj.address || "";
+        this.coverPhoto      =    Doc.parseArray(obj.coverPhoto, Media);
         this.coverPhotoName  =    obj.coverPhotoName || [];
         this.description     =    obj.description || "";
         this.formId          =    obj.formId || "";
@@ -102,12 +104,14 @@ export class Event extends Doc {
         this.volunteerJoined =    obj.volunteerJoined || 0;
         this.volunteerRequired =  obj.volunteerRequired || 0;
 
-        this.endDate         =    Doc.parseDate(obj.endDateLong);
-        this.startDate       =    Doc.parseDate(obj.startDateLong);
+        //this.endDate         =    Doc.parseDate(obj.endDateLong);
+        //this.startDate       =    Doc.parseDate(obj.startDateLong);
+        this.endDate         =    Doc.parseDate(obj.endDate);
+        this.startDate       =    Doc.parseDate(obj.startDate);
 
         if (obj.coordinators && Array.isArray(obj.coordinators)) {
             this.coordinators=    obj.coordinators.map(
-                (coord) => new Coordinator(coord)
+                (coord) => new Coordinator(coord, obj.ngo.logo.url)
             );
         } else {
             this.coordinators=    [];

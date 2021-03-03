@@ -278,7 +278,7 @@ export class BoloHomeSingleTen {
                                             <span class="overlay-v">
                                                 <span class="v-center">
                                                     <span>
-                                                        <a id="play-video" class="video-play-button popup-youtube" href="https://www.youtube.com/watch?v=CmCIZ_aUAeQ">
+                                                        <a id="play-video" class="video-play-button popup-youtube" href="https://www.youtube.com/watch?v=EWPFmdAWRZ0">
                                                             <span></span>
                                                         </a>
                                                     </span>

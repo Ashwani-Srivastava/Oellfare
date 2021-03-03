@@ -60,7 +60,7 @@ export class BoloHomeSingle {
         console.log('Home :: Component did load');
 
         if (Build.isBrowser) {
-            BoloBase.setupEssentials();
+            BoloBase.setupEssentials(true);
         }
     }
 
@@ -188,6 +188,7 @@ export class BoloHomeSingle {
 								<div class="col-md-10 offset-md-1 text-center">
 									<h2 class="mb20">Our <span>Vision<span class="underline"></span></span> </h2>
 									<p> { this.ngo.vision } </p>
+									<img src='/assets/images/baby001.jpg' class="mb30 img-fluid" alt="" />
 									<h2 class="mb20"> What <span>we do?<span class="underline"></span></span> </h2>
                                 	<p style={{ 'text-align': 'left' }} innerHTML={ marked.parse(this.ngo.description) }> </p>
 									<div class="spacer-half"></div>
@@ -196,7 +197,7 @@ export class BoloHomeSingle {
 								</div>
 
 								<div class="col-md-8 offset-md-2 text-center">
-									<img src={this.ngo.photos[1]} class="mb-sm-30 img-fluid" alt="" />
+									<img src='/assets/images/baby002.jpg' class="mb-sm-30 img-fluid" alt="" />
 								</div>
 
 								<div class="clearfix"></div>
@@ -208,8 +209,7 @@ export class BoloHomeSingle {
 				{ /** section service begin  */ }
 				<section id="section-sid3" class="side-bg no-padding bg-color text-light">
 					<div class="image-container col-md-6 pull-right d-block d-sm-none d-md-block">
-						<div class="background-image let-it-snow" data-bgimage={`url(/assets/images/baby001.jpg)`}></div>
-						<div class="background-image let-it-snow" data-bgimage={`url(/assets/images/baby001.jpg)`}></div>
+						<div class="background-image let-it-snow" data-bgimage={`url(${ this.ngo.photos[1] })`}></div>
 					</div>
 
 					<div class="container">
@@ -243,22 +243,31 @@ export class BoloHomeSingle {
 								</h2>
 							</div>
 
+                            { this.ngo.team.map(mem => (
 							<div class="col-lg-2 offset-lg-5 col-md-4 offset-md-4 col-sm-6 mb-md-30">
 								<div class="profile_pic text-center">
 									<figure class="picframe gray sc-icon mb20">
 										<div class="icons">
-											<a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-											<a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-											<a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-											<a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                            { mem.reachOut.facebook.length > 0 ?
+											    <a href={ mem.reachOut.facebook }><i class="fa fa-facebook fa-lg"></i></a>: null }
+                                                
+                                            { mem.reachOut.twitter.length > 0 ?
+											    <a href={ mem.reachOut.twitter }><i class="fa fa-twitter fa-lg"></i></a>: null }
+
+                                            { mem.reachOut.linkedin.length > 0 ?
+											    <a href={ mem.reachOut.linkedin}><i class="fa fa-linkedin fa-lg"></i></a>: null }
+
+                                            { mem.reachOut.instagram.length > 0 ?
+                                                <a href={ mem.reachOut.instagram }><i class="fa fa-google-plus fa-lg"></i></a>: null }
 										</div>
-										<img src="/assets/bolo/images/team/3.jpg" class="img-fluid" alt="" />
+										<img src={ mem.photo.url } class="img-fluid" alt="" />
 									</figure>
 
-									<h3>Lourdhu Diana</h3>
-									<span class="subtitle">Founder</span>
+									<h3> { mem.name } </h3>
+									<span class="subtitle"> { mem.role } </span>
 								</div>
 							</div>
+                            )) }
 
 						</div>
 					</div>
@@ -273,14 +282,14 @@ export class BoloHomeSingle {
 
 							<div class="col-md-3 offset-md-3 col-sm-6 col-xs-6 mb-sm-30">
 								<div class="de_count">
-									<h3 class="timer" data-to="24" data-speed="2500">0</h3>
+									<h3 class="timer" data-to={ this.ngo.impactPrimitive.toysDistributed } data-speed="2500">0</h3>
 									<span> Toys Distributed </span>
 								</div>
 							</div>
 
 							<div class="col-md-3 col-sm-6 col-xs-6 mb-sm-30">
 								<div class="de_count">
-									<h3 class="timer" data-to="16">0</h3>
+									<h3 class="timer" data-to={ this.ngo.impactPrimitive.dressDistributed }>0</h3>
 									<span> Dress Distributed </span>
 								</div>
 							</div>

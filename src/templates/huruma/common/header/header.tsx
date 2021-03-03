@@ -19,7 +19,7 @@ export class HurumaHeader {
                     <div class="col-lg-6">
                         <div class="header-content">
                             <p>
-                                <a href="#">Join us in Nation building... <span>Join us</span></a>
+                                <a href="/volunteer">Join us in Nation building... <span>Join us</span></a>
                             </p>
                         </div>
                     </div>
@@ -27,19 +27,19 @@ export class HurumaHeader {
                     <div class="col-lg-6">
                         <div class="top-header-social">
                             <span>Follow us:</span>
-                            <a href="#" target="_blank">
+                            <a href={this.ngo.reachOut.facebook} target="_blank">
                                 <i class='flaticon-facebook'></i>
                             </a>
 
-                            <a href="#" target="_blank">
+                            <a href={this.ngo.reachOut.twitter} target="_blank">
                                 <i class='flaticon-twitter'></i>
                             </a>
 
-                            <a href="#" target="_blank">
+                            <a href={this.ngo.reachOut.instagram}target="_blank">
                                 <i class='flaticon-instagram'></i>
                             </a>
 
-                            <a href="#" target="_blank">
+                            <a href={this.ngo.reachOut.linkedin} target="_blank">
                                 <i class='flaticon-linkedin'></i>
                             </a>
                         </div>
@@ -71,7 +71,7 @@ export class HurumaHeader {
             <div class="huruma-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="/">
                             <img src={ this.ngo.logo.url } style={{ 'background': 'url(/assets/huruma/img/logo-bg.png)', 'width': '185px', 'height': '165px', 'object-fit': 'contain', 'padding': '16px' }} class="white-logo" alt="logo" />
                             <img src={ this.ngo.logo.url } class="black-logo" alt="image" style={{ 'width': '120px' }} />
                         </a>
@@ -100,6 +100,14 @@ export class HurumaHeader {
                                             <a class={location.pathname.startsWith('/about/press-coverage') ? 'nav-link active' : 'nav-link' }>
                                                 <ion-router-link color='white' href="/about/press-coverage"> 
                                                     Press Coverage
+                                                </ion-router-link>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class={location.pathname.startsWith('/about/awards') ? 'nav-link active' : 'nav-link' }>
+                                                <ion-router-link color='white' href="/about/awards"> 
+                                                    Awards
                                                 </ion-router-link>
                                             </a>
                                         </li>
@@ -138,16 +146,32 @@ export class HurumaHeader {
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class={location.pathname.startsWith('/milestones') ? 'nav-link active' : 'nav-link' }>
-                                        <ion-router-link color='white' href="/milestones"> 
+                                    <a class={location.pathname.startsWith('/activities') ? 'nav-link active' : 'nav-link' }>
+                                        <ion-router-link color='white' href="/activities"> 
                                             <span>o4</span>
-                                            Milestones 
+                                            Activities 
                                             <i class='bx bx-chevron-down'></i>
                                         </ion-router-link>
                                     </a>
 
                                     <ul class="dropdown-menu">
 
+                                        <li class="nav-item">
+                                            <a class={location.pathname.startsWith(`/activities/upcoming`) ? 'nav-link active' : 'nav-link' }>
+                                                <ion-router-link color='white' href={`/activities/upcoming`}> 
+                                                    Upcoming Activities
+                                                </ion-router-link>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class={location.pathname.startsWith(`/activities/milestones`) ? 'nav-link active' : 'nav-link' }>
+                                                <ion-router-link color='white' href={`/activities/milestones`}> 
+                                                    Milestones
+                                                </ion-router-link>
+                                            </a>
+                                        </li>
+                                    
                                     </ul>
                                 </li>
 
@@ -166,8 +190,21 @@ export class HurumaHeader {
                                         <ion-router-link color='white' href="/donate"> 
                                             <span>o6</span>
                                             Donate 
+                                            <i class='bx bx-chevron-down'></i>
                                         </ion-router-link>
                                     </a>
+
+                                    <ul class="dropdown-menu">
+
+                                        <li class="nav-item">
+                                            <a class={location.pathname.startsWith(`/donate/champion`) ? 'nav-link active' : 'nav-link' }>
+                                                <ion-router-link color='white' href={`/donate/champion`}> 
+                                                    Become a Champion
+                                                </ion-router-link>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
@@ -191,110 +228,7 @@ export class HurumaHeader {
             </div>
         </div>,
 
-        <div class="sidebar-modal">
-            <div class="sidebar-modal-inner">
-                <div class="sidebar-about-area">
-                    <div class="title">
-                        <h2>About Us</h2>
-                        <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
-                    </div>
-                </div>
-
-                <div class="sidebar-instagram-feed">
-                    <h2>Instagram</h2>
-                    <ul>
-                        <li>
-							<a href="#">
-								<img src="/assets/huruma/img/sidebar/1.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/2.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/3.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/4.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/5.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/6.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/7.jpg" alt="image" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/assets/huruma/img/sidebar/8.jpg" alt="image" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-contact-area">
-                    <div class="contact-info">
-                        <div class="contact-info-content">
-                            <h2>
-                                <a href="tel:+0881306298615">
-                                    +088 130 629 8615
-                                </a>
-                                <span>OR</span>
-                                <a href="mailto:huruma@gmail.com">
-                                    huruma@gmail.com
-                                </a>
-                            </h2>
-    
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-pinterest"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="close-btn sidebar-modal-close-btn">
-                    <i class="flaticon-close"></i>
-                </span>
-            </div>
-        </div>
+        <huruma-sidebar-model ngo={this.ngo}></huruma-sidebar-model>
         ];
     }
 

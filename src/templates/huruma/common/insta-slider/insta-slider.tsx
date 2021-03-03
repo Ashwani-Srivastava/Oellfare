@@ -18,7 +18,7 @@ export class HurumaInstaSlider {
                 <div class="instagram-slides owl-carousel owl-theme">
                     { this.ngo.photos.map(p => (
                     <div class="instagram-box">
-                        <img src={p} alt="image" />
+                        <img src={p} alt="image" style={{ 'height': '180px', 'object-fit': 'cover' }}/>
 
                         <div class="icon">
                             <i class="flaticon-instagram"></i>

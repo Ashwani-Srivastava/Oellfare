@@ -6,8 +6,8 @@ import { filter, takeWhile  }   from    'rxjs/operators';
 
 import { VersoBase          }   from    'verso/base/base'
 import { AuthService        }   from    'auth/auth.service';
-import { ConfirmResponse,
-         DialogService      }   from    'common/dialog.service';
+//import { ConfirmResponse,
+import { DialogService      }   from    'common/dialog.service';
 import { EnvironmentService }   from    'common/environment.service';
 import { HelmetService      }   from    'common/helmet.service'
 import { Logger             }   from    'common/logger';
@@ -38,7 +38,7 @@ export class VersoVolunteer {
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
-    private whyVolunteer        :   string              =   '';
+    //private whyVolunteer        :   string              =   '';
 
     constructor () {
         console.log('Volunteer :: Constructor');
@@ -100,6 +100,7 @@ export class VersoVolunteer {
         }); 
     }
 
+    /*
     private handleCommonInput(e, fieldName: string): void {
         console.log(e.target.value, fieldName);
         this.whyVolunteer       =   e.target.value;
@@ -128,6 +129,7 @@ export class VersoVolunteer {
         }
 
     }
+    */
 
     render() {
 

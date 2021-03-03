@@ -486,6 +486,8 @@ export class Ngo extends Doc {
     public whyVolunteerHere     :   Array<{ [key:string]: string }>;
     public whyHelpMatters       :   Array<{ [key:string]: string }>;
 
+    public impactPrimitive      :   {[key: string]: string};
+
     public status               :   NgoState;
 
     constructor(obj             :   any = {}) {
@@ -549,6 +551,8 @@ export class Ngo extends Doc {
 
         this.status             =   obj.status          ||  NgoState.Draft;
         this.oid                =   obj.oid             ||  '';
+
+        this.impactPrimitive    =   obj.impactPrimitive ||  {};
     }
 
     public toJson() {

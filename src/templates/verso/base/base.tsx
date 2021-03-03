@@ -9,7 +9,7 @@ declare var google              :   any;
 
 export class VersoBase {
 
-    private static wow: any;
+    //private static wow: any;
 
     public static setupEssentials() {
         VersoBase.setup1();
@@ -143,7 +143,8 @@ export class VersoBase {
     public static setup2() {
 
         /* change the variables below to modify your map position / style & markers */
-        var map = window['map'] || {
+        /*
+        const map = window['map'] || {
             map_type: 'ROADMAP',
             auto_zoom: 'manual',
             // set to 'manual' to set the zoom manually. Leave empty for auto zoom
@@ -168,6 +169,7 @@ export class VersoBase {
             markerURL: 'assets/images/marker.png'
             // the marker URL
         };
+        */
 
 
 
@@ -242,7 +244,7 @@ export class VersoBase {
             return new google.maps.Map(element[0], options);
         }
 
-        function setupMarkers(map, mapDiv, mapData) {
+        function setupMarkers(map, _mapDiv, mapData) {
             mapData.markers = [];
             if(mapData.addresses) {
                 geocodeMarkerList(map, mapData);

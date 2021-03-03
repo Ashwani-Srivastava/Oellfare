@@ -12,6 +12,7 @@ import { Ngo                }   from    'ngo/ngo.model';
 import { NgoService         }   from    'ngo/ngo.service';
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
+import * as events              from    'assets/events.json';
 
 @Component({
     tag                         :   'huruma-home',
@@ -21,6 +22,7 @@ export class HurumaHome {
 
     @Prop() ngo                 :   Ngo                 =   new Ngo(ngo);
     @Prop() fund                :   Fundraiser          =   new Fundraiser(fund);
+    @Prop() events              :   any                 =   events;
 
     private alive               :   boolean             =   true;
 
@@ -67,45 +69,41 @@ export class HurumaHome {
     }
 
     coverText = [{
-        header                  :   'For the betterment of Humanity...',
-        subHeader               :   'Join us in giving the Departed, their deserving final rites.',
-        length                  :   5
+        header                  :   'Towards Accident free Nation',
+        subHeader               :   'We pledge for Tamil nadu',
     }, {
-        header                  :   'No one is Alone',
-        subHeader               :   'As long as We are here.',
-        length                  :   4
+        header                  :   'Building Leaders of the Nation',
+        subHeader               :   'One at a time',
     }, {
-        header                  :   'Started by a bunch of College students',
-        subHeader               :   'To give Love, to those who really need it.',
-        length                  :   7
+        header                  :   'No matter how Gifted you are, you alone cannot change the world!',
+        subHeader               :   'Connecting Local bodies, People, Students, Corporates and even other NGOs. Trying to be as inclusive as possible',
     }];
 
     render() {
+        var image2='url('+"https://images.unsplash.com/photo-1589723935682-abe6cc1ee259?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"+')';
         return (
 
             <div class="page-wrapper">
 
                 <huruma-header ngo={this.ngo}></huruma-header>
 
-                { /** Start Home Banner Three Area */ }
                 <div class="home-banner-three home-banner-four">
                     <div class="home-slides-four owl-carousel owl-theme">
-                        { this.ngo.photos.slice(0, 3).map(ph => (
+                        { this.ngo.photos.slice(0, 3).map((ph, index) => (
                         <div class="home-item item-bg-1" style={{ 'background': `url(${ph})`, 'background-size': 'cover' }}>
                             <div class="d-table">
                                 <div class="d-table-cell">
                                     <div class="container">
                                         <div class="main-banner-content main-banner-content-four text-center">
-                                            <span>Huruma</span>
-                                            <h1>It is more difficult to give money away </h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing incididunt ut laboredolore magna aliqua elsed  tempomet, consectetur adipiscing.</p>
+                                            <h1> { this.coverText[index].header } </h1>
+                                            <p>  { this.coverText[index].subHeader } </p>
                                             <div class="banner-btn">
-                                                <a href="#" class="default-btn">
+                                                <a href="/donate" class="default-btn">
                                                     Donate Now
                                                     <i class="flaticon-right"></i>
                                                     <span></span>
                                                 </a>
-                                                <a class="optional-btn" href="#">
+                                                <a class="optional-btn" href="/volunteer">
                                                     Become Member
                                                     <i class="flaticon-right"></i>
                                                 </a>
@@ -118,7 +116,6 @@ export class HurumaHome {
                         )) } 
                     </div>
                 </div>
-                { /** End Home Banner Three Area */ }
 
                 { /** Start Top Feature Area */ }
                 <section class="feature-section">
@@ -134,7 +131,7 @@ export class HurumaHome {
                                     <h3>Become A Volunteer</h3>
                                     <p> Think of giving not as a duty but as a privilege. </p>
 
-                                    <a href="#" class="feature-btn">
+                                    <a href="/volunteer" class="feature-btn">
                                         Join now +
                                     </a>
                                 </div>
@@ -150,7 +147,7 @@ export class HurumaHome {
                                     <h3> Donate Once </h3>
                                     <p> For it is in giving that we receive. </p>
 
-                                    <a href="#" class="feature-btn">
+                                    <a href="/donate" class="feature-btn">
                                         Give now +
                                     </a>
                                 </div>
@@ -166,7 +163,7 @@ export class HurumaHome {
                                     <h3> Become a Champion </h3>
                                     <p> No one has ever become poor by giving. </p>
 
-                                    <a href="#" class="feature-btn">
+                                    <a href="/donate" class="feature-btn">
                                         Donate now +
                                     </a>
                                 </div>
@@ -194,12 +191,12 @@ export class HurumaHome {
                                     <p> { this.ngo.description } </p>
 
                                     <div class="about-btn">
-                                        <a href="#" class="default-btn">
+                                        <a href="/donate" class="default-btn">
                                             Donate Now
                                             <i class="flaticon-right"></i>
                                             <span></span>
                                         </a>
-                                        <a class="optional-btn" href="#">
+                                        <a class="optional-btn" href="/about">
                                             More about us
                                             <i class="flaticon-right"></i>
                                         </a>
@@ -209,13 +206,13 @@ export class HurumaHome {
 
                             <div class="col-lg-6">
                                 <div class="about-image about-four">
-                                    <img src="/assets/huruma/img/about/1.jpg" class="shadow" alt="image" />
-                                    <img src="/assets/huruma/img/about/2.jpg" class="shadow" alt="image" />
+                                    <img src={this.ngo.photos[4]} class="shadow" alt="image" />
+                                    <img src={this.ngo.photos[5]} class="shadow hello" alt="image" />
                                 </div>
 
                                 <div class="about-video">
                                     <a href={ this.ngo.video.url } class="video-btn popup-youtube">
-                                        <i class="bx bx-play"></i>
+                                        <i class="bx bx-play play-button"></i>
                                     </a>
                                 </div>
                             </div>
@@ -309,7 +306,7 @@ export class HurumaHome {
                                             <p>Raised by { this.fund.donation.count }</p>
                                         </div>
                                         
-                                        <a href="single-causes.html" class="causes-btn-one">
+                                        <a href="/donate" class="causes-btn-one">
                                             Donate Now
                                             <i class="flaticon-right"></i>
                                         </a>
@@ -371,7 +368,7 @@ export class HurumaHome {
 
                 { /** Start Solve Area */ }
                 <section class="solve-section pt-100 pb-70">
-                    <div class="container">
+                    <div class="container" >
                         <div class="section-title">
                             <span>
                                 <i class="flaticon-to-do-list"></i>
@@ -383,7 +380,7 @@ export class HurumaHome {
                         <div class="row">
 
                             { this.ngo.sdg.slice(0, 4).map(s => (
-                            <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                                 <div class="solve-item">
                                     <div class="icon">
                                         <img src={s.photo.url} alt="image" />
@@ -400,55 +397,18 @@ export class HurumaHome {
                 { /** End Solve Area */ }
 
                 { /** Start Events Area */ }
-                <section class="event-section pt-100">
-                    <div class="container">
+                <section class="donor-section pt-100 pb-70">
+                    <div class="container" >
                         <div class="section-title">
                             <span>
                                 <i class="flaticon-clipboard"></i>
-                                Upcoming Events
+                                Help
                             </span>
-                            <h2>Be ready for Our Events</h2>
-                            <p> Coming sooon... </p>
+                            <h2> The heart that gives, gathers</h2>
+                            {/* <p>  with a good background image </p> */}
                         </div>
 
                         <div class="event-slider owl-carousel owl-theme">
-
-                        { /*
-                            <div class="event-item">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="event-time">
-                                            <h3>0-140</h3>
-                                            <span>10 January 2021</span>
-
-                                            <div class="icon">
-                                                <i class="flaticon-clock"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-8">
-                                        <div class="event-content">
-                                            <h4>Poor funding for helpless</h4>
-
-                                            <ul class="event-meta">
-                                                <li>
-                                                    <i class="flaticon-clock"></i>
-                                                    9:00 - 12:00
-                                                </li>
-
-                                                <li>
-                                                    <i class="flaticon-pin"></i>
-                                                    Calfornia City
-                                                </li>
-                                            </ul>
-                                            <p>Suspendice quis ipsum  consectetucaquuis ipsums gravida.</p>
-                                            <a href="single-events.html" class="event-btn-one">Join Now +</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        */ }
 
                         </div>
                     </div>
@@ -506,7 +466,7 @@ export class HurumaHome {
                         <div class="section-title">
                             <h2>Want you know How Can  Help?</h2>
                             <p> See our Volunteer with us Page </p>
-                            <a href="#" class="donate-btn">
+                            <a href="/volunteer" class="donate-btn">
                                 Volunteer with us 
                                 <i class="flaticon-right"></i>
                             </a>
@@ -535,22 +495,7 @@ export class HurumaHome {
 
                             { this.ngo.media.slice(0, 3).map(med => (
                             <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-blog">
-                                    <img src={ med.photo.url } style={{ 'max-height': '150px', 'object-fit': 'cover', 'width': '100%' }} alt="image" />
-
-                                    <div class="content">
-                                        <a href="#">
-                                            <i class='bx bx-user'></i>
-                                        </a>
-                                        <span> { med.publicationName } </span>
-                                        <h3>
-                                            <a href="#">
-                                                { med.name }
-                                            </a>
-                                        </h3>
-                                        <a href="single-blog.html" class="blog-btn"> { med.date } </a>
-                                    </div>
-                                </div>
+                                <huruma-press-card media={med}></huruma-press-card>
                             </div>
                             )) }
 
@@ -559,7 +504,7 @@ export class HurumaHome {
 
                         <div class='row' style={{ 'float': 'right' }} >
                             <div class="team-btn">
-                                <a href="#" class="optional-btn">
+                                <a href="/about/press-coverage" class="optional-btn">
                                     See More
                                     <i class="flaticon-right"></i>
                                 </a>
@@ -569,28 +514,27 @@ export class HurumaHome {
                 </section>
                 { /** End Blog Area */ }
 
-                <section class="causes-section pt-100 pb-70">
+                {/* Start Events Area */}
+                <section class="event-section pt-100">
                     <div class="container">
                         <div class="section-title">
-                            <h2>Our Projects</h2>
-                            <p>Wherever you turn, you can find someone who needs you. Even if it is a little thing, do something for which there is no pay but the privilege of doing it. Remember, you don’t live in the world all of your own.</p>
+                            <span>
+                                <i class="flaticon-clipboard"></i>
+                                Upcoming Events
+                            </span>
+                            <h2>Be ready for Our Events</h2>
+                            <p>Event makes suspendice  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendices gravida.</p>
                         </div>
-                        <div class="row justify-content-center">
-                            {this.ngo.projects.slice(0,3).map(p => (
-                                <huruma-project-card project={p}></huruma-project-card>
-                            )) }
-                        </div>
-                        <div class='row' style={{ 'float': 'right' }} >
-                            <div class="team-btn">
-                                <ion-router-link class="optional-btn" color='white' href="/projects"> 
-                                    See More
-                                    <i class="flaticon-right"></i>
-                                </ion-router-link>
-                            </div>
+
+                        <div class="event-slider owl-carousel owl-theme">
+                            {this.events.default.map(event => (
+                                <huruma-event-card event={event}></huruma-event-card>
+                            ))}
                         </div>
                     </div>
                 </section>
-
+                {/* End Events Area */}
+                <br/><br/><br/><br/>
                 <huruma-footer ngo={this.ngo}></huruma-footer>
 
                 { HelmetService.render(this.ngo, 'Home') }

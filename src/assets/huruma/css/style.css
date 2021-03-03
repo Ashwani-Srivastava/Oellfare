@@ -1,3 +1,69 @@
+:root {
+
+  --ion-color-primary: #016433;
+  --ion-color-primary-rgb: 1,100,51;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #01582d;
+  --ion-color-primary-tint: #1a7447;
+
+  --ion-color-secondary: #E64528;
+  --ion-color-secondary-rgb: 230,69,40;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255,255,255;
+  --ion-color-secondary-shade: #ca3d23;
+  --ion-color-secondary-tint: #e9583e;
+
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82,96,255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255,255,255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45,211,111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255,255,255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255,196,9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0,0,0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235,68,90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34,36,40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146,148,156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244,245,248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
 /*
 @File: Huruma Template Styles
 
@@ -71,11 +137,11 @@ a {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 a:hover, a:focus {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   text-decoration: none;
 }
 
@@ -148,7 +214,7 @@ img {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-family: "Abril Fatface", cursive;
   font-weight: 400;
   text-transform: capitalize;
@@ -167,7 +233,7 @@ img {
   z-index: 1;
   color: #ffffff;
   text-transform: capitalize;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50px;
@@ -185,7 +251,7 @@ img {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
@@ -212,7 +278,7 @@ img {
 }
 
 .optional-btn {
-  border: 1px solid #302c51;
+  border: 1px solid var(--ion-color-primary-shade);
   position: relative;
   display: inline-block;
   text-align: center;
@@ -220,7 +286,7 @@ img {
   z-index: 1;
   color: #ffffff !important;
   text-transform: capitalize;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -241,8 +307,8 @@ img {
 
 .optional-btn:hover, .optional-btn:focus {
   color: #ffffff !important;
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .optional-btn i {
@@ -260,7 +326,7 @@ img {
 
 .section-title span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
@@ -315,7 +381,7 @@ Preloader Area CSS
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background-color: #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
   -webkit-animation: preloader 1.3s linear infinite;
   animation: preloader 1.3s linear infinite;
 }
@@ -370,11 +436,11 @@ Header Area CSS
 }
 
 .header-content a:hover {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .header-content span {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .top-header-social {
@@ -460,7 +526,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item a:hover, .huruma-nav .navbar .navbar-nav .nav-item a:focus, .huruma-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -484,7 +550,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item:hover a, .huruma-nav .navbar .navbar-nav .nav-item.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -524,13 +590,13 @@ Navbar Area CSS
   padding: 8px 15px;
   margin: 0;
   position: relative;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 15.5px;
   font-weight: 400;
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   letter-spacing: 1px;
 }
 
@@ -546,11 +612,11 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -561,11 +627,11 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -576,11 +642,11 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -591,11 +657,11 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -606,11 +672,11 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -621,15 +687,15 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -639,7 +705,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -649,7 +715,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -659,7 +725,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -669,7 +735,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -679,7 +745,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .huruma-nav .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
@@ -756,7 +822,7 @@ Navbar Area CSS
 
 .huruma-nav .navbar .others-options .language-switcher .dropdown-menu .dropdown-item {
   padding: 0;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-bottom: 10px;
   font-weight: 500;
 }
@@ -782,7 +848,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .others-options .language-switcher .dropdown-menu .dropdown-item:active, .huruma-nav .navbar .others-options .language-switcher .dropdown-menu .dropdown-item.active {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   background-color: transparent;
 }
 
@@ -792,7 +858,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .others-options .option-item {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   display: inline-block;
   position: relative;
   line-height: 1;
@@ -814,8 +880,8 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .others-options .option-item .search-btn:hover {
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -839,8 +905,8 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .others-options .option-item .close-btn:hover {
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -856,7 +922,7 @@ Navbar Area CSS
   width: 70px;
   height: 92px;
   line-height: 90px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   cursor: pointer;
   color: #ffffff;
   margin-left: 10px;
@@ -880,7 +946,7 @@ Navbar Area CSS
 }
 
 .huruma-nav .navbar .others-options .burger-menu:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -891,7 +957,7 @@ Navbar Area CSS
 
 .navbar-area {
   position: relative;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -912,11 +978,11 @@ Navbar Area CSS
 .navbar-area.is-sticky .navbar-nav .nav-item span {
   display: block;
   font-size: 12px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .navbar-nav .nav-item a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .others-options .language-switcher .dropdown-toggle img {
@@ -924,19 +990,19 @@ Navbar Area CSS
 }
 
 .navbar-area.is-sticky .others-options .language-switcher .dropdown-toggle span {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .others-options .language-switcher .dropdown-toggle span i {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .others-options .option-item .search-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .others-options .option-item .close-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-area.is-sticky .navbar .navbar-brand {
@@ -980,11 +1046,11 @@ Navbar Area CSS
 .navbar-style-two.is-sticky .navbar-nav .nav-item span {
   display: block;
   font-size: 12px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .navbar-nav .nav-item a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .language-switcher .dropdown-toggle img {
@@ -992,28 +1058,28 @@ Navbar Area CSS
 }
 
 .navbar-style-two.is-sticky .others-options .language-switcher .dropdown-toggle span {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .language-switcher .dropdown-toggle span i {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .option-item .search-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .option-item .close-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .cart-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two.is-sticky .others-options .cart-btn sup {
-  color: #2f2c52;
-  background-color: #ff6015;
+  color: var(--ion-color-primary);
+  background-color: var(--ion-color-secondary);
 }
 
 .navbar-style-two.is-sticky .huruma-nav .navbar {
@@ -1034,11 +1100,11 @@ Navbar Area CSS
 }
 
 .navbar-style-two .huruma-nav .navbar .navbar-nav .nav-item a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two .huruma-nav .navbar .navbar-nav .nav-item a:hover, .navbar-style-two .huruma-nav .navbar .navbar-nav .nav-item a:focus, .navbar-style-two .huruma-nav .navbar .navbar-nav .nav-item a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1049,11 +1115,11 @@ Navbar Area CSS
 }
 
 .navbar-style-two .huruma-nav .navbar .others-options .language-switcher .dropdown-toggle span {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two .huruma-nav .navbar .others-options .option-item .search-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two .huruma-nav .navbar .others-options .option-item .search-btn:hover {
@@ -1061,7 +1127,7 @@ Navbar Area CSS
 }
 
 .navbar-style-two .huruma-nav .navbar .others-options .option-item .close-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-two .huruma-nav .navbar .others-options .option-item .close-btn:hover {
@@ -1070,7 +1136,7 @@ Navbar Area CSS
 
 .navbar-style-two .huruma-nav .navbar .others-options .burger-menu {
   background-color: transparent;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   top: 5px;
   line-height: unset;
@@ -1130,7 +1196,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item a:hover, .navbar-style-three .navbar .navbar-nav .nav-item a:focus, .navbar-style-three .navbar .navbar-nav .nav-item a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1154,7 +1220,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item:hover a, .navbar-style-three .navbar .navbar-nav .nav-item.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1194,13 +1260,13 @@ Navbar Area CSS
   padding: 8px 15px;
   margin: 0;
   position: relative;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 15.5px;
   font-weight: 400;
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   letter-spacing: 1px;
 }
 
@@ -1216,11 +1282,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -1231,11 +1297,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -1246,11 +1312,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -1261,11 +1327,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -1276,11 +1342,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -1291,15 +1357,15 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -1309,7 +1375,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -1319,7 +1385,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -1329,7 +1395,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -1339,7 +1405,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -1349,7 +1415,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .navbar-style-three .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
@@ -1427,7 +1493,7 @@ Navbar Area CSS
 
 .navbar-style-three .navbar .others-options .language-switcher .dropdown-menu .dropdown-item {
   padding: 0;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-bottom: 10px;
   font-weight: 500;
 }
@@ -1453,7 +1519,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .language-switcher .dropdown-menu .dropdown-item:active, .navbar-style-three .navbar .others-options .language-switcher .dropdown-menu .dropdown-item.active {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   background-color: transparent;
 }
 
@@ -1463,7 +1529,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .option-item {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   display: inline-block;
   position: relative;
   line-height: 1;
@@ -1485,8 +1551,8 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .option-item .search-btn:hover {
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -1510,8 +1576,8 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .option-item .close-btn:hover {
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -1550,8 +1616,8 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .cart-btn:hover {
-  background-color: #ff6015;
-  border: 1px solid #ff6015;
+  background-color: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -1568,7 +1634,7 @@ Navbar Area CSS
   top: -12px;
   left: 15px;
   background-color: #ffffff;
-  color: #2f2c52 !important;
+  color: var(--ion-color-primary);
   width: 18px;
   height: 18px;
   line-height: 18px;
@@ -1580,7 +1646,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .cart-btn sup:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff !important;
 }
 
@@ -1590,7 +1656,7 @@ Navbar Area CSS
   line-height: 80px;
   background-color: #ffffff;
   cursor: pointer;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   margin-left: 10px;
   cursor: pointer;
   display: inline-block;
@@ -1608,7 +1674,7 @@ Navbar Area CSS
 }
 
 .navbar-style-three .navbar .others-options .burger-menu:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -1635,11 +1701,11 @@ Navbar Area CSS
 .navbar-style-three.is-sticky .navbar-nav .nav-item span {
   display: block;
   font-size: 12px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .navbar-nav .nav-item a {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .others-options .language-switcher .dropdown-toggle img {
@@ -1647,11 +1713,11 @@ Navbar Area CSS
 }
 
 .navbar-style-three.is-sticky .others-options .language-switcher .dropdown-toggle span {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .others-options .language-switcher .dropdown-toggle span i {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .others-options .language-switcher .dropdown-menu {
@@ -1659,15 +1725,15 @@ Navbar Area CSS
 }
 
 .navbar-style-three.is-sticky .others-options .option-item .search-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .others-options .option-item .close-btn {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .navbar-style-three.is-sticky .others-options .burger-menu {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -1702,7 +1768,7 @@ Navbar Area CSS
   height: 50px;
   line-height: initial;
   border: 1px solid #eeeeee;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   outline: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1711,7 +1777,7 @@ Navbar Area CSS
 }
 
 .search-overlay.search-popup .search-form .search-input:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
 }
 
 .search-overlay.search-popup .search-form .search-button {
@@ -1730,7 +1796,7 @@ Navbar Area CSS
 }
 
 .search-overlay.search-popup .search-form .search-button:hover, .search-overlay.search-popup .search-form .search-button:focus {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .sidebar-modal {
@@ -1773,7 +1839,7 @@ Navbar Area CSS
   font-size: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   opacity: .66;
   cursor: pointer;
 }
@@ -1870,19 +1936,19 @@ Navbar Area CSS
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content h2 a {
   display: inline-block;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content h2 a:hover {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content h2 a:not(:first-child) {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content h2 a:not(:first-child):hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content h2 span {
@@ -1923,8 +1989,8 @@ Navbar Area CSS
 
 .sidebar-modal .sidebar-contact-area .contact-info .contact-info-content .social li a:hover {
   color: #ffffff;
-  border-color: #ff6015;
-  background-color: #ff6015;
+  border-color: var(--ion-color-secondary);
+  background-color: var(--ion-color-secondary);
 }
 
 .sidebar-modal.active {
@@ -1947,7 +2013,7 @@ Navbar Area CSS
     font-size: 15px;
   }
   .huruma-responsive-nav .huruma-responsive-menu.mean-container .mean-nav ul li a.active {
-    color: #ff6015;
+    color: var(--ion-color-secondary);
   }
   .huruma-responsive-nav .huruma-responsive-menu.mean-container .mean-nav ul li li a {
     font-size: 14px;
@@ -1959,10 +2025,10 @@ Navbar Area CSS
             box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
   .huruma-responsive-nav .mean-container a.meanmenu-reveal {
-    color: #2f2c52;
+    color: var(--ion-color-primary);
   }
   .huruma-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #2f2c52;
+    background: var(--ion-color-primary);
   }
   .huruma-responsive-nav .mean-container .others-option {
     display: none;
@@ -2063,7 +2129,7 @@ Top Feature Area CSS
   font-size: 18px;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   line-height: 1;
@@ -2079,7 +2145,7 @@ Top Feature Area CSS
   width: 100%;
   height: 0;
   border-radius: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   z-index: -1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -2120,7 +2186,7 @@ Top Feature Area CSS
 
 .feature-content span {
   font-size: 15px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .feature-content h3 {
@@ -2142,7 +2208,7 @@ Top Feature Area CSS
   margin-bottom: 0;
   position: relative;
   z-index: 1;
-  border: 1px dashed #ff6015;
+  border: 1px dashed var(--ion-color-secondary);
   border-radius: 5px;
 }
 
@@ -2166,7 +2232,7 @@ Top Feature Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
   position: relative;
   outline: 0;
 }
@@ -2178,7 +2244,7 @@ Top Feature Area CSS
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   border-radius: 50%;
   margin: 4px;
   opacity: 0;
@@ -2202,7 +2268,7 @@ About Area Area CSS
 =================================================*/
 .about-item span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
@@ -2214,14 +2280,14 @@ About Area Area CSS
 
 .about-item h3 {
   font-size: 38px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin: 5px 0 20px 0;
   text-transform: capitalize;
 }
 
 .about-item .main-color {
   font-size: 18px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-weight: 400;
   font-family: "Rubik", sans-serif;
 }
@@ -2283,7 +2349,7 @@ About Area Area CSS
   line-height: 60px;
   background-color: #ffffff;
   border-radius: 50%;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   z-index: 1;
 }
@@ -2326,7 +2392,7 @@ About Area Area CSS
 }
 
 .about-video .video-btn:hover, .about-video .video-btn .video-content .video-btn:focus {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -2397,7 +2463,7 @@ Fun Facts Area CSS
 
 .single-fun-fact h3 {
   position: relative;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   margin-top: 5px;
   line-height: 1;
   margin-bottom: 0;
@@ -2442,9 +2508,10 @@ Causes Area CSS
 }
 
 .single-causes .causes-content {
+    width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   padding: 20px;
   border-radius: 30px 30px 5px 5px;
   -webkit-transition: 0.5s;
@@ -2505,7 +2572,7 @@ Causes Area CSS
   content: "";
   height: 5px;
   width: 100%;
-  background-color: #555081;
+  background-color: var(--ion-color-primary-shade);
   bottom: -20px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -2537,7 +2604,7 @@ Causes Area CSS
   content: "";
   height: 5px;
   width: 50%;
-  background-color: #ffa380;
+  background-color: var(--ion-color-secondary-tint);
   top: -15px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -2549,7 +2616,7 @@ Causes Area CSS
   content: "";
   height: 4px;
   width: 12px;
-  background-color: #ffa380;
+  background-color: var(--ion-color-secondary-tint);
   top: -15px;
   left: 0;
   right: 0;
@@ -2563,7 +2630,7 @@ Causes Area CSS
 .single-causes .causes-content .causes-btn-one {
   display: inline-block;
   background-color: #ffffff;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   padding: 14px 25px;
   border-radius: 50px;
   margin-top: 16px;
@@ -2603,7 +2670,7 @@ Causes Area CSS
 }
 
 .single-causes .icon i {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-size: 30px;
 }
 
@@ -2614,7 +2681,7 @@ Causes Area CSS
   bottom: 0;
   width: 100%;
   height: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1;
@@ -2623,8 +2690,8 @@ Causes Area CSS
 }
 
 .single-causes:hover::before {
-  height: 150px;
-  width: 360px;
+  height: 280px;
+  width: 100%;
   border-radius: 30px 30px 5px 5px;
 }
 
@@ -2673,7 +2740,7 @@ Causes Area CSS
 .single-causes:hover .causes-btn-one {
   opacity: 1;
   visibility: visible;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   bottom: 15px;
   z-index: 1;
 }
@@ -2688,7 +2755,7 @@ Causes Area CSS
 Donor Area CSS
 =================================================*/
 .donor-section {
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -2713,9 +2780,9 @@ Donor Area CSS
   width: 100px;
   line-height: 100px;
   text-align: center;
-  border: 1px solid #49456e;
+  border: 1px solid var(--ion-color-dark-tint);
   border-radius: 50px;
-  color: #ffae88;
+  color: var(--ion-color-secondary-tint);
   font-weight: normal;
   position: absolute;
   left: 0;
@@ -2836,7 +2903,7 @@ Solve Area CSS
   position: relative;
   margin-bottom: 30px;
   text-align: center;
-  background-color: #ffe9e1;
+  background-color: var(--ion-color-light);
   padding: 25px;
   border: 1px dashed #cccad7;
   -webkit-transition: 0.5s;
@@ -2847,7 +2914,7 @@ Solve Area CSS
 .solve-item h3 {
   font-size: 20px;
   font-family: "Muli", sans-serif;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-weight: bold;
   margin: 20px 0 8px 0;
 }
@@ -2859,7 +2926,7 @@ Solve Area CSS
 
 .solve-item:hover {
   background-color: #ffffff;
-  border: 1px dashed #ff6015;
+  border: 1px dashed var(--ion-color-secondary);
 }
 
 .solve-section .col-lg-3:last-child .solve-item-two {
@@ -2870,14 +2937,14 @@ Solve Area CSS
   position: relative;
   margin-bottom: 30px;
   text-align: left;
-  border-right: 1px dashed #ff6015;
+  border-right: 1px dashed var(--ion-color-secondary);
   padding-left: 10px;
 }
 
 .solve-item-two h3 {
   font-size: 20px;
   font-family: "Muli", sans-serif;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-weight: bold;
   margin: 20px 0 8px 0;
 }
@@ -2889,7 +2956,7 @@ Solve Area CSS
 
 .solve-area-content span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
@@ -2935,7 +3002,7 @@ Mission Area CSS
 
 .mission-tab span {
   font-size: 18px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
@@ -2964,11 +3031,11 @@ Mission Area CSS
 }
 
 .mission-tab .mission-list-tab .tabs li.current {
-  border-bottom: 2px solid #ff6015;
+  border-bottom: 2px solid var(--ion-color-secondary);
 }
 
 .mission-tab .mission-list-tab .tabs li.current a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .mission-tab .mission-list-tab .tabs li a {
@@ -2982,7 +3049,7 @@ Mission Area CSS
 .mission-tab.mission-tab-two {
   position: absolute;
   bottom: 0;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   margin-left: 0;
   padding: 35px;
   right: 60px;
@@ -3014,7 +3081,7 @@ Mission Area CSS
 }
 
 .mission-tab.mission-tab-two .mission-list-tab .tabs li.current a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .mission-tab.mission-tab-two .mission-list-tab .tab_content .tabs_item p {
@@ -3024,7 +3091,7 @@ Mission Area CSS
 .mission-tab.mission-tab-three {
   position: absolute;
   top: 130px;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   margin-left: 0;
   padding: 35px;
   right: 0;
@@ -3056,7 +3123,7 @@ Mission Area CSS
 }
 
 .mission-tab.mission-tab-three .mission-list-tab .tabs li.current a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .mission-tab.mission-tab-three .mission-list-tab .tab_content .tabs_item p {
@@ -3091,7 +3158,7 @@ Mission Area CSS
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   opacity: 0.5;
 }
 
@@ -3117,7 +3184,7 @@ Mission Area CSS
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   opacity: 0.5;
 }
 
@@ -3173,7 +3240,7 @@ Team Area CSS
   text-align: center;
   position: relative;
   font-size: 20px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   border-radius: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3192,7 +3259,7 @@ Team Area CSS
 
 .team-item .image .social li a:hover {
   color: #ffffff;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
 }
 
 .team-item .image .social li:nth-child(1) {
@@ -3231,7 +3298,7 @@ Team Area CSS
 
 .team-item .content span {
   display: block;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-size: 14px;
   margin-top: 6px;
 }
@@ -3270,7 +3337,7 @@ Team Area CSS
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3284,7 +3351,7 @@ Team Area CSS
   bottom: -55%;
   width: 100%;
   height: 100%;
-  background: #ff6015;
+  background: var(--ion-color-secondary);
   opacity: 0.9;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3326,7 +3393,7 @@ Team Area CSS
 
 .single-team-member .social-btn li a:hover {
   background-color: #ffffff;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   border-color: #ffffff;
 }
 
@@ -3386,7 +3453,7 @@ Team Area CSS
 
 .single-team-member:hover .team-icon {
   background-color: #ffffff;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .single-team-member .team-icon {
@@ -3402,7 +3469,7 @@ Team Area CSS
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   border-radius: 50px;
   cursor: pointer;
   -webkit-transition: 0.5s;
@@ -3466,7 +3533,7 @@ Team Area CSS
   width: 35px;
   height: 35px;
   line-height: 35px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
   border-radius: 50%;
   text-align: center;
@@ -3476,7 +3543,7 @@ Team Area CSS
 }
 
 .single-team-member-two .team-image .social-btn li a:hover i {
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
 }
 
 .single-team-member-two .team-image .social-btn:hover li:nth-child(1) {
@@ -3558,7 +3625,7 @@ Events Area CSS
 }
 
 .event-slider .event-item .event-time h3 {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-size: 45px;
   font-weight: 300;
   font-family: "Rubik", sans-serif;
@@ -3623,7 +3690,7 @@ Events Area CSS
 .event-slider .event-item .event-content .event-btn-one {
   display: inline-block;
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .event-slider.owl-theme .owl-nav {
@@ -3640,8 +3707,8 @@ Events Area CSS
   height: 40px;
   width: 40px;
   line-height: 38px;
-  background-color: #ff6015 !important;
-  border: 1px solid #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
+  border: 1px solid var(--ion-color-secondary) !important;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: 0;
@@ -3660,7 +3727,7 @@ Events Area CSS
 }
 
 .event-slider.owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ff6015 !important;
+  color: var(--ion-color-secondary) !important;
   background-color: #ffffff !important;
   border: 1px solid #ffffff !important;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
@@ -3682,7 +3749,7 @@ Events Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
   position: relative;
   outline: 0;
 }
@@ -3694,7 +3761,7 @@ Events Area CSS
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   border-radius: 50%;
   margin: 4px;
   opacity: 0;
@@ -3734,7 +3801,7 @@ Events Area CSS
   width: 100%;
   left: 0;
   top: 0;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   opacity: 0.7;
 }
 
@@ -3807,7 +3874,7 @@ Events Area CSS
 }
 
 .event-area-content .content .event-btn-one:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 /*================================================
@@ -3852,7 +3919,7 @@ Testimonials Area CSS
 }
 
 .testimonials-info b {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-weight: 400;
 }
 
@@ -3912,7 +3979,7 @@ Testimonials Area CSS
   padding: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #2f2c52 !important;
+  color: var(--ion-color-primary) !important;
   font-size: 16px;
   border-radius: 50px;
   outline: 0;
@@ -3924,8 +3991,8 @@ Testimonials Area CSS
 
 .testimonials-slider.owl-theme .owl-nav [class*=owl-]:hover {
   color: #ffffff !important;
-  background-color: #ff6015 !important;
-  border: 1px solid #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
+  border: 1px solid var(--ion-color-secondary) !important;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -3991,7 +4058,7 @@ Testimonials Area CSS
 .feedback-slider .feedback-item .content h3 {
   font-size: 20px;
   margin: 0 0 0 0;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   padding: 16px;
   border-radius: 5px;
   color: #ffffff;
@@ -4004,7 +4071,7 @@ Testimonials Area CSS
   font-size: 18px;
   margin-bottom: 0;
   color: #6a6886;
-  border: 1px dashed #ff6015;
+  border: 1px dashed var(--ion-color-secondary);
   border-top: none;
 }
 
@@ -4046,7 +4113,7 @@ Testimonials Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
   position: relative;
   outline: 0;
 }
@@ -4058,7 +4125,7 @@ Testimonials Area CSS
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   border-radius: 50%;
   margin: 4px;
   opacity: 0;
@@ -4086,7 +4153,7 @@ Testimonials Area CSS
 Donate Area CSS
 =================================================*/
 .donate-section {
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   position: relative;
   overflow: hidden;
 }
@@ -4132,9 +4199,9 @@ Donate Area CSS
 }
 
 .donate-section .section-title .donate-btn:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .donate-section .creative-shape {
@@ -4203,7 +4270,7 @@ Blog Area CSS
   right: 15px;
   width: 25px;
   height: 25px;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   text-align: center;
   line-height: 25px;
   border-radius: 50%;
@@ -4229,7 +4296,7 @@ Blog Area CSS
   content: "";
   height: 8px;
   width: 8px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   left: 0;
   top: 5px;
   border-radius: 30px;
@@ -4250,7 +4317,7 @@ Blog Area CSS
 .single-blog .content .blog-btn {
   display: inline-block;
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   margin-top: 5px;
   position: absolute;
@@ -4268,7 +4335,7 @@ Blog Area CSS
   bottom: 0;
   width: 100%;
   height: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1;
@@ -4385,7 +4452,7 @@ Blog Area CSS
   display: inline-block;
   text-align: center;
   z-index: 1;
-  color: #2f2c52 !important;
+  color: var(--ion-color-primary) !important;
   text-transform: capitalize;
   border-radius: 50px;
   font-weight: 400;
@@ -4405,9 +4472,9 @@ Blog Area CSS
 }
 
 .blog-item .content .blog-btn-one:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff !important;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .blog-item:hover span {
@@ -4450,7 +4517,7 @@ Main Banner Area CSS
 
 .main-banner-content span {
   font-size: 70px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Shadows Into Light", cursive;
   font-weight: normal;
   display: block;
@@ -4458,7 +4525,7 @@ Main Banner Area CSS
 
 .main-banner-content h1 {
   font-size: 55px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin: 5px 0 16px 0;
 }
 
@@ -4504,8 +4571,8 @@ Main Banner Area CSS
 
 .banner-image-slider.owl-theme .owl-nav [class*=owl-]:hover {
   color: #ffffff !important;
-  background-color: #ff6015 !important;
-  border: 1px solid #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
+  border: 1px solid var(--ion-color-secondary) !important;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -4528,7 +4595,7 @@ Main Banner Area CSS
   line-height: 60px;
   background-color: #ffffff;
   border-radius: 50%;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   z-index: 1;
 }
@@ -4571,7 +4638,7 @@ Main Banner Area CSS
 }
 
 .banner-slider-wrap .banner-video .video-btn:hover, .banner-slider-wrap .banner-video .video-btn .video-content .video-btn:focus {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -4618,8 +4685,8 @@ Main Banner Area CSS
 }
 
 .banner-text span {
-  color: #ff6015;
-  border-bottom: 1px solid #ff6015;
+  color: var(--ion-color-secondary);
+  border-bottom: 1px solid var(--ion-color-secondary);
 }
 
 .banner-shape {
@@ -4886,7 +4953,7 @@ Main Banner Area CSS
 }
 
 .slider_area .metis .tp-bullet.selected, .slider_area .metis .tp-bullet:hover {
-  background-color: #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
 }
 
 /*================================================
@@ -4899,7 +4966,7 @@ Process Area CSS
 
 .process-section .section-title span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
@@ -4922,7 +4989,7 @@ Process Area CSS
 
 .process-section.center-process .section-title span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
@@ -4954,9 +5021,9 @@ Process Area CSS
   width: 70px;
   line-height: 70px;
   text-align: center;
-  border: 1px solid #49456e;
+  border: 1px solid var(--ion-color-dark-tint);
   border-radius: 50px;
-  color: #ffae88;
+  color: var(--ion-color-secondary-tint);
   font-weight: normal;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -4968,7 +5035,7 @@ Process Area CSS
 
 .process-item h3 {
   font-size: 20px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-family: "Muli", sans-serif;
   margin: 18px 0 10px 0;
   font-weight: bold;
@@ -4994,7 +5061,7 @@ Process Area CSS
 Donate Form Area CSS
 =================================================*/
 .donate-form-section {
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   position: relative;
 }
 
@@ -5061,7 +5128,7 @@ Donate Form Area CSS
 }
 
 .donate-form .form-group .nice-select .list .option:hover {
-  background-color: #ff6015 !important;
+  background-color: var(--ion-color-secondary) !important;
   color: #ffffff;
 }
 
@@ -5082,7 +5149,7 @@ Donate Form Area CSS
 }
 
 .donate-form .form-group .form-control:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5133,7 +5200,7 @@ Fame Area CSS
 }
 
 .fame-area-content span {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .fame-area-content h3 {
@@ -5155,7 +5222,7 @@ Fame Area CSS
 
 .fame-area-content .single-fun-fact h3 {
   position: relative;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   margin-top: 5px;
   line-height: 1;
   margin-bottom: 0;
@@ -5248,7 +5315,7 @@ Country Area CSS
   position: absolute;
   left: 16px;
   bottom: -4px;
-  border: 4px solid #ff6015;
+  border: 4px solid var(--ion-color-secondary);
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -5299,7 +5366,7 @@ Country Area CSS
 .map-img .location a .location-info h5 {
   font-size: 16px;
   margin: 5px 0 5px 0;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-family: "Muli", sans-serif;
 }
 
@@ -5339,7 +5406,7 @@ Country Area CSS
 
 .country-area-content span {
   font-size: 16px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .country-area-content h3 {
@@ -5364,7 +5431,7 @@ Country Area CSS
 .skill-bar .progress-title {
   font-size: 16px;
   font-weight: 500;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .skill-bar .progress-number-wrapper {
@@ -5386,7 +5453,7 @@ Country Area CSS
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 16px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-weight: 500;
 }
 
@@ -5409,7 +5476,7 @@ Country Area CSS
 
 .skill-bar .progress-content-two {
   height: 6px;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
   border-radius: 4px;
   width: 0%;
 }
@@ -5519,7 +5586,7 @@ Home Banner Three Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
   position: relative;
 }
 
@@ -5530,7 +5597,7 @@ Home Banner Three Area CSS
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   border-radius: 50%;
   margin: 4px;
   opacity: 0;
@@ -5611,7 +5678,7 @@ Home Banner Three Area CSS
   line-height: 60px;
   background-color: #ffffff;
   border-radius: 50%;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: relative;
   z-index: 1;
 }
@@ -5654,7 +5721,7 @@ Home Banner Three Area CSS
 }
 
 .home-banner-three .banner-bar .banner-video .video-btn:hover, .home-banner-three .banner-bar .banner-video .video-btn .video-content .video-btn:focus {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -5786,7 +5853,7 @@ Page Title Area CSS
 }
 
 .page-title-content ul li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .page-title-content ul li::before {
@@ -5797,7 +5864,7 @@ Page Title Area CSS
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
 }
 
 .page-title-content ul li:last-child::before {
@@ -5819,7 +5886,7 @@ Pagination Area CSS
   display: inline-block;
   background-color: #ffffff;
   line-height: 48px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
           box-shadow: 0 2px 10px 0 #d8dde6;
   font-size: 18px;
@@ -5827,7 +5894,7 @@ Pagination Area CSS
 }
 
 .pagination-area .page-numbers.current, .pagination-area .page-numbers:hover, .pagination-area .page-numbers:focus {
-  background: #ff6015;
+  background: var(--ion-color-secondary);
   color: #ffffff;
   -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
           box-shadow: 0 2px 10px 0 #d8dde6;
@@ -5861,7 +5928,7 @@ Causes Details Area Style
   position: relative;
   -webkit-animation: animate-positive 2s;
           animation: animate-positive 2s;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   width: 50%;
 }
 
@@ -5886,7 +5953,7 @@ Causes Details Area Style
 }
 
 .causes-details-desc .causes-details-text .progress.pink .progress-bar:after {
-  border-bottom-color: #ff6015;
+  border-bottom-color: var(--ion-color-secondary);
 }
 
 @-webkit-keyframes animate-positive {
@@ -5954,7 +6021,7 @@ Causes Details Area Style
 }
 
 .causes-details-desc .causes-details-meta .entry-meta span {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .causes-details-desc .causes-details-payment {
@@ -6001,7 +6068,7 @@ Causes Details Area Style
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .causes-details-desc .causes-details-payment .causes-details-btn {
@@ -6040,7 +6107,7 @@ Sidebar Widget Area Style
 .widget-area .widget .widget-title::before {
   content: '';
   position: absolute;
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   bottom: -1px;
   left: 0;
   width: 50px;
@@ -6073,7 +6140,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_search form .search-field:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
 }
 
 .widget-area .widget_search form button {
@@ -6085,13 +6152,13 @@ Sidebar Widget Area Style
   width: 50px;
   border: none;
   color: #ffffff;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .widget-area .widget_search form button:hover {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
 }
 
 .widget-area .widget_huruma_posts_thumb {
@@ -6171,7 +6238,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_huruma_posts_thumb .item .info .title a:hover {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .widget-area .widget_recent_entries ul {
@@ -6195,7 +6262,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_recent_entries ul li::before {
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   position: absolute;
   height: 7px;
   width: 7px;
@@ -6231,7 +6298,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_categories ul li::before {
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   position: absolute;
   height: 7px;
   width: 7px;
@@ -6247,7 +6314,7 @@ Sidebar Widget Area Style
 
 .widget-area .widget_categories ul li a:hover {
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .widget-area .widget_categories ul li .post-count {
@@ -6274,7 +6341,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_meta ul li::before {
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   position: absolute;
   height: 7px;
   width: 7px;
@@ -6299,15 +6366,15 @@ Sidebar Widget Area Style
 }
 
 .widget-area .tagcloud a:hover {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
 }
 
 .widget-area .tagcloud a:focus {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
-  border-color: #2f2c52;
+  border-color: var(--ion-color-primary);
 }
 
 .widget-area .widget_services_list ul {
@@ -6355,7 +6422,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_services_list ul li a:hover {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
   padding-left: 20px;
 }
@@ -6367,7 +6434,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_services_list ul li a.active {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
   padding-left: 20px;
 }
@@ -6427,7 +6494,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_download ul li a:hover {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
   padding-left: 20px;
 }
@@ -6439,7 +6506,7 @@ Sidebar Widget Area Style
 }
 
 .widget-area .widget_download ul li a.active {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
   padding-left: 20px;
 }
@@ -6472,7 +6539,7 @@ Gallery Area CSS
   content: '';
   position: absolute;
   height: 100%;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   left: 0;
   top: 0;
   -webkit-transition: 0.5s;
@@ -6493,7 +6560,7 @@ Gallery Area CSS
   height: 50px;
   line-height: 50px;
   background-color: #ffffff;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 18px;
   margin-top: 15px;
   opacity: 0;
@@ -6503,7 +6570,7 @@ Gallery Area CSS
 
 .single-gallery-box .gallery-btn:hover {
   color: #ffffff;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
 }
 
 .single-gallery-box:hover::before {
@@ -6537,14 +6604,14 @@ Events Details Area CSS
 .events-details-desc .events-details-content .entry-meta ul li {
   position: relative;
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-right: 20px;
   font-size: 14px;
 }
 
 .events-details-desc .events-details-content .entry-meta ul li span {
   display: inline-block;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .events-details-desc .events-details-content .entry-meta ul li a {
@@ -6553,11 +6620,11 @@ Events Details Area CSS
 }
 
 .events-details-desc .events-details-content .entry-meta ul li a:hover {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .events-details-desc .events-details-content .entry-meta ul li i {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-right: 2px;
 }
 
@@ -6568,7 +6635,7 @@ Events Details Area CSS
   right: -15px;
   width: 6px;
   height: 1px;
-  background: #2f2c52;
+  background: var(--ion-color-primary);
 }
 
 .events-details-desc .events-details-content .entry-meta ul li:last-child {
@@ -6603,7 +6670,7 @@ Events Details Area CSS
 
 .events-details-desc .events-details-footer .article-tags span {
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 20px;
   margin-right: 5px;
   position: relative;
@@ -6616,11 +6683,11 @@ Events Details Area CSS
 }
 
 .events-details-desc .events-details-footer .article-tags a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .events-details-desc .events-details-footer .article-tags i {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .events-details-desc .events-details-footer .article-share {
@@ -6645,12 +6712,12 @@ Events Details Area CSS
   display: inline-block;
   margin-right: 2px;
   font-weight: 500;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .events-details-desc .events-details-footer .article-share .social li a {
   display: block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -6662,7 +6729,7 @@ Events Details Area CSS
 
 .events-details-desc .events-details-footer .article-share .social li a:hover {
   color: #ffffff;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -6713,7 +6780,7 @@ Faq Area CSS
 
 .faq-accordion-content .accordion .accordion-title {
   padding: 18px 20px 18px 55px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   position: relative;
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
@@ -6730,7 +6797,7 @@ Faq Area CSS
   width: 40px;
   text-align: center;
   height: 100%;
-  background: #ff6015;
+  background: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -6857,13 +6924,13 @@ Login In CSS
   height: 50px;
   border: 1px solid #eeeeee;
   border-radius: 3px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   padding-left: 20px;
   background: transparent;
 }
 
 .login-form form .form-control:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -6907,8 +6974,8 @@ Login In CSS
 .login-form form .send-btn .default-btn-one {
   display: inline-block;
   padding: 12px 30px;
-  background: #ff6015;
-  border: 1px solid #ff6015;
+  background: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -6919,7 +6986,7 @@ Login In CSS
 .login-form form .send-btn .default-btn-one:hover {
   text-decoration: none;
   background-color: #ffffff;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .login-form form span {
@@ -6928,7 +6995,7 @@ Login In CSS
 }
 
 .login-form form span a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .login-form .forgot-password {
@@ -6941,7 +7008,7 @@ Login In CSS
 }
 
 .login-form .forgot-password a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 /*================================================
@@ -6967,13 +7034,13 @@ Sign Up CSS
   height: 50px;
   border: 1px solid #eeeeee;
   border-radius: 3px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   padding-left: 20px;
   background: transparent;
 }
 
 .signup-form form .form-control:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -7012,8 +7079,8 @@ Sign Up CSS
 .signup-form form .send-btn .default-btn-one {
   display: inline-block;
   padding: 12px 30px;
-  background: #ff6015;
-  border: 1px solid #ff6015;
+  background: var(--ion-color-secondary);
+  border: 1px solid var(--ion-color-secondary);
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -7024,7 +7091,7 @@ Sign Up CSS
 .signup-form form .send-btn .default-btn-one:hover {
   text-decoration: none;
   background-color: #ffffff;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .signup-form form span {
@@ -7033,7 +7100,7 @@ Sign Up CSS
 }
 
 .signup-form form span a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 /*================================================
@@ -7067,7 +7134,7 @@ Recover Area CSS
 }
 
 .contact-form-action .form-heading .reset-desc a {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .contact-form-action .form-heading .reset-desc {
@@ -7098,15 +7165,15 @@ Recover Area CSS
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .contact-form-action .log-in {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .contact-form-action .now-register {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   text-align: right;
 }
 
@@ -7143,7 +7210,7 @@ Contact Area CSS
 =================================================*/
 .contact-info-address {
   padding: 30px;
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
 }
 
 .contact-info-address h3 {
@@ -7162,7 +7229,7 @@ Contact Area CSS
 }
 
 .contact-info-address .info-contact i {
-  color: #ffae88;
+  color: var(--ion-color-secondary-tint);
   position: absolute;
   left: 0;
   top: -6px;
@@ -7171,7 +7238,7 @@ Contact Area CSS
 
 .contact-info-address .info-contact h3 {
   font-size: 14px;
-  color: #ffae88;
+  color: var(--ion-color-secondary-tint);
   font-weight: 400;
   margin: 0 0 10px 0;
   padding-left: 25px;
@@ -7194,7 +7261,7 @@ Contact Area CSS
 }
 
 .contact-info-address .info-contact span a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   letter-spacing: 1px;
 }
 
@@ -7202,7 +7269,7 @@ Contact Area CSS
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(255, 255, 255, 0.2);
           box-shadow: 0px 5px 28.5px 1.5px rgba(255, 255, 255, 0.2);
   padding: 30px;
-  border: 1px dashed #ff6015;
+  border: 1px dashed var(--ion-color-secondary);
   border-radius: 5px;
 }
 
@@ -7223,12 +7290,12 @@ Contact Area CSS
   background-color: #f5f5f5;
   border: none;
   height: 57px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   border: 1px solid #ffffff;
 }
 
 .contact-area .contact-form form .form-control:focus {
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -7300,13 +7367,13 @@ Blog Details Area CSS
 .blog-details-desc .article-content .entry-meta ul li {
   position: relative;
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-right: 21px;
 }
 
 .blog-details-desc .article-content .entry-meta ul li span {
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-weight: 500;
 }
 
@@ -7316,11 +7383,11 @@ Blog Details Area CSS
 }
 
 .blog-details-desc .article-content .entry-meta ul li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .blog-details-desc .article-content .entry-meta ul li i {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   margin-right: 2px;
 }
 
@@ -7331,7 +7398,7 @@ Blog Details Area CSS
   right: -15px;
   width: 6px;
   height: 1px;
-  background: #ff6015;
+  background: var(--ion-color-secondary);
 }
 
 .blog-details-desc .article-content .entry-meta ul li:last-child {
@@ -7396,7 +7463,7 @@ Blog Details Area CSS
   text-align: center;
   border-radius: 40px;
   background-color: #faf5f5;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: inline-block;
@@ -7407,7 +7474,7 @@ Blog Details Area CSS
 }
 
 .blog-details-desc .article-content .features-list li:hover i {
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
 }
 
@@ -7434,7 +7501,7 @@ Blog Details Area CSS
 
 .blog-details-desc .article-footer .article-tags span {
   display: inline-block;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 20px;
   margin-right: 5px;
   position: relative;
@@ -7447,7 +7514,7 @@ Blog Details Area CSS
 }
 
 .blog-details-desc .article-footer .article-tags a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .blog-details-desc .article-footer .article-share {
@@ -7477,7 +7544,7 @@ Blog Details Area CSS
 
 .blog-details-desc .article-footer .article-share .social li a {
   display: block;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -7489,7 +7556,7 @@ Blog Details Area CSS
 
 .blog-details-desc .article-footer .article-share .social li a:hover {
   color: #ffffff;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -7510,7 +7577,7 @@ blockquote, .blockquote {
 }
 
 blockquote p, .blockquote p {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
@@ -7529,7 +7596,7 @@ blockquote::after, .blockquote::after {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -7619,7 +7686,7 @@ blockquote::after, .blockquote::after {
 .comments-area .comment-body {
   border-bottom: 1px solid #eeeeee;
   padding-left: 65px;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   font-size: 14px;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -7631,7 +7698,7 @@ blockquote::after, .blockquote::after {
 
 .comments-area .comment-body .reply a {
   border: 1px solid #ded9d9;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   display: inline-block;
   padding: 5px 20px;
   border-radius: 30px;
@@ -7644,8 +7711,8 @@ blockquote::after, .blockquote::after {
 
 .comments-area .comment-body .reply a:hover {
   color: #ffffff;
-  background-color: #ff6015;
-  border-color: #ff6015;
+  background-color: var(--ion-color-secondary);
+  border-color: var(--ion-color-secondary);
 }
 
 .comments-area .comment-author {
@@ -7680,7 +7747,7 @@ blockquote::after, .blockquote::after {
 }
 
 .comments-area .comment-metadata a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .comments-area .comment-respond {
@@ -7715,7 +7782,7 @@ blockquote::after, .blockquote::after {
 .comments-area .comment-respond label {
   display: block;
   font-weight: 400;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
   margin-bottom: 5px;
 }
 
@@ -7731,7 +7798,7 @@ blockquote::after, .blockquote::after {
 }
 
 .comments-area .comment-respond input[type="date"]:focus, .comments-area .comment-respond input[type="time"]:focus, .comments-area .comment-respond input[type="datetime-local"]:focus, .comments-area .comment-respond input[type="week"]:focus, .comments-area .comment-respond input[type="month"]:focus, .comments-area .comment-respond input[type="text"]:focus, .comments-area .comment-respond input[type="email"]:focus, .comments-area .comment-respond input[type="url"]:focus, .comments-area .comment-respond input[type="password"]:focus, .comments-area .comment-respond input[type="search"]:focus, .comments-area .comment-respond input[type="tel"]:focus, .comments-area .comment-respond input[type="number"]:focus, .comments-area .comment-respond textarea:focus {
-  border-color: #ff6015;
+  border-color: var(--ion-color-secondary);
 }
 
 .comments-area .comment-respond .comment-form-author {
@@ -7783,7 +7850,7 @@ blockquote::after, .blockquote::after {
 }
 
 .comments-area .comment-respond .form-submit input {
-  background: #ff6015;
+  background: var(--ion-color-secondary);
   border: none;
   color: #ffffff;
   padding: 10px 30px;
@@ -7800,7 +7867,7 @@ blockquote::after, .blockquote::after {
 
 .comments-area .comment-respond .form-submit input:hover, .comments-area .comment-respond .form-submit input:focus {
   color: #ffffff;
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
 }
 
 /*================================================
@@ -7815,7 +7882,7 @@ Privacy Section CSS
 Footer Area CSS
 =================================================*/
 .footer-section {
-  background-color: #302c51;
+  background-color: var(--ion-color-primary-shade);
 }
 
 .footer-section.white-bg {
@@ -7823,7 +7890,7 @@ Footer Area CSS
 }
 
 .footer-section.white-bg .single-footer-widget h3 {
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .footer-section.white-bg .single-footer-widget .footer-info-contact span {
@@ -7835,7 +7902,7 @@ Footer Area CSS
 }
 
 .footer-section.white-bg .single-footer-widget .footer-info-contact span a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .footer-section.white-bg .single-footer-widget .footer-quick-links li {
@@ -7847,7 +7914,7 @@ Footer Area CSS
 }
 
 .footer-section.white-bg .single-footer-widget .footer-quick-links li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .footer-section.white-bg .single-footer-widget .footer-news h4 {
@@ -7870,7 +7937,7 @@ Footer Area CSS
 }
 
 .footer-section.white-bg .copyright-area .copyright-area-content p a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .footer-section.white-bg .copyright-area .copyright-area-content ul li {
@@ -7882,7 +7949,7 @@ Footer Area CSS
 }
 
 .footer-section.white-bg .copyright-area .copyright-area-content ul li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .single-footer-widget {
@@ -7905,7 +7972,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .footer-info-contact i {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   position: absolute;
   left: 0;
   top: -6px;
@@ -7914,7 +7981,7 @@ Footer Area CSS
 
 .single-footer-widget .footer-info-contact h3 {
   font-size: 14px;
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   font-weight: 400;
   margin: 0 0 10px 0;
   padding-left: 25px;
@@ -7937,7 +8004,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .footer-info-contact span a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   letter-spacing: 1px;
 }
 
@@ -7965,7 +8032,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .footer-quick-links li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   letter-spacing: 1px;
@@ -8011,7 +8078,7 @@ Footer Area CSS
   content: "";
   height: 8px;
   width: 8px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   left: 22px;
   top: 5px;
   border-radius: 30px;
@@ -8040,7 +8107,7 @@ Footer Area CSS
 }
 
 .copyright-area .copyright-area-content p a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .copyright-area .copyright-area-content ul {
@@ -8065,7 +8132,7 @@ Footer Area CSS
 }
 
 .copyright-area .copyright-area-content ul li a:hover {
-  color: #ff6015;
+  color: var(--ion-color-secondary);
 }
 
 .copyright-area .copyright-area-content ul li::before {
@@ -8075,7 +8142,7 @@ Footer Area CSS
   right: -13px;
   width: 1px;
   height: 14px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
 }
 
 .copyright-area .copyright-area-content ul li:last-child {
@@ -8123,7 +8190,7 @@ Footer Area CSS
   padding-left: 25px;
   border-radius: 50px;
   outline: 0;
-  color: #2f2c52;
+  color: var(--ion-color-primary);
 }
 
 .subscribe-area .newsletter-form .input-newsletter::-webkit-input-placeholder {
@@ -8146,7 +8213,7 @@ Footer Area CSS
   position: absolute;
   right: 4px;
   top: 4px;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   color: #ffffff;
   border: none;
   height: 62px;
@@ -8162,7 +8229,7 @@ Footer Area CSS
 }
 
 .subscribe-area .newsletter-form button:hover {
-  background-color: #2f2c52;
+  background-color: var(--ion-color-primary);
   color: #ffffff;
 }
 
@@ -8183,7 +8250,7 @@ Go Top CSS
   top: 0;
   right: 15px;
   color: #ffffff;
-  background-color: #ff6015;
+  background-color: var(--ion-color-secondary);
   z-index: 4;
   width: 40px;
   text-align: center;
@@ -8194,7 +8261,7 @@ Go Top CSS
   -webkit-transition: .9s;
   transition: .9s;
   border-radius: 50%;
-  border: 1px solid #ff6015;
+  border: 1px solid var(--ion-color-secondary);
 }
 
 .go-top.active {
@@ -8232,7 +8299,7 @@ Go Top CSS
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: #2f2c52;
+  background: var(--ion-color-primary);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.5s;
@@ -8330,4 +8397,5 @@ Go Top CSS
   display: -ms-grid;
   display: grid;
 }
+
 /*# sourceMappingURL=style.css.map */

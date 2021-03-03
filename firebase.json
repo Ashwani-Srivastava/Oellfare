@@ -14,6 +14,20 @@
             "**/node_modules/**"
         ]
     }, {
+        "site": "gr-thozhan",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }, {
         "site": "gr-daivadoni",
         "rewrites": [
             {

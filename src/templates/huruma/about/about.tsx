@@ -31,13 +31,13 @@ export class HurumaAbout {
 
     render() {
 
-        return [
+        return (
 
-            <div class="page-wrapper">
+        <div class="page-wrapper">
 
-            <huruma-header ngo={this.ngo}></huruma-header>
+            <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
 
-            <huruma-title name='About us'></huruma-title>
+            <huruma-title name='About us' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
             <section class="about-section about-page pt-100 pb-100">
                 { /** Start About Area */ }
@@ -134,66 +134,32 @@ export class HurumaAbout {
 
             { /** Start Team Area */ }
             <section class="team-section pt-100 pb-70">
-                    <div class="container">
-                        <div class="team-title-area">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="section-title text-left">
-                                        <span>
-                                            <i class="flaticon-support"></i>
-                                            Meet Our Team
-                                        </span>
-                                        <h2> Talented Team behind { this.ngo.name } </h2>
-                                        <p> Teamwork is the ability to work together toward a common vision </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-5">
+                <div class="container">
+                    <div class="team-title-area">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7">
+                                <div class="section-title text-left">
+                                    <span>
+                                        <i class="flaticon-support"></i>
+                                        Meet Our Team
+                                    </span>
+                                    <h2> Talented Team behind { this.ngo.name } </h2>
+                                    <p> Teamwork is the ability to work together toward a common vision </p>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-
-                            { this.ngo.team.map (member => (
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-team-member">
-                                    <div class="team-image">
-                                        <img src={ member.photo.url } alt="image" />
-                                    </div>
-            
-                                <ul class="social-btn">
-                                    <li>
-                                        <a href="#">
-                                            <i class="flaticon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="#">
-                                            <i class="flaticon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="#">
-                                            <i class="flaticon-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-        
-                                <div class="member-content">
-                                    <h3> { member.name } </h3>
-                                    <span> { member.role } </span>
-                                </div>
-
-                                <div class="team-icon">
-                                    <i class="flaticon-plus"></i>
-                                </div>
+                            <div class="col-lg-5">
                             </div>
                         </div>
-                        )) }
+                    </div>
 
+                    <div class="row">
+
+                        {this.ngo.team.map(member => (
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <huruma-member-card member={member}></huruma-member-card>
+                            </div>
+                        ))}
 
                     </div>
                 </div>
@@ -206,9 +172,9 @@ export class HurumaAbout {
 
             <span> { HelmetService.render(this.ngo, 'About') } </span>
 
-            </div>
+        </div>
 
-        ];
+        );
 
     }
 

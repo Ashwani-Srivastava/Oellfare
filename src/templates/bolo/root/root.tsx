@@ -53,7 +53,11 @@ export class BoloRoot {
                     <ion-route url="/volunteer" component="charity-volunteer" />
                        */ }
 
+                    { this.ngo.name === 'Baby Needs Foundation' ?
+                    <ion-route url="/" component="bolo-home-single" />
+                            :
                     <ion-route url="/" component="bolo-home-single-ten" />
+                    }
 
                 </ion-router>
                 <ion-nav />

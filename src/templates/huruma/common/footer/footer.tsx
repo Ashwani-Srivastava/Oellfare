@@ -52,12 +52,12 @@ export class HurumaFooter {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/donate">
                                         Donate Now
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/volunteer">
                                         Become a Volunteer
                                     </a>
                                 </li>
@@ -67,7 +67,7 @@ export class HurumaFooter {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/contact">
                                         Contact Us
                                     </a>
                                 </li>
@@ -91,7 +91,7 @@ export class HurumaFooter {
 
                             <ul class="footer-quick-links">
                                 <li>
-                                    <a href="#">
+                                    <a href="/donate">
                                         Donate
                                     </a>
                                 </li>
@@ -106,7 +106,7 @@ export class HurumaFooter {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/volunteer">
                                         Volunteer
                                     </a>
                                 </li>
@@ -134,7 +134,7 @@ export class HurumaFooter {
                             <h3>Recent News</h3>
 
                             <div class="footer-news">
-                               <a href="single-blog.html">
+                               <a href="">
                                     <img src="/assets/huruma/img/footer-news/1.jpg" alt="image" />
                                     <h4>Support about poverty to poor family</h4>
                                     <span>Poor, 22 January</span>
@@ -142,7 +142,7 @@ export class HurumaFooter {
                             </div>
 
                             <div class="footer-news">
-                               <a href="single-blog.html">
+                               <a href="">
                                     <img src="/assets/huruma/img/footer-news/2.jpg" alt="image" />
                                     <h4>Mostly suffered school Boys care</h4>
                                     <span>Health, 24 February</span>
@@ -176,10 +176,10 @@ export class HurumaFooter {
                             <div class="col-lg-4 col-md-6">
                                 <ul>
                                     <li>
-                                        <a href="terms-condition.html">Terms & Conditions</a>
+                                        <a href="">Terms & Conditions</a>
                                     </li>
                                     <li>
-                                        <a href="privacy-policy.html">Privacy Policy</a>
+                                        <a href="">Privacy Policy</a>
                                     </li>
                                 </ul>
                             </div>

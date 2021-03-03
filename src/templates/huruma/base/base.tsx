@@ -301,6 +301,7 @@ export class HurumaBase {
 		});
 
 		// Feedback Slider
+        /*
 		$('.feedback-slider').owlCarousel({
 			loop: true,
 			nav: false,
@@ -328,6 +329,7 @@ export class HurumaBase {
 				}
 			}
 		});
+        */
 
 		// Instagram Slides
 		$('.instagram-slides').owlCarousel({
