@@ -516,7 +516,7 @@ export class BoloHomeSingleTen {
                                 
                                 <div class="col-md-4 text-center mb-sm-30">
                                     <h6 class="id-color">Email Us</h6>
-                                    <a style={{ 'color': 'white', 'text-decoration': 'underline' }} href={ `tel:${ this.ngo.reachOut.email }` }> { this.ngo.reachOut.email } </a>
+                                    <a style={{ 'color': 'white', 'text-decoration': 'underline' }} href={ `mailto:${ this.ngo.reachOut.email }` }> { this.ngo.reachOut.email } </a>
                                 </div>
 
                             </div>
