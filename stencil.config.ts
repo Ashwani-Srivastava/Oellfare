@@ -10,7 +10,7 @@ if (dev) {
 }
 
 export const config: Config = {
-    buildEs5: true,
+    buildEs5: 'prod',
     globalScript: globalScript,
     globalStyle: 'src/global/app.css',
     taskQueue: 'async',
@@ -23,7 +23,7 @@ export const config: Config = {
             ]
         },
 
-        baseUrl:'https://babyneedsfoundation.in/',
+        baseUrl:'https://daivadoni.in/',
         prerenderConfig: './prerender.config.ts',
     }],
 };
