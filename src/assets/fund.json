@@ -1,67 +1,67 @@
 {
-  "district": { "id": 3126, "name": "Tirunelveli" },
-  "coordinators": [
-    {
-      "email": "immanuelk83@gmail.com",
-      "phone": "+919698119163",
-      "photo": {
-        "caption": "",
-        "url": "https://lh3.googleusercontent.com/a-/AOh14GijoKR0qDKFkU7FiiN6bTmD7BHQE8vIupyktjQM=s96-c"
-      },
-      "name": "Immanuel K",
-      "id": "O6x52xt92xMduX3AXpKA2dNmRY63",
-      "ngo": {
-        "slug": "daiva-doni-trust",
-        "logo": { "url": "", "caption": "" },
-        "name": "Daiva Doni Trust",
-        "id": "SZqtONqDkUd0NVg4GmfB"
-      },
-      "priority": 10
-    }
-  ],
-  "state": { "id": 31, "name": "Tamil Nadu" },
+  "createdAt": { "_seconds": 1613728202, "_nanoseconds": 489000000 },
   "donationMin": 100,
   "donationSlot": [],
-  "fullUrl": "",
-  "startDate": { "_seconds": 1613728076, "_nanoseconds": 42000000 },
-  "endDate": { "_seconds": 1613728076, "_nanoseconds": 42000000 },
-  "isBroadcasted": false,
-  "cause": { "id": 0, "name": "" },
+  "commission": 5,
+  "coordinators": [
+    {
+      "ngo": {
+        "logo": { "url": "", "caption": "" },
+        "name": "OSCAR Education and Charitable Trust",
+        "id": "rdYkw6SBHECOJn2AXeoV",
+        "slug": "oscar-education-and-charitable-trust"
+      },
+      "email": "sathyabama615@gmail.com",
+      "priority": 10,
+      "name": "sathyabama sathyabamaa@gmail.com",
+      "id": "sWWxXwXCEHMo86M0hnOEsqBdMES2",
+      "photo": {
+        "caption": "",
+        "url": "https://lh3.googleusercontent.com/-ALROSbV7jlw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmhmvbn1_Qu3GmN3iv6wDVsqefM_Q/s96-c/photo.jpg"
+      },
+      "phone": "+918608106559"
+    }
+  ],
+  "state": { "name": "Tamil Nadu", "id": 31 },
   "donationBtnText": "Donate",
-  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "block": { "id": 0, "name": "" },
-  "createdAt": { "_seconds": 1613728076, "_nanoseconds": 42000000 },
-  "video": { "url": "", "caption": "" },
-  "donation": { "required": 50000, "collected": 0, "count": 0 },
-  "name": "Daiva Doni General Donation",
-  "status": 0,
-  "shortCode": "",
-  "recentUpdate": [],
-  "aboutNgo": "We help poor people by distributing Healthy food to them. We also have 2 tuition centers to give free education to Children in Tirunelveli. And every quarter, we conduct regular medical camps. We run one Tailoring coaching center to empower Women in Kalakad.",
+  "project": { "name": "Free Tuition center", "id": "XuJ4E6a2NcF9dRWHc4L0" },
+  "shortUrl": "",
   "isActive": true,
+  "aboutProject": "Contribution towards our Activities",
+  "updatedAt": { "_seconds": 1613728202, "_nanoseconds": 489000000 },
   "donationMax": 10000,
-  "project": { "name": "", "id": "" },
+  "endDate": { "_seconds": 1613728202, "_nanoseconds": 489000000 },
+  "aggregate": { "fork": 0, "update": 0 },
+  "id": "U5PUvKhEo9uwMlLm7F6I",
+  "ngo": {
+    "logo": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_logo.jpg?alt=media",
+      "caption": "Caption of OSCAR Education and Charitable Trust photo"
+    },
+    "slug": "oscar-education-and-charitable-trust",
+    "id": "rdYkw6SBHECOJn2AXeoV",
+    "name": "OSCAR Education and Charitable Trust"
+  },
+  "block": { "id": 0, "name": "" },
+  "status": 0,
+  "fullUrl": "",
+  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
   "coverPhoto": [
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Ffundraiser%2FU5PUvKhEo9uwMlLm7F6I%2Foriginal_cover.jpg?alt=media&token=d8920094-5a63-4a54-a70b-412b4c995cae",
+      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3100%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Ffundraiser%2FU5PUvKhEo9uwMlLm7F6I%2Foriginal_cover.jpg?alt=media&token=8a28c822-efb5-4155-8f43-b7e466dafc43",
       "caption": ""
     }
   ],
-  "updatedAt": { "_seconds": 1613728076, "_nanoseconds": 42000000 },
-  "ngo": {
-    "id": "SZqtONqDkUd0NVg4GmfB",
-    "logo": {
-      "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FSZqtONqDkUd0NVg4GmfB%2Foriginal_logo.jpg?alt=media",
-      "caption": "Caption of Daiva Doni Trust photo"
-    },
-    "name": "Daiva Doni Trust",
-    "slug": "daiva-doni-trust"
-  },
-  "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
-  "aboutProject": "General donation towards our Activities",
-  "slug": "daiva-doni-general-donation",
-  "commission": 5,
-  "aggregate": { "fork": 0, "update": 0 },
-  "id": "U5PUvKhEo9uwMlLm7F6I",
-  "shortUrl": ""
+  "startDate": { "_seconds": 1613728202, "_nanoseconds": 490000000 },
+  "slug": "oscared-general-donation",
+  "name": "OscarEd General Donation",
+  "shortCode": "",
+  "isBroadcasted": false,
+  "cause": { "name": "", "id": 0 },
+  "aboutNgo": "அனைவருக்கும் பாரபட்சமற்ற கல்வி முன்னேற்றம் மற்றும் பெண்கள் கல்வி முன்னேற்றம் தொழில்கல்வி  பயிற்சி மேற்கொள்ள படுகிறது",
+  "video": { "url": "", "caption": "" },
+  "donation": { "collected": 0, "required": 100000, "count": 0 },
+  "district": { "id": 3126, "name": "Tirunelveli" },
+  "recentUpdate": [],
+  "createdBy": "OBIB4vabR7PrG2y6WXYpLph6l342"
 }

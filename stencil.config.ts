@@ -23,7 +23,7 @@ export const config: Config = {
             ]
         },
 
-        baseUrl:'https://daivadoni.in/',
+        baseUrl:'https://oscared.org/',
         prerenderConfig: './prerender.config.ts',
     }],
 };

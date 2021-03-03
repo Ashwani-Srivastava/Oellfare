@@ -227,7 +227,7 @@
   "admin": [],
   "status": 3,
   "updatedAt": { "_seconds": 1612936915, "_nanoseconds": 0 },
-  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "whyHelpMatters": [ { "text": "", "icon": "checkmark-circle-outline" }, { "text": "", "icon": "checkmark-circle-outline" }, { "text": "", "icon": "checkmark-circle-outline" } ],
   "updatedBy": "OBIB4vabR7PrG2y6WXYpLph6l342",
   "testimonial": [],
   "createdAt": { "_seconds": 1612936915, "_nanoseconds": 533000000 },
@@ -278,7 +278,7 @@
     "url": "https://firebasestorage.googleapis.com/v0/b/gr-live.appspot.com/o/grcare%2Fregional%2Fin%2F31%2F3126%2Fngo%2FrdYkw6SBHECOJn2AXeoV%2Foriginal_logo.jpg?alt=media",
     "caption": "Caption of OSCAR Education and Charitable Trust photo"
   },
-  "whyVolunteerHere": [ { "text": "", "icon": "checkmark-circle-outline" } ],
+  "whyVolunteerHere": [ { "text": "", "icon": "checkmark-circle-outline" }, { "text": "", "icon": "checkmark-circle-outline" }, { "text": "", "icon": "checkmark-circle-outline" } ],
   "id": "rdYkw6SBHECOJn2AXeoV",
   "slug": "oscar-education-and-charitable-trust",
   "district": { "id": 3126, "name": "Tirunelveli" },
