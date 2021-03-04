@@ -72,7 +72,7 @@ import * as ngo                 from    'assets/ngo.json';
                 : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
                 }
 
-                <huruma-title name='Contact ' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
+                <huruma-title name='Contact ' bg-image='/assets/images/contact-001x1024.jpg'></huruma-title>
 
                 <section class="contact-section ptb-100">
                     <div class="container">
@@ -168,7 +168,7 @@ import * as ngo                 from    'assets/ngo.json';
 
                 // <!-- Start Map Area -->  */}
                 <div class="map-section">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.97757859632!2d80.18950631536964!3d13.037099116963866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266d4377f9d27%3A0xd881baee6613b9e6!2sThozhan%20Trust!5e0!3m2!1sen!2sin!4v1614349751839!5m2!1sen!2sin"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13654.642347280882!2d77.71064429124829!3d8.693259307851733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b041245d28d3ad5%3A0x142cb300453d8888!2s1st%20St%2C%20Tirunelveli%2C%20Tamil%20Nadu%20627005!5e0!3m2!1sen!2sin!4v1614827230047!5m2!1sen!2sin"></iframe>
                 </div>
                 {/* //  <!-- End Map Area -->  */}
 

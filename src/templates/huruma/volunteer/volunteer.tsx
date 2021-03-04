@@ -141,7 +141,7 @@ export class HurumaVolunteer {
                 : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
                 }
 
-                <huruma-title name='Volunteer' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
+                <huruma-title name='Volunteer' bg-image='/assets/images/thank-010x1024.jpg'></huruma-title>
 
                 <section class="cta-s1-section" style={{ 'margin-top': '32px' , 'margin-bottom': '32px' }}>
                     <div class="container">

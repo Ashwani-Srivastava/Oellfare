@@ -31,7 +31,7 @@ export class HurumaPressCoverage {
             : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
             }
             
-            <huruma-title name='Press Coverage' bg-image={image}></huruma-title>
+            <huruma-title name='Press Coverage' bg-image='/assets/images/press-001x1024.jpg'></huruma-title>
 
       { /** Start Causes Area  */ }
       <section class="causes-section pt-100 pb-70">

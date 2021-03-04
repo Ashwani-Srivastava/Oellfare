@@ -172,7 +172,8 @@ export class HurumaChampion {
 
                 <huruma-title name='Champion' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
-                <h1> Champion </h1>,
+                <h1> Become a Champion </h1>,
+                <h5> Monthly automated Donations - Coming soon </h5>,
 
                 <huruma-footer ngo={this.ngo}></huruma-footer>,
 

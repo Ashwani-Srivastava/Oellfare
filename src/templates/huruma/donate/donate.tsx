@@ -15,8 +15,8 @@ import { Fundraiser         }   from    'fundraiser/fundraiser.model';
 import { Logger             }   from    'common/logger';
 import { Ngo                }   from    'ngo/ngo.model';
 import { NgoService         }   from    'ngo/ngo.service';
-//import { PaymentState       }   from    'payment/payment.model';
-//import { PaymentService     }   from    'payment/payment.service';
+import { PaymentState       }   from    'payment/payment.model';
+import { PaymentService     }   from    'payment/payment.service';
 import { Volunteer          }   from    'volunteer/volunteer.model';
 import { UtilityService     }   from    'common/utility.service';
 
@@ -39,10 +39,10 @@ export class HurumaDonate {
     @State() isLoggedIn         :   boolean             =   false;
 
     private alive               :   boolean             =   true;
-    //private donationAmount      :   number              =   1000;
-    //private whyDonate           :   string              =   '';
-    //private referredBy          :   string              =   '';
-    //private isAnonymous         :   boolean             =   false;
+    private donationAmount      :   number              =   1000;
+    private whyDonate           :   string              =   '';
+    private referredBy          :   string              =   '';
+    private isAnonymous         :   boolean             =   false;
 
     constructor () {
         console.log('Donate :: Constructor');
@@ -117,8 +117,6 @@ export class HurumaDonate {
 
     }
 
-    
-    /*
     private async makeDonation(): Promise<any> {
         console.log('makeDonation', this.donationAmount, this.referredBy, this.isAnonymous, this.whyDonate);
 
@@ -158,7 +156,6 @@ export class HurumaDonate {
             this[fieldName]     =   e.target.value;
         }
     }
-    */
 
     
 
@@ -172,7 +169,7 @@ export class HurumaDonate {
             : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
             }
 
-            <huruma-title name='Donate' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
+            <huruma-title name='Donate' bg-image='/assets/images/begin-002x960.jpg'></huruma-title>
 
             <section class="causes-details-area ptb-100">
                 <div class="container">
@@ -188,36 +185,55 @@ export class HurumaDonate {
                                     <form class="contact-form">
                                         <div class="row">
 
+                                            { !this.isLoggedIn ?
                                             <div class="col-lg-12 mb-3">
-                                                <div class="causes-details-btn">
+                                                <div onClick={() => this.openAuthDrawer()} class="causes-details-btn">
                                                     <a href="#" class="default-btn">
-                                                        Login with Grassroots
+                                                        Login with Gmail
                                                         <span></span>
                                                     </a>
                                                 </div>
-                                            </div>
+                                            </div>: null }
+                    
+                                            { this.isLoggedIn ?
+                                            <div class="col-md-12">
+                                                <h5> Not { this.me?.name }? <a href='#' onClick={() => AuthService.logout() }>Log out</a> </h5>
+                                            </div> : null }
 
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" id="first-name" class="form-control" placeholder="Fundraiser" />
+                                                    <select class='form-control mb-4' disabled={ !this.isLoggedIn } >
+                                                        <option> { this.fund.name } </option>
+                                                    </select>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" class="form-control" placeholder="Donation Amount" />
+                                                    <input type="number"
+                                                        class="form-control" 
+                                                        onInput={ (e) => this.handleCommonInput(e, 'donationAmount') } 
+                                                        min={100}
+                                                        name="name" 
+                                                        placeholder="Donation Amount"
+                                                        disabled={ !this.isLoggedIn } />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input type="text" name="text" class="form-control" placeholder="Referred by" />
+                                                    <input type="text"
+                                                        class="form-control" 
+                                                        onInput={ (e) => this.handleCommonInput(e, 'referredBy') } 
+                                                        placeholder="Referred by"
+                                                        disabled={ !this.isLoggedIn } />
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <input type="checkbox" 
+                                                        onInput={ (e) => this.handleCommonInput(e, 'isAnonymous') }
                                                         style={{ 'width': '18px', 'height': '18px' }} 
                                                         id="anonymous" name="anonymous" value="yes"
                                                         disabled={ !this.isLoggedIn } />
@@ -227,13 +243,21 @@ export class HurumaDonate {
 
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <textarea class="form-control" style={{ 'height': '120px' }} placeholder="Why I am donating" > </textarea>
+                                                    <textarea class="form-control" 
+                                                        style={{ 'height': '120px' }}
+                                                        onInput={ (e) => this.handleCommonInput(e, 'whyDonate') } 
+                                                        cols={30} rows={7} 
+                                                        placeholder="Why am I donating?"
+                                                        disabled={ !this.isLoggedIn } ></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12">
-                                                <div class="causes-details-btn">
-                                                    <a href="/donate" class="default-btn">
+                                                <div class="causes-details-btn"
+                                                    onClick={() => this.makeDonation()}
+                                                    style={{ 'width': '100%' }} >
+
+                                                    <a class="default-btn" style={{ 'cursor': 'pointer' }}>
                                                         Donate Now
                                                         <span></span>
                                                     </a>
@@ -248,6 +272,7 @@ export class HurumaDonate {
                         <div class="col-lg-4 col-md-12">
                             <aside class="widget-area" id="secondary">
 
+                                { /**
                                 <section class="widget widget_huruma_posts_thumb">
                                     <h3 class="widget-title"> Recent Donors </h3>
 
@@ -281,36 +306,8 @@ export class HurumaDonate {
                                         <div class="clear"></div>
                                     </article>
 
-                                    <article class="item">
-                                        <a href="#" class="thumb">
-                                            <span class="fullimage cover bg3" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <time dateTime="2019-06-30">June 30, 2020</time>
-                                            <h4 class="title usmall">
-                                                <a href="#"> Prakash</a>
-                                                <p> Rs. 3000 </p>
-                                            </h4>
-                                        </div>
-
-                                        <div class="clear"></div>
-                                    </article>
-                                    
-                                    <article class="item">
-                                        <a href="#" class="thumb">
-                                            <span class="fullimage cover bg4" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <time dateTime="2019-06-30">June 30, 2020</time>
-                                            <h4 class="title usmall">
-                                                <a href="#"> Gandhi </a>
-                                                <p> Rs. 5000 </p>
-                                            </h4>
-                                        </div>
-
-                                        <div class="clear"></div>
-                                    </article>
                                 </section>
+                                */ }
 
                                 
 

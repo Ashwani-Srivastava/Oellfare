@@ -36,7 +36,7 @@ export class HurumaProjects {
             : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
             }
 
-            <huruma-title name='Projects' bg-image={image}></huruma-title>
+            <huruma-title name='About us' bg-image='/assets/images/tailoring-002x1980.jpg'></huruma-title>
             
 
       <section class="features-section ptb-100">
