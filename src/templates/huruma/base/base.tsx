@@ -9,7 +9,7 @@ export class HurumaBase {
 
 		// Mean Menu
 	 	$('.meanmenu-reveal').click(() => {
-			$('.mean-nav ul').show();
+			$('.mean-nav ul').toggle();
         });
 
 		// Home Slides

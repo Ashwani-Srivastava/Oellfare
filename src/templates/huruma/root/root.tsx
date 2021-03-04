@@ -59,6 +59,12 @@ export class CharityRoot {
                 </ion-router>
                 <ion-nav />
 
+                <ion-fab horizontal="start" vertical="bottom">
+                    <ion-fab-button color='primary' href={`https://api.whatsapp.com/send?phone=${this.ngo.reachOut.phone1}&text=Hi. I like to support ${this.ngo.name}.`}>
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
+
             </ion-app>
         );
     }
