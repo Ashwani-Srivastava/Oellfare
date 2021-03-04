@@ -2045,7 +2045,7 @@ Navbar Area CSS
   }
   .huruma-responsive-nav .huruma-responsive-menu.mean-container .navbar-nav {
     overflow-y: scroll;
-    height: 336px;
+    height: 420px;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
             box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }

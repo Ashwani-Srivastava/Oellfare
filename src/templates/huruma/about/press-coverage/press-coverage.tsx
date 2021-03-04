@@ -21,8 +21,6 @@ export class HurumaPressCoverage {
 
 
     render() {
-        //var image='url('+this.ngo.photos[6]+')';
-        var image=this.ngo.photos[6];
         return [
             <div class="page-wrapper">
 

@@ -24,11 +24,11 @@ export class HurumaFooter {
 
                             <div class="col-lg-4 col-md-6">
                                 <p>
-                                    <i class="far fa-copyright"></i> 
-                                    2020 Huruma. All Rights Reserved by
-                                    <a href="https://envytheme.com/" target="_blank">
-                                        EnvyTheme
-                                    </a>
+
+									Built with 
+									&nbsp; <i style={{ 'color': 'red', 'font-size': '1.2em' }} class="bx bxs-heart"></i> &nbsp;
+									by <a href="https://thegrassroots.app/">Grassroots</a>
+
                                 </p>
                             </div>
 

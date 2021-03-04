@@ -1,5 +1,4 @@
 declare var $                   :   any;
-declare var jQuery              :   any;
 declare var Swiper              :   any;
 
 export class HurumaBase {
@@ -9,8 +8,8 @@ export class HurumaBase {
         this.hidePreloader();
 
 		// Mean Menu
-		 jQuery('.mean-menu').meanmenu({
-			meanScreenWidth: "991"
+	 	$('.meanmenu-reveal').click(() => {
+			$('.mean-nav ul').show();
         });
 
 		// Home Slides
@@ -284,18 +283,18 @@ export class HurumaBase {
 		});
 
 		//skill
-		jQuery('.skill-bar').each(function() {
-			jQuery(this).find('.progress-content, .progress-content-two, .progress-content-three').animate({
-			width:jQuery(this).attr('data-percentage')
+		$('.skill-bar').each(function() {
+			$(this).find('.progress-content, .progress-content-two, .progress-content-three').animate({
+			width:$(this).attr('data-percentage')
 			},2000);
 			
-			jQuery(this).find('.progress-number-mark').animate(
-			{left:jQuery(this).attr('data-percentage')},
+			$(this).find('.progress-number-mark').animate(
+			{left:$(this).attr('data-percentage')},
 			{
 				duration: 2000,
 				step: function(now, _fx) {
                     var data = Math.round(now);
-                    jQuery(this).find('.percent').html(data + '%');
+                    $(this).find('.percent').html(data + '%');
 				}
 			});  
 		});
