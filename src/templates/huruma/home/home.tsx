@@ -206,8 +206,8 @@ export class HurumaHome {
 
                             <div class="col-lg-6">
                                 <div class="about-image about-four">
-                                    <img src={this.ngo.photos[4]} class="shadow" alt="image" />
-                                    <img src={this.ngo.photos[5]} class="shadow hello" alt="image" />
+                                    <img src={this.ngo.photos[3]} style={{  'min-height': '500px', 'object-fit': 'cover' }} class="shadow" alt="image" />
+                                    <img src={this.ngo.photos[0]} style={{  'min-height': '200px','object-fit': 'cover' }}class="shadow" alt="image" />
                                 </div>
 
                                 <div class="about-video">
@@ -397,14 +397,15 @@ export class HurumaHome {
                 { /** End Solve Area */ }
 
                 { /** Start Events Area */ }
-                <section class="donor-section pt-100 pb-70">
-                    <div class="container" >
+                <section class="event-section pt-100"  style={{ 'background': `url("https://images.unsplash.com/photo-1566807387450-b74aea0e727e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`, 'background-size': 'cover' }}>
+                    <div class="container">
                         <div class="section-title">
                             <span>
                                 <i class="flaticon-clipboard"></i>
-                                Help
-                            </span>
-                            <h2> The heart that gives, gathers</h2>
+                                Donate
+                            </span><br/><br/>
+                            <h2> No act of kindness, no matter how small, is ever wasted </h2>
+                            <br/><br/>
                             {/* <p>  with a good background image </p> */}
                         </div>
 
@@ -515,7 +516,7 @@ export class HurumaHome {
                 { /** End Blog Area */ }
 
                 {/* Start Events Area */}
-                <section class="event-section pt-100">
+                <section class="event-section pt-100"  style={{ 'background': `url("https://images.unsplash.com/photo-1601744851599-c13661b043be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1357&q=80")`, 'background-size': 'cover' }}>
                     <div class="container">
                         <div class="section-title">
                             <span>
