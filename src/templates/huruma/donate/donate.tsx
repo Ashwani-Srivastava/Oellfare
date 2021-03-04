@@ -167,7 +167,12 @@ export class HurumaDonate {
         return [
         <div class="page-wrapper">
 
-            <huruma-header ngo={this.ngo}></huruma-header>
+            { this.ngo.name === 'Thozhan' ?
+            <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
+
+            <huruma-title name='Donate' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
             <section class="causes-details-area ptb-100">
                 <div class="container">

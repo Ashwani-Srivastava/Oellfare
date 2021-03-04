@@ -47,7 +47,10 @@ export class HurumaLegalPage {
 
         <div class="page-wrapper">
 
+            { this.ngo.name === 'Thozhan' ?
             <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
 
             <huruma-title name='Legal' parent='About us' bg-image='/assets/images/books-001x1024.jpg'></huruma-title>
 

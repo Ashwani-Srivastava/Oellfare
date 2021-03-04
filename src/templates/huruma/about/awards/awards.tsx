@@ -28,7 +28,10 @@ export class HurumaAwards {
 
         <div class="page-wrapper">
 
+            { this.ngo.name === 'Thozhan' ?
             <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
 
             <huruma-title name='Awards' parent='About us' bg-image='/assets/images/awards001x1440.jpg'></huruma-title>
 

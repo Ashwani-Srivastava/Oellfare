@@ -35,7 +35,10 @@ export class HurumaAbout {
 
         <div class="page-wrapper">
 
+            { this.ngo.name === 'Thozhan' ?
             <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
 
             <huruma-title name='About us' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
@@ -49,7 +52,10 @@ export class HurumaAbout {
                                     <i class="flaticon-care-about-plants"></i>
                                     About us
                                 </span>
-                                <h3>The Organization Focused On Building People</h3>
+                                { this.ngo.name === 'Thozhan' ?
+                                <h3> The Organization Focused On Building People </h3>
+                                    :
+                                <h3> The Organization Focused On Education </h3> }
                                 <p class="main-color">
                                         { this.ngo.mission }
                                 </p>
@@ -59,8 +65,8 @@ export class HurumaAbout {
 
                         <div class="col-lg-6">
                             <div class="about-image">
-                                <img src="/assets/huruma/img/about/1.jpg" class="shadow about-page-img" alt="image" />
-                                <img src="/assets/huruma/img/about/2.jpg" class="shadow" alt="image" />
+                                <img src={this.ngo.photos[1]} class="shadow" alt="image" />
+                                <img src={this.ngo.photos[2]} class="shadow hello" alt="image" />
                             </div>
 
                             <div class="about-video">
@@ -78,8 +84,8 @@ export class HurumaAbout {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 p-0">
-                            <div class="mission-image" style={{ 'background': `url(${this.ngo.photos[4]})` }}>
-                                <img src={ this.ngo.photos[4] } alt="image" />
+                            <div class="mission-image" style={{ 'background': `url(${this.ngo.photos[1]})` }}>
+                                <img src={ this.ngo.photos[1] } alt="image" />
                             </div>
                         </div>
 
@@ -92,38 +98,44 @@ export class HurumaAbout {
                                 <h2>Concern about Our Mission</h2>
                                 <div class="tab mission-list-tab">
                                     <ul class="tabs">
+                                        { this.ngo.name === 'Thozhan' ?
                                         <li>
                                             <a href="#">
                                                 Our Mission
                                             </a>
-                                        </li>
+                                        </li>: null }
+
                                         <li>
                                             <a href="#">
                                                 Our Vision
                                             </a>
                                         </li>
+
+                                        { this.ngo.name === 'Thozhan' ?
                                         <li>
                                             <a href="#">
                                                 Why your help matters?
                                             </a>
-                                        </li>
+                                        </li>: null }
                                     </ul>
                                     
                                     <div class="tab_content">
+                                        { this.ngo.name === 'Thozhan' ?
                                         <div class="tabs_item">
                                             <p> { this.ngo.mission } </p>
-                                        </div>
+                                        </div>: null }
 
                                         <div class="tabs_item">
                                             <p> { this.ngo.vision } </p>
 
                                         </div>
 
+                                        { this.ngo.name === 'Thozhan' ?
                                         <div class="tabs_item">
                                             { this.ngo.whyHelpMatters.map( help => (
                                                 <p> { help.text } </p>
                                             )) }
-                                        </div>
+                                        </div>: null }
                                     </div>
                                 </div>
                             </div>

@@ -26,7 +26,10 @@ export class HurumaPressCoverage {
         return [
             <div class="page-wrapper">
 
+            { this.ngo.name === 'Thozhan' ?
             <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
             
             <huruma-title name='Press Coverage' bg-image={image}></huruma-title>
 

@@ -162,17 +162,24 @@ export class HurumaChampion {
 
     render() {
 
-        return [
+        return (
+            <div class="page-wrapper">
 
-        <huruma-header ngo={this.ngo}></huruma-header>,
+                { this.ngo.name === 'Thozhan' ?
+                <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+                : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+                }
 
-        <h1> Champion </h1>,
+                <huruma-title name='Champion' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
-        <huruma-footer ngo={this.ngo}></huruma-footer>,
+                <h1> Champion </h1>,
 
-        <span> { HelmetService.render(this.ngo, 'Champion') } </span>
+                <huruma-footer ngo={this.ngo}></huruma-footer>,
 
-        ];
+                <span> { HelmetService.render(this.ngo, 'Champion') } </span>
+
+            </div>
+        );
 
     }
 

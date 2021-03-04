@@ -39,7 +39,11 @@ export class HurumaProjectsDetail {
         console.log(`Project :: ${this.projectSlug} :: Render`);
         return [
             <div class="page-wrapper">
+
+            { this.ngo.name === 'Thozhan' ?
             <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+            : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+            }
             
             <huruma-title name={this.project.name} bg-image={image}></huruma-title>
             

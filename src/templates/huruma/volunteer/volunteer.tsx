@@ -135,7 +135,13 @@ export class HurumaVolunteer {
 
         return [
             <div class="page-wrapper">
-                <huruma-header ngo={this.ngo}></huruma-header>
+
+                { this.ngo.name === 'Thozhan' ?
+                <huruma-header-trans ngo={this.ngo}></huruma-header-trans>
+                : <huruma-header-trans-oscar ngo={this.ngo}></huruma-header-trans-oscar>
+                }
+
+                <huruma-title name='Volunteer' bg-image='/assets/images/team-008x1440.jpg'></huruma-title>
 
                 <section class="cta-s1-section" style={{ 'margin-top': '32px' , 'margin-bottom': '32px' }}>
                     <div class="container">
