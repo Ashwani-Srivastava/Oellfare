@@ -18,8 +18,8 @@ export class ClabHeader {
                             { /**brand start */ }
                             <div class="navbar-brand float-left">
                                 <a class="" href="index.html">
-                                    <img class="logo-light" src="/assets/clab/img/logo.png" srcset="assets/img/logo@2x.png 2x" alt="CLab" />
-                                    <img class="logo-dark" src="/assets/clab/img/logo-dark.png" srcset="assets/img/logo-dark@2x.png 2x" alt="CLab" />
+                                    <img class="logo-light" src="/assets/clab/img/logo.png" srcset="/assets/clab/img/logo@2x.png 2x" alt="CLab" />
+                                    <img class="logo-dark" src="/assets/clab/img/logo-dark.png" srcset="/assets/clab/img/logo-dark@2x.png 2x" alt="CLab" />
                                 </a>
                             </div>
                             { /**brand end */ }
