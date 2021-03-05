@@ -34,8 +34,10 @@
 
             "alor/*"    :[ "templates/alor/*"],
             "bolo/*"    :[ "templates/bolo/*"],
+            "clab/*"    :[ "templates/clab/*"],
             "charity/*" :[ "templates/charity/*"],
             "huruma/*"  :[ "templates/huruma/*"],
+            "oellfare/*":[ "templates/oellfare/*"],
             "proffer/*" :[ "templates/proffer/*"],
             "verso/*"   :[ "templates/verso/*"]
         }
