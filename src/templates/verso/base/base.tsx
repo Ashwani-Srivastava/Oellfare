@@ -438,7 +438,7 @@ export class VersoBase {
         });
         $('body').on('click', '.verso-go-top', function(event) {
             event.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 300);
+            $('#page-wrapper').animate({scrollTop: 0}, 300);
         });
     }
 
