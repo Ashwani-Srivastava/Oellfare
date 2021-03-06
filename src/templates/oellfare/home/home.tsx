@@ -1,6 +1,6 @@
 import { Component, h, Prop }   from    '@stencil/core';
 
-import { OellfareBase          }   from    'oellfare/base/base'
+import { OellfareBase       }   from    'oellfare/base/base'
 import { HelmetService      }   from    'common/helmet.service'
 import * as ngo                 from    'assets/ngo.json';
 import * as fund                from    'assets/fund.json';
