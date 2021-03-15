@@ -70,27 +70,27 @@ export class OellfareFooter {
                                 </div>
                                 <div class="address_content">
                                     <ul>
-                                        <li><img src="/assets/oellfare/images/phone2.png" alt="icon" /><span>Call Us</span> +123 456 789</li>
+                                        <li><img src="/assets/oellfare/images/phone2.png" alt="icon" /><span>Call Us</span> {this.ngo.reachOut.phone2}</li>
                                         <li><img src="/assets/oellfare/images/clock.png" alt="icon" /><span>Working Hour</span> 9.00am - 6.00pm</li>
-                                        <li><img src="/assets/oellfare/images/mail.png" alt="icon" /><span>Send Mail</span> oellfare@admin.com</li>
+                                        <li><img src="/assets/oellfare/images/mail.png" alt="icon" /><span>Send Mail</span> {this.ngo.reachOut.email}</li>
                                     </ul>
                                 </div>
                                 <div class="footer_social">
                                     <ul>
                                         <li class="facebook">
-                                            <a href="#"><i class="ion-logo-facebook"></i></a>
+                                            <a href={this.ngo.reachOut.facebook}><i class="ion-logo-facebook"></i></a>
                                         </li>
                                         <li class="twitter">
-                                            <a href="#"><i class="ion-logo-twitter"></i></a>
+                                            <a href={this.ngo.reachOut.twitter}><i class="ion-logo-twitter"></i></a>
                                         </li>
                                         <li class="skype">
-                                            <a href="#"><i class="ion-logo-skype"></i></a>
+                                            <a href={this.ngo.reachOut.skype}><i class="ion-logo-skype"></i></a>
                                         </li>
                                         <li class="instagram">
-                                            <a href="#"><i class="ion-logo-instagram"></i></a>
+                                            <a href={this.ngo.reachOut.instagram}><i class="ion-logo-instagram"></i></a>
                                         </li>
                                         <li class="pinterest">
-                                            <a href="#"><i class="ion-logo-pinterest"></i></a>
+                                            <a href={this.ngo.reachOut.pinterest}><i class="ion-logo-pinterest"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -104,12 +104,12 @@ export class OellfareFooter {
                     <div class="footer_bottom_inner">
                         <div class="logo-footer">
                             <a href="index.html">
-                                <img src="/assets/oellfare/images/logo-footer.png" alt="Oellfare" />
+                                <img src={this.ngo.logo.url} class="logo-manage" alt="Oellfare" />
                             </a>
                         </div>
-                        <div class="copyright">
+                        {/* <div class="copyright">
                             <p> &copy; All rights reserved to <a href="#">WP ThemeBooster</a></p>
-                        </div>
+                        </div> */}
                         <div class="terms_nav">
                             <ul>
                                 <li class="menu-item"><a href="#">Terms</a></li>

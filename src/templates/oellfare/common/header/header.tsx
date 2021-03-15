@@ -7,7 +7,6 @@ import { Component, h, Prop } from '@stencil/core';
 export class OellfareHeader {
 
     @Prop() ngo                 :   any                 =   {};
-
     render() {
         return (
         <header id="header">
@@ -23,11 +22,11 @@ export class OellfareHeader {
                             <div class="top-right-elements">
                                 <div class="element">
                                     <ul class="top-social">
-                                        <li class="facebook"><a href="#"><i class="ion-logo-facebook"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="ion-logo-twitter"></i></a></li>
-                                        <li class="instagram"><a href="#"><i class="ion-logo-instagram"></i></a></li>
-                                        <li class="linkedin"><a href="#"><i class="ion-logo-linkedin"></i></a></li>
-                                        <li class="skype"><a href="#"><i class="ion-logo-skype"></i></a></li>
+                                        <li class="facebook"><a href={this.ngo.reachOut.facebook}><i class="ion-logo-facebook"></i></a></li>
+                                        <li class="twitter"><a href={this.ngo.reachOut.twitter}><i class="ion-logo-twitter"></i></a></li>
+                                        <li class="instagram"><a href={this.ngo.reachOut.instagram}><i class="ion-logo-instagram"></i></a></li>
+                                        <li class="linkedin"><a href={this.ngo.reachOut.linkedin}><i class="ion-logo-linkedin"></i></a></li>
+                                        <li class="skype"><a href={this.ngo.reachOut.skype}><i class="ion-logo-skype"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -40,19 +39,19 @@ export class OellfareHeader {
                     <div class="navigation">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="/assets/oellfare/images/logo.png" alt="Oelfare" />
+                                <img src={this.ngo.logo.url} class="logo-manage" alt="Oellfare" />
                             </a>
                         </div>
                         <nav id="flexmenu">
                             <div class="nav-inner">
                                 <div id="mobile-toggle" class="mobile-btn"></div>
                                 <ul id="menu-main-menu" class="main-menu">
-                                    <li class="menu-item current-menu-item menu-item-has-children active"><a href="index.html">Home</a>
-                                        <ul class="sub-menu">
+                                    <li class="menu-item current-menu-item active"><a href="index.html">Home</a>
+                                        {/* <ul class="sub-menu">
                                             <li class="menu-item"><a href="index2.html">Home Two</a></li>
                                             <li class="menu-item"><a href="index3.html">Home Three</a></li>
                                             <li class="menu-item"><a href="index4.html">Home Four</a></li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
                                     <li class="menu-item"><a href="about.html">About</a></li>
                                     <li class="menu-item menu-item-has-children"><a href="#">Causes</a>
@@ -84,7 +83,7 @@ export class OellfareHeader {
                             </div>
                         </nav>
                         <div class="element phone">
-                            <img src="/assets/oellfare/images/phone.png" alt="phone" /><div><span>Contact us to donate</span><br />(+123)987.654.32</div>
+                            <img src="/assets/oellfare/images/phone.png" alt="phone" /><div><span>Contact us to donate</span><br />{this.ngo.reachOut.phone1}</div>
                         </div>
                     </div>
                 </div>
